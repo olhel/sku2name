@@ -195,7 +195,6 @@ code,
 }
 
 .site-nav {
-  margin-left: auto;
   display: flex;
   align-items: center;
   /* Must wrap. The links carry white-space: nowrap so an item never breaks
@@ -229,6 +228,89 @@ code,
   bottom: -6px;
   height: 2px;
   background: var(--accent);
+}
+
+/* ---------- mobile nav disclosure ---------- */
+
+/* A native <details> rather than a scripted hamburger: keyboard operable for
+ * free, works with scripting off, and the links stay in the DOM at every
+ * width so crawlers see one navigation. Above 40rem the summary is hidden
+ * and the content forced open, so the desktop row is unchanged. */
+.nav-disclosure {
+  margin-left: auto;
+}
+.nav-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  /* Both are needed to drop the default triangle. */
+  list-style: none;
+}
+.nav-toggle::-webkit-details-marker {
+  display: none;
+}
+.nav-toggle svg {
+  display: block;
+}
+
+@media (max-width: 39.999rem) {
+  .nav-toggle {
+    display: flex;
+    /* Out of flow, so the panel below can take the full row while the button
+     * still sits beside the wordmark. sub2tenant pushes the page down rather
+     * than overlaying it, and this keeps that behaviour. */
+    position: absolute;
+    top: 0;
+    /* Against .wrap's padding box, so this has to clear the same inline
+     * padding the brand sits inside. */
+    right: var(--sp-4);
+  }
+  /* .site-nav sets display: flex, which beats the UA rule that hides a
+   * closed <details>. The closed state has to be stated explicitly or the
+   * panel is always open. */
+  .nav-disclosure:not([open]) .site-nav {
+    display: none;
+  }
+  .site-header .wrap {
+    position: relative;
+    row-gap: 0;
+  }
+  .nav-disclosure {
+    width: 100%;
+    margin-left: 0;
+  }
+  .site-nav {
+    /* sub2tenant's panel: 46px rows, 4px apart, left aligned, at body size. */
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding-top: 4px;
+    font-size: var(--fs-md);
+  }
+  .site-nav > * {
+    padding-block: 0.8rem;
+    line-height: normal;
+    text-align: left;
+  }
+  /* .theme-toggle zeroes its own padding and inherits the body line-height
+   * for the desktop row, which made it 3px taller than the links here. */
+  .site-nav .theme-toggle {
+    padding-block: 0.8rem;
+    font-size: inherit;
+    line-height: normal;
+  }
+  /* The underline is drawn for a horizontal row and reads as a stray rule in
+   * a stacked list. */
+  .site-nav a[aria-current='page']::after {
+    display: none;
+  }
 }
 
 .theme-toggle {
@@ -914,6 +996,14 @@ mark {
   /* sub2tenant's own .page padding-top. It places the field a fixed distance
    * below the header rather than centring it, which is why theirs sits higher. */
   padding-top: clamp(4rem, 16vh, 11rem);
+}
+/* 16vh is tuned for a desktop viewport; on a phone it pushes the field 80px
+ * below where sub2tenant puts it. Must sit after the rule above, not up with
+ * the nav block, or it loses on source order at equal specificity. */
+@media (max-width: 39.999rem) {
+  .home {
+    padding-top: clamp(2rem, 6vh, 4rem);
+  }
 }
 .home h1 {
   font-size: clamp(1.375rem, 1.05rem + 1.5vw, 1.75rem);
