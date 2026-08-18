@@ -85,9 +85,11 @@ function header(activePath) {
       <span class="byline">A free tool by <a href="${SITE.bsure}" rel="noopener">bsure.</a></span>
     </span>
     <nav class="site-nav" aria-label="Main">
-      ${link('/browse/', 'Browse')}
+      ${link('/browse/skus/', 'All SKUs')}
+      ${link('/browse/service-plans/', 'All service plans')}
       ${link('/about/', 'About')}
       ${link('/data/', 'Data')}
+      <a href="${SITE.github}" rel="noopener">GitHub</a>
       <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Theme: dark. Activate to switch to light.">Theme</button>
     </nav>
   </div>
@@ -97,13 +99,6 @@ function header(activePath) {
 function footer(syncedLabel) {
   return html`<footer class="site-footer">
   <div class="wrap">
-    <nav aria-label="Footer">
-      <a href="/browse/skus/">All SKUs</a>
-      <a href="/browse/service-plans/">All service plans</a>
-      <a href="/about/">About</a>
-      <a href="/data/">Data</a>
-      <a href="${SITE.github}" rel="noopener">GitHub</a>
-    </nav>
     <p>Data sourced from Microsoft Learn${syncedLabel ? raw(`, synced ${esc(syncedLabel)}`) : ''}.</p>
     <p>
       sku2name is an independent tool, not affiliated with or endorsed by Microsoft.

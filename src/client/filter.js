@@ -53,7 +53,20 @@ if (input) {
     }
   };
 
-  input.addEventListener('input', run);
+  // Carry the current filter across to the other list, so switching lists
+  // does not silently discard what was typed.
+  const cross = document.getElementById('cross-list');
+  const syncCross = () => {
+    if (!cross) return;
+    const base = cross.getAttribute('href').split('?')[0];
+    const q = input.value.trim();
+    cross.setAttribute('href', q ? `${base}?q=${encodeURIComponent(q)}` : base);
+  };
+
+  input.addEventListener('input', () => {
+    run();
+    syncCross();
+  });
 
   // Support a shared search URL landing on a browse page.
   const initial = new URLSearchParams(location.search).get('q');

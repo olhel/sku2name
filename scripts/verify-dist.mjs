@@ -122,13 +122,27 @@ async function main() {
   }
 
   // Sitemap coverage must match the pages actually emitted.
-  const sitemapUrls = new Set();
-  for (const name of ['sitemap-pages.xml', 'sitemap-skus.xml', 'sitemap-plans.xml']) {
+  const locsIn = async (name) => {
     const xml = await readFile(join(DIST, name), 'utf8');
-    for (const match of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) sitemapUrls.add(match[1]);
+    return xml.split('<loc>').slice(1).map((part) => part.split('<')[0]);
+  };
+  const staticUrls = await locsIn('sitemap-pages.xml');
+  const skuUrls = await locsIn('sitemap-skus.xml');
+  const planUrls = await locsIn('sitemap-plans.xml');
+
+  // Derived rather than hard-coded: adding or removing a static page should
+  // not require editing a magic number here.
+  if (skuUrls.length !== skus.length) {
+    fail(`sitemap-skus lists ${skuUrls.length} URLs, expected ${skus.length}`);
   }
-  if (sitemapUrls.size !== skus.length + plans.length + 6) {
-    fail(`Sitemap lists ${sitemapUrls.size} URLs, expected ${skus.length + plans.length + 6}`);
+  if (planUrls.length !== plans.length) {
+    fail(`sitemap-plans lists ${planUrls.length} URLs, expected ${plans.length}`);
+  }
+  if (staticUrls.length < 4) {
+    fail(`sitemap-pages lists only ${staticUrls.length} URLs`);
+  }
+  for (const url of [...staticUrls, ...skuUrls, ...planUrls]) {
+    if (!url.startsWith('https://')) fail(`sitemap entry is not absolute: ${url}`);
   }
 
   // Byte budgets against the compressed bytes that actually ship.

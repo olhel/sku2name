@@ -29,7 +29,7 @@ export function renderHomePage({ meta, assets, counts }) {
         Paste a SKU part number, GUID, product name, or service plan name.
       </p>
 
-      <form class="search" role="search" action="/browse/" method="get" id="search-form">
+      <form class="search" role="search" action="/browse/skus/" method="get" id="search-form">
         <label class="vh" for="q">Search Microsoft 365 SKUs and service plans</label>
         <div class="search-field">
           <input

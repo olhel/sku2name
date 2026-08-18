@@ -94,6 +94,14 @@ app.get('/id/:value', (req, res) => {
   return send404(res);
 });
 
+/* ---------- retired routes ---------- */
+
+// /browse/ was a hub page holding two links. The header now points at both
+// lists directly, so the hub is gone; anyone holding the old URL is sent on
+// rather than shown a 404.
+app.get('/browse', (req, res) => res.redirect(301, '/browse/skus/'));
+app.get('/browse/', (req, res) => res.redirect(301, '/browse/skus/'));
+
 /* ---------- canonical form redirects ---------- */
 
 // One canonical form per URL: lowercase, no trailing slash on detail pages.

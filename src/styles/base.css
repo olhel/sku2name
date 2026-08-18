@@ -904,3 +904,9 @@ mark {
 .home-footnote a:hover {
   color: var(--accent);
 }
+
+.browse-cross {
+  margin-top: var(--sp-4);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}

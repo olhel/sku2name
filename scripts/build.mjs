@@ -28,7 +28,6 @@ import { renderPlanPage, planPath, planHeading } from '../src/render/page-plan.m
 import { renderHomePage } from '../src/render/page-home.mjs';
 import {
   renderBrowsePage,
-  renderBrowseHubPage,
   renderDisambiguationPage,
   renderAboutPage,
   renderDataPage,
@@ -159,6 +158,7 @@ async function main() {
   }
 
   const pages = [];
+  const disambiguationPaths = [];
 
   // --- SKU pages ---------------------------------------------------------
   for (const sku of skus) {
@@ -220,6 +220,7 @@ async function main() {
 
       const html = renderDisambiguationPage({ slug, kind, entries: rows, meta, assets });
       const path = `/${isSku ? 'sku' : 'service-plan'}/${slug}`;
+      disambiguationPaths.push(path);
       await emit(`${path.slice(1)}.html`, html);
       pages.push({ path, html });
     }
@@ -242,7 +243,6 @@ async function main() {
     }))
     .sort((a, b) => byCodeUnit(a.name, b.name));
 
-  await emitPage('/browse/', renderBrowseHubPage({ meta, assets, counts }), pages);
   await emitPage('/browse/skus/', renderBrowsePage({ kind: 'sku', items: skuItems, meta, assets, counts }), pages);
   await emitPage('/browse/service-plans/', renderBrowsePage({ kind: 'plan', items: planItems, meta, assets, counts }), pages);
 
@@ -277,7 +277,7 @@ async function main() {
   await emit('data/id-map.json', compactStringify(buildIdMap({ skus, servicePlans })));
 
   const canonicalPaths = pages.map((page) => page.path);
-  for (const [name, xml] of Object.entries(renderSitemaps({ skus, servicePlans, meta, extraPaths: ['/', '/browse/', '/browse/skus/', '/browse/service-plans/', '/about/', '/data/'] }))) {
+  for (const [name, xml] of Object.entries(renderSitemaps({ skus, servicePlans, meta, extraPaths: ['/', '/browse/skus/', '/browse/service-plans/', '/about/', '/data/', ...disambiguationPaths] }))) {
     await emit(name, xml);
   }
   await emit('robots.txt', renderRobots());

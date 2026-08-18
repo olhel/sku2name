@@ -31,10 +31,13 @@ export function renderBrowsePage({ kind, items, meta, assets, counts }) {
     </li>`
   );
 
+  const other = isSku
+    ? { href: '/browse/service-plans/', label: 'service plans' }
+    : { href: '/browse/skus/', label: 'SKUs' };
+
   const body = html`${breadcrumb([
     { href: '/', label: 'Home' },
-    { href: '/browse/', label: 'Browse' },
-    { label: isSku ? 'SKUs' : 'Service plans' },
+    { label: isSku ? 'All SKUs' : 'All service plans' },
   ])}
     <h1>All Microsoft 365 ${noun}</h1>
     <p class="lede">
@@ -47,7 +50,10 @@ export function renderBrowsePage({ kind, items, meta, assets, counts }) {
       <input type="search" id="row-filter" placeholder="Filter ${formatNumber(total)} ${noun}…" autocomplete="off" spellcheck="false" />
       <span class="filter-count" id="filter-count">${formatNumber(total)} of ${formatNumber(total)} shown</span>
     </div>
-    <ul class="browse-list" data-filterable>${rows}</ul>`;
+    <ul class="browse-list" data-filterable>${rows}</ul>
+    <p class="browse-cross">
+      Looking for something else? <a id="cross-list" href="${other.href}">Search all ${other.label}</a>.
+    </p>`;
 
   return renderPage({
     title: buildTitle(`All Microsoft 365 ${noun}`),
@@ -57,26 +63,7 @@ export function renderBrowsePage({ kind, items, meta, assets, counts }) {
     assets,
     scripts: [assets.filter],
     ...common(meta),
-    jsonLdBlocks: [breadcrumbLd([['Home', '/'], ['Browse', '/browse/'], [isSku ? 'SKUs' : 'Service plans', path]])],
-  });
-}
-
-export function renderBrowseHubPage({ meta, assets, counts }) {
-  const body = html`${breadcrumb([{ href: '/', label: 'Home' }, { label: 'Browse' }])}
-    <h1>Browse</h1>
-    <p class="lede">Every SKU and service plan in Microsoft's licensing reference.</p>
-    <div class="chips">
-      <a class="chip" href="/browse/skus/">All ${formatNumber(counts.skus)} SKUs</a>
-      <a class="chip" href="/browse/service-plans/">All ${formatNumber(counts.servicePlans)} service plans</a>
-    </div>`;
-
-  return renderPage({
-    title: buildTitle('Browse all Microsoft 365 SKUs and service plans'),
-    description: `Browse all ${formatNumber(counts.skus)} Microsoft 365 license SKUs and ${formatNumber(counts.servicePlans)} service plans, parsed from Microsoft's published licensing reference.`,
-    path: '/browse/',
-    body,
-    assets,
-    ...common(meta),
+    jsonLdBlocks: [breadcrumbLd([['Home', '/'], [isSku ? 'All SKUs' : 'All service plans', path]])],
   });
 }
 
