@@ -46,8 +46,22 @@ export function html(strings, ...values) {
   return raw(out);
 }
 
-/** Serialise an object as a JSON-LD script block, escaping the `<` that could close it. */
+// Inside a <script> block, HTML escaping does not apply: the only thing that
+// can terminate the element early is the literal sequence "</script". These
+// are JSON unicode escapes, which are valid JSON and mean the same string to
+// any parser, while being inert to the HTML tokenizer.
+//
+// Written as explicit escape sequences. A single missing backslash here turns
+// the whole replacement into a silent no-op that reading will not catch, which
+// is exactly what happened the first time this was written.
+const JSON_LD_ESCAPES = {
+  '<': '\\u003c',
+  '>': '\\u003e',
+  '&': '\\u0026',
+};
+
+/** Serialise an object as a JSON-LD script block that cannot break out of it. */
 export function jsonLd(data) {
-  const json = JSON.stringify(data, null, 2).replace(/</g, '\u003c');
+  const json = JSON.stringify(data, null, 2).replace(/[<>&]/g, (char) => JSON_LD_ESCAPES[char]);
   return raw(`<script type="application/ld+json">\n${json}\n</script>`);
 }
