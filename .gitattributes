@@ -1,3 +1,7 @@
 * text=auto eol=lf
 *.png binary
 *.ico binary
+
+# This fixture exists precisely to test CRLF handling, so it must keep its
+# CRLF bytes through checkout on every platform.
+test/fixtures/quirks/csv-crlf.csv -text
