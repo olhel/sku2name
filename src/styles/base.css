@@ -153,7 +153,6 @@ code,
   display: flex;
   align-items: flex-start;
   gap: var(--sp-4);
-  padding-block: var(--sp-4);
   flex-wrap: wrap;
 }
 .brand-block {
@@ -532,6 +531,10 @@ input[type='search'] {
 input::placeholder {
   color: var(--text-faint);
 }
+.search .search-input::placeholder {
+  /* sub2tenant's resolved placeholder colour. */
+  color: rgba(191, 214, 232, 0.72);
+}
 
 /* ---------- buttons ---------- */
 
@@ -639,8 +642,8 @@ input::placeholder {
   color: var(--text-muted);
 }
 .site-footer p {
-  max-width: var(--w-prose);
   margin-inline: auto;
+  text-wrap: balance;
 }
 .site-footer p + p {
   margin-top: var(--sp-1);
@@ -706,18 +709,14 @@ input::placeholder {
 .search {
   position: relative;
   max-width: var(--w-search);
-  margin-top: var(--sp-5);
 }
 .search-field {
   display: flex;
-  gap: var(--sp-2);
+  gap: 0.9rem;
 }
 @media (max-width: 39.999rem) {
   .search-field {
     flex-direction: column;
-  }
-  .search .btn {
-    width: 100%;
   }
 }
 /* The search field's resting border is deliberately quieter than every other
@@ -734,16 +733,24 @@ input::placeholder {
 .search .search-input {
   border-color: var(--field-border);
   background: var(--field-bg);
-  font-size: var(--fs-md);
-  padding: var(--sp-3) var(--sp-5);
-  height: 52px;
+  /* Measured live from sub2tenant: 17.6px text, 15.2px/19.2px padding.
+     Ours was 16px with tighter padding, which read as thinner. */
+  font-size: 1.1rem;
+  /* normal, not the body line-height: inheriting 1.55 stretched the field to
+     60px against sub2tenant's 53px at the same font size and padding. */
+  line-height: normal;
+  padding: 0.95rem 1.2rem;
   border-radius: var(--r-pill);
 }
 .search .btn {
-  height: 52px;
-  padding-inline: var(--sp-6);
+  /* Measured live from sub2tenant: 16.8px text, 25.6px side padding.
+   * align-self rather than a fixed height, so the button always matches the
+   * input exactly. sub2tenant hard-codes 48px against a 53px input, and the
+   * two visibly do not line up. */
+  align-self: stretch;
+  padding-inline: 1.6rem;
   border-radius: var(--r-pill);
-  font-size: var(--fs-md);
+  font-size: 1.05rem;
 }
 .search-status {
   /* Reserved height so an announcement never shifts the layout. */
@@ -938,7 +945,7 @@ mark {
   text-align: center;
   font-size: 0.94rem;
   color: var(--text-faint);
-  max-width: var(--w-prose);
+  text-wrap: balance;
 }
 .home-footnote a {
   color: var(--text-muted);
