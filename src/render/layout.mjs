@@ -72,8 +72,11 @@ ${jsonLdBlocks.map((block) => jsonLd(block))}`;
 }
 
 function header(activePath) {
+  // "/" has to match exactly. Under startsWith it is a prefix of every path
+  // on the site, so every page would mark the home link as the current one.
+  const isCurrent = (href) => (href === '/' ? activePath === '/' : activePath.startsWith(href));
   const link = (href, label) =>
-    html`<a href="${href}"${raw(activePath.startsWith(href) ? ' aria-current="page"' : '')}>${label}</a>`;
+    html`<a href="${href}"${raw(isCurrent(href) ? ' aria-current="page"' : '')}>${label}</a>`;
 
   return html`<header class="site-header">
   <div class="wrap">
@@ -89,6 +92,7 @@ function header(activePath) {
         <span></span><span></span><span></span>
       </summary>
       <nav class="site-nav" aria-label="Main">
+        ${link('/', 'Lookup')}
         ${link('/browse/skus/', 'All SKUs')}
         ${link('/browse/service-plans/', 'All service plans')}
         ${link('/about/', 'About')}
