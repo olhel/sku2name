@@ -133,10 +133,15 @@ code,
 }
 .site-header .wrap {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--sp-4);
-  padding-block: var(--sp-3);
+  padding-block: var(--sp-4);
   flex-wrap: wrap;
+}
+.brand-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
 }
 
 .brand {
@@ -769,14 +774,11 @@ mark {
   text-decoration: none;
 }
 .examples code {
-  background: var(--surface-sunk);
-  border: var(--bw) solid var(--border);
-  border-radius: var(--r-xs);
-  padding: 1px var(--sp-2);
   font-size: var(--fs-mono);
+  color: var(--accent);
 }
 .examples a:hover code {
-  border-color: var(--border-strong);
+  text-decoration: underline;
 }
 
 /* ---------- browse list ---------- */
@@ -836,23 +838,33 @@ mark {
 /* The search is the page, so it gets vertical room the way sub2tenant's does,
  * without pushing itself below the fold on a phone. */
 .home {
-  max-width: var(--w-search);
-  padding-top: clamp(var(--sp-5), 8vh, var(--sp-8));
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: center;
+  padding-top: clamp(var(--sp-6), 12vh, 9rem);
 }
 .home h1 {
-  font-size: clamp(1.5rem, 1.1rem + 1.8vw, 2rem);
+  font-size: clamp(1.375rem, 1.05rem + 1.5vw, 1.75rem);
+  text-wrap: balance;
 }
 .home .lede {
   margin-top: var(--sp-3);
+  margin-inline: auto;
 }
 .home .search {
   margin-top: var(--sp-6);
+  margin-inline: auto;
+}
+.home .examples {
+  justify-content: center;
 }
 
 /* One quiet line at the bottom, in place of the three sections that used to
  * sit here. */
 .home-footnote {
   margin-top: var(--sp-8);
+  margin-inline: auto;
+  text-align: center;
   font-size: var(--fs-sm);
   color: var(--text-faint);
   max-width: var(--w-prose);

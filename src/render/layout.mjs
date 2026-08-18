@@ -77,11 +77,13 @@ function header(activePath) {
 
   return html`<header class="site-header">
   <div class="wrap">
-    <a class="brand" href="/">
-      <span class="wordmark">sku2name</span>
-      <span class="vh">${SITE.tagline}</span>
-    </a>
-    <span class="byline">A free tool by <a href="${SITE.bsure}" rel="noopener">bsure.</a></span>
+    <span class="brand-block">
+      <a class="brand" href="/">
+        <span class="wordmark">sku2name</span>
+        <span class="vh">${SITE.tagline}</span>
+      </a>
+      <span class="byline">A free tool by <a href="${SITE.bsure}" rel="noopener">bsure.</a></span>
+    </span>
     <nav class="site-nav" aria-label="Main">
       ${link('/browse/', 'Browse')}
       ${link('/about/', 'About')}
