@@ -87,6 +87,9 @@ export const LIGHT = {
   '--border': '#D6E0EF',
   '--field-border': '#8FA6C4',
   '--field-bg': '#FFFFFF',
+  // Placeholder text, weighted to read the same in both themes: 6.79:1 here
+  // on the white field, 6.72:1 on the dark one.
+  '--placeholder': '#4A5C78',
   '--border-strong': '#66809F',
   '--focus': '#0248CE',
   '--ok': '#007A55',
@@ -121,6 +124,8 @@ export const DARK = {
   // this one control sits below the 3:1 boundary contrast.
   '--field-border': '#49566E',
   '--field-bg': '#0F172A',
+  // sub2tenant's rgba(191,214,232,0.72) resolved over the field fill.
+  '--placeholder': '#8EA1B3',
   // Measured against --surface, not --bg. A control's boundary is judged
   // against what sits behind the control, and the card surface is lighter
   // than the page, so #4A648C read as 3.2:1 on the page but only 2.65:1
