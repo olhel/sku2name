@@ -781,3 +781,7 @@ mark {
   font-size: var(--fs-mono);
   color: var(--text-muted);
 }
+
+.note-cta {
+  margin-top: var(--sp-7);
+}

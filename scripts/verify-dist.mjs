@@ -70,6 +70,9 @@ async function main() {
     if (contents.includes('undefined')) fail(`${path} contains the literal string "undefined"`);
     if (contents.includes('[object Object]')) fail(`${path} contains "[object Object]"`);
     if (!contents.includes('<link rel="canonical"')) fail(`${path} has no canonical link`);
+    // style-src 'self' blocks style attributes, and the failure is silent:
+    // the rule is simply dropped and the page looks subtly wrong.
+    if (/<[^>]+[ ]style=/.test(contents)) fail(`${path} has an inline style attribute, which CSP blocks`);
     if (!/<title>[^<]+<\/title>/.test(contents)) fail(`${path} has no title`);
 
     const compressed = brotliCompressSync(Buffer.from(contents)).length;

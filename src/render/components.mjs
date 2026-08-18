@@ -110,7 +110,9 @@ export function copyLabel(text) {
 
 /** The one CTA per page, placed after the answer and never before it. */
 export function ctaCard() {
-  return html`<aside class="note" style="margin-top: var(--sp-7)">
+  // A class, not an inline style: style-src 'self' blocks style attributes,
+  // so an inline rule here is silently dropped in production.
+  return html`<aside class="note note-cta">
       <strong>You know what the license contains. Now see who is actually using it.</strong>
       Bsure finds inactive identities and unused licenses across Microsoft 365 and Entra.
       <a href="${SITE.bsure}" rel="noopener">Visit Bsure</a>
