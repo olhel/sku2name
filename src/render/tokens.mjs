@@ -90,6 +90,8 @@ export const LIGHT = {
   '--btn-fg': '#FFFFFF',
   '--btn-bg-hover': '#013CAE',
   '--border': '#D6E0EF',
+  '--field-border': '#8FA6C4',
+  '--field-bg': '#FFFFFF',
   '--border-strong': '#66809F',
   '--focus': '#0248CE',
   '--ok': '#007A55',
@@ -118,6 +120,11 @@ export const DARK = {
   '--btn-fg': '#FFFFFF',
   '--btn-bg-hover': '#0E56E8',
   '--border': '#1E3557',
+  // sub2tenant's exact effective value: rgba(195,221,253,.32) resolved over
+  // its input fill. See the note beside .search-input in base.css for why
+  // this one control sits below the 3:1 boundary contrast.
+  '--field-border': '#49566E',
+  '--field-bg': '#0F172A',
   // Measured against --surface, not --bg. A control's boundary is judged
   // against what sits behind the control, and the card surface is lighter
   // than the page, so #4A648C read as 3.2:1 on the page but only 2.65:1

@@ -687,7 +687,20 @@ input::placeholder {
   display: flex;
   gap: var(--sp-2);
 }
+/* The search field's resting border is deliberately quieter than every other
+ * control boundary on the site, matching sub2tenant. It sits at about 2.4:1
+ * rather than the 3:1 WCAG 1.4.11 asks for a component boundary.
+ *
+ * The trade is scoped as narrowly as possible: this is one control, it carries
+ * a visible placeholder, it is the largest element on the page, and it sits
+ * beside a labelled Lookup button, so it is identifiable without leaning on
+ * its outline. Everything else, tables, cards, buttons, other inputs, keeps
+ * --border-strong at 3:1. And unlike sub2tenant the FOCUS state is not
+ * colour-only: it is an 8.8:1 ring, so the state that actually matters for
+ * keyboard use is unambiguous. */
 .search .search-input {
+  border-color: var(--field-border);
+  background: var(--field-bg);
   font-size: var(--fs-md);
   padding: var(--sp-3) var(--sp-5);
   height: 52px;
