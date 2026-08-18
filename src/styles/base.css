@@ -196,8 +196,11 @@ code,
   font-size: var(--fs-sm);
 }
 .site-nav a {
-  color: var(--text-muted);
+  /* Brighter than --text-muted, which is tuned for body copy. sub2tenant's
+     nav sits at 9.17:1 and ours read dim beside it at 6.66:1. */
+  color: var(--text-nav);
   text-decoration: none;
+  white-space: nowrap;
 }
 .site-nav a:hover,
 .site-nav a[aria-current='page'] {
@@ -220,7 +223,7 @@ code,
 .theme-toggle {
   background: transparent;
   border: 0;
-  color: var(--text-muted);
+  color: var(--text-nav);
   cursor: pointer;
   padding: 0;
   font: inherit;
@@ -905,6 +908,7 @@ mark {
  * sit here. */
 .home-footnote {
   margin-top: var(--sp-8);
+  padding-top: var(--sp-7);
   margin-inline: auto;
   text-align: center;
   font-size: var(--fs-sm);

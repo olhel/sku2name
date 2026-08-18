@@ -82,6 +82,7 @@ export const LIGHT = {
   '--text': '#091A33',
   '--text-muted': '#4A5C78',
   '--text-faint': '#5C6E88',
+  '--text-nav': '#33415C',
   '--accent': '#0248CE',
   '--accent-hover': '#013CAE',
   '--accent-wash': '#DCE9FF',
@@ -109,6 +110,7 @@ export const DARK = {
   '--text': '#F2F7FE',
   '--text-muted': '#96A1B2',
   '--text-faint': '#8698AF',
+  '--text-nav': '#A9BFD2',
   // Bright Blue is 2.34:1 on this navy and unreadable, so dark mode uses a
   // pale accent instead. Every component references var(--accent) and never a
   // literal, which is what makes the swap automatic.

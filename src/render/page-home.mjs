@@ -12,13 +12,6 @@
 import { html } from '../lib/html.mjs';
 import { renderPage, canonical, formatDate, formatNumber } from './layout.mjs';
 
-// Three, not fifteen. Enough to show what an input looks like without
-// becoming a directory.
-const EXAMPLES = [
-  { label: 'ENTERPRISEPACK', href: '/sku/enterprisepack' },
-  { label: 'SPE_E5', href: '/sku/spe_e5' },
-  { label: 'EXCHANGE_S_ENTERPRISE', href: '/service-plan/exchange_s_enterprise' },
-];
 
 export function renderHomePage({ meta, assets, counts }) {
   const synced = formatDate(meta.document?.lastUpdated);
@@ -56,10 +49,6 @@ export function renderHomePage({ meta, assets, counts }) {
         <p id="q-status" class="search-status" role="status"></p>
       </form>
 
-      <p class="examples">
-        Try:
-        ${EXAMPLES.map((example) => html`<a href="${example.href}"><code>${example.label}</code></a>`)}
-      </p>
 
       <noscript>
         <p class="note">
@@ -71,9 +60,9 @@ export function renderHomePage({ meta, assets, counts }) {
     </div>
 
     <p class="home-footnote">
-      ${formatNumber(counts.skus)} license SKUs and ${formatNumber(counts.servicePlans)} service
-      plans, parsed from Microsoft's published licensing reference${synced ? ` and synced ${synced}` : ''}.
-      <a href="/data/">How this is built</a>.
+      <strong>sku2name</strong> maps any Microsoft 365 SKU part number, GUID or service plan name to
+      its friendly name and everything the license contains.
+      ${formatNumber(counts.skus)} SKUs, ${formatNumber(counts.servicePlans)} service plans.
     </p>`;
 
   return renderPage({
