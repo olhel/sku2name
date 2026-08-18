@@ -110,6 +110,25 @@ async function main() {
     if (!htmlPaths.has(`${target.slice(1)}.html`)) fail(`id-map entry ${guid} points at missing ${target}`);
   }
 
+  // The desktop nav lives inside a <details> that is only a disclosure below
+  // 40rem. Engines hide a closed <details> two different ways: older ones put
+  // display:none on the content, which .site-nav's own display:flex overrides,
+  // and newer ones hide ::details-content, which no rule on the child can
+  // reach. Both overrides have to be present or the entire desktop navigation
+  // silently disappears on one engine while looking fine on the other.
+  {
+    const cssFile = (await readdir(join(DIST, 'assets'))).find((n) => n.endsWith('.css'));
+    const css = await readFile(join(DIST, 'assets', cssFile), 'utf8');
+    if (!css.includes('.nav-disclosure::details-content')) {
+      fail('base.css has no ::details-content override; the desktop nav vanishes on current Chrome and Edge');
+    }
+    // A plain substring, not a regex: the brackets in :not([open]) read as a
+    // character class and the pattern silently never matches.
+    if (!css.includes('.nav-disclosure:not([open]) .site-nav')) {
+      fail('base.css never states the closed nav state; the mobile menu stays open on older engines');
+    }
+  }
+
   // MIT compliance: the upstream notice must ship with the data.
   const noticePath = join(DIST, 'data/NOTICE.txt');
   if (!existsSync(noticePath)) {

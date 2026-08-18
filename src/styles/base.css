@@ -239,12 +239,21 @@ code,
 .nav-disclosure {
   margin-left: auto;
 }
+
+@media (min-width: 40rem) {
+  .nav-disclosure::details-content {
+    content-visibility: visible;
+    block-size: auto;
+  }
+}
 .nav-toggle {
   display: none;
-  width: 40px;
-  height: 40px;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.28rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border: 1px solid var(--border-strong);
   border-radius: var(--r-pill);
   background: var(--surface);
@@ -256,8 +265,25 @@ code,
 .nav-toggle::-webkit-details-marker {
   display: none;
 }
-.nav-toggle svg {
+.nav-toggle span {
   display: block;
+  width: 1rem;
+  height: 2px;
+  border-radius: var(--r-pill);
+  background: currentcolor;
+  transition: transform 0.16s ease-out, opacity 0.16s ease-out;
+}
+/* The bars fold into a close cross while open. sub2tenant drives this from a
+ * class its script puts on the header; [open] gets it for free. The global
+ * prefers-reduced-motion rule already flattens the transition. */
+.nav-disclosure[open] .nav-toggle span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.nav-disclosure[open] .nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+.nav-disclosure[open] .nav-toggle span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 @media (max-width: 39.999rem) {
@@ -295,16 +321,22 @@ code,
     font-size: var(--fs-md);
   }
   .site-nav > * {
-    padding-block: 0.8rem;
+    padding-block: 0.75rem;
     line-height: normal;
     text-align: left;
+    /* On every row including the first, which is what puts a rule between
+     * the byline and the top item. */
+    border-top: 1px solid var(--border);
   }
   /* .theme-toggle zeroes its own padding and inherits the body line-height
    * for the desktop row, which made it 3px taller than the links here. */
   .site-nav .theme-toggle {
-    padding-block: 0.8rem;
+    padding-block: 0.75rem;
     font-size: inherit;
     line-height: normal;
+    /* .theme-toggle's own border:0 is declared below this block, so the
+     * separator has to be restated at a specificity that beats it. */
+    border-top: 1px solid var(--border);
   }
   /* The underline is drawn for a horizontal row and reads as a stray rule in
    * a stacked list. */

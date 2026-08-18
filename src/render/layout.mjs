@@ -86,9 +86,7 @@ function header(activePath) {
     </span>
     <details class="nav-disclosure">
       <summary class="nav-toggle" aria-label="Menu">
-        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
-          <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-        </svg>
+        <span></span><span></span><span></span>
       </summary>
       <nav class="site-nav" aria-label="Main">
         ${link('/browse/skus/', 'All SKUs')}
