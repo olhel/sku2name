@@ -130,7 +130,12 @@ export const DARK = {
   // than the page, so #4A648C read as 3.2:1 on the page but only 2.65:1
   // where it actually appears. WCAG 1.4.11 wants 3:1.
   '--border-strong': '#546E96',
-  '--focus': '#8EC5FF',
+  // The focus ring is NOT --accent. --accent is pale (#8EC5FF) because it
+  // has to work as link ink on navy, and at 9.84:1 as a 2px ring it reads
+  // as a white glow rather than a blue rim. #2B7FFF is the product design
+  // system's info indicator, clears 3:1 on every dark surface it can appear
+  // over (3.56 to 4.75), and looks like sub2tenant's blue rim.
+  '--focus': '#2B7FFF',
   '--ok': '#00BC7D',
   '--ok-wash': '#004F3B',
   '--warn-wash': '#432004',
