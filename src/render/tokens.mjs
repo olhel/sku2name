@@ -57,20 +57,14 @@ export const SCALE = `
   --w-content: 1040px;
   --w-search:  620px;
 
-  /* Segoe UI Variable is what this audience already reads administrative
-     interfaces in, and using it costs zero requests and zero layout shift. */
-  --font-ui: system-ui, -apple-system, "Segoe UI Variable Text", "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  /* The wordmark only. Declared as a full family chain rather than embedded:
-     FT Regola Neue is a licensed commercial face, and outlining it into a
-     public site is the licensing question the brand manual says to check
-     first. Anyone with it installed sees the brand face; everyone else gets a
-     clean fallback, which is the documented intended behaviour. */
-  --font-brand: "FT Regola Neue", "Schibsted Grotesk", var(--font-ui);
-  /* Chosen for a distinguishable zero and clear 1/l/I separation, which
-     matters when the page is mostly GUIDs. */
-  --font-mono: ui-monospace, "Cascadia Mono", "SF Mono", "Segoe UI Mono", Menlo, Consolas,
-    "Liberation Mono", monospace;
+  /* Taken verbatim from sub2tenant so the two tools are font-identical.
+     Nothing is loaded: no webfont, no brand face, no request on the critical
+     path. Note that system-ui and ui-monospace both resolve first on every
+     current platform, so the rest of each list is a fallback for old
+     browsers rather than a preference. */
+  --font-ui: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 `;
 
 // Contrast ratios in the comments are measured, not assumed.

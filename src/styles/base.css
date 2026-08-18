@@ -170,18 +170,16 @@ code,
   color: var(--text);
 }
 .wordmark {
-  /* The one place the Bsure brand face is asked for. It is not embedded, so
-   * this resolves for anyone who has it and falls back cleanly for everyone
-   * else, which is what the brand manual prescribes for an unbundled face. */
-  font-family: var(--font-brand);
-  font-size: var(--fs-lg);
-  font-weight: var(--fw-bold);
-  letter-spacing: -0.01em;
-  line-height: 1;
+  /* sub2tenant's own values: 1.08rem at 700. No brand face is requested, so
+   * both tools render the wordmark in the same system font. */
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 .byline {
-  font-size: var(--fs-xs);
+  /* sub2tenant's .site-subtitle size. */
+  font-size: 0.84rem;
   color: var(--text-muted);
 }
 .byline a {
@@ -192,7 +190,12 @@ code,
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: var(--sp-4);
+  /* Must wrap. The links carry white-space: nowrap so an item never breaks
+   * mid-label, which means the row itself has to be allowed to wrap or the
+   * six items force a 376px floor and every page scrolls sideways on a
+   * phone. */
+  flex-wrap: wrap;
+  gap: var(--sp-2) var(--sp-4);
   font-size: var(--fs-sm);
 }
 .site-nav a {
