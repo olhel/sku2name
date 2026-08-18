@@ -687,6 +687,14 @@ input::placeholder {
   display: flex;
   gap: var(--sp-2);
 }
+@media (max-width: 39.999rem) {
+  .search-field {
+    flex-direction: column;
+  }
+  .search .btn {
+    width: 100%;
+  }
+}
 /* The search field's resting border is deliberately quieter than every other
  * control boundary on the site, matching sub2tenant. It sits at about 2.4:1
  * rather than the 3:1 WCAG 1.4.11 asks for a component boundary.
@@ -870,7 +878,12 @@ mark {
   max-width: 720px;
   margin-inline: auto;
   text-align: center;
-  padding-top: clamp(var(--sp-6), 12vh, 9rem);
+  /* Centred in the space between header and footer. min-height rather than
+   * height so a short viewport scrolls instead of clipping. */
+  min-height: clamp(18rem, 58vh, 34rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .home h1 {
   font-size: clamp(1.375rem, 1.05rem + 1.5vw, 1.75rem);
@@ -881,8 +894,8 @@ mark {
   margin-inline: auto;
 }
 .home .search {
-  margin-top: var(--sp-6);
   margin-inline: auto;
+  width: 100%;
 }
 .home .examples {
   justify-content: center;

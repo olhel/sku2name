@@ -24,10 +24,7 @@ export function renderHomePage({ meta, assets, counts }) {
   const synced = formatDate(meta.document?.lastUpdated);
 
   const body = html`<div class="home">
-      <h1>Look up any Microsoft 365 license SKU or service plan</h1>
-      <p class="lede">
-        Paste a SKU part number, GUID, product name, or service plan name.
-      </p>
+      <h1 class="vh">Look up any Microsoft 365 license SKU or service plan</h1>
 
       <form class="search" role="search" action="/browse/skus/" method="get" id="search-form">
         <label class="vh" for="q">Search Microsoft 365 SKUs and service plans</label>
@@ -47,7 +44,7 @@ export function renderHomePage({ meta, assets, counts }) {
             autocapitalize="off"
             spellcheck="false"
             enterkeyhint="search"
-            placeholder="Search product, SKU, GUID or service plan…"
+            placeholder="Paste a SKU, GUID or service plan name"
           />
           <button type="submit" class="btn btn-primary">Lookup</button>
         </div>
