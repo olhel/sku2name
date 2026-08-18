@@ -1,0 +1,10 @@
+Product_Display_Name,String_Id,GUID,Service_Plan_Name,Service_Plan_Id,Service_Plans_Included_Friendly_Names
+Office 365 E3,ENTERPRISEPACK,6fd2c87f-b296-42f0-b197-1e91e994b900,EXCHANGE_S_ENTERPRISE,efb87545-963c-4e0d-99df-69c6916d9eb0,Exchange Online (Plan 2)
+Office 365 E3,ENTERPRISEPACK,6fd2c87f-b296-42f0-b197-1e91e994b900,EXCHANGE_S_FOUNDATION,113feb6c-3fe4-4440-bddc-54d774bf0318,Exchange Foundation
+Office 365 E3,ENTERPRISEPACK,6fd2c87f-b296-42f0-b197-1e91e994b900,EXCHANGE_S_FOUNDATION,113feb6c-3fe4-4440-bddc-54d774bf0318,Exchange Foundation
+"Dynamics 365 Field Service, Enterprise Edition",CRM_AUTO_ROUTING_ADDON,977464c4-bfaf-4b67-b761-a9bb735a2196,CRM_AUTO_ROUTING_ADDON,2ba394e0-6f18-4b77-b45f-a5663bbab540,RETIRED - Field Service Automated Routing Engine Add-On
+"Dynamics 365 Field Service, Enterprise Edition",CRM_AUTO_ROUTING_ADDON,977464c4-bfaf-4b67-b761-a9bb735a2196,EXCHANGE_S_FOUNDATION,113feb6c-3fe4-4440-bddc-54d774bf0318,EXCHANGE FOUNDATION
+Microsoft Copilot Studio User License,POWER_VIRTUAL_AGENTS,4b74a65c-8b4a-4fc8-9f6b-5177ed11ddfa,POWER_VIRTUAL_AGENTS,0aeeee7d-e0eb-4b23-9c5b-a2b0f9f2fbf6,Power Virtual Agents
+Power Virtual Agent User License,POWER_VIRTUAL_AGENTS,4b74a65c-8b4a-4fc8-9f6b-5177ed11ddfa,EXCHANGE_S_FOUNDATION,113feb6c-3fe4-4440-bddc-54d774bf0318,Exchange Foundation
+"Teams ""Premium"" Trial",TEAMS_PREMIUM_TRIAL,36a0f3b3-adb5-49ea-bf66-762134cf063a,TEAMS_PREMIUM,989a1621-93bc-4be0-835c-fe30171d6167,Microsoft Teams Premium
+Microsoft Teams Enterprise,Microsoft_Teams_Enterprise_New,3ab6abff-666f-4424-bfb7-f0bc274ec7bc,TEAMS_ENTERPRISE,d0d1ca43-b81b-4f5b-a5d4-9a1e9d4e5a2a,Microsoft Teams Enterprise

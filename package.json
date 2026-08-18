@@ -14,7 +14,7 @@
     "ingest:check": "node scripts/ingest-check.mjs",
     "build": "node scripts/build.mjs",
     "verify": "node scripts/verify-dist.mjs",
-    "test": "node --test test/"
+    "test": "node --test \"test/**/*.test.mjs\""
   },
   "dependencies": {
     "express": "^4.21.2"
