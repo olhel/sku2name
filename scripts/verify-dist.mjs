@@ -100,6 +100,17 @@ async function main() {
     if (!htmlPaths.has(`${target.slice(1)}.html`)) fail(`id-map entry ${guid} points at missing ${target}`);
   }
 
+  // MIT compliance: the upstream notice must ship with the data.
+  const noticePath = join(DIST, 'data/NOTICE.txt');
+  if (!existsSync(noticePath)) {
+    fail('data/NOTICE.txt is missing; MIT requires the upstream notice to ship with the dataset');
+  } else {
+    const notice = await readFile(noticePath, 'utf8');
+    for (const required of ['Copyright (c) Microsoft Corporation', 'shall be included in all']) {
+      if (!notice.includes(required)) fail(`data/NOTICE.txt is missing the text "${required}"`);
+    }
+  }
+
   // Sitemap coverage must match the pages actually emitted.
   const sitemapUrls = new Set();
   for (const name of ['sitemap-pages.xml', 'sitemap-skus.xml', 'sitemap-plans.xml']) {

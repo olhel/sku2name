@@ -3,6 +3,7 @@
 import { html, raw } from '../lib/html.mjs';
 import { renderPage, canonical, buildTitle, formatDate, formatNumber, SITE } from './layout.mjs';
 import { breadcrumb, ctaCard } from './components.mjs';
+import { UPSTREAM_LICENSE } from './attribution.mjs';
 
 const common = (meta) => ({
   syncedIso: meta.document?.lastUpdated,
@@ -286,8 +287,31 @@ export function renderDataPage({ meta, assets, counts, categories }) {
       <p>
         The normalized dataset is available as JSON:
         <a href="/data/skus.json">skus.json</a>,
-        <a href="/data/service-plans.json">service-plans.json</a>.
-        The underlying facts are Microsoft's.
+        <a href="/data/service-plans.json">service-plans.json</a>,
+        <a href="/data/source-meta.json">source-meta.json</a>.
+      </p>
+
+      <h2 id="license">Attribution and license</h2>
+      <p>
+        Microsoft's licensing reference is published in the
+        <a href="${UPSTREAM_LICENSE.repoUrl}" rel="noopener">${UPSTREAM_LICENSE.repo}</a>
+        repository under the
+        <a href="${UPSTREAM_LICENSE.licenseUrl}" rel="noopener">MIT License</a>,
+        which covers its documentation as well as its code. That license requires the copyright
+        notice to travel with substantial portions of the work, so it ships with this dataset:
+      </p>
+      <div class="note">
+        <p>Copyright (c) ${UPSTREAM_LICENSE.holder}. Licensed under the MIT License.</p>
+        <p>Full text: <a href="/data/NOTICE.txt">NOTICE.txt</a>, shipped alongside the JSON downloads.</p>
+      </div>
+      <p>
+        What sku2name adds on top is its own: the reverse index from service plans to SKUs, the
+        similarity between SKUs, the canonical name selection, the derived categories, and the URL
+        slugs. None of that comes from Microsoft, and it is covered by
+        <a href="${SITE.github}" rel="noopener">sku2name's own MIT license</a>.
+      </p>
+      <p>
+        The underlying facts, the identifiers and GUIDs themselves, are Microsoft's.
       </p>
     </div>`;
 

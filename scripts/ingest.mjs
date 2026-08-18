@@ -24,6 +24,8 @@ import { normalizeDataset } from '../src/ingest/normalize.mjs';
 import { validate, formatReport } from '../src/ingest/validate.mjs';
 import { emptyRegistry } from '../src/ingest/slug-registry.mjs';
 import { stableStringify } from '../src/lib/stable-json.mjs';
+import { renderNoticeText } from '../src/render/attribution.mjs';
+import { formatDate } from '../src/render/layout.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = join(ROOT, 'data');
@@ -169,6 +171,13 @@ async function main() {
   await writeAtomic(join(DATA_DIR, 'incompatibility-groups.json'), stableStringify(dataset.incompatibilityGroups));
   await writeAtomic(join(DATA_DIR, 'slug-registry.json'), stableStringify(dataset.slugRegistry));
   await writeAtomic(join(DATA_DIR, 'source-meta.json'), stableStringify(sourceMeta));
+
+  // MIT requires the upstream notice to travel with substantial portions of
+  // the work. Regenerated here so its sync date always matches the dataset.
+  await writeAtomic(
+    join(ROOT, 'NOTICE'),
+    renderNoticeText({ syncedLabel: formatDate(merged.document?.lastUpdated) })
+  );
 
   console.log(`\nWrote data/ at ${dataset.datasetHash}`);
 }

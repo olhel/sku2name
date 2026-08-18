@@ -21,6 +21,7 @@ import { categoryTable, CATEGORY_RULES } from '../src/ingest/derive-categories.m
 import { renderTokensCss } from '../src/render/tokens.mjs';
 import { shortHash } from '../src/lib/hash.mjs';
 import { byCodeUnit } from '../src/lib/sort.mjs';
+import { formatDate } from '../src/render/layout.mjs';
 import { stableStringify, compactStringify } from '../src/lib/stable-json.mjs';
 import { renderSkuPage, skuPath } from '../src/render/page-sku.mjs';
 import { renderPlanPage, planPath, planHeading } from '../src/render/page-plan.mjs';
@@ -37,6 +38,7 @@ import {
 import { buildSearchIndexes } from '../src/render/search-index.mjs';
 import { renderSitemaps } from '../src/render/sitemap.mjs';
 import { renderRobots, renderLlmsTxt } from '../src/render/robots.mjs';
+import { renderNoticeText } from '../src/render/attribution.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data');
@@ -281,6 +283,8 @@ async function main() {
   await emit('data/skus.json', stableStringify(skus));
   await emit('data/service-plans.json', stableStringify(servicePlans));
   await emit('data/source-meta.json', stableStringify(meta));
+  // MIT requires the notice to travel with substantial portions of the work.
+  await emit('data/NOTICE.txt', renderNoticeText({ syncedLabel: formatDate(meta.document?.lastUpdated) }));
   await emit('data/id-map.json', compactStringify(buildIdMap({ skus, servicePlans })));
 
   const canonicalPaths = pages.map((page) => page.path);
