@@ -156,6 +156,26 @@ test('the filter bar appears only above the row count where scanning fails', () 
   assert.ok(renderSkuPage({ sku, plans: many, similar: [], meta, assets }).includes('row-filter'));
 });
 
+// Regression: an unscoped filter also emptied the similar-SKUs table on the
+// same page and counted its rows in the total.
+test('a SKU page marks exactly one filterable container', () => {
+  const many = Array.from({ length: 30 }, (_, i) => ({ ...plan, planId: `${i}`, slug: `p${i}`, skuCount: 1 }));
+  const similar = [{ skuId: 'x', slug: 'other', productName: 'Other SKU', stringId: 'OTHER', shared: 3, total: 30 }];
+  const output = renderSkuPage({ sku, plans: many, similar, meta, assets });
+
+  assert.equal((output.match(/data-filterable/g) || []).length, 1);
+  assert.ok(output.includes('row-filter'), 'the filter box should be present');
+  // The similar-SKUs table must exist but must not be filterable.
+  assert.ok(output.includes('SKUs similar to this one'));
+});
+
+test('a page with a filter box always has a container for it to target', () => {
+  const many = Array.from({ length: 30 }, (_, i) => ({ ...plan, planId: `${i}`, slug: `p${i}`, skuCount: 1 }));
+  const output = renderSkuPage({ sku, plans: many, similar: [], meta, assets });
+  assert.ok(output.includes('id="row-filter"'));
+  assert.ok(output.includes('data-filterable'));
+});
+
 test('every page carries the non-affiliation disclaimer', () => {
   const output = renderSkuPage({ sku, plans: [], similar: [], meta, assets });
   assert.ok(output.includes('not affiliated with or endorsed by Microsoft'));

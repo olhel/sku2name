@@ -20,6 +20,15 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+/* The browser's own [hidden] rule is display:none at specificity (0,1,0), so
+ * ANY component rule that sets display beats it and the element stays visible.
+ * .browse-list li { display: flex } did exactly that, which silently broke the
+ * filter: rows were marked hidden and the count updated, but nothing
+ * disappeared. Enforced here once so no component can reintroduce it. */
+[hidden] {
+  display: none !important;
+}
+
 body {
   margin: 0;
   background: var(--bg);

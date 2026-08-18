@@ -74,6 +74,16 @@ async function main() {
     // the rule is simply dropped and the page looks subtly wrong.
     if (/<[^>]+[ ]style=/.test(contents)) fail(`${path} has an inline style attribute, which CSP blocks`);
     if (!/<title>[^<]+<\/title>/.test(contents)) fail(`${path} has no title`);
+    // The row filter targets a single marked container. More than one makes
+    // it filter the wrong rows and miscount; a filter box with no container
+    // does nothing at all.
+    const filterable = (contents.match(/data-filterable/g) || []).length;
+    if (filterable > 1) {
+      fail(`${path} marks ${filterable} filterable containers, expected at most 1`);
+    }
+    if (contents.includes('id="row-filter"') && filterable === 0) {
+      fail(`${path} has a filter box but no filterable container`);
+    }
 
     const compressed = brotliCompressSync(Buffer.from(contents)).length;
     if (compressed > largestHtml.size) largestHtml = { path, size: compressed };

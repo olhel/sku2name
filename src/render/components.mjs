@@ -51,7 +51,7 @@ export function filterBar(rowCount, noun) {
   return html`<div class="filter-bar">
       <label class="vh" for="row-filter">Filter ${noun}</label>
       <input type="search" id="row-filter" placeholder="Filter ${formatNumber(rowCount)} ${noun}…" autocomplete="off" spellcheck="false" />
-      <span class="filter-count" id="filter-count" aria-live="polite">${formatNumber(rowCount)} of ${formatNumber(rowCount)} shown</span>
+      <span class="filter-count" id="filter-count">${formatNumber(rowCount)} of ${formatNumber(rowCount)} shown</span>
     </div>`;
 }
 
@@ -77,7 +77,10 @@ export function dataRow({ id, href, name, technical, guid, meta }) {
 
 /** A full data table with a visually hidden caption. */
 export function dataTable({ caption, columnLabel, rows }) {
-  return html`<div class="table-wrap">
+  // data-filterable scopes the row filter. A page can carry more than one
+  // table (a SKU page also has the similar-SKUs table), and an unscoped
+  // filter empties the others and miscounts.
+  return html`<div class="table-wrap" data-filterable>
       <table class="data">
         <caption class="vh">${caption}</caption>
         <thead>

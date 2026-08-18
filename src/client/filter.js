@@ -11,9 +11,14 @@
 
 const input = document.getElementById('row-filter');
 const count = document.getElementById('filter-count');
+const liveRegion = document.getElementById('live-status');
 
 if (input) {
-  const rows = Array.from(document.querySelectorAll('.browse-list > li, table.data tbody tr'));
+  // Scoped to the one container marked filterable, never every table on
+  // the page: a SKU page also carries the similar-SKUs table, which must not
+  // be emptied by a filter aimed at the service plan list.
+  const scope = document.querySelector('[data-filterable]');
+  const rows = scope ? Array.from(scope.querySelectorAll(':scope > li, tbody tr')) : [];
   const total = rows.length;
   const keys = rows.map((row) => row.textContent.toLowerCase().replace(/\s+/g, ' '));
 
@@ -31,13 +36,19 @@ if (input) {
       if (match) shown += 1;
     }
 
-    if (count) {
-      // Debounced, and it announces a count rather than the matches. Announcing
-      // every keystroke's results is what makes a filter unusable with a
-      // screen reader.
+    const text = `${format(shown)} of ${format(total)} shown`;
+
+    // The visible count updates immediately: showing a stale number beside a
+    // filtered list is worse than no number at all.
+    if (count) count.textContent = text;
+
+    // The announcement is debounced and separate. Firing a live region on
+    // every keystroke is the classic way to make a filter unusable with a
+    // screen reader.
+    if (liveRegion) {
       clearTimeout(announceTimer);
       announceTimer = setTimeout(() => {
-        count.textContent = `${format(shown)} of ${format(total)} shown`;
+        liveRegion.textContent = query ? `${text} for ${query}` : text;
       }, 250);
     }
   };

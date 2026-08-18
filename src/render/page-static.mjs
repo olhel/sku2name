@@ -45,9 +45,9 @@ export function renderBrowsePage({ kind, items, meta, assets, counts }) {
     <div class="filter-bar">
       <label class="vh" for="row-filter">Filter ${noun}</label>
       <input type="search" id="row-filter" placeholder="Filter ${formatNumber(total)} ${noun}…" autocomplete="off" spellcheck="false" />
-      <span class="filter-count" id="filter-count" aria-live="polite">${formatNumber(total)} of ${formatNumber(total)} shown</span>
+      <span class="filter-count" id="filter-count">${formatNumber(total)} of ${formatNumber(total)} shown</span>
     </div>
-    <ul class="browse-list">${rows}</ul>`;
+    <ul class="browse-list" data-filterable>${rows}</ul>`;
 
   return renderPage({
     title: buildTitle(`All Microsoft 365 ${noun}`),
