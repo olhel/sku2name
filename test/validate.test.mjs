@@ -31,7 +31,6 @@ function makeDataset(overrides = {}) {
     // 10 edges each = 6,000 edges, above the floor.
     servicePlanIds: servicePlans.slice(i % 100, (i % 100) + 10).map((p) => p.planId),
     sources: ['csv', 'md'],
-    categories: [],
   }));
 
   const counts = {

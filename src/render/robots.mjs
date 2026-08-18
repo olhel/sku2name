@@ -73,7 +73,7 @@ because neither is complete on its own. Method and caveats: ${SITE.origin}/data/
 
 Microsoft's reference is published under the MIT License, Copyright (c) Microsoft Corporation, and
 that notice ships with the data at ${SITE.origin}/data/NOTICE.txt. The reverse index, SKU
-similarity, canonical name selection and derived categories are sku2name's own additions.
+similarity and canonical name selection are sku2name's own additions.
 
 sku2name is an independent tool. It is not affiliated with or endorsed by Microsoft. Microsoft 365
 and Microsoft Entra are trademarks of Microsoft Corporation.

@@ -42,17 +42,6 @@ export function provenance(meta) {
     </p>`;
 }
 
-/** Derived category chips, always labelled as sku2name's own inference. */
-export function categoryChips(categories, labels) {
-  if (!categories || categories.length === 0) return '';
-  return html`<div class="chips">
-      ${categories.map(
-        (id) => html`<span class="chip chip-derived">${labels[id] || id}</span>`
-      )}
-      <span class="chip-note"><a href="/data/#derived">Derived by sku2name, not a Microsoft field</a></span>
-    </div>`;
-}
-
 /**
  * The filter bar, rendered only above a row count where scanning stops working.
  * Below that it is noise.

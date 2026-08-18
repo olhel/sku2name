@@ -13,9 +13,9 @@ That documentation is licensed by Microsoft Corporation under the MIT
 License, reproduced in full below as that license requires.
 
 sku2name adds its own derived material on top of it: the reverse index from
-service plans to SKUs, similarity between SKUs, canonical name selection,
-category labels, and URL slugs. Those additions are sku2name's, not
-Microsoft's, and are covered by the project's own MIT license.
+service plans to SKUs, similarity between SKUs, canonical name selection, and
+URL slugs. Those additions are sku2name's, not Microsoft's, and are covered by
+the project's own MIT license.
 
 sku2name is an independent tool. It is not affiliated with or endorsed by
 Microsoft. Microsoft 365 and Microsoft Entra are trademarks of Microsoft

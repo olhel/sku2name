@@ -17,7 +17,6 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { buildReverseIndex } from '../src/ingest/normalize.mjs';
-import { categoryTable, CATEGORY_RULES } from '../src/ingest/derive-categories.mjs';
 import { renderTokensCss } from '../src/render/tokens.mjs';
 import { shortHash } from '../src/lib/hash.mjs';
 import { byCodeUnit } from '../src/lib/sort.mjs';
@@ -43,8 +42,6 @@ import { renderNoticeText } from '../src/render/attribution.mjs';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data');
 const DIST = join(ROOT, 'dist');
-
-const CATEGORY_LABELS = Object.fromEntries(CATEGORY_RULES.map((rule) => [rule.id, rule.label]));
 
 // Hand-curated, and the only curated list in the project. These are the
 // licenses people actually look up, surfaced on the homepage as real links so
@@ -183,7 +180,6 @@ async function main() {
       similar: findSimilar(sku, skus, planSets),
       meta,
       assets,
-      categoryLabels: CATEGORY_LABELS,
     });
     const path = skuPath(sku);
     await emit(`${path.slice(1)}.html`, html);
@@ -273,7 +269,7 @@ async function main() {
   );
   await emitPage('/', home, pages, 'index.html');
   await emitPage('/about/', renderAboutPage({ meta, assets, counts }), pages);
-  await emitPage('/data/', renderDataPage({ meta, assets, counts, categories: categoryTable() }), pages);
+  await emitPage('/data/', renderDataPage({ meta, assets, counts }), pages);
 
   // 404 and the GUID-miss template are served by Express, never crawled.
   await emit('404.html', render404Page({ meta, assets, counts }).replace('</head>', `${searchMeta}\n</head>`));

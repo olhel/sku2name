@@ -17,7 +17,6 @@ const sku = {
   slug: 'enterprisepack',
   servicePlanIds: ['efb87545-963c-4e0d-99df-69c6916d9eb0'],
   aliases: { stringId: [], productName: [] },
-  categories: [],
   sources: ['csv', 'md'],
 };
 
@@ -67,7 +66,7 @@ test('JSON-LD escapes a closing script tag', () => {
 // Product names really do contain these characters.
 test('renders a product name containing an ampersand and a slash safely', () => {
   const tricky = { ...sku, productName: 'Enterprise & Mobility w/o Teams', stringId: 'O365_w/o Teams Bundle_M3' };
-  const output = renderSkuPage({ sku: tricky, plans: [], similar: [], meta, assets, categoryLabels: {} });
+  const output = renderSkuPage({ sku: tricky, plans: [], similar: [], meta, assets });
   assert.ok(output.includes('Enterprise &amp; Mobility w/o Teams'));
   assert.ok(!output.includes('Enterprise & Mobility'));
 });
@@ -113,7 +112,7 @@ test('plan heading falls back to the technical name when there is no friendly on
 /* ---------- page structure ---------- */
 
 test('a SKU page puts the answer in the first viewport', () => {
-  const output = renderSkuPage({ sku, plans: [{ ...plan, skuCount: 41 }], similar: [], meta, assets, categoryLabels: {} });
+  const output = renderSkuPage({ sku, plans: [{ ...plan, skuCount: 41 }], similar: [], meta, assets });
   const beforeTable = output.slice(0, output.indexOf('<table'));
   assert.ok(beforeTable.includes('Office 365 E3'), 'friendly name above the table');
   assert.ok(beforeTable.includes('ENTERPRISEPACK'), 'String ID above the table');
@@ -121,7 +120,7 @@ test('a SKU page puts the answer in the first viewport', () => {
 });
 
 test('a SKU page emits a canonical link, breadcrumb and DefinedTerm', () => {
-  const output = renderSkuPage({ sku, plans: [], similar: [], meta, assets, categoryLabels: {} });
+  const output = renderSkuPage({ sku, plans: [], similar: [], meta, assets });
   assert.ok(output.includes('<link rel="canonical" href="https://sku2name.com/sku/enterprisepack"'));
   assert.ok(output.includes('"@type": "BreadcrumbList"'));
   assert.ok(output.includes('"@type": "DefinedTerm"'));
@@ -150,36 +149,28 @@ test('a plan with no friendly name says so instead of faking one', () => {
   assert.ok(output.includes('<h1>EXCHANGE_S_ENTERPRISE</h1>'));
 });
 
-test('derived categories are always labelled as not a Microsoft field', () => {
-  const categorised = { ...sku, categories: ['government'] };
-  const output = renderSkuPage({ sku: categorised, plans: [], similar: [], meta, assets, categoryLabels: { government: 'Government' } });
-  assert.ok(output.includes('chip-derived'));
-  assert.ok(output.includes('not a Microsoft field'));
-  assert.ok(output.includes('/data/#derived'));
-});
-
 test('the filter bar appears only above the row count where scanning fails', () => {
   const few = Array.from({ length: 10 }, (_, i) => ({ ...plan, planId: `${i}`, slug: `p${i}`, skuCount: 1 }));
   const many = Array.from({ length: 30 }, (_, i) => ({ ...plan, planId: `${i}`, slug: `p${i}`, skuCount: 1 }));
-  assert.ok(!renderSkuPage({ sku, plans: few, similar: [], meta, assets, categoryLabels: {} }).includes('row-filter'));
-  assert.ok(renderSkuPage({ sku, plans: many, similar: [], meta, assets, categoryLabels: {} }).includes('row-filter'));
+  assert.ok(!renderSkuPage({ sku, plans: few, similar: [], meta, assets }).includes('row-filter'));
+  assert.ok(renderSkuPage({ sku, plans: many, similar: [], meta, assets }).includes('row-filter'));
 });
 
 test('every page carries the non-affiliation disclaimer', () => {
-  const output = renderSkuPage({ sku, plans: [], similar: [], meta, assets, categoryLabels: {} });
+  const output = renderSkuPage({ sku, plans: [], similar: [], meta, assets });
   assert.ok(output.includes('not affiliated with or endorsed by Microsoft'));
 });
 
 /* ---------- determinism ---------- */
 
 test('rendering the same page twice is byte-identical', () => {
-  const once = renderSkuPage({ sku, plans: [{ ...plan, skuCount: 41 }], similar: [], meta, assets, categoryLabels: {} });
-  const twice = renderSkuPage({ sku, plans: [{ ...plan, skuCount: 41 }], similar: [], meta, assets, categoryLabels: {} });
+  const once = renderSkuPage({ sku, plans: [{ ...plan, skuCount: 41 }], similar: [], meta, assets });
+  const twice = renderSkuPage({ sku, plans: [{ ...plan, skuCount: 41 }], similar: [], meta, assets });
   assert.equal(once, twice);
 });
 
 test('no render path leaks a build timestamp', () => {
-  const output = renderSkuPage({ sku, plans: [], similar: [], meta, assets, categoryLabels: {} });
+  const output = renderSkuPage({ sku, plans: [], similar: [], meta, assets });
   // The visible date must come from the dataset, not from the clock.
   assert.ok(output.includes('2026-08-14'));
   assert.ok(!output.includes(String(new Date().getFullYear() + 1)));

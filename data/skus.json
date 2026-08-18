@@ -4,7 +4,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesCsvOnly": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
       "22b657cf-0a9e-467b-8a91-5e31f21bc570",
@@ -30,9 +29,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 Business Premium (no Teams)",
     "servicePlanIds": [
       "7bf960f6-2cd9-443a-8046-5dbff9558365",
@@ -106,9 +102,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Privacy Management - subject rights request (1) GCC",
     "servicePlanIds": [
       "5b96ffc4-3853-4cf4-af50-e38505080f6b",
@@ -128,10 +121,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Career Coach for students",
     "servicePlanIds": [
       "80f0ae31-0dfb-425c-b3fc-36f40170eb35"
@@ -149,9 +138,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Pages authenticated users T3 min 1,000 units - 100 users/per site/month capacity pack_USGOV_GCCHIGH",
     "servicePlanIds": [
       "7aae746a-3463-4737-b295-3c1a16c31438",
@@ -171,9 +157,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Dynamics 365 Customer Insights vTrial",
     "servicePlanIds": [
       "94e5cbf6-d843-4ee8-a2ec-8b15eb52019e",
@@ -194,9 +177,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Privacy Management - risk GCC",
     "servicePlanIds": [
       "cd31b152-6326-4d1b-ae1b-997b625182e6",
@@ -216,7 +196,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Office 365 Midsize Business",
     "servicePlanIds": [
       "a23b959c-7ce8-4e57-9140-b90eb88a9e97",
@@ -240,7 +219,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Customer Insights Journeys T3 Interacted People",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -260,7 +238,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesCsvOnly": [
       "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
@@ -331,10 +308,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Power BI Premium Per User for Faculty",
     "servicePlanIds": [
       "70d33638-9c74-4d01-bfd3-562de28bd4ba",
@@ -354,7 +327,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Intune",
     "servicePlanIds": [
       "c1ec4a95-1f05-45b3-a911-aa3fa01094f5"
@@ -372,9 +344,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Digital Messaging for GCC Test SKU",
     "servicePlanIds": [
       "e501d49b-1176-4816-aece-2563c0d995db",
@@ -397,9 +366,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 F1 EEA (no Teams)",
     "servicePlanIds": [
       "b76fb638-6ba6-402a-b9f9-83d28acb3d86",
@@ -435,7 +401,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Skype for Business PSTN Usage Calling Plan",
     "servicePlanIds": [
       "6b340437-d6f9-4dc5-8cc2-99163f7f83d6"
@@ -453,7 +418,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 E5",
     "servicePlanIds": [
       "8c7d2df8-86f0-4902-b2ed-a0458298f3b3",
@@ -556,9 +520,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Project Plan 3 for GCC",
     "servicePlanIds": [
       "83837d9c-c21a-46a0-873e-d834c94015d6",
@@ -582,7 +543,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Entra ID P1",
     "servicePlanIds": [
       "41781fb2-bc02-4b7c-bd55-b576c07bb09d",
@@ -603,10 +563,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government",
-      "addon"
-    ],
     "productName": "Power Automate unattended RPA add-on for Government",
     "servicePlanIds": [
       "922ba911-5694-4e99-a794-73aed9bfeec8",
@@ -626,7 +582,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesMdOnly": [
       "4828c8ec-dc2e-4779-b502-87ac9ce28ab7"
     ],
@@ -649,7 +604,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Sensor Data Intelligence Additional Machines Add-in for Dynamics 365 Supply Chain Management",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -668,7 +622,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Project Online Premium",
     "servicePlanIds": [
       "5dbe027f-2339-4123-9542-606e4d348a72",
@@ -689,7 +642,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Supply Chain Management Attach to Qualifying Dynamics 365 Base Offer",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -712,7 +664,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Rights Management Service Basic Content Protection",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -731,7 +682,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Guides",
     "servicePlanIds": [
       "1315ade1-0410-450d-b8e3-8050e6da320f",
@@ -751,10 +701,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Exchange Online (Plan 2) for Faculty",
     "servicePlanIds": [
       "31cf2cfc-6b0d-4adc-a336-88b724ed8122",
@@ -775,7 +721,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 E3 (500 seats min)_HUB",
     "servicePlanIds": [
       "3efbd4ed-8958-4824-8389-1321f8730af8",
@@ -839,7 +784,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Customer Insights Standalone",
     "servicePlanIds": [
       "b3c26516-3b8d-492f-a5a3-64d70ad3f8d0",
@@ -862,7 +806,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Audio Conferencing",
     "servicePlanIds": [
       "3e26ee1f-8a5f-4d52-aee2-b81ce45c8f40"
@@ -880,7 +823,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Enterprise 1 vCPU 2 GB 64 GB",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -899,7 +841,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Enterprise 4 vCPU 16 GB 512 GB",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -918,7 +859,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Skype for Business PSTN Domestic Calling",
     "servicePlanIds": [
       "4ed3ff63-69d7-4fb7-b984-5aec7f605ca8"
@@ -936,10 +876,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Microsoft Teams Phone Resource Account for Faculty",
     "servicePlanIds": [
       "f47330e9-c134-43b3-9993-e7f004506889"
@@ -957,9 +893,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "PowerApps & Flow GCC Test - O365 & Dyn365 Plans",
     "servicePlanIds": [
       "83837d9c-c21a-46a0-873e-d834c94015d6",
@@ -997,7 +930,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Clipchamp Premium",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -1018,7 +950,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Compliance Program for Microsoft Cloud",
     "servicePlanIds": [
       "1265e154-5544-4197-bba1-03ef69c3b180"
@@ -1036,7 +967,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Defender for Endpoint",
     "servicePlanIds": [
       "871d91ec-ec1a-452b-a83f-bd76c7d770ef",
@@ -1055,7 +985,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesCsvOnly": [
       "54a152dc-90de-4996-93d2-bc47e670fc06",
       "754aec36-45fc-4eaa-bcaf-44f6cb1f553c"
@@ -1077,7 +1006,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Customer Insights User License",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -1097,10 +1025,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Microsoft 365 Apps for Faculty",
     "servicePlanIds": [
       "94065c59-bc8e-4e8b-89e5-5138d471eaff",
@@ -1127,9 +1051,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Office 365 GCC G5 without Audio Conferencing",
     "servicePlanIds": [
       "cd31b152-6326-4d1b-ae1b-997b625182e6",
@@ -1189,7 +1110,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Business 2 vCPU 4 GB 128 GB",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -1210,7 +1130,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Office 365 E4",
     "servicePlanIds": [
       "c87f142c-d1e9-4363-8630-aaea9c4d9ae5",
@@ -1244,7 +1163,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Customer Service Professional",
     "servicePlanIds": [
       "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
@@ -1268,9 +1186,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Dynamics 365 Commerce Trial",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -1289,10 +1204,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government",
-      "addon"
-    ],
     "productName": "Power Apps Portals page view capacity add-on for Government",
     "servicePlanIds": [
       "483d5646-7724-46ac-ad71-c78b7f099d8d",
@@ -1312,7 +1223,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Copilot for Sales",
     "servicePlanIds": [
       "a2194428-ead1-4fc1-bb81-ab8675125f42",
@@ -1341,7 +1251,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Defender for Endpoint P1",
     "servicePlanIds": [
       "292cc034-7b7c-4950-aaf5-943befd3f1d4",
@@ -1360,7 +1269,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams (Free)",
     "servicePlanIds": [
       "36b29273-c6d0-477a-aca6-6fbe24f538e3",
@@ -1383,9 +1291,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft 365 Audio Conferencing - GCCHigh Tenant (AR)_USGOV_GCCHIGH",
     "servicePlanIds": [
       "c85e4b03-254a-453b-af72-167a53f38530"
@@ -1403,7 +1308,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Office 365 E1",
     "servicePlanIds": [
       "5e62787c-c316-451f-b873-1d05acd4d12c",
@@ -1456,10 +1360,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Microsoft 365 A3 for students use benefit",
     "servicePlanIds": [
       "c68f8d98-5534-41c8-bf36-22fa496fa792",
@@ -1513,7 +1413,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 E5 Compliance",
     "servicePlanIds": [
       "2f442157-a11c-46b9-ae5b-6e39ff4e5849",
@@ -1553,7 +1452,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Office 365 E3 Developer",
     "servicePlanIds": [
       "57ff2da0-773e-42df-b2af-ffb7a2317929",
@@ -1583,9 +1481,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 E5 (no Teams)",
     "servicePlanIds": [
       "8a256a2b-b617-496d-b51b-e76466e88db0",
@@ -1689,7 +1584,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Defender Vulnerability Management",
     "servicePlanIds": [
       "36810a13-b903-490a-aa45-afbeb7540832"
@@ -1707,7 +1601,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Customer Service Professional Attach to Qualifying Dynamics 365 Base Offer",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -1728,7 +1621,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Exchange Online (Plan 2)",
     "servicePlanIds": [
       "efb87545-963c-4e0d-99df-69c6916d9eb0"
@@ -1746,9 +1638,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Office 365 Advanced Compliance for GCC",
     "servicePlanIds": [
       "617b097b-4b93-4ede-83de-5f075bb5fb2f",
@@ -1779,10 +1668,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Microsoft 365 A3 - Unattended License for students use benefit",
     "servicePlanIds": [
       "57ff2da0-773e-42df-b2af-ffb7a2317929",
@@ -1836,7 +1721,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Office 365 Advanced Compliance",
     "servicePlanIds": [
       "617b097b-4b93-4ede-83de-5f075bb5fb2f",
@@ -1859,7 +1743,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Business 4 vCPU 16 GB 512 GB",
     "servicePlanIds": [
       "15499661-b229-4a1f-b0f9-bd5832ef7b3e",
@@ -1880,9 +1763,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 for Customer Service Chat for Government",
     "servicePlanIds": [
       "b9f7ce72-67ff-4695-a9d9-5ff620232024",
@@ -1903,10 +1783,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government",
-      "addon"
-    ],
     "productName": "Power BI Premium Per User Add-On for GCC",
     "servicePlanIds": [
       "32d15238-9a8c-46da-af3f-21fc5351d365"
@@ -1924,7 +1800,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesMdOnly": [
       "a22efeae-e37a-47ac-9a61-1572d74202e5"
     ],
@@ -1946,7 +1821,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Audio Conferencing with dial-out to USA/CAN",
     "servicePlanIds": [
       "9974d6cf-cd24-4ba2-921c-e2aa687da846"
@@ -1964,7 +1838,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Enterprise 2 vCPU 8 GB 256 GB",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -1983,9 +1856,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 Enterprise Edition - Additional Non-Production Instance for Government",
     "servicePlanIds": [
       "6d99eb83-7b5f-4947-8e99-cc12f1adb399",
@@ -2004,7 +1874,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Business Central Essentials Attach",
     "servicePlanIds": [
       "60bf28f9-2b70-4522-96f7-335f5e06c941",
@@ -2026,7 +1895,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Sales Enterprise Edition",
     "servicePlanIds": [
       "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
@@ -2050,9 +1918,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Dynamics 365 Customer Service Enterprise Viral Trial",
     "servicePlanIds": [
       "54b37829-818e-4e3c-a08a-3ea66ab9b45d",
@@ -2078,7 +1943,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 10/11 Enterprise E5 (Original)",
     "servicePlanIds": [
       "59231cdf-b40d-4534-a93e-14d0cd31d27e",
@@ -2102,9 +1966,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 E5 EEA (no Teams) (500 seats min)_HUB",
     "servicePlanIds": [
       "a23b959c-7ce8-4e57-9140-b90eb88a9e97",
@@ -2202,9 +2063,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 for Project Service Automation Enterprise Edition for Government",
     "servicePlanIds": [
       "e98256c5-17d0-4987-becc-e991c52d55c6",
@@ -2230,7 +2088,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Stream",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -2251,10 +2108,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Microsoft Teams Phone Standard for Students",
     "servicePlanIds": [
       "4828c8ec-dc2e-4779-b502-87ac9ce28ab7"
@@ -2272,7 +2125,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Shared Use 2 vCPU 4 GB 64 GB",
     "servicePlanIds": [
       "64981bdb-a5a6-4a22-869f-a9455366d5bc"
@@ -2290,7 +2142,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "SharePoint Online (Plan 1)",
     "servicePlanIds": [
       "c7699d2e-19aa-44de-8edf-1736da088ca1"
@@ -2308,7 +2159,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 E5 without Audio Conferencing (500 seats min)_HUB",
     "servicePlanIds": [
       "0d0c0d31-fae7-41f2-b909-eaf4d7f26dba",
@@ -2406,9 +2256,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 Business Basic (no Teams)",
     "servicePlanIds": [
       "a23b959c-7ce8-4e57-9140-b90eb88a9e97",
@@ -2459,7 +2306,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Rooms Pro without Audio Conferencing",
     "servicePlanIds": [
       "41781fb2-bc02-4b7c-bd55-b576c07bb09d",
@@ -2482,7 +2328,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Enterprise 2 vCPU 4 GB 128 GB",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -2501,9 +2346,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 for Sales Professional for Government",
     "servicePlanIds": [
       "153f85dd-d912-4762-af6c-d6e0fb4f6692",
@@ -2529,9 +2371,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Dynamics 365 for Marketing Addnl Contacts Tier 3",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -2550,7 +2389,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesMdOnly": [
       "eec0eb4f-6444-4f95-aba0-50c24d67f998"
     ],
@@ -2595,7 +2433,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Marketing Business Edition",
     "servicePlanIds": [
       "393a0c96-9ba1-4af0-8975-fa2f853a25ac",
@@ -2614,7 +2451,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Field Service Contractor",
     "servicePlanIds": [
       "f4614a66-d632-443a-bc77-afe92987b322",
@@ -2636,7 +2472,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Sales Professional Attach to Qualifying Dynamics 365 Base Offer",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -2655,9 +2490,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Office 365 G3 without Microsoft 365 Apps GCC",
     "servicePlanIds": [
       "a70bbf38-cdda-470d-adb8-5804b8770f41",
@@ -2697,7 +2529,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Business 16 vCPU, 64 GB, 1 TB",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -2718,7 +2549,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Business Premium Donation",
     "servicePlanIds": [
       "0d0c0d31-fae7-41f2-b909-eaf4d7f26dba",
@@ -2792,7 +2622,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power Automate Process",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -2813,7 +2642,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 E5 Security",
     "servicePlanIds": [
       "bf28f719-7844-4079-9c78-c1307898e192",
@@ -2838,10 +2666,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Microsoft Defender for Office 365 (Plan 1) Faculty",
     "servicePlanIds": [
       "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
@@ -2859,10 +2683,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government",
-      "addon"
-    ],
     "productName": "Power Apps Portals login capacity add-on Tier 2 (10 unit min) for Government",
     "servicePlanIds": [
       "bea6aef1-f52d-4cce-ae09-bed96c4b1811",
@@ -2884,7 +2704,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Office 365 E5 Without Audio Conferencing",
     "servicePlanIds": [
       "28b0fa46-c39a-4188-89e2-58e979a6b014",
@@ -2956,9 +2775,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Pages authenticated users T1 100 users/per site/month capacity pack_GCC",
     "servicePlanIds": [
       "cdf787bd-1546-48d2-9e93-b21f9ea7067a",
@@ -2977,7 +2793,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Business Central Essentials",
     "servicePlanIds": [
       "874fc546-6efe-4d22-90b8-5c4e7aa59f4b",
@@ -2998,9 +2813,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 for Sales, Enterprise Edition for Government",
     "servicePlanIds": [
       "2c6af4f1-e7b6-4d59-bbc8-eaa884f42d69",
@@ -3024,7 +2836,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Shared Devices",
     "servicePlanIds": [
       "4828c8ec-dc2e-4779-b502-87ac9ce28ab7",
@@ -3047,9 +2858,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Microsoft Teams Commercial Cloud",
     "servicePlanIds": [
       "902b47e5-dcb2-4fdc-858b-c63a90a2bdb9",
@@ -3081,9 +2889,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Dynamics 365 Field Service Viral Trial",
     "servicePlanIds": [
       "dbe07046-af68-4861-a20d-1c8cbda9194f",
@@ -3105,7 +2910,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power Apps Premium embedded",
     "servicePlanIds": [
       "60bf28f9-2b70-4522-96f7-335f5e06c941",
@@ -3127,9 +2931,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft 365 F3 GCC",
     "servicePlanIds": [
       "41781fb2-bc02-4b7c-bd55-b576c07bb09d",
@@ -3168,9 +2969,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Intune Government",
     "servicePlanIds": [
       "d216f254-796f-4dab-bbfa-710686e646b9",
@@ -3189,7 +2987,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Intune Device",
     "servicePlanIds": [
       "c1ec4a95-1f05-45b3-a911-aa3fa01094f5",
@@ -3210,9 +3007,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Flow Plan 1 for Government",
     "servicePlanIds": [
       "774da41c-a8b3-47c1-8322-b9c1ab68be9f",
@@ -3234,7 +3028,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Entra ID Basic",
     "servicePlanIds": [
       "c4da7f8a-5ee2-4c99-a7e1-87d2df57f6fe"
@@ -3252,9 +3045,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 Enterprise Edition - Additional Production Instance for Government",
     "servicePlanIds": [
       "483cc331-f4df-4a3b-b8ca-fe1a247569f6",
@@ -3273,9 +3063,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Intune Device for Government",
     "servicePlanIds": [
       "c1ec4a95-1f05-45b3-a911-aa3fa01094f5",
@@ -3294,7 +3081,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power Apps Per User BD Only",
     "servicePlanIds": [
       "60bf28f9-2b70-4522-96f7-335f5e06c941",
@@ -3316,9 +3102,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Teams Phone Resource Account for GCC",
     "servicePlanIds": [
       "0628a73f-3b4a-4989-bd7b-0f8823144313"
@@ -3336,9 +3119,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 - Additional Non-Production Instance for Government",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -3357,9 +3137,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Power Pages authenticated users T3 min 1,000 units - 100 users/per site/month capacity pack CN_CN",
     "servicePlanIds": [
       "967d9574-a076-4bb7-ab89-f41f64bc142e",
@@ -3378,7 +3155,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Shared Use 2 vCPU 8 GB 128 GB",
     "servicePlanIds": [
       "057efbfe-a95d-4263-acb0-12b4a31fed8d"
@@ -3396,9 +3172,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft 365 Audio Conferencing for GCC",
     "servicePlanIds": [
       "f544b08d-1645-4287-82de-8d91f37c02a1",
@@ -3419,7 +3192,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Project Online Premium Without Project Client",
     "servicePlanIds": [
       "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
@@ -3441,7 +3213,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Business Central Team Members",
     "servicePlanIds": [
       "d9a6391b-8970-4976-bd94-5f205007c8d8",
@@ -3462,7 +3233,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Shared Use 2 vCPU 8 GB 256 GB",
     "servicePlanIds": [
       "50ef7026-6174-40ba-bff7-f0e4fcddbf65"
@@ -3480,7 +3250,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Sales Premium",
     "servicePlanIds": [
       "874fc546-6efe-4d22-90b8-5c4e7aa59f4b",
@@ -3509,9 +3278,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Microsoft Entra Suite Add-on for Microsoft Entra ID P2",
     "servicePlanIds": [
       "aae826b7-14cd-4691-8178-2b312f7072ea",
@@ -3532,9 +3298,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Office 365 GCC G5 without Power BI and Phone System",
     "servicePlanIds": [
       "efb0351d-3b08-4503-993d-383af8de41e3",
@@ -3595,10 +3358,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Microsoft Entra ID P1 for Faculty",
     "servicePlanIds": [
       "932ad362-64a8-4783-9106-97849a1a30b9",
@@ -3619,10 +3378,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Office 365 A1 for students",
     "servicePlanIds": [
       "1d0f309f-fdf9-4b2a-9ae7-9c48b91f1426",
@@ -3669,10 +3424,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Microsoft 365 A5 for students use benefit",
     "servicePlanIds": [
       "4a51bca5-1eff-43f5-878c-177680f191af",
@@ -3734,9 +3485,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Teams Rooms Pro for GCC",
     "servicePlanIds": [
       "f544b08d-1645-4287-82de-8d91f37c02a1",
@@ -3763,7 +3511,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Sales Copilot",
     "servicePlanIds": [
       "8ba1ff15-7bf6-4620-b65c-ecedb6942766",
@@ -3782,9 +3529,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 E5 EEA (no Teams)",
     "servicePlanIds": [
       "5dbe027f-2339-4123-9542-606e4d348a72",
@@ -3880,7 +3624,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 - Additional Database Storage (Qualified Offer)",
     "servicePlanIds": [
       "77866113-0f3e-4e6e-9666-b1e25c6f99b0",
@@ -3901,10 +3644,6 @@
         "Microsoft 365 A3 Suite features for faculty"
       ]
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Microsoft 365 A3 Suite features for faculty",
     "servicePlanIds": [
       "da24caf9-af8e-485c-b7c8-e73336da2693",
@@ -3924,9 +3663,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Microsoft 365 F5 Security + Compliance Add-on",
     "servicePlanIds": [
       "871d91ec-ec1a-452b-a83f-bd76c7d770ef",
@@ -3971,10 +3707,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government",
-      "addon"
-    ],
     "productName": "Dynamics 365 for Customer Service Digital Messaging add-on for Government",
     "servicePlanIds": [
       "922ba911-5694-4e99-a794-73aed9bfeec8",
@@ -3997,7 +3729,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 P1 Tria for Information Workers",
     "servicePlanIds": [
       "056a5f80-b4e0-4983-a8be-7ad254a113c9",
@@ -4016,9 +3747,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Power Automate unattended RPA add-on",
     "servicePlanIds": [
       "b475952f-128a-4a44-b82a-0b98a45ca7fb",
@@ -4038,7 +3766,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Customer Voice",
     "servicePlanIds": [
       "296820fe-dce5-40f4-a4f2-e14b8feef383",
@@ -4057,7 +3784,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Premium Introductory Pricing",
     "servicePlanIds": [
       "85704d55-2e73-47ee-93b4-4b8ea14db92b",
@@ -4081,9 +3807,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Dynamics CRM Online Basic for Government",
     "servicePlanIds": [
       "3d53f6d9-d6e0-45c1-9575-6acd77692584",
@@ -4104,7 +3827,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Visio Plan 2",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -4125,9 +3847,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Pages authenticated users T3 min 1,000 units - 100 users/per site/month capacity pack_USGOV_DOD",
     "servicePlanIds": [
       "03300fea-7a88-45a6-b5bd-29653803c591",
@@ -4146,9 +3865,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Dynamics 365 Contact Center Add-on for Customer Service Enterprise",
     "servicePlanIds": [
       "f6ec6dfa-2402-468d-a455-89be11116d43",
@@ -4175,9 +3891,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Dynamics 365 for Talent",
     "servicePlanIds": [
       "f815ac79-c5dd-4bcc-9b78-d97f7b817d0d",
@@ -4201,7 +3914,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Viva Goals User-led",
     "servicePlanIds": [
       "b44c6eaf-5c9f-478c-8f16-8cea26353bfb"
@@ -4219,7 +3931,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power BI Pro Dept",
     "servicePlanIds": [
       "70d33638-9c74-4d01-bfd3-562de28bd4ba",
@@ -4240,7 +3951,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Essentials (AAD Identity)",
     "servicePlanIds": [
       "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
@@ -4265,7 +3975,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesMdOnly": [
       "a82fbf69-b4d7-49f4-83a6-915b2cf354f4"
     ],
@@ -4299,7 +4008,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Operations - Device",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -4319,9 +4027,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 for Customer Service, Enterprise Edition for Government",
     "servicePlanIds": [
       "2c6af4f1-e7b6-4d59-bbc8-eaa884f42d69",
@@ -4346,7 +4051,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Business 8 vCPU 32 GB 128 GB",
     "servicePlanIds": [
       "6f23d6a9-adbf-481c-8538-b4c095654487",
@@ -4367,7 +4071,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesMdOnly": [
       "ccaebebf-3634-4975-a0ad-3eccb697f393"
     ],
@@ -4391,7 +4094,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Viva Glint",
     "servicePlanIds": [
       "6b270342-093e-4015-8c5c-224561532fbf"
@@ -4409,7 +4111,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Defender for Office 365 (Plan 2)",
     "servicePlanIds": [
       "8e0c0a52-6a6c-4d40-8370-dd62790dcd70",
@@ -4429,10 +4130,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government",
-      "addon"
-    ],
     "productName": "Microsoft 365 F5 Compliance Add-on GCC",
     "servicePlanIds": [
       "65cc641f-cccd-4643-97e0-a17e3045e541",
@@ -4468,9 +4165,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Office 365 G1 GCC",
     "servicePlanIds": [
       "f9c43823-deb4-46a8-aa65-8b551f0c4f8a",
@@ -4505,7 +4199,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power Pages vTrial for Makers",
     "servicePlanIds": [
       "6817d093-2d30-4249-8bd6-774f01efa78c",
@@ -4525,7 +4218,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Viva Topics",
     "servicePlanIds": [
       "b74d57b2-58e9-484a-9731-aeccbba954f0",
@@ -4544,7 +4236,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power BI Pro CE",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -4563,10 +4254,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Microsoft Teams Shared Devices for Faculty",
     "servicePlanIds": [
       "41781fb2-bc02-4b7c-bd55-b576c07bb09d",
@@ -4590,7 +4277,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Business 2 vCPU 4 GB 64 GB",
     "servicePlanIds": [
       "a790cd6e-a153-4461-83c7-e127037830b6",
@@ -4611,7 +4297,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Business 4 vCPU 16 GB 128 GB (with Windows Hybrid Benefit)",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -4630,7 +4315,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Phone Resource Account",
     "servicePlanIds": [
       "f47330e9-c134-43b3-9993-e7f004506889"
@@ -4648,7 +4332,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 F1",
     "servicePlanIds": [
       "41781fb2-bc02-4b7c-bd55-b576c07bb09d",
@@ -4679,7 +4362,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Basic Collaboration",
     "servicePlanIds": [
       "9aaf7827-d63c-4b61-89c3-182f06f82e5c",
@@ -4700,9 +4382,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Dynamics 365 Customer Voice Additional Responses",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -4721,7 +4400,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Common Data Service Log Capacity",
     "servicePlanIds": [
       "dc48f5c5-e87d-43d6-b884-7ac4a59e7ee9",
@@ -4740,7 +4418,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 E5 Security for EMS E5",
     "servicePlanIds": [
       "871d91ec-ec1a-452b-a83f-bd76c7d770ef",
@@ -4762,7 +4439,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Exchange Online Protection",
     "servicePlanIds": [
       "326e2b78-9d27-42c9-8509-46c827743a17"
@@ -4780,9 +4456,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Power BI for Office 365 Add-On",
     "servicePlanIds": [
       "2125cfd7-2110-4567-83c4-c1cd5275163d",
@@ -4801,7 +4474,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Project Plan 3 (for Department)",
     "servicePlanIds": [
       "fe71d6c3-a2ea-4499-9778-da042bf08063",
@@ -4826,9 +4498,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "edgesMdOnly": [
       "6dc0e3c6-2e4e-463c-90a4-9989d8543841"
     ],
@@ -4851,10 +4520,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Project Plan 3 for Faculty",
     "servicePlanIds": [
       "664a2fed-6c7a-468e-af35-d61740f0ec90",
@@ -4879,7 +4544,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Shared Use 4 vCPU 16 GB 512 GB",
     "servicePlanIds": [
       "48b82071-99a5-4214-b493-406a637bd68d"
@@ -4899,10 +4563,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Microsoft 365 A5 for Students",
     "servicePlanIds": [
       "46129a58-a698-46f0-aa5b-17f6586297d9",
@@ -5004,9 +4664,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Office 365 E3 (no Teams)",
     "servicePlanIds": [
       "dcf9d2f4-772e-4434-b757-77a453cfbc02",
@@ -5061,9 +4718,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Copilot Studio User License for GCC High_USGOV_GCCHIGH",
     "servicePlanIds": [
       "cb867b3c-7f38-4d0d-99ce-e29cd69812c8",
@@ -5085,7 +4739,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Power Automate Plan 2",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -5105,9 +4758,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education"
-    ],
     "productName": "Privacy Management - subject rights request (1) for EDU",
     "servicePlanIds": [
       "5b96ffc4-3853-4cf4-af50-e38505080f6b",
@@ -5127,7 +4777,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Communications Credits",
     "servicePlanIds": [
       "505e180f-f7e0-4b65-91d4-00d670bbd18c"
@@ -5145,7 +4794,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesCsvOnly": [
       "f7e5b77d-f293-410a-bae8-f941f19fe680"
     ],
@@ -5168,7 +4816,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 10/11 Enterprise E5",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -5191,7 +4838,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Sales, Field Service and Customer Service Partner Sandbox",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -5214,7 +4860,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power Automate per user plan",
     "servicePlanIds": [
       "6ea4c1ef-c259-46df-bce2-943342cd3cb2",
@@ -5234,9 +4879,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Visio Plan 2 for GCC",
     "servicePlanIds": [
       "98709c2e-96b5-4244-95f5-a0ebe139fb8a",
@@ -5257,9 +4899,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 Enterprise Edition - Additional Database Storage for Government",
     "servicePlanIds": [
       "62edd427-6067-4274-93c4-29afdeb30707",
@@ -5278,7 +4917,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Visio Plan 1",
     "servicePlanIds": [
       "da792a53-cbc0-4184-a10d-e544dd34b3c1",
@@ -5298,9 +4936,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Clipchamp Premium Add-on",
     "servicePlanIds": [
       "430b908f-78e1-4812-b045-cf83320e7d5d"
@@ -5318,7 +4953,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesMdOnly": [
       "9974d6cf-cd24-4ba2-921c-e2aa687da846"
     ],
@@ -5343,7 +4977,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Office 365 F3",
     "servicePlanIds": [
       "ca6e61ec-d4f4-41eb-8b88-d96e0e14323f",
@@ -5388,10 +5021,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Microsoft 365 A3 for Faculty",
     "servicePlanIds": [
       "932ad362-64a8-4783-9106-97849a1a30b9",
@@ -5456,7 +5085,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Copilot Studio User License",
     "servicePlanIds": [
       "cb867b3c-7f38-4d0d-99ce-e29cd69812c8",
@@ -5476,7 +5104,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Exchange Online (Plan 1)",
     "servicePlanIds": [
       "5e62787c-c316-451f-b873-1d05acd4d12c",
@@ -5496,7 +5123,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Rooms Pro",
     "servicePlanIds": [
       "41781fb2-bc02-4b7c-bd55-b576c07bb09d",
@@ -5520,9 +5146,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft 365 Audio Conferencing_USGOV_GCCHIGH",
     "servicePlanIds": [
       "f1e3613f-3818-4254-9b5e-f02d803384e0"
@@ -5540,9 +5163,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft 365 E5_USGOV_GCCHIGH",
     "servicePlanIds": [
       "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
@@ -5610,7 +5230,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Defender for Office 365 (Plan 1)",
     "servicePlanIds": [
       "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
@@ -5630,7 +5249,6 @@
         "DYN365_ ENTERPRISE _RELATIONSHIP_SALES"
       ]
     },
-    "categories": [],
     "productName": "Microsoft Relationship Sales solution",
     "servicePlanIds": [
       "1259157c-8581-4875-bca7-2ffb18c51bda",
@@ -5658,7 +5276,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesMdOnly": [
       "41781fb2-bc02-4b7c-bd55-b576c07bb09d",
       "79d69417-9e27-4a13-b7a5-80c513145533",
@@ -5690,7 +5307,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Rooms Basic without Audio Conferencing",
     "servicePlanIds": [
       "4a51bca5-1eff-43f5-878c-177680f191af",
@@ -5709,7 +5325,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Defender for Endpoint Server",
     "servicePlanIds": [
       "871d91ec-ec1a-452b-a83f-bd76c7d770ef",
@@ -5728,7 +5343,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 F1",
     "servicePlanIds": [
       "c1ec4a95-1f05-45b3-a911-aa3fa01094f5",
@@ -5763,7 +5377,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Enterprise 2 vCPU 4 GB 256 GB",
     "servicePlanIds": [
       "0d143570-9b92-4f57-adb5-e4efcd23b3bb",
@@ -5782,7 +5395,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Entra Workload ID",
     "servicePlanIds": [
       "7dc0e92d-bf15-401d-907e-0884efe7c760"
@@ -5800,7 +5412,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Teams Premium (for Departments)",
     "servicePlanIds": [
       "78b58230-ec7e-4309-913c-93a45cc4735b",
@@ -5825,9 +5436,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Pages authenticated users T3 min 1,000 units - 100 users/per site/month capacity pack_GCC",
     "servicePlanIds": [
       "cdf787bd-1546-48d2-9e93-b21f9ea7067a",
@@ -5846,10 +5454,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Minecraft Education Student",
     "servicePlanIds": [
       "4c246bbc-f513-4311-beff-eba54c353256",
@@ -5868,9 +5472,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "edgesCsvOnly": [
       "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
@@ -5915,7 +5516,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Planner and Project Plan 3",
     "servicePlanIds": [
       "818523f5-016b-4355-9be8-ed6944946ea7",
@@ -5940,7 +5540,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Skype for Business PSTN Domestic Calling (120 Minutes)",
     "servicePlanIds": [
       "54a152dc-90de-4996-93d2-bc47e670fc06"
@@ -5958,9 +5557,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Defender for Office 365 (Plan 1)_USGOV_GCCHIGH",
     "servicePlanIds": [
       "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
@@ -5978,7 +5574,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Cloud for Sustainability vTrial",
     "servicePlanIds": [
       "81d4ecb8-0481-42fb-8868-51536c5aceeb",
@@ -6000,7 +5595,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Finance",
     "servicePlanIds": [
       "c7657ae3-c0b0-4eed-8c1d-6a7967bd9c65",
@@ -6023,9 +5617,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Defender for Office 365 (Plan 2) GCC",
     "servicePlanIds": [
       "bf28f719-7844-4079-9c78-c1307898e192",
@@ -6045,9 +5636,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Power Apps Portals login capacity add-on Tier 2 (10 unit min)",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -6067,7 +5655,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Contact Center Digital",
     "servicePlanIds": [
       "7e6d7d78-73de-46ba-83b1-6d25117334ba",
@@ -6093,9 +5680,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 Business Standard (no Teams)",
     "servicePlanIds": [
       "a23b959c-7ce8-4e57-9140-b90eb88a9e97",
@@ -6147,7 +5731,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Sales Enterprise Attach to Qualifying Dynamics 365 Base Offer",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -6168,7 +5751,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Power Apps for Developer",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -6189,9 +5771,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "edgesCsvOnly": [
       "292cc034-7b7c-4950-aaf5-943befd3f1d4"
     ],
@@ -6235,9 +5814,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 for Case Management, Enterprise Edition for Government",
     "servicePlanIds": [
       "79bb0a8d-e686-4e16-ac59-2b3fd0014a61",
@@ -6261,9 +5837,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Project Plan 3 for GCC TEST",
     "servicePlanIds": [
       "986d454b-9027-4d9f-880b-f1b68f920cc4",
@@ -6289,7 +5862,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Defender for Business",
     "servicePlanIds": [
       "bfc1bbd9-981b-4f71-9b82-17c35fd0e2a4",
@@ -6310,7 +5882,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Intune Advanced Analytics",
     "servicePlanIds": [
       "2a4baa0e-5e99-4c38-b1f2-6864960f1bd1"
@@ -6328,9 +5899,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Pages authenticated users T2 min 100 units - 100 users/per site/month capacity pack_GCC",
     "servicePlanIds": [
       "cdf787bd-1546-48d2-9e93-b21f9ea7067a",
@@ -6349,9 +5917,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "edgesMdOnly": [
       "0d0c0d31-fae7-41f2-b909-eaf4d7f26dba",
       "199a5c09-e0ca-4e37-8f7c-b05d533e1ea2",
@@ -6428,9 +5993,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Microsoft Copilot Studio Viral Trial",
     "servicePlanIds": [
       "5d798708-6473-48ad-9776-3acc301c40af",
@@ -6450,7 +6012,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Rooms Standard",
     "servicePlanIds": [
       "3e26ee1f-8a5f-4d52-aee2-b81ce45c8f40",
@@ -6475,7 +6036,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesCsvOnly": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
       "4f0142e8-8fb8-44a7-8ef8-665425d93888"
@@ -6497,7 +6057,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Viva Suite",
     "servicePlanIds": [
       "c244cc9e-622f-4576-92ea-82e233e44e36",
@@ -6522,7 +6081,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesMdOnly": [
       "92c6b761-01de-457a-9dd9-793a975238f7",
       "cfce7ae3-4b41-4438-999c-c0e91f3b7fb9"
@@ -6550,9 +6108,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Dynamics 365 Customer Service Insights Trial",
     "servicePlanIds": [
       "4ade5aa6-5959-4d2c-bf0a-f4c9e2cc00f2"
@@ -6570,7 +6125,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Common Data Service for Apps File Capacity",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -6591,7 +6145,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "edgesMdOnly": [
       "0aedf20c-091d-420b-aadf-30c042609612",
       "fe6c28b3-d468-44ea-bbd0-a10a5167435c"
@@ -6620,7 +6173,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Premium",
     "servicePlanIds": [
       "0504111f-feb8-4a3c-992a-70280f9a2869",
@@ -6643,7 +6195,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows Store for Business",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -6662,9 +6213,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Project Plan 3_USGOV_GCCHIGH",
     "servicePlanIds": [
       "5dbe027f-2339-4123-9542-606e4d348a72",
@@ -6687,9 +6235,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Office Mobile Apps for Office 365 for GCC",
     "servicePlanIds": [
       "45c6831b-ad74-4c7f-bd03-7c2b3fa39067",
@@ -6714,9 +6259,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 for Customer Service Enterprise for Government",
     "servicePlanIds": [
       "2c6af4f1-e7b6-4d59-bbc8-eaa884f42d69",
@@ -6742,9 +6284,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Dynamics 365 Customer Voice Additional Responses",
     "servicePlanIds": [
       "e6e35e2d-2e7f-4e71-bc6f-2f40ed062f5d",
@@ -6763,10 +6302,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government",
-      "addon"
-    ],
     "productName": "Power BI Premium Per User Add-On for GCC",
     "servicePlanIds": [
       "32d15238-9a8c-46da-af3f-21fc5351d365"
@@ -6784,7 +6319,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Office 365 E2",
     "servicePlanIds": [
       "5e62787c-c316-451f-b873-1d05acd4d12c",
@@ -6815,7 +6349,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 F3",
     "servicePlanIds": [
       "bd91b1a4-9f94-4ecf-b45b-3a65e5c8128a",
@@ -6871,7 +6404,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Asset Management Addl Assets",
     "servicePlanIds": [
       "90467813-5b40-40d4-835c-abd48009b1d9",
@@ -6890,9 +6422,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 Enterprise Edition - Additional Portal for Government",
     "servicePlanIds": [
       "eac6b45b-aa89-429f-a37b-c8ce00e8367e",
@@ -6911,9 +6440,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Microsoft 365 F5 Security Add-on",
     "servicePlanIds": [
       "eec0eb4f-6444-4f95-aba0-50c24d67f998",
@@ -6939,7 +6465,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 10/11 Enterprise E3",
     "servicePlanIds": [
       "9a6eeb79-0b4b-4bf0-9808-39d99a2cd5a3",
@@ -6961,9 +6486,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Dynamics 365 Business Central for IWs",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -6982,7 +6504,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Rooms Basic",
     "servicePlanIds": [
       "3e26ee1f-8a5f-4d52-aee2-b81ce45c8f40",
@@ -7005,7 +6526,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Multi-app",
     "servicePlanIds": [
       "4f4c7800-298a-4e22-8867-96b17850d4dd",
@@ -7044,9 +6564,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 for Project Service Automation for Government",
     "servicePlanIds": [
       "e98256c5-17d0-4987-becc-e991c52d55c6",
@@ -7072,9 +6589,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 Customer Service Digital Messaging and Voice Add-in for Government",
     "servicePlanIds": [
       "cad9c719-36e0-43c7-9506-6886f272d4f0",
@@ -7096,9 +6610,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Dynamics 365 Sales Premium Viral Trial",
     "servicePlanIds": [
       "81d4ecb8-0481-42fb-8868-51536c5aceeb",
@@ -7121,9 +6632,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 E5 EEA (no Teams) with Calling Minutes",
     "servicePlanIds": [
       "b737dad2-2f6c-4c65-90e3-ca563267e8b9",
@@ -7213,7 +6721,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesCsvOnly": [
       "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
@@ -7270,9 +6777,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Power Pages authenticated users T2 min 100 units - 100 users/per site/month capacity pack",
     "servicePlanIds": [
       "0d3366f3-266e-4117-b422-7cabbc165e7c",
@@ -7292,9 +6796,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Teams Phone Standard for GCCHIGH",
     "servicePlanIds": [
       "4828c8ec-dc2e-4779-b502-87ac9ce28ab7"
@@ -7312,9 +6813,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Privacy Management - subject rights request (1) USGOV_GCCHIGH",
     "servicePlanIds": [
       "5b96ffc4-3853-4cf4-af50-e38505080f6b",
@@ -7334,7 +6832,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Exploratory",
     "servicePlanIds": [
       "bed136c6-b799-4462-824d-fc045d3a9d25",
@@ -7372,9 +6869,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Office 365 E5 EEA (no Teams) without Audio Conferencing",
     "servicePlanIds": [
       "7547a3fe-08ee-4ccb-b430-5077c5041653",
@@ -7448,7 +6942,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Business 2 vCPU 8 GB 128 GB",
     "servicePlanIds": [
       "6f23d6a9-adbf-481c-8538-b4c095654487",
@@ -7469,7 +6962,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Business Center",
     "servicePlanIds": [
       "cca845f9-fd51-4df6-b563-976a37c56ce0"
@@ -7487,7 +6979,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Domestic Calling Plan (240 min)",
     "servicePlanIds": [
       "346d83bf-6fe6-42ca-b424-b9300d2e21bf"
@@ -7505,9 +6996,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Dynamics 365 Contact Center Voice Add-on for Customer Service Enterprise",
     "servicePlanIds": [
       "874fc546-6efe-4d22-90b8-5c4e7aa59f4b",
@@ -7533,7 +7021,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Workload Identities Premium",
     "servicePlanIds": [
       "7dc0e92d-bf15-401d-907e-0884efe7c760",
@@ -7552,9 +7039,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Office 365 F3_USGOV_GCCHIGH",
     "servicePlanIds": [
       "902b47e5-dcb2-4fdc-858b-c63a90a2bdb9",
@@ -7585,7 +7069,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Customer Service Enterprise Edition",
     "servicePlanIds": [
       "67bf4812-f90b-4db9-97e7-c0bbbf7b2d09",
@@ -7612,9 +7095,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Microsoft Teams Trial",
     "servicePlanIds": [
       "42a3ec34-28ba-46b6-992f-db53a675ac5b",
@@ -7641,7 +7121,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Business 2 vCPU 8 GB 256 GB",
     "servicePlanIds": [
       "1a3ef005-2ef6-434b-8be1-faa56c892854",
@@ -7662,7 +7141,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Copilot Studio",
     "servicePlanIds": [
       "7b0640f1-63cc-4f83-b8c6-0a4d78b8b988",
@@ -7682,7 +7160,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Project Online Essentials",
     "servicePlanIds": [
       "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
@@ -7705,9 +7182,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "edgesCsvOnly": [
       "1c56fdd3-59ce-417a-b8bb-a97bb4e67b99",
       "5a6d0425-3ef2-4e42-8372-76709c9effe0",
@@ -7733,7 +7207,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Enterprise 8 vCPU 32 GB 256 GB",
     "servicePlanIds": [
       "69dc175c-dcff-4757-8389-d19e76acb45d",
@@ -7752,9 +7225,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Azure Information Protection Premium P1 for Government",
     "servicePlanIds": [
       "1b66aedf-8ca1-4f73-af76-ec76c6180f98",
@@ -7774,9 +7244,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Privacy Management - risk_USGOV_GCCHIGH",
     "servicePlanIds": [
       "cd31b152-6326-4d1b-ae1b-997b625182e6",
@@ -7798,10 +7265,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Office 365 A1 Plus for faculty",
     "servicePlanIds": [
       "9aaf7827-d63c-4b61-89c3-182f06f82e5c",
@@ -7845,7 +7308,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Privacy Management - subject rights request (10)",
     "servicePlanIds": [
       "74853901-d7a9-428e-895d-f4c8687a9f0b",
@@ -7865,7 +7327,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Agent 365",
     "servicePlanIds": [
       "d0ce5ebb-9db0-491f-b780-8973a1d815fe",
@@ -7894,7 +7355,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Commerce",
     "servicePlanIds": [
       "93cc200d-a47f-4c56-aec1-83f8b0d0425a",
@@ -7925,7 +7385,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Contact Center Voice",
     "servicePlanIds": [
       "5dbe027f-2339-4123-9542-606e4d348a72",
@@ -7951,7 +7410,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Remote Assist",
     "servicePlanIds": [
       "4f4c7800-298a-4e22-8867-96b17850d4dd",
@@ -7973,7 +7431,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Team Members",
     "servicePlanIds": [
       "d5156635-0704-4f66-8803-93258f8b2678",
@@ -8009,10 +7466,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Windows 10/11 Enterprise A5 for faculty",
     "servicePlanIds": [
       "7bf960f6-2cd9-443a-8046-5dbff9558365",
@@ -8034,9 +7487,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Power BI Premium P1",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -8055,7 +7505,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Enterprise 2 vCPU 4 GB 64 GB",
     "servicePlanIds": [
       "23a25099-1b2f-4e07-84bd-b84606109438",
@@ -8074,9 +7523,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Exchange Online (Plan 2) for GCC",
     "servicePlanIds": [
       "8c3069c0-ccdb-44be-ab77-986203a67df2",
@@ -8095,9 +7541,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Pages authenticated users T2 min 100 units - 100 users/per site/month capacity pack_USGOV_GCCHIGH",
     "servicePlanIds": [
       "5410f688-68f2-47a5-9b8f-7466194a806a",
@@ -8119,10 +7562,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Microsoft 365 A3 for Students",
     "servicePlanIds": [
       "c1ec4a95-1f05-45b3-a911-aa3fa01094f5",
@@ -8183,7 +7622,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Business Central Database Capacity",
     "servicePlanIds": [
       "ae6b27b3-fe31-4e77-ae06-ec5fabbc103a",
@@ -8202,9 +7640,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Power Pages authenticated users T2 min 100 units - 100 users/per site/month capacity pack CN_CN",
     "servicePlanIds": [
       "967d9574-a076-4bb7-ab89-f41f64bc142e",
@@ -8223,7 +7658,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Customer Service Chat",
     "servicePlanIds": [
       "426ec19c-d5b1-4548-b894-6fe75028c30d",
@@ -8244,7 +7678,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesCsvOnly": [
       "159f4cd6-e380-449f-a816-af1a9ef76344",
       "199a5c09-e0ca-4e37-8f7c-b05d533e1ea2",
@@ -8288,9 +7721,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Dynamics 365 Contact Center Digital Add-on for Customer Service Enterprise",
     "servicePlanIds": [
       "7e6d7d78-73de-46ba-83b1-6d25117334ba",
@@ -8316,9 +7746,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft Teams EEA",
     "servicePlanIds": [
       "4495894f-534f-41ca-9d3b-0ebf1220a423",
@@ -8347,9 +7774,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Dynamics 365 Regulatory Service - Enterprise Edition Trial",
     "servicePlanIds": [
       "c7657ae3-c0b0-4eed-8c1d-6a7967bd9c65",
@@ -8368,7 +7792,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Exchange Online Essentials (ExO P1 Based)",
     "servicePlanIds": [
       "9aaf7827-d63c-4b61-89c3-182f06f82e5c"
@@ -8386,7 +7809,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Business 2 vCPU 4 GB 256 GB",
     "servicePlanIds": [
       "d55411c9-cfff-40a9-87c7-240f14df7da5",
@@ -8407,7 +7829,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Exchange Online Kiosk",
     "servicePlanIds": [
       "4a82b400-a79f-41a4-b4e2-e94f5787b113"
@@ -8425,9 +7846,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Visio Plan 2_USGOV_GCCHIGH",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -8448,10 +7866,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Microsoft 365 A5 without Audio Conferencing for students use benefit",
     "servicePlanIds": [
       "882e1d05-acd1-4ccb-8708-6ee03664b117",
@@ -8510,7 +7924,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Business 1 vCPU 2 GB 64 GB",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -8533,9 +7946,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Apps per app plan (1 app or website) BD Only - GCC",
     "servicePlanIds": [
       "70091fc8-1836-470f-a386-f4e6639cb04e",
@@ -8556,7 +7966,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Business Voice (without Calling Plan) for US",
     "servicePlanIds": [
       "4828c8ec-dc2e-4779-b502-87ac9ce28ab7",
@@ -8575,9 +7984,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Privacy Management - risk_USGOV_DOD",
     "servicePlanIds": [
       "ebb17a6e-6002-4f65-acb0-d386480cebc1",
@@ -8597,7 +8003,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Human Resources Attach to Qualifying Dynamics 365 Base Offer",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -8621,7 +8026,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Office 365 Multi-Geo Capabilities",
     "servicePlanIds": [
       "41eda15d-6b52-453b-906f-bc4a5b25a26b",
@@ -8641,7 +8045,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Entra ID P2",
     "servicePlanIds": [
       "41781fb2-bc02-4b7c-bd55-b576c07bb09d",
@@ -8663,7 +8066,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Project Plan 1 (for Department)",
     "servicePlanIds": [
       "1259157c-8581-4875-bca7-2ffb18c51bda",
@@ -8686,7 +8088,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Office 365 Cloud App Security",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -8705,9 +8106,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Copilot Studio_USGOV_GCCHIGH",
     "servicePlanIds": [
       "7b0640f1-63cc-4f83-b8c6-0a4d78b8b988",
@@ -8727,7 +8125,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Marketing Attach",
     "servicePlanIds": [
       "a3a4fa10-5092-401a-af30-0462a95a7ac8",
@@ -8747,9 +8144,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Apps per app plan for Government",
     "servicePlanIds": [
       "be6e5cba-3661-424c-b79a-6d95fa1d849a",
@@ -8770,9 +8164,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Power Pages authenticated users T3 min 1,000 units - 100 users/per site/month capacity pack",
     "servicePlanIds": [
       "0d3366f3-266e-4117-b422-7cabbc165e7c",
@@ -8792,7 +8183,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power Apps and Logic Flows",
     "servicePlanIds": [
       "e61a2945-1d4e-4523-b6e7-30ba39d20f32",
@@ -8813,9 +8203,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Office 365 G5 GCC",
     "servicePlanIds": [
       "8c098270-9dd4-4350-9b30-ba4703f3b36b",
@@ -8876,9 +8263,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Enterprise Mobility + Security G5 GCC",
     "servicePlanIds": [
       "bea4c11e-220a-4e6d-8eb8-8ea15d019f90",
@@ -8905,9 +8289,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Compliance Manager Premium Assessment Add-On",
     "servicePlanIds": [
       "3a117d30-cfac-4f00-84ac-54f8b6a18d78"
@@ -8925,7 +8306,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Rights Management Adhoc",
     "servicePlanIds": [
       "7a39d7dd-e456-4e09-842a-0204ee08187b",
@@ -8944,9 +8324,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Apps Premium for Government",
     "servicePlanIds": [
       "91f50f7b-2204-4803-acac-5cf5668b8b39",
@@ -8969,7 +8346,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Team Members Enterprise Edition",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -9006,9 +8382,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 for Field Service for Government",
     "servicePlanIds": [
       "3089c02b-e533-4b73-96a5-01fa648c3c3c",
@@ -9034,9 +8407,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Power BI Premium EM2",
     "servicePlanIds": [
       "4e29abd1-ba96-44c0-8a72-e24e4fe9956e",
@@ -9055,7 +8425,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Sales and Customer Service Enterprise Edition",
     "servicePlanIds": [
       "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
@@ -9079,7 +8448,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Business 8 vCPU 32 GB 512 GB",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -9100,10 +8468,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Windows 10/11 Enterprise A3 for faculty",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -9124,7 +8488,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "App Connect IW",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -9143,7 +8506,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Shared Use 2 vCPU 4 GB 256 GB",
     "servicePlanIds": [
       "aa8fbe7b-695c-4c05-8d45-d1dddf6f7616"
@@ -9161,9 +8523,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "edgesMdOnly": [
       "c948ea65-2053-4a5a-8a62-9eaaaf11b522"
     ],
@@ -9262,7 +8621,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Shared Use 2 vCPU 4 GB 128 GB",
     "servicePlanIds": [
       "51855c77-4d2e-4736-be67-6dca605f2b57"
@@ -9280,7 +8638,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Dynamics CRM Online Basic",
     "servicePlanIds": [
       "bf36ca64-95c6-4918-9275-eb9f4ce2c04f",
@@ -9301,7 +8658,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Exchange Online Archiving for Exchange Server",
     "servicePlanIds": [
       "da040e0a-b393-4bea-bb76-928b3fa1cf5a"
@@ -9319,7 +8675,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Business Apps (free)",
     "servicePlanIds": [
       "39b5c996-467e-4e60-bd62-46066f572726",
@@ -9338,10 +8693,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Microsoft Defender for Office 365 (Plan 1) Student",
     "servicePlanIds": [
       "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
@@ -9359,9 +8710,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Privacy Management - subject rights request (100) GCC",
     "servicePlanIds": [
       "5b96ffc4-3853-4cf4-af50-e38505080f6b",
@@ -9381,9 +8729,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Microsoft 365 F5 Compliance Add-on",
     "servicePlanIds": [
       "2e2ddb96-6af9-4b1d-a3f0-d6ecfd22edb2",
@@ -9423,9 +8768,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Teams Domestic Calling Plan for GCC",
     "servicePlanIds": [
       "3c8a8792-7866-409b-bb61-1b20ace0368b",
@@ -9444,9 +8786,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Power Apps Portals login capacity add-on Tier 3 (50 unit min)",
     "servicePlanIds": [
       "084747ad-b095-4a57-b41f-061d84d69f6f",
@@ -9466,10 +8805,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Project Plan 5 for faculty",
     "servicePlanIds": [
       "fafd7243-e5c1-4a3a-9e40-495efcb1d3c3",
@@ -9494,9 +8829,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Windows 10/11 Enterprise E5 Commercial (GCC Compatible)",
     "servicePlanIds": [
       "e7c91390-7625-45be-94e0-e16907e03118",
@@ -9516,7 +8848,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Business 16 vCPU, 64 GB, 512 GB",
     "servicePlanIds": [
       "cbbedc49-52d5-4fd6-82ac-a5bc51634dc3",
@@ -9537,7 +8868,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Supply Chain Management Premium",
     "servicePlanIds": [
       "7e6d7d78-73de-46ba-83b1-6d25117334ba",
@@ -9567,10 +8897,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Office 365 A1 for faculty",
     "servicePlanIds": [
       "9e700747-8b1d-45e5-ab8d-ef187ceec156",
@@ -9617,9 +8943,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Dynamics 365 Customer Service Enterprise Admin",
     "servicePlanIds": [
       "7e6d7d78-73de-46ba-83b1-6d25117334ba",
@@ -9646,9 +8969,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Teams Rooms Standard for GCC",
     "servicePlanIds": [
       "db23fce2-a974-42ef-9002-d78dd42a0f22",
@@ -9673,10 +8993,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Career Coach for faculty",
     "servicePlanIds": [
       "80f0ae31-0dfb-425c-b3fc-36f40170eb35"
@@ -9694,10 +9010,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Teams Premium for Faculty",
     "servicePlanIds": [
       "ab2d4fb5-f80a-4bf1-a11d-7f1da254041b",
@@ -9724,7 +9036,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Enterprise 4 vCPU 16 GB 256 GB",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -9743,9 +9054,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "App governance add-on to Microsoft Defender for Cloud Apps",
     "servicePlanIds": [
       "f6de4823-28fa-440b-b886-4783fa86ddba",
@@ -9765,9 +9073,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Dynamics 365 Field Service, Enterprise Edition - Resource Scheduling Optimization",
     "servicePlanIds": [
       "24435e4b-87d0-4d7d-8beb-63a9b1573022",
@@ -9787,9 +9092,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Pages authenticated users T1 100 users/per site/month capacity pack_USGOV_GCCHIGH",
     "servicePlanIds": [
       "5410f688-68f2-47a5-9b8f-7466194a806a",
@@ -9809,10 +9111,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Minecraft Education Faculty",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -9831,9 +9129,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Teams Phone Standard_USGOV_GCCHIGH",
     "servicePlanIds": [
       "4828c8ec-dc2e-4779-b502-87ac9ce28ab7"
@@ -9851,7 +9146,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Project Operations",
     "servicePlanIds": [
       "69f07c66-bee4-4222-b051-195095efee5b",
@@ -9880,10 +9174,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Office 365 A3 for students",
     "servicePlanIds": [
       "31b4e2fc-4cd6-4e7d-9c1b-41407303bd66",
@@ -9931,7 +9221,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Defender for Identity",
     "servicePlanIds": [
       "61d18b02-6889-479f-8f36-56e6e0fe5792",
@@ -9951,9 +9240,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Virtual Agent for GCC",
     "servicePlanIds": [
       "e425b9f6-1543-45a0-8efb-f8fdaf18cba1",
@@ -9973,7 +9259,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Office 365 Extra File Storage",
     "servicePlanIds": [
       "be5a7ed5-c598-4fcd-a061-5e6724c68a58"
@@ -9991,9 +9276,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Dynamics 365 for Marketing Additional Application",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -10012,7 +9294,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Guides vTrial",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -10036,7 +9317,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "edgesCsvOnly": [
       "3afa0b92-83ef-41c1-8d64-586ab882a951",
       "795aec3a-93a2-45be-92c4-47b9a76340ca"
@@ -10076,7 +9356,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Intune Plan 1 A VL",
     "servicePlanIds": [
       "3e170737-c728-4eae-bbb9-3f3360f7184c",
@@ -10095,7 +9374,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 E7",
     "servicePlanIds": [
       "27e196a4-8b80-4930-bd65-53fd28581878",
@@ -10223,7 +9501,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Business Central External Accountant",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -10244,9 +9521,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Power Pages authenticated users T1 100 users/per site/month capacity pack CN_CN",
     "servicePlanIds": [
       "967d9574-a076-4bb7-ab89-f41f64bc142e",
@@ -10265,7 +9539,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Calling Plan pay-as-you-go (country zone 1 - US)",
     "servicePlanIds": [
       "156a1efe-17cd-4b03-9f17-2eb512298fb3"
@@ -10283,9 +9556,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education"
-    ],
     "productName": "Privacy Management - subject rights request (100) for EDU",
     "servicePlanIds": [
       "5b96ffc4-3853-4cf4-af50-e38505080f6b",
@@ -10305,10 +9575,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Microsoft 365 A5 Suite features for faculty",
     "servicePlanIds": [
       "d9fa6af4-e046-4c89-9226-729a0786685d",
@@ -10331,9 +9597,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Microsoft Stream Storage Add-On (500 GB)",
     "servicePlanIds": [
       "83bced11-77ce-4071-95bd-240133796768",
@@ -10352,7 +9615,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Lighthouse",
     "servicePlanIds": [
       "6f23d6a9-adbf-481c-8538-b4c095654487",
@@ -10373,9 +9635,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Dynamics 365 For Sales Professional Trial",
     "servicePlanIds": [
       "73f205fc-6b15-47a5-967e-9e64fdf72d0a",
@@ -10396,10 +9655,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "government",
-      "addon"
-    ],
     "productName": "Microsoft 365 F5 Compliance Add-on AR (DOD)_USGOV_DOD",
     "servicePlanIds": [
       "4de31727-a228-4ec3-a5bf-8e45b5ca48cc",
@@ -10434,9 +9689,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Microsoft Sustainability Manager Premium USL Plus",
     "servicePlanIds": [
       "beaf5b5c-d11c-4417-b5cb-cd9f9e6719b0",
@@ -10457,7 +9709,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 - Additional Production Instance (Qualified Offer)",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -10476,7 +9727,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Sensor Data Intelligence Scenario Add-in for Dynamics 365 Supply Chain Management",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -10495,7 +9745,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Universal Print",
     "servicePlanIds": [
       "795f6fe0-cc4d-4773-b050-5dde4dc704c9",
@@ -10514,10 +9763,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government",
-      "addon"
-    ],
     "productName": "Microsoft 365 F5 Compliance Add-on AR_USGOV_GCCHIGH",
     "servicePlanIds": [
       "e26c2fcc-ab91-4a61-b35c-03cdc8dddf66",
@@ -10552,7 +9797,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Threat Experts - Experts on Demand",
     "servicePlanIds": [
       "b83a66d4-f05f-414d-ac0f-ea1c5239c42b"
@@ -10570,7 +9814,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Enterprise 8 vCPU 32 GB 512 GB",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -10589,9 +9832,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Privacy Management - subject rights request (10) GCC",
     "servicePlanIds": [
       "5b96ffc4-3853-4cf4-af50-e38505080f6b",
@@ -10611,9 +9851,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Power Apps Portals page view capacity add-on",
     "servicePlanIds": [
       "1c5a559a-ec06-4f76-be5b-6a315418495f",
@@ -10633,7 +9870,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Azure Information Protection Plan 1",
     "servicePlanIds": [
       "bea4c11e-220a-4e6d-8eb8-8ea15d019f90",
@@ -10653,7 +9889,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Project for Office 365",
     "servicePlanIds": [
       "fafd7243-e5c1-4a3a-9e40-495efcb1d3c3"
@@ -10671,10 +9906,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Microsoft Defender for Office 365 (Plan 1) Student use benefit",
     "servicePlanIds": [
       "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
@@ -10692,9 +9923,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 E3 EEA (no Teams) - Unattended License",
     "servicePlanIds": [
       "0d0c0d31-fae7-41f2-b909-eaf4d7f26dba",
@@ -10753,7 +9981,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Field Service Attach to Qualifying Dynamics 365 Base Offer",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -10772,7 +9999,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Customer Insights Attach",
     "servicePlanIds": [
       "d04ca659-b119-4a92-b8fc-3ede584a9d65",
@@ -10794,9 +10020,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 Business Premium EEA (no Teams)",
     "servicePlanIds": [
       "8e229017-d77b-43d5-9305-903395523b99",
@@ -10863,7 +10086,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Fabric (Free)",
     "servicePlanIds": [
       "c948ea65-2053-4a5a-8a62-9eaaaf11b522",
@@ -10883,10 +10105,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Office 365 A5 for faculty",
     "servicePlanIds": [
       "2b815d45-56e4-4e3a-b65c-66cb9175b560",
@@ -10960,9 +10178,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Teams Phone Standard for GCC",
     "servicePlanIds": [
       "922ba911-5694-4e99-a794-73aed9bfeec8",
@@ -10981,9 +10196,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Enterprise Mobility + Security E5_USGOV_GCCHIGH",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -11010,7 +10222,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Enterprise Edition - Additional Portal (Qualified Offer)",
     "servicePlanIds": [
       "1d4e9cb1-708d-449c-9f71-943aa8ed1d6a",
@@ -11029,7 +10240,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Rooms Basic for EDU",
     "servicePlanIds": [
       "57ff2da0-773e-42df-b2af-ffb7a2317929",
@@ -11052,9 +10262,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Dynamics 365 Business Central Additional Environment Addon",
     "servicePlanIds": [
       "d397d6c6-9664-4502-b71c-66f39c400ca4"
@@ -11072,7 +10279,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Business Voice",
     "servicePlanIds": [
       "4ed3ff63-69d7-4fb7-b984-5aec7f605ca8",
@@ -11092,9 +10298,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 E5 EEA (no Teams) without Audio Conferencing (500 seats min)_HUB",
     "servicePlanIds": [
       "7547a3fe-08ee-4ccb-b430-5077c5041653",
@@ -11185,7 +10388,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesMdOnly": [
       "0aedf20c-091d-420b-aadf-30c042609612",
       "3227bcb2-8448-4f81-b3c2-8c2074e15a2a",
@@ -11220,7 +10422,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power Apps per app plan",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -11241,7 +10442,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 E5 with Calling Minutes",
     "servicePlanIds": [
       "617b097b-4b93-4ede-83de-5f075bb5fb2f",
@@ -11341,7 +10541,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Intune Suite",
     "servicePlanIds": [
       "a6e407da-7411-4397-8a2e-d9b52780849e",
@@ -11363,7 +10562,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "SharePoint Online (Plan 2)",
     "servicePlanIds": [
       "5dbe027f-2339-4123-9542-606e4d348a72"
@@ -11381,7 +10579,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Defender Threat Intelligence",
     "servicePlanIds": [
       "fbdb91e6-7bfd-4a1f-8f7a-d27f4ef39702"
@@ -11399,7 +10596,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Shared Use 4 vCPU 16 GB 256 GB",
     "servicePlanIds": [
       "2d1d344e-d10c-41bb-953b-b3a47521dca0"
@@ -11417,10 +10613,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government",
-      "addon"
-    ],
     "productName": "Compliance Manager Premium Assessment Add-On for GCC",
     "servicePlanIds": [
       "3a117d30-cfac-4f00-84ac-54f8b6a18d78"
@@ -11438,7 +10630,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Exchange Online (Plan 1) for Alumni with Yammer",
     "servicePlanIds": [
       "882e1d05-acd1-4ccb-8708-6ee03664b117",
@@ -11458,9 +10649,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "nonprofit"
-    ],
     "productName": "Nonprofit Portal",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -11479,7 +10667,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Phone Standard for Small and Medium Business",
     "servicePlanIds": [
       "ed777b71-af04-42ca-9798-84344c66f7c6"
@@ -11497,9 +10684,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Privacy Management - subject rights request (10) USGOV_DOD",
     "servicePlanIds": [
       "5b96ffc4-3853-4cf4-af50-e38505080f6b",
@@ -11519,7 +10703,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Business Standard - Prepaid Legacy",
     "servicePlanIds": [
       "41bf139a-4e60-409f-9346-a1361efc6dfb",
@@ -11552,10 +10735,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Exchange Online (Plan 1) for Students",
     "servicePlanIds": [
       "31cf2cfc-6b0d-4adc-a336-88b724ed8122",
@@ -11576,9 +10755,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Microsoft Defender Vulnerability Management Add-on",
     "servicePlanIds": [
       "36810a13-b903-490a-aa45-afbeb7540832"
@@ -11596,7 +10772,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Business 4 vCPU 16 GB 128 GB",
     "servicePlanIds": [
       "d55411c9-cfff-40a9-87c7-240f14df7da5",
@@ -11617,9 +10792,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education"
-    ],
     "productName": "Microsoft 365 Copilot (Education Faculty)",
     "servicePlanIds": [
       "89f1c4c8-0878-40f7-804d-869c9128ab5d",
@@ -11644,10 +10816,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Microsoft Fabric (Free) for faculty",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -11666,7 +10834,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Teams Phone with Calling Plan",
     "servicePlanIds": [
       "4ed3ff63-69d7-4fb7-b984-5aec7f605ca8",
@@ -11685,9 +10852,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "edgesCsvOnly": [
       "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
@@ -11717,7 +10881,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesCsvOnly": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
       "2d2f174c-c3cc-4abe-9ce8-4dd86f469ab1",
@@ -11743,7 +10906,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Sustainability Manager Premium",
     "servicePlanIds": [
       "ba80223c-e515-4642-a838-3e7d66f70cb6",
@@ -11763,10 +10925,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Enterprise Mobility + Security A3 for Faculty",
     "servicePlanIds": [
       "c1ec4a95-1f05-45b3-a911-aa3fa01094f5",
@@ -11793,7 +10951,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Project Operations Attach",
     "servicePlanIds": [
       "7df1d500-ca5c-4229-8cea-815bc88798c9",
@@ -11818,7 +10975,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Enterprise Mobility + Security E5",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -11847,9 +11003,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Teams Phone Standard_USGOV_DOD",
     "servicePlanIds": [
       "4828c8ec-dc2e-4779-b502-87ac9ce28ab7"
@@ -11867,9 +11020,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft 365 GCC G5 w/o WDATP/CAS Unified",
     "servicePlanIds": [
       "4a51bca5-1eff-43f5-878c-177680f191af",
@@ -11938,9 +11088,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "edgesCsvOnly": [
       "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
@@ -11969,7 +11116,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Defender for Endpoint P2_XPLAT",
     "servicePlanIds": [
       "871d91ec-ec1a-452b-a83f-bd76c7d770ef",
@@ -11989,9 +11135,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Teams Shared Devices for GCC",
     "servicePlanIds": [
       "db23fce2-a974-42ef-9002-d78dd42a0f22",
@@ -12014,7 +11157,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 A1",
     "servicePlanIds": [
       "da24caf9-af8e-485c-b7c8-e73336da2693",
@@ -12035,9 +11177,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 Business Basic EEA (no Teams)",
     "servicePlanIds": [
       "0feaeb32-d00e-4d66-bd5a-43b5b83db82c",
@@ -12082,7 +11221,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Apps for Business",
     "servicePlanIds": [
       "094e7854-93fc-4d55-b2c0-3ab5369ebdc1",
@@ -12104,7 +11242,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power Apps Premium",
     "servicePlanIds": [
       "91f50f7b-2204-4803-acac-5cf5668b8b39",
@@ -12128,7 +11265,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Business 4 vCPU 16 GB 256 GB",
     "servicePlanIds": [
       "6f23d6a9-adbf-481c-8538-b4c095654487",
@@ -12149,7 +11285,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power Automate per flow plan",
     "servicePlanIds": [
       "c84e52ae-1906-4947-ac4d-6fb3e5bf7c2e",
@@ -12169,9 +11304,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Intune Plan 1 A VL_USGOV_GCCHIGH",
     "servicePlanIds": [
       "3e170737-c728-4eae-bbb9-3f3360f7184c",
@@ -12190,9 +11322,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Teams Rooms Standard for GCC without Audio Conferencing",
     "servicePlanIds": [
       "92c6b761-01de-457a-9dd9-793a975238f7",
@@ -12218,7 +11347,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power Apps per app plan (1 app or portal)",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -12240,9 +11368,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Pages authenticated users T1 100 users/per site/month capacity pack_USGOV_DOD",
     "servicePlanIds": [
       "7aae746a-3463-4737-b295-3c1a16c31438",
@@ -12261,7 +11386,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Talent: Onboard",
     "servicePlanIds": [
       "2d925ad8-2479-4bd8-bb76-5b80f1d48935",
@@ -12282,9 +11406,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Office 365 E1 EEA (no Teams)",
     "servicePlanIds": [
       "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
@@ -12330,10 +11451,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Project Plan 5 without Project Client for Faculty",
     "servicePlanIds": [
       "9b5de886-f035-4ff2-b3d8-c9127bea3620",
@@ -12356,7 +11473,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Operations – Activity",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -12379,7 +11495,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Teams Phone Mobile",
     "servicePlanIds": [
       "cb22fbd7-ed7d-4786-a27a-e4cd617b69c0"
@@ -12397,7 +11512,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Skype for Business Online (Plan 1)",
     "servicePlanIds": [
       "afc06cb0-b4f4-4473-8286-d644f70d8faf"
@@ -12415,9 +11529,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Dynamics CRM Online for Government",
     "servicePlanIds": [
       "2b8c7c8c-9db5-44a5-a1dd-f4aa5b97b372",
@@ -12438,9 +11549,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 for Team Members Enterprise Edition for Government",
     "servicePlanIds": [
       "63efc247-5f28-43e3-a2f8-00c183e3f1db",
@@ -12465,9 +11573,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Privacy Management - subject rights request (100) USGOV_DOD",
     "servicePlanIds": [
       "500f440d-167e-4030-a3a7-8cd35421fbd8",
@@ -12487,7 +11592,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Viva Goals",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -12506,7 +11610,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Imagine Academy",
     "servicePlanIds": [
       "d736def0-1fde-43f0-a5be-e3f8b2de6e41"
@@ -12524,9 +11627,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education"
-    ],
     "productName": "Microsoft Defender for Endpoint P1 for EDU",
     "servicePlanIds": [
       "292cc034-7b7c-4950-aaf5-943befd3f1d4"
@@ -12544,9 +11644,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Windows 365 Enterprise 4 vCPU 16 GB 256 GB (Preview)",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -12565,9 +11662,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Power BI Premium EM1",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -12586,9 +11680,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Dynamics 365 Customer Voice Trial",
     "servicePlanIds": [
       "17efdd9f-c22c-4ad8-b48e-3b1f3ee1dc9a",
@@ -12610,9 +11701,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Windows 365 Enterprise 2 vCPU 4 GB 128 GB (Preview)",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -12631,7 +11719,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Office 365 Small Business",
     "servicePlanIds": [
       "d42bdbd6-c335-4231-ab3d-c8f348d5aff5",
@@ -12652,10 +11739,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Microsoft Fabric (Free) for student",
     "servicePlanIds": [
       "2049e525-b859-401b-b2a0-e0a31c4b1fe4",
@@ -12676,7 +11759,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "edgesMdOnly": [
       "1259157c-8581-4875-bca7-2ffb18c51bda"
     ],
@@ -12703,7 +11785,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Planner Plan 1",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -12728,7 +11809,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "PowerApps per app baseline access",
     "servicePlanIds": [
       "35122886-cef5-44a3-ab36-97134eabd9ba",
@@ -12748,10 +11828,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Visio Plan 2 for Faculty",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -12772,11 +11848,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty",
-      "addon"
-    ],
     "productName": "Power BI Premium Per User Add-On for Faculty",
     "servicePlanIds": [
       "0bf3c642-7bb5-4ccc-884e-59d09df0266c",
@@ -12795,9 +11866,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Apps per app plan (1 app or website) for Government",
     "servicePlanIds": [
       "8e2c2c3d-07f6-4da7-86a9-e78cc8c2c8b9",
@@ -12819,7 +11887,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power BI Premium Per User",
     "servicePlanIds": [
       "70d33638-9c74-4d01-bfd3-562de28bd4ba",
@@ -12839,9 +11906,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 Business Standard EEA (no Teams)",
     "servicePlanIds": [
       "a1ace008-72f3-4ea0-8dac-33b3a23a2472",
@@ -12893,7 +11957,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Apps for Enterprise",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -12919,7 +11982,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Rooms Pro for EDU",
     "servicePlanIds": [
       "1d0f309f-fdf9-4b2a-9ae7-9c48b91f1426",
@@ -12950,7 +12012,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 E3 - Unattended License",
     "servicePlanIds": [
       "5dbe027f-2339-4123-9542-606e4d348a72",
@@ -13013,10 +12074,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Microsoft 365 Audio Conferencing for faculty",
     "servicePlanIds": [
       "3e26ee1f-8a5f-4d52-aee2-b81ce45c8f40"
@@ -13034,9 +12091,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "10-Year Audit Log Retention Add On",
     "servicePlanIds": [
       "7d16094b-4db8-41ff-a182-372a90a85407"
@@ -13056,9 +12110,6 @@
         "O365_w/o Teams Bundle_M3"
       ]
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 E3 EEA (no Teams)",
     "servicePlanIds": [
       "882e1d05-acd1-4ccb-8708-6ee03664b117",
@@ -13119,10 +12170,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Microsoft 365 Apps for Students",
     "servicePlanIds": [
       "882e1d05-acd1-4ccb-8708-6ee03664b117",
@@ -13149,9 +12196,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Dynamics 365 for Marketing Additional Non-Prod Application",
     "servicePlanIds": [
       "1599de10-5250-4c95-acf2-491f74edce48"
@@ -13169,9 +12213,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 for Field Service Enterprise Edition for Government",
     "servicePlanIds": [
       "638862ef-afb3-46e4-b292-ed0aad759476",
@@ -13196,7 +12237,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Privacy Management - subject rights request (50)",
     "servicePlanIds": [
       "8bbd1fea-6dc6-4aef-8abc-79af22d746e4",
@@ -13216,7 +12256,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 E5 Developer (without Windows and Audio Conferencing)",
     "servicePlanIds": [
       "6c57d4b6-3b23-47a5-9bc9-69f17b4947b3",
@@ -13304,7 +12343,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Azure Information Protection Plan 1",
     "servicePlanIds": [
       "6c57d4b6-3b23-47a5-9bc9-69f17b4947b3",
@@ -13323,9 +12361,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Azure Information Protection Premium P1_USGOV_GCCHIGH",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -13345,7 +12380,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Visio Plan 2",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -13366,9 +12400,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Dynamics 365 AI for Market Insights (Preview)",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -13387,9 +12418,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Enterprise Mobility + Security G3 GCC",
     "servicePlanIds": [
       "41781fb2-bc02-4b7c-bd55-b576c07bb09d",
@@ -13413,7 +12441,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Field Service Enterprise Edition",
     "servicePlanIds": [
       "7e6d7d78-73de-46ba-83b1-6d25117334ba",
@@ -13439,7 +12466,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Office 365 E5",
     "servicePlanIds": [
       "4a51bca5-1eff-43f5-878c-177680f191af",
@@ -13513,10 +12539,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Windows Store for Business EDU Faculty",
     "servicePlanIds": [
       "aaa2cd24-5519-450f-a1a0-160750710ca1"
@@ -13534,9 +12556,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Automate per user plan for Government",
     "servicePlanIds": [
       "37396c73-2203-48e6-8be1-d882dae53275",
@@ -13556,7 +12575,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Enterprise 8 vCPU 32 GB 128 GB",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -13575,7 +12593,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Viva Learning",
     "servicePlanIds": [
       "7162bd38-edae-4022-83a7-c5837f951759"
@@ -13593,9 +12610,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Project Online Essentials for GCC",
     "servicePlanIds": [
       "922ba911-5694-4e99-a794-73aed9bfeec8",
@@ -13616,7 +12630,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Visio Plan 1",
     "servicePlanIds": [
       "da792a53-cbc0-4184-a10d-e544dd34b3c1",
@@ -13636,9 +12649,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "edgesCsvOnly": [
       "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
@@ -13673,7 +12683,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Exchange Online POP",
     "servicePlanIds": [
       "90927877-dcff-4af6-b346-2332c0b15bb7"
@@ -13693,7 +12702,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 10/11 Enterprise E3",
     "servicePlanIds": [
       "21b439ba-a0ca-424f-a6cc-52f954a5b111"
@@ -13711,7 +12719,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Azure Multi-Factor Authentication",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -13730,9 +12737,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 Enterprise Edition - Additional Portal for Government",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -13751,7 +12755,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Business Premium",
     "servicePlanIds": [
       "5bfe124c-bbdc-4494-8835-f1297d457d79",
@@ -13823,7 +12826,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Financials Business Edition",
     "servicePlanIds": [
       "920656a2-7dd8-4c83-97b6-a356414dbd36",
@@ -13843,7 +12845,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 UNF OPS Plan ENT Edition",
     "servicePlanIds": [
       "300b8114-8555-4313-b861-0c115d820f50",
@@ -13868,7 +12869,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 E5 without Audio Conferencing",
     "servicePlanIds": [
       "41fcdd7d-4733-4863-9cf4-c65b83ce2df4",
@@ -13968,9 +12968,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Apps Per App BD Only for GCC",
     "servicePlanIds": [
       "922ba911-5694-4e99-a794-73aed9bfeec8",
@@ -13991,7 +12988,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Apps for Business",
     "servicePlanIds": [
       "13696edf-5a08-49f6-8134-03083ed8ba30",
@@ -14013,9 +13009,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Privacy Management - subject rights request (100) USGOV_GCCHIGH",
     "servicePlanIds": [
       "500f440d-167e-4030-a3a7-8cd35421fbd8",
@@ -14035,7 +13028,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Privacy Management - subject rights request (100)",
     "servicePlanIds": [
       "500f440d-167e-4030-a3a7-8cd35421fbd8",
@@ -14055,9 +13047,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Office 365 E5 EEA (no Teams)",
     "servicePlanIds": [
       "28b0fa46-c39a-4188-89e2-58e979a6b014",
@@ -14132,7 +13121,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Entra ID Governance",
     "servicePlanIds": [
       "e866a266-3cff-43a3-acca-0c90a7e00c8b"
@@ -14150,9 +13138,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Teams Phone Standard for DOD",
     "servicePlanIds": [
       "4828c8ec-dc2e-4779-b502-87ac9ce28ab7"
@@ -14170,9 +13155,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Defender for Office 365 (Plan 1) GCC",
     "servicePlanIds": [
       "493ff600-6a2b-4db6-ad37-a7d4eb214516"
@@ -14192,7 +13174,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Domestic Calling Plan (120 minutes) - US",
     "servicePlanIds": [
       "1346d5e6-15a6-4b88-9693-806ff7296a7a"
@@ -14212,7 +13193,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 10/11 Enterprise E3 VDA",
     "servicePlanIds": [
       "e7c91390-7625-45be-94e0-e16907e03118",
@@ -14236,7 +13216,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Dynamics CRM Online",
     "servicePlanIds": [
       "3413916e-ee66-4071-be30-6f94d4adfeda",
@@ -14258,9 +13237,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Office 365 F3 EEA (no Teams)",
     "servicePlanIds": [
       "902b47e5-dcb2-4fdc-858b-c63a90a2bdb9",
@@ -14305,7 +13281,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesMdOnly": [
       "6dc0e3c6-2e4e-463c-90a4-9989d8543841"
     ],
@@ -14328,9 +13303,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "AI Builder Capacity add-on",
     "servicePlanIds": [
       "a7c70a41-5e02-4271-93e6-d9b4184d83f5",
@@ -14349,9 +13321,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Automate Premium for Government",
     "servicePlanIds": [
       "fb613c67-1a58-4645-a8df-21e95a37d433",
@@ -14371,7 +13340,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Case Management Enterprise Edition",
     "servicePlanIds": [
       "1259157c-8581-4875-bca7-2ffb18c51bda",
@@ -14396,7 +13364,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Skype for Business PSTN Domestic and International Calling",
     "servicePlanIds": [
       "5a10155d-f5c1-411a-a8ec-e99aae125390"
@@ -14414,9 +13381,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Privacy Management - subject rights request (1) USGOV_DOD",
     "servicePlanIds": [
       "5b96ffc4-3853-4cf4-af50-e38505080f6b",
@@ -14436,7 +13400,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Skype for Business PSTN Domestic and International Calling",
     "servicePlanIds": [
       "d4009785-b899-4cab-97b6-d06a7c799507"
@@ -14454,7 +13417,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Skype for Business Online (Plan 2)",
     "servicePlanIds": [
       "0feaeb32-d00e-4d66-bd5a-43b5b83db82c"
@@ -14472,7 +13434,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Skype for Business PSTN Calling Domestic Small",
     "servicePlanIds": [
       "9a0125a5-c8f8-4526-b231-49e2abe0ebce"
@@ -14490,10 +13451,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Windows 10/11 Enterprise A3 for students",
     "servicePlanIds": [
       "795f6fe0-cc4d-4773-b050-5dde4dc704c9",
@@ -14514,7 +13471,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Business Voice (without Calling Plan)",
     "servicePlanIds": [
       "4828c8ec-dc2e-4779-b502-87ac9ce28ab7",
@@ -14533,9 +13489,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "edgesCsvOnly": [
       "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
@@ -14568,9 +13521,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Office 365 E3 EEA (no Teams)",
     "servicePlanIds": [
       "94065c59-bc8e-4e8b-89e5-5138d471eaff",
@@ -14618,7 +13568,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Finance Attach to Qualifying Dynamics 365 Base Offer",
     "servicePlanIds": [
       "60bf28f9-2b70-4522-96f7-335f5e06c941",
@@ -14641,9 +13590,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Copilot Studio for GCC",
     "servicePlanIds": [
       "5dd1819f-0de7-487f-985b-c450a4c9cc1d",
@@ -14663,7 +13609,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power Automate per user plan dept",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -14683,9 +13628,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Dynamics 365 for Marketing Addnl Contacts Tier 5",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -14704,7 +13646,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Privacy Management - subject rights request (1)",
     "servicePlanIds": [
       "5b96ffc4-3853-4cf4-af50-e38505080f6b",
@@ -14724,10 +13665,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Microsoft Teams Phone Standard for Faculty",
     "servicePlanIds": [
       "4828c8ec-dc2e-4779-b502-87ac9ce28ab7"
@@ -14745,9 +13682,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education"
-    ],
     "productName": "Intune for Education",
     "servicePlanIds": [
       "3a3976ce-de18-4a87-a78e-5e9245e252df",
@@ -14769,9 +13703,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Automate per flow plan for Government",
     "servicePlanIds": [
       "922ba911-5694-4e99-a794-73aed9bfeec8",
@@ -14791,7 +13722,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesCsvOnly": [
       "a82fbf69-b4d7-49f4-83a6-915b2cf354f4"
     ],
@@ -14825,7 +13755,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Customer Service Voice Channel Add-in",
     "servicePlanIds": [
       "f6ec6dfa-2402-468d-a455-89be11116d43",
@@ -14845,7 +13774,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Finance Attach to Qualifying Base Offer Embedded with Project Management & Accounting",
     "servicePlanIds": [
       "6d8e07c6-9613-484f-8cc1-a66c5c3979bb",
@@ -14870,7 +13798,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 E5 (500 seats min)_HUB",
     "servicePlanIds": [
       "b76fb638-6ba6-402a-b9f9-83d28acb3d86",
@@ -14969,7 +13896,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesCsvOnly": [
       "156a1efe-17cd-4b03-9f17-2eb512298fb3",
       "2b9bf4f4-ac52-42c5-8456-f70ee4924295"
@@ -14991,9 +13917,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Microsoft Power Apps Plan 2 Trial",
     "servicePlanIds": [
       "d5368ca3-357e-4acb-9c21-8495fb025d1f",
@@ -15015,9 +13938,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education"
-    ],
     "productName": "Privacy Management - risk for EDU",
     "servicePlanIds": [
       "cd31b152-6326-4d1b-ae1b-997b625182e6",
@@ -15037,9 +13957,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 E3 (no Teams)",
     "servicePlanIds": [
       "41781fb2-bc02-4b7c-bd55-b576c07bb09d",
@@ -15106,7 +14023,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Power Apps Plan 2 (Qualified Offer)",
     "servicePlanIds": [
       "00527d7f-d5bc-4c2a-8d1e-6c0de2410c81",
@@ -15127,7 +14043,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Hybrid Connector",
     "servicePlanIds": [
       "0210d5c8-49d2-4dd1-a01b-a91c7c14e0bf",
@@ -15146,7 +14061,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "TELSTRA Calling for O365",
     "servicePlanIds": [
       "7861360b-dc3b-4eba-a3fc-0d323a035746"
@@ -15164,9 +14078,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Power BI Premium Per User Add-On",
     "servicePlanIds": [
       "0bf3c642-7bb5-4ccc-884e-59d09df0266c"
@@ -15184,9 +14095,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Entra ID P1_USGOV_GCCHIGH",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -15207,10 +14115,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Power BI Pro for Faculty",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -15229,9 +14133,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "edgesMdOnly": [
       "7aae746a-3463-4737-b295-3c1a16c31438"
     ],
@@ -15254,7 +14155,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "edgesMdOnly": [
       "f6de4823-28fa-440b-b886-4783fa86ddba"
     ],
@@ -15277,7 +14177,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Audio Conferencing Pay-Per-Minute - EA",
     "servicePlanIds": [
       "bb038288-76ab-49d6-afc1-eaa6c222c65a"
@@ -15295,7 +14194,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Contact Center",
     "servicePlanIds": [
       "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
@@ -15322,9 +14220,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education"
-    ],
     "productName": "Privacy Management - subject rights request (10) for EDU",
     "servicePlanIds": [
       "5b96ffc4-3853-4cf4-af50-e38505080f6b",
@@ -15344,7 +14239,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 - Additional Non-Production Instance (Qualified Offer)",
     "servicePlanIds": [
       "a98b7619-66c7-4885-bdfc-1d9c8c3d279f",
@@ -15363,7 +14257,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Exploratory Dept",
     "servicePlanIds": [
       "882e1d05-acd1-4ccb-8708-6ee03664b117",
@@ -15404,7 +14297,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power BI",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -15424,7 +14316,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Customer Voice USL",
     "servicePlanIds": [
       "3ca0766a-643e-4304-af20-37f02726339b",
@@ -15444,7 +14335,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Enterprise 2 vCPU 8 GB 128 GB",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -15463,9 +14353,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft 365 GCC G5",
     "servicePlanIds": [
       "843da3a8-d2cc-4e7a-9e90-dc46019f964c",
@@ -15539,9 +14426,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Teams Phone Resource Account_USGOV_GCCHIGH",
     "servicePlanIds": [
       "f47330e9-c134-43b3-9993-e7f004506889"
@@ -15559,7 +14443,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Privacy Management – risk",
     "servicePlanIds": [
       "f281fb1f-99a7-46ab-9edb-ffd74e260ed3",
@@ -15579,7 +14462,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Defender for Endpoint F2",
     "servicePlanIds": [
       "871d91ec-ec1a-452b-a83f-bd76c7d770ef"
@@ -15597,10 +14479,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Project Online Essentials for Faculty",
     "servicePlanIds": [
       "a23b959c-7ce8-4e57-9140-b90eb88a9e97",
@@ -15623,7 +14501,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Phone Standard",
     "servicePlanIds": [
       "4828c8ec-dc2e-4779-b502-87ac9ce28ab7"
@@ -15641,7 +14518,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Advanced Communications",
     "servicePlanIds": [
       "604ec28a-ae18-4bc6-91b0-11da94504ba9"
@@ -15659,7 +14535,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Remote Assist HoloLens",
     "servicePlanIds": [
       "57ff2da0-773e-42df-b2af-ffb7a2317929",
@@ -15679,7 +14554,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Operations - Sandbox Tier 2:Standard Acceptance Testing",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -15698,7 +14572,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power Virtual Agent",
     "servicePlanIds": [
       "f6934f16-83d3-4f3b-ad27-c6e9c187b260",
@@ -15718,9 +14591,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power BI Premium Per User for Government",
     "servicePlanIds": [
       "944e9726-f011-4353-b654-5f7d2663db76",
@@ -15740,7 +14610,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Talent: Attract",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -15760,9 +14629,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Office 365 Extra File Storage for GCC",
     "servicePlanIds": [
       "922ba911-5694-4e99-a794-73aed9bfeec8",
@@ -15783,10 +14649,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Office 365 A3 for faculty",
     "servicePlanIds": [
       "199a5c09-e0ca-4e37-8f7c-b05d533e1ea2",
@@ -15836,7 +14698,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Business Voice (UK",
     "servicePlanIds": [
       "4ed3ff63-69d7-4fb7-b984-5aec7f605ca8",
@@ -15856,7 +14717,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Intune SMB",
     "servicePlanIds": [
       "8e9ff0ff-aa7a-4b20-83c1-2f636b600ac2",
@@ -15877,7 +14737,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Common Data Service Database Capacity",
     "servicePlanIds": [
       "360bcc37-0c11-4264-8eed-9fa7a3297c9b",
@@ -15896,7 +14755,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "OneDrive for Business (Plan 1)",
     "servicePlanIds": [
       "a23b959c-7ce8-4e57-9140-b90eb88a9e97",
@@ -15917,9 +14775,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 Field Service Contractor for Government",
     "servicePlanIds": [
       "3089c02b-e533-4b73-96a5-01fa648c3c3c",
@@ -15939,9 +14794,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "edgesCsvOnly": [
       "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
@@ -15992,10 +14844,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Office 365 A1 Plus for students",
     "servicePlanIds": [
       "e03c7e47-402c-463c-ab25-949079bedb21",
@@ -16038,9 +14886,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 for Sales Enterprise for Government",
     "servicePlanIds": [
       "8ba1ff15-7bf6-4620-b65c-ecedb6942766",
@@ -16070,7 +14915,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Exchange Enterprise CAL Services (EOP DLP)",
     "servicePlanIds": [
       "bea4c11e-220a-4e6d-8eb8-8ea15d019f90",
@@ -16089,7 +14933,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Exchange Online Essentials",
     "servicePlanIds": [
       "5e62787c-c316-451f-b873-1d05acd4d12c",
@@ -16108,10 +14951,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "faculty"
-    ],
     "productName": "Microsoft 365 A5 for faculty",
     "servicePlanIds": [
       "617b097b-4b93-4ede-83de-5f075bb5fb2f",
@@ -16217,7 +15056,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Customer Engagement Plan",
     "servicePlanIds": [
       "fe71d6c3-a2ea-4499-9778-da042bf08063",
@@ -16256,7 +15094,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Apps for enterprise (device)",
     "servicePlanIds": [
       "3c994f28-87d5-4273-b07a-eb6190852599"
@@ -16274,9 +15111,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 Customer Service Digital Messaging and Voice Add-in for Government for Test",
     "servicePlanIds": [
       "411b0c93-8f89-455e-a663-c0a3effd12c3",
@@ -16298,7 +15132,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Customer Service Enterprise Attach to Qualifying Dynamics 365 Base Offer A",
     "servicePlanIds": [
       "61a2665f-1873-488c-9199-c3d0bc213fdf",
@@ -16318,7 +15151,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Stream Plan 2",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -16339,9 +15171,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "PowerApps Plan 1 for Government",
     "servicePlanIds": [
       "5ce719f1-169f-4021-8a64-7d24dcaec15f",
@@ -16362,7 +15191,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Sustainability Manager USL Essentials",
     "servicePlanIds": [
       "c46c42af-d654-4385-8c85-29a84f3dfb22",
@@ -16383,7 +15211,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "OneDrive for Business (Plan 2)",
     "servicePlanIds": [
       "afcafa6a-d966-4462-918c-ec0b4e0fe642",
@@ -16402,9 +15229,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education"
-    ],
     "productName": "Privacy Management - subject rights request (50) for EDU",
     "servicePlanIds": [
       "7ca7f875-98db-4458-ab1b-47503826dd73",
@@ -16424,7 +15248,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power Automate Premium",
     "servicePlanIds": [
       "3da2fd4c-1bee-4b61-a17f-94c31e5cab93",
@@ -16444,9 +15267,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Common Data Service Database Capacity for Government",
     "servicePlanIds": [
       "922ba911-5694-4e99-a794-73aed9bfeec8",
@@ -16465,9 +15285,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Exchange Online Archiving for Exchange Online",
     "servicePlanIds": [
       "176a09a6-7ec5-4039-ac02-b2791c6ba793"
@@ -16485,10 +15302,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "education",
-      "student"
-    ],
     "productName": "Office 365 A5 for students",
     "servicePlanIds": [
       "43de0ff5-c92c-492b-9116-175376d08c38",
@@ -16560,7 +15373,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Enterprise Mobility + Security E3",
     "servicePlanIds": [
       "41781fb2-bc02-4b7c-bd55-b576c07bb09d",
@@ -16584,9 +15396,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power BI Pro for GCC",
     "servicePlanIds": [
       "922ba911-5694-4e99-a794-73aed9bfeec8",
@@ -16605,7 +15414,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power BI Premium Per User Dept",
     "servicePlanIds": [
       "0bf3c642-7bb5-4ccc-884e-59d09df0266c",
@@ -16627,9 +15435,6 @@
       ],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Microsoft Copilot Studio User License for GCC",
     "servicePlanIds": [
       "00b6f978-853b-4041-9de0-a233d18669aa",
@@ -16652,9 +15457,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Project Plan 5 for GCC",
     "servicePlanIds": [
       "83837d9c-c21a-46a0-873e-d834c94015d6",
@@ -16679,7 +15481,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 Business Standard",
     "servicePlanIds": [
       "6f23d6a9-adbf-481c-8538-b4c095654487",
@@ -16733,7 +15534,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 for Supply Chain Management",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -16756,7 +15556,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Power Automate Free",
     "servicePlanIds": [
       "17ab22cd-a0b3-4536-910a-cb6eb12696c0",
@@ -16776,7 +15575,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Shared Use 8 vCPU 32 GB 128 GB",
     "servicePlanIds": [
       "e4dee41f-a5c5-457d-b7d3-c309986fdbb2"
@@ -16794,9 +15592,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Exchange Online (Plan 1) for GCC",
     "servicePlanIds": [
       "e9b4930a-925f-45e2-ac2a-3f7788ca6fdd",
@@ -16815,9 +15610,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Power Pages authenticated users T2 min 100 units - 100 users/per site/month capacity pack_USGOV_DOD",
     "servicePlanIds": [
       "7aae746a-3463-4737-b295-3c1a16c31438",
@@ -16836,7 +15628,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Shared Use 8 vCPU 32 GB 512 GB",
     "servicePlanIds": [
       "fa0b4021-0f60-4d95-bf68-95036285282a"
@@ -16854,10 +15645,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government",
-      "addon"
-    ],
     "productName": "Power BI Premium P1 GCC",
     "servicePlanIds": [
       "922ba911-5694-4e99-a794-73aed9bfeec8",
@@ -16876,7 +15663,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft 365 E3 Extra Features",
     "servicePlanIds": [
       "3efbd4ed-8958-4824-8389-1321f8730af8",
@@ -16901,7 +15687,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "SharePoint Syntex",
     "servicePlanIds": [
       "fd2e7f90-1010-487e-a11b-d2b1ae9651fc",
@@ -16921,9 +15706,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Office 365 E1_USGOV_GCCHIGH",
     "servicePlanIds": [
       "e923bad8-588e-44d5-acd0-b226daa7b4de",
@@ -16957,9 +15739,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Privacy Management - subject rights request (10) USGOV_GCCHIGH",
     "servicePlanIds": [
       "5b96ffc4-3853-4cf4-af50-e38505080f6b",
@@ -16979,7 +15758,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Privacy Management - subject rights request (50)",
     "servicePlanIds": [
       "7ca7f875-98db-4458-ab1b-47503826dd73",
@@ -16999,7 +15777,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Operations - Sandbox Tier 4:Standard Performance Testing",
     "servicePlanIds": [
       "f6b5efb1-1813-426f-96d0-9b4f7438714f",
@@ -17018,9 +15795,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 F3 EEA (no Teams)",
     "servicePlanIds": [
       "7547a3fe-08ee-4ccb-b430-5077c5041653",
@@ -17076,7 +15850,6 @@
       ],
       "stringId": []
     },
-    "categories": [],
     "productName": "Project Online With Project for Office 365",
     "servicePlanIds": [
       "159f4cd6-e380-449f-a816-af1a9ef76344",
@@ -17099,7 +15872,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Power BI Pro",
     "servicePlanIds": [
       "70d33638-9c74-4d01-bfd3-562de28bd4ba",
@@ -17118,9 +15890,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "edgesCsvOnly": [
       "c6675fa4-68fe-415f-aec1-a44520f0c3a3"
     ],
@@ -17179,7 +15948,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Business Central Premium",
     "servicePlanIds": [
       "7e6d7d78-73de-46ba-83b1-6d25117334ba",
@@ -17200,7 +15968,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Shared Use 8 vCPU 32 GB 256 GB",
     "servicePlanIds": [
       "1e2321a0-f81c-4d43-a0d5-9895125706b8"
@@ -17218,7 +15985,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Windows 365 Business 8 vCPU 32 GB 256 GB",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -17239,7 +16005,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Office 365 Small Business Premium",
     "servicePlanIds": [
       "d42bdbd6-c335-4231-ab3d-c8f348d5aff5",
@@ -17261,9 +16026,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "addon"
-    ],
     "productName": "Dynamics 365 for Marketing Addnl Contacts Tier 1",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -17282,9 +16044,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "trial"
-    ],
     "productName": "Microsoft Dynamics AX7 User Trial",
     "servicePlanIds": [
       "e2f705fd-2468-4090-8c58-fad6e6b1e724",
@@ -17303,7 +16062,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Essentials",
     "servicePlanIds": [
       "f4f2f6de-6830-442b-a433-e92249faebe2"
@@ -17321,7 +16079,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Dynamics 365 Customer Insights Attach",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -17343,9 +16100,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "government"
-    ],
     "productName": "Dynamics 365 for Case Management, Enterprise Edition for Government",
     "servicePlanIds": [
       "3089c02b-e533-4b73-96a5-01fa648c3c3c",
@@ -17370,9 +16124,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [
-      "eea-no-teams"
-    ],
     "productName": "Microsoft 365 Business Standard EEA (no Teams)",
     "servicePlanIds": [
       "b737dad2-2f6c-4c65-90e3-ca563267e8b9",
@@ -17421,7 +16172,6 @@
       "productName": [],
       "stringId": []
     },
-    "categories": [],
     "productName": "Microsoft Teams Phone Standard for TELSTRA",
     "servicePlanIds": [
       "4828c8ec-dc2e-4779-b502-87ac9ce28ab7"

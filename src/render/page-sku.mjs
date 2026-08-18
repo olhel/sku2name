@@ -9,7 +9,6 @@ import {
   breadcrumb,
   summaryRow,
   provenance,
-  categoryChips,
   filterBar,
   dataRow,
   dataTable,
@@ -32,7 +31,7 @@ export function skuDescription(sku, planCount, topPlans) {
   return trimDescription(withExamples);
 }
 
-export function renderSkuPage({ sku, plans, similar, meta, assets, categoryLabels }) {
+export function renderSkuPage({ sku, plans, similar, meta, assets }) {
   const planCount = plans.length;
   const topPlans = plans.slice(0, 2).map((plan) => plan.friendlyName || plan.technicalName);
   const description = skuDescription(sku, planCount, topPlans);
@@ -63,7 +62,6 @@ export function renderSkuPage({ sku, plans, similar, meta, assets, categoryLabel
       ${summaryRow({ label: 'Included service plans', value: formatNumber(planCount), plain: true })}
     </dl>
     ${provenance(meta)}
-    ${categoryChips(sku.categories, categoryLabels)}
     ${aliasNote(sku)}
 
     <h2 class="section-head">Service plans included in ${sku.productName}</h2>

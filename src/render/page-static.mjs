@@ -195,7 +195,7 @@ export function renderAboutPage({ meta, assets, counts }) {
  * is exactly how" is the most interesting thing on the site and the strongest
  * answer to the thin-content risk that any generated reference site carries.
  */
-export function renderDataPage({ meta, assets, counts, categories }) {
+export function renderDataPage({ meta, assets, counts }) {
   const csv = meta.sources?.csv || {};
   const markdown = meta.sources?.markdown || {};
 
@@ -259,23 +259,6 @@ export function renderDataPage({ meta, assets, counts, categories }) {
         rather than inventing one. That is the case for ${formatNumber(counts.plansWithoutFriendlyName)} plans.
       </p>
 
-      <h2 id="derived">Derived categories</h2>
-      <p>
-        These labels are <strong>sku2name's own</strong>, inferred from naming patterns. They are
-        not Microsoft fields and Microsoft does not publish them. They exist for navigation only.
-      </p>
-      <div class="table-wrap">
-        <table class="data">
-          <caption class="vh">Derived category rules</caption>
-          <thead><tr><th scope="col">Label</th><th scope="col">Matched when</th></tr></thead>
-          <tbody>
-            ${categories.map(
-              (category) => html`<tr><th scope="row">${category.label}</th><td>${category.describe}</td></tr>`
-            )}
-          </tbody>
-        </table>
-      </div>
-
       <h2>Known caveats</h2>
       <ul>
         <li>Some technical names in Microsoft's data contain stray spaces or are ALL CAPS. These are shown as published, with obvious whitespace defects repaired.</li>
@@ -306,8 +289,7 @@ export function renderDataPage({ meta, assets, counts, categories }) {
       </div>
       <p>
         What sku2name adds on top is its own: the reverse index from service plans to SKUs, the
-        similarity between SKUs, the canonical name selection, the derived categories, and the URL
-        slugs. None of that comes from Microsoft, and it is covered by
+        similarity between SKUs, the canonical name selection, and the URL slugs. None of that comes from Microsoft, and it is covered by
         <a href="${SITE.github}" rel="noopener">sku2name's own MIT license</a>.
       </p>
       <p>

@@ -8,7 +8,6 @@ import { byCodeUnit } from '../lib/sort.mjs';
 import { hashValue } from '../lib/hash.mjs';
 import { pickCanonical, collectAliases, resolvePlanNames } from './canonical-names.mjs';
 import { assignSlugs, emptyRegistry } from './slug-registry.mjs';
-import { deriveCategories } from './derive-categories.mjs';
 
 /**
  * @param {object} merged output of mergeSources
@@ -51,7 +50,6 @@ export function normalizeDataset(merged, { registry = emptyRegistry(), firstSeen
       // recorded; anything not listed came from both sources.
       ...singleSourceEdges(sku.planSources),
       sources: sku.sources,
-      categories: deriveCategories({ stringId, productName }),
     };
   });
 

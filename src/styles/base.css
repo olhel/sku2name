@@ -316,11 +316,6 @@ a.chip:hover {
   border-color: var(--border-strong);
   color: var(--text);
 }
-/* Derived labels are sku2name's inference, never a Microsoft field, so they
- * are marked by a dashed border as well as the footnote, never colour alone. */
-.chip-derived {
-  border-style: dashed;
-}
 .chip-retired {
   background: var(--warn-wash);
 }
