@@ -44,14 +44,6 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data');
 const DIST = join(ROOT, 'dist');
 
-// Hand-curated, and the only curated list in the project. These are the
-// licenses people actually look up, surfaced on the homepage as real links so
-// they are also crawl paths.
-const POPULAR_STRING_IDS = [
-  'ENTERPRISEPACK', 'ENTERPRISEPREMIUM', 'SPE_E3', 'SPE_E5', 'O365_BUSINESS_PREMIUM',
-  'SPB', 'DESKLESSPACK', 'SPE_F1', 'STANDARDPACK', 'EXCHANGESTANDARD',
-  'POWER_BI_PRO', 'AAD_PREMIUM', 'AAD_PREMIUM_P2', 'EMS', 'INTUNE_A',
-];
 
 async function emit(relativePath, contents) {
   const target = join(DIST, relativePath);
@@ -263,9 +255,8 @@ async function main() {
   const searchMeta = `<meta name="search-index" content="/s/${idxName}" />\n<meta name="guid-index" content="/s/${guidName}" />\n<link rel="preload" as="fetch" href="/s/${idxName}" crossorigin="anonymous" />`;
 
   // --- home and static pages ---------------------------------------------
-  const popular = POPULAR_STRING_IDS.map((stringId) => skus.find((sku) => sku.stringId === stringId)).filter(Boolean);
 
-  const home = renderHomePage({ meta, assets, counts, popular, searchIndexPath: `/s/${idxName}` }).replace(
+  const home = renderHomePage({ meta, assets, counts }).replace(
     '</head>',
     `${searchMeta}\n</head>`
   );

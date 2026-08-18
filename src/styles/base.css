@@ -505,12 +505,14 @@ input::placeholder {
   gap: var(--sp-2);
 }
 .btn-primary {
-  background: var(--accent);
-  color: var(--on-accent);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  /* "Lookup" must never wrap: it did, and the button rendered two lines tall. */
+  white-space: nowrap;
 }
 .btn-primary:hover {
-  background: var(--accent-hover);
-  color: var(--on-accent);
+  background: var(--btn-bg-hover);
+  color: var(--btn-fg);
 }
 .btn-quiet {
   background: var(--surface);
@@ -827,4 +829,37 @@ mark {
 
 .note-cta {
   margin-top: var(--sp-7);
+}
+
+/* ---------- homepage ---------- */
+
+/* The search is the page, so it gets vertical room the way sub2tenant's does,
+ * without pushing itself below the fold on a phone. */
+.home {
+  max-width: var(--w-search);
+  padding-top: clamp(var(--sp-5), 8vh, var(--sp-8));
+}
+.home h1 {
+  font-size: clamp(1.5rem, 1.1rem + 1.8vw, 2rem);
+}
+.home .lede {
+  margin-top: var(--sp-3);
+}
+.home .search {
+  margin-top: var(--sp-6);
+}
+
+/* One quiet line at the bottom, in place of the three sections that used to
+ * sit here. */
+.home-footnote {
+  margin-top: var(--sp-8);
+  font-size: var(--fs-sm);
+  color: var(--text-faint);
+  max-width: var(--w-prose);
+}
+.home-footnote a {
+  color: var(--text-muted);
+}
+.home-footnote a:hover {
+  color: var(--accent);
 }
