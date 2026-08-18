@@ -51,15 +51,19 @@ body {
    * element with a larger radius the moment it takes focus. */
 }
 
-/* Text inputs get the ring flush against their own border rather than offset.
- * A 1px border plus a 2px gap plus a 2px ring reads as a halo; flush reads as
- * one crisp edge, which is what sub2tenant's input looks like at rest.
+/* Text inputs draw the ring ON their own edge, not around it.
  *
- * The ring itself stays. sub2tenant sets outline:none on focus and shifts its
- * border colour by one shade instead, which is not a sufficient focus
- * indicator, and matching that would be copying its one real defect. */
+ * A negative offset pulls the 2px outline back over the 1px border, so the
+ * focused input is a single crisp rim at exactly the same silhouette as at
+ * rest. No halo, no size change, and it follows the pill radius.
+ *
+ * This is sub2tenant's LOOK without its flaw. sub2tenant keeps a 1px border
+ * and only swaps its colour, grey to Bright Blue, and those two colours are
+ * 1.01:1 apart in luminance: the difference is pure hue, so its focus state
+ * is close to invisible with reduced colour vision or on a bad screen. The
+ * ring here is 8.8:1 against the field it sits on. */
 :where(input[type='text'], input[type='search']):focus-visible {
-  outline-offset: 0;
+  outline-offset: -1px;
 }
 
 a {

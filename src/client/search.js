@@ -397,5 +397,15 @@ if (input && listbox) {
     ensureIndex().then(run);
   }
 
-  if (matchMedia('(hover: hover) and (pointer: fine)').matches) input.focus();
+  // Deliberately no autofocus.
+  //
+  // A text input always matches :focus-visible when focused, so autofocusing
+  // on load means every desktop visitor arrives at a lit-up box. sub2tenant
+  // autofocuses too, but hides the effect with outline:none, which is not an
+  // option here: suppressing the indicator to win back the visual is the
+  // wrong trade.
+  //
+  // Moving focus without the user asking is also disorienting with a screen
+  // reader or a magnifier. The field is the first interactive element on the
+  // page, so Tab reaches it immediately, and "/" focuses it from anywhere.
 }
