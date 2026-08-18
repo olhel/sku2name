@@ -20,6 +20,7 @@ import { buildReverseIndex } from '../src/ingest/normalize.mjs';
 import { renderTokensCss } from '../src/render/tokens.mjs';
 import { shortHash } from '../src/lib/hash.mjs';
 import { stripCssComments } from '../src/lib/css.mjs';
+import { stripJsComments } from '../src/lib/js.mjs';
 import { byCodeUnit } from '../src/lib/sort.mjs';
 import { formatDate } from '../src/render/layout.mjs';
 import { stableStringify, compactStringify } from '../src/lib/stable-json.mjs';
@@ -76,7 +77,7 @@ async function buildAssets() {
   manifest.css = `/assets/${cssName}`;
 
   for (const [key, file] of [['app', 'app.js'], ['search', 'search.js'], ['filter', 'filter.js']]) {
-    const source = await readFile(join(ROOT, 'src/client', file), 'utf8');
+    const source = stripJsComments(await readFile(join(ROOT, 'src/client', file), 'utf8'));
     const name = `${file.replace('.js', '')}.${shortHash(source)}.js`;
     await emit(`assets/${name}`, source);
     manifest[key] = `/assets/${name}`;

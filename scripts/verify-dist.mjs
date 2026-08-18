@@ -12,17 +12,16 @@ const DIST = join(ROOT, 'dist');
 
 // Compressed budgets, measured against the bytes that actually ship.
 //
-// The JS entries still do not meet the original plan, which set the homepage
-// script at 3,600 gzip: search.js is 5,566 gzip / 4,675 brotli. It was 5,273
-// before any of the search work, and no JS budget had ever been wired in, so
-// the overrun went unnoticed for a long time. Like every other entry here
-// these are brotli, and they sit just above today's sizes so the gap cannot
-// widen silently while a decision is made about it.
+// The JS entries now meet the original plan, which set the homepage script at
+// 3,600 gzip: search.js is 3,155. It had been over that since long before any
+// of the search work, because comments shipped to the browser while the CSS
+// pipeline had always stripped its own. Like every other entry here these are
+// brotli.
 const BUDGETS = {
   'assets/*.css': 4_500,
-  'assets/search.*.js': 5_000,
-  'assets/app.*.js': 1_300,
-  'assets/filter.*.js': 1_300,
+  'assets/search.*.js': 3_000,
+  'assets/app.*.js': 900,
+  'assets/filter.*.js': 700,
   's/idx.*.json': 32_000,
   's/guid.*.json': 28_000,
   'largest html': 22_000,

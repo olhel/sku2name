@@ -92,6 +92,21 @@ if (input) {
     return out;
   }
 
+  // GUIDs are deliberately not in the main index: 1,401 near-incompressible
+  // hex strings cost ~50KB on every visit, and /id/ resolves them server-side
+  // anyway. But the GUID index stores the same /sku/<slug> and
+  // /service-plan/<slug> targets the main index already carries, so the two
+  // join on href for free and a pasted GUID can name its product rather than
+  // answering "Open this GUID", which is a dead end that costs another click.
+  let byHref = null;
+  const hrefIndex = () => {
+    if (!byHref) {
+      byHref = new Map();
+      for (const entry of entries || []) byHref.set(entry.href, entry);
+    }
+    return byHref;
+  };
+
   async function ensureIndex() {
     if (entries || !indexUrl) return entries;
     if (!pending) {
@@ -291,49 +306,52 @@ if (input) {
       return;
     }
 
-    // A full GUID is a navigation, not a search. /id/ resolves it server-side.
-    const guid = asGuid(raw);
-    if (guid) {
-      render([
-        {
-          entry: {
-            kind: 'sku',
-            id: dashed(guid),
-            name: 'Open this GUID',
-            href: `/id/${dashed(guid)}`,
-            count: 0,
-          },
-          value: 1000,
-          base: T.ID_EXACT,
-        },
-      ]);
-      updateUrl(raw);
-      return;
-    }
-
     await ensureIndex();
     if (!entries) return;
 
-    let scored = search(raw);
+    const full = asGuid(raw);
+    let scored = full ? [] : search(raw);
 
-    // Partial GUID: fetch the hex index only once someone has typed enough to
-    // mean it, which is a small minority of sessions.
-    const hex = raw.replace(/-/g, '').toLowerCase();
+    // A GUID, whole or partial. The hex index is fetched only once someone has
+    // typed enough for it to mean anything, which is a small minority of
+    // sessions.
+    // asGuid has already normalised braces, urn:uuid: and the undashed form
+    // to bare hex; stripping dashes off the raw text does not, so a pasted
+    // {6FD2C87F-...} failed the hex test and never reached the index.
+    const hex = full || raw.replace(/-/g, '').toLowerCase();
     if (scored.length === 0 && /^[0-9a-f]{8,}$/.test(hex)) {
       await ensureGuidIndex();
       if (guidIndex) {
         // Keys are truncated at build time, so the query is clamped to match.
         const probe = hex.slice(0, guidIndex.len || 16);
+        const hrefs = hrefIndex();
         scored = guidIndex.k
-          .map((key, i) => (key.startsWith(probe) ? { key, target: guidIndex.p[guidIndex.y[i]] + guidIndex.s[i] } : null))
+          .map((key, i) => (key.startsWith(probe) ? guidIndex.p[guidIndex.y[i]] + guidIndex.s[i] : null))
           .filter(Boolean)
           .slice(0, MAX_RESULTS)
-          .map(({ key, target }) => ({
-            entry: { kind: 'sku', id: dashed(key), name: 'Matching GUID', href: target, count: 0 },
-            value: 950,
-            base: T.ID_PREFIX,
-          }));
+          .map((target) => hrefs.get(target))
+          .filter(Boolean)
+          .map((entry) => ({ entry, value: 1000, base: T.ID_EXACT }));
       }
+    }
+
+    // A well-formed GUID that resolved to nothing is still worth acting on:
+    // /id/ knows about retired slugs and aliases the client index does not,
+    // and its miss page explains what the GUID might be instead.
+    if (scored.length === 0 && full) {
+      scored = [
+        {
+          entry: {
+            kind: 'sku',
+            id: dashed(full),
+            name: 'Open this GUID',
+            href: `/id/${dashed(full)}`,
+            count: 0,
+          },
+          value: 1000,
+          base: T.ID_EXACT,
+        },
+      ];
     }
 
     render(scored);
