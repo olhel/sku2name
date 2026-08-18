@@ -11,6 +11,10 @@ const input = document.getElementById('q');
 const listbox = document.getElementById('q-listbox');
 const statusLine = document.getElementById('q-status');
 const form = document.getElementById('search-form');
+// Present only on /search/. Their presence is what switches this script from
+// popover mode to full-results mode.
+const resultsList = document.getElementById('search-results');
+const summary = document.getElementById('search-summary');
 
 if (input && listbox) {
   const MAX_RESULTS = 8;
@@ -34,6 +38,9 @@ if (input && listbox) {
   let results = [];
   let announceTimer = null;
   let urlTimer = null;
+  // Total matches for the current query, which is not results.length: that is
+  // capped at MAX_RESULTS and may carry an extra overflow row.
+  let lastCount = 0;
 
   /* ---------- normalisation ---------- */
 
@@ -165,8 +172,14 @@ if (input && listbox) {
     const popularity = Math.min(20, 6 * Math.log2(1 + entry.count));
     const degenerate = entry.nameSq === entry.idSq ? -25 : 0;
 
-    return base + tightness + typeBias + popularity + degenerate;
+    // base travels with the score because the tier cannot be recovered from
+    // the total: modifiers run -25..+95, so ALIAS_EXACT can fall to 825 while
+    // NAME_TOKEN_EXACT reaches 845. Submit needs the tier, not the total.
+    return { value: base + tightness + typeBias + popularity + degenerate, base };
   }
+
+  // Did the query name one thing outright, rather than merely match it?
+  const EXACT_TIER = T.ALIAS_EXACT;
 
   function search(raw) {
     const query = { sq: squash(raw), toks: tokens(raw) };
@@ -174,8 +187,8 @@ if (input && listbox) {
 
     const scored = [];
     for (const entry of entries) {
-      const value = score(entry, query);
-      if (value !== null) scored.push({ entry, value });
+      const hit = score(entry, query);
+      if (hit !== null) scored.push({ entry, value: hit.value, base: hit.base });
     }
 
     // Deterministic tie-break, so results never jitter between keystrokes.
@@ -207,9 +220,26 @@ if (input && listbox) {
     input.removeAttribute('aria-activedescendant');
     active = -1;
     results = [];
+    lastCount = 0;
   }
 
+  const optionMarkup = ({ entry }, index) => {
+    const badge = entry.kind === 'sku' ? 'SKU' : 'PLAN';
+    const reading = entry.kind === 'sku' ? 'License SKU' : 'Service plan';
+    const meta = entry.kind === 'sku' ? `${entry.count} plans` : `in ${entry.count} SKUs`;
+    return `<li role="option" id="q-opt-${index}" aria-selected="false" class="opt" data-href="${escapeAttr(entry.href)}">
+  <span class="opt-badge" aria-hidden="true">${badge}</span>
+  <span class="opt-main">
+    <span class="opt-name">${escapeHtml(entry.name)}</span>
+    <span class="opt-tech">${escapeHtml(entry.id)}</span>
+  </span>
+  <span class="opt-meta">${escapeHtml(meta)}</span>
+  <span class="vh">${reading}</span>
+</li>`;
+  };
+
   function render(scored) {
+    lastCount = scored.length;
     results = scored.slice(0, MAX_RESULTS);
     active = -1;
 
@@ -219,22 +249,30 @@ if (input && listbox) {
       return;
     }
 
+    // The overflow row is a real option rather than a sibling of the listbox:
+    // every option here navigates, so this one navigating to the results page
+    // needs no special handling in arrow keys, Enter or navigate().
+    const overflow = scored.length > results.length
+      ? {
+          entry: {
+            kind: 'more',
+            id: '',
+            name: `See all ${scored.length} results`,
+            href: `/search/?q=${encodeURIComponent(input.value.trim())}`,
+            count: 0,
+          },
+        }
+      : null;
+    if (overflow) results = results.concat(overflow);
+
     listbox.innerHTML = results
-      .map(({ entry }, index) => {
-        const badge = entry.kind === 'sku' ? 'SKU' : 'PLAN';
-        const reading = entry.kind === 'sku' ? 'License SKU' : 'Service plan';
-        const meta = entry.kind === 'sku'
-          ? `${entry.count} plans`
-          : `in ${entry.count} SKUs`;
-        return `<li role="option" id="q-opt-${index}" aria-selected="false" class="opt" data-href="${escapeAttr(entry.href)}">
-  <span class="opt-badge" aria-hidden="true">${badge}</span>
-  <span class="opt-main">
-    <span class="opt-name">${escapeHtml(entry.name)}</span>
-    <span class="opt-tech">${escapeHtml(entry.id)}</span>
-  </span>
-  <span class="opt-meta">${escapeHtml(meta)}</span>
-  <span class="vh">${reading}</span>
+      .map((item, index) => {
+        if (item.entry.kind === 'more') {
+          return `<li role="option" id="q-opt-${index}" aria-selected="false" class="opt opt-more" data-href="${escapeAttr(item.entry.href)}">
+  <span class="opt-main"><span class="opt-name">${escapeHtml(item.entry.name)}</span></span>
 </li>`;
+        }
+        return optionMarkup(item, index);
       })
       .join('');
 
@@ -242,6 +280,58 @@ if (input && listbox) {
     input.setAttribute('aria-expanded', 'true');
     setStatus(`${scored.length} result${scored.length === 1 ? '' : 's'}`);
   }
+
+  /* ---------- full results page ---------- */
+
+  // A broad query can match well over a thousand entries. Rendering all of
+  // them is a lot of DOM for no benefit, so this stops at PAGE_RESULTS and
+  // says so rather than truncating silently.
+  const PAGE_RESULTS = 200;
+
+  function renderFull(scored) {
+    lastCount = scored.length;
+    results = scored.slice(0, MAX_RESULTS);
+    active = -1;
+    close();
+
+    const query = input.value.trim();
+    if (!query) {
+      summary.textContent = '';
+      resultsList.innerHTML = '';
+      return;
+    }
+    if (scored.length === 0) {
+      summary.textContent = `No results for ${query}.`;
+      resultsList.innerHTML = '';
+      return;
+    }
+
+    const shown = scored.slice(0, PAGE_RESULTS);
+    summary.textContent =
+      shown.length < scored.length
+        ? `Showing the first ${shown.length} of ${scored.length} results for ${query}. Narrow the query to see the rest.`
+        : `${scored.length} result${scored.length === 1 ? '' : 's'} for ${query}.`;
+
+    resultsList.innerHTML = shown
+      .map(({ entry }) => {
+        const badge = entry.kind === 'sku' ? 'SKU' : 'PLAN';
+        const reading = entry.kind === 'sku' ? 'License SKU' : 'Service plan';
+        const meta = entry.kind === 'sku' ? `${entry.count} plans` : `in ${entry.count} SKUs`;
+        return `<li class="result">
+  <a href="${escapeAttr(entry.href)}">
+    <span class="opt-badge" aria-hidden="true">${badge}</span>
+    <span class="opt-main">
+      <span class="opt-name">${escapeHtml(entry.name)}</span>
+      <span class="opt-tech">${escapeHtml(entry.id)}</span>
+    </span>
+    <span class="opt-meta">${escapeHtml(meta)}</span>
+    <span class="vh">${reading}</span>
+  </a>
+</li>`;
+      })
+      .join('');
+  }
+
 
   const escapeHtml = (value) =>
     String(value).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -282,7 +372,7 @@ if (input && listbox) {
     // A full GUID is a navigation, not a search. /id/ resolves it server-side.
     const guid = asGuid(raw);
     if (guid) {
-      render([
+      show([
         {
           entry: {
             kind: 'sku',
@@ -292,6 +382,7 @@ if (input && listbox) {
             count: 0,
           },
           value: 1000,
+          base: T.ID_EXACT,
         },
       ]);
       updateUrl(raw);
@@ -318,13 +409,18 @@ if (input && listbox) {
           .map(({ key, target }) => ({
             entry: { kind: 'sku', id: dashed(key), name: 'Matching GUID', href: target, count: 0 },
             value: 950,
+            // A partial GUID is a prefix, so it only counts as exact when it
+            // narrowed to a single entry. That is checked at submit.
+            base: T.ID_PREFIX,
           }));
       }
     }
 
-    render(scored);
+    show(scored);
     updateUrl(raw);
   }
+
+  const show = (scored) => (resultsList ? renderFull(scored) : render(scored));
 
   function updateUrl(value) {
     clearTimeout(urlTimer);
@@ -385,13 +481,38 @@ if (input && listbox) {
     setActive([...listbox.querySelectorAll('[role="option"]')].indexOf(option));
   });
 
-  // The form is a real GET to /browse/, so submitting without JavaScript, or
-  // before the index has loaded, still lands somewhere useful.
+  // Submit is conditional, because one button was doing two jobs badly.
+  //
+  // Jumping to the top hit is exactly right for a pasted identifier, which is
+  // what this tool is for. It is wrong for a broad query: "e" matches 1,374
+  // entries and picking one of them is arbitrary. So it navigates only when
+  // the query actually named something, meaning an option was arrowed to, the
+  // top hit sits in an exact tier, or there is only one result at all.
+  // Anything else goes to the full results page.
+  //
+  // Without JavaScript the form is a real GET and the action attribute
+  // handles it, so this never leaves someone stranded.
   form?.addEventListener('submit', (event) => {
-    if (results.length > 0) {
+    if (resultsList) {
+      // Already on the results page: re-run rather than navigate away.
       event.preventDefault();
-      navigate(active >= 0 ? active : 0);
+      run();
+      return;
     }
+    if (results.length === 0) return;
+    if (active >= 0) {
+      event.preventDefault();
+      navigate(active);
+      return;
+    }
+    const top = results[0];
+    const named = top.base >= EXACT_TIER || lastCount === 1;
+    if (named) {
+      event.preventDefault();
+      navigate(0);
+    }
+    // Otherwise fall through: the form's action is /search/ and q is the
+    // input's own name, so the browser does the navigation.
   });
 
   // Start fetching immediately on the homepage; the index is the point here.

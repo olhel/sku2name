@@ -11,8 +11,18 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
 
 // Compressed budgets, measured against the bytes that actually ship.
+//
+// The JS entries are new, and they do not meet the original plan: it set the
+// homepage script at 3,600 gzip, and search.js is 6,600 gzip / 5,587 brotli.
+// It was already at 5,273 gzip before the results page, and no JS budget had
+// ever been wired in, so the overrun went unnoticed. Like every other entry
+// here these are brotli, and they sit just above today's sizes so the gap
+// cannot widen silently while a decision is made about it.
 const BUDGETS = {
   'assets/*.css': 4_500,
+  'assets/search.*.js': 6_000,
+  'assets/app.*.js': 1_300,
+  'assets/filter.*.js': 1_300,
   's/idx.*.json': 32_000,
   's/guid.*.json': 28_000,
   'largest html': 22_000,
@@ -169,6 +179,9 @@ async function main() {
     const path = rel(file);
     const budget =
       path.endsWith('.css') ? BUDGETS['assets/*.css']
+      : path.startsWith('assets/search.') ? BUDGETS['assets/search.*.js']
+      : path.startsWith('assets/app.') ? BUDGETS['assets/app.*.js']
+      : path.startsWith('assets/filter.') ? BUDGETS['assets/filter.*.js']
       : /^s\/idx\./.test(path) ? BUDGETS['s/idx.*.json']
       : /^s\/guid\./.test(path) ? BUDGETS['s/guid.*.json']
       : null;

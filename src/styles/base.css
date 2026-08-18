@@ -836,6 +836,43 @@ input::placeholder {
   }
 }
 
+/* ---------- full results page ---------- */
+
+.search-page-form {
+  max-width: none;
+  margin-bottom: var(--sp-5);
+}
+.search-summary {
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--sp-3);
+}
+.results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.results .result + .result {
+  border-top: 1px solid var(--border);
+}
+.results a {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-2);
+  text-decoration: none;
+  color: inherit;
+}
+.results a:hover {
+  background: var(--surface-hover);
+}
+/* The row that offers the rest of a truncated result set. It is a real
+ * listbox option so the arrow keys reach it, but it is not a result. */
+.opt-more .opt-name {
+  color: var(--accent);
+  font-weight: var(--fw-medium);
+}
+
 /* ---------- search ---------- */
 
 .search {

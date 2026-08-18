@@ -19,7 +19,7 @@ export function renderHomePage({ meta, assets, counts }) {
   const body = html`<div class="home">
       <h1 class="vh">Look up any Microsoft 365 license SKU or service plan</h1>
 
-      <form class="search" role="search" action="/browse/skus/" method="get" id="search-form">
+      <form class="search" role="search" action="/search/" method="get" id="search-form">
         <label class="vh" for="q">Search Microsoft 365 SKUs and service plans</label>
         <div class="search-field">
           <input
