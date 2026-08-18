@@ -145,6 +145,9 @@ code,
 
 .site-header {
   background: transparent;
+  /* sub2tenant's own value. Without it the header sits hard against the top
+   * of the viewport, which is what made it read as closer to the edge. */
+  margin-top: clamp(1.25rem, 3.5vh, 2.4rem);
 }
 .site-header .wrap {
   display: flex;
@@ -183,7 +186,13 @@ code,
   color: var(--text-muted);
 }
 .byline a {
-  font-weight: var(--fw-medium);
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+.byline a:hover {
+  color: var(--text);
+  text-decoration: underline;
 }
 
 .site-nav {
@@ -195,8 +204,8 @@ code,
    * six items force a 376px floor and every page scrolls sideways on a
    * phone. */
   flex-wrap: wrap;
-  gap: var(--sp-2) var(--sp-4);
-  font-size: var(--fs-sm);
+  gap: var(--sp-2) 1.15rem;
+  font-size: 0.9rem;
 }
 .site-nav a {
   /* Brighter than --text-muted, which is tuned for body copy. sub2tenant's
@@ -230,7 +239,7 @@ code,
   cursor: pointer;
   padding: 0;
   font: inherit;
-  font-size: var(--fs-sm);
+  font-size: 0.9rem;
   line-height: inherit;
 }
 .theme-toggle:hover {
@@ -243,6 +252,13 @@ code,
 main {
   flex: 1;
   padding-block: var(--sp-6) var(--sp-8);
+  display: flex;
+  flex-direction: column;
+}
+main > .wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .stack > * + * {
@@ -604,8 +620,7 @@ input::placeholder {
 .site-footer {
   background: transparent;
   padding-block: var(--sp-6);
-  margin-top: var(--sp-8);
-  font-size: var(--fs-xs);
+  font-size: 0.84rem;
   color: var(--text-faint);
   text-align: center;
 }
@@ -884,12 +899,9 @@ mark {
   max-width: 720px;
   margin-inline: auto;
   text-align: center;
-  /* Centred in the space between header and footer. min-height rather than
-   * height so a short viewport scrolls instead of clipping. */
-  min-height: clamp(18rem, 58vh, 34rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /* sub2tenant's own .page padding-top. It places the field a fixed distance
+   * below the header rather than centring it, which is why theirs sits higher. */
+  padding-top: clamp(4rem, 16vh, 11rem);
 }
 .home h1 {
   font-size: clamp(1.375rem, 1.05rem + 1.5vw, 1.75rem);
@@ -910,11 +922,12 @@ mark {
 /* One quiet line at the bottom, in place of the three sections that used to
  * sit here. */
 .home-footnote {
-  margin-top: var(--sp-8);
+  /* Anchored to the bottom, as sub2tenant anchors its own closing line. */
+  margin-top: auto;
   padding-top: var(--sp-7);
   margin-inline: auto;
   text-align: center;
-  font-size: var(--fs-sm);
+  font-size: 0.94rem;
   color: var(--text-faint);
   max-width: var(--w-prose);
 }
