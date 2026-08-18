@@ -15,6 +15,15 @@ const form = document.getElementById('search-form');
 if (input && listbox) {
   const MAX_RESULTS = 8;
 
+  // The full wording runs 376px, which fits the 455px of text space on a wide
+  // field and overruns a 375px phone by about nine characters. The short form
+  // ships in the HTML so a phone is right before any script runs; the wide
+  // viewport is upgraded here. 40rem is the site's only breakpoint, and it is
+  // read through matchMedia rather than innerWidth.
+  if (window.matchMedia('(min-width: 40rem)').matches) {
+    input.placeholder = 'Paste a SKU, GUID, product or service plan name';
+  }
+
   const indexUrl = document.querySelector('meta[name="search-index"]')?.content;
   const guidUrl = document.querySelector('meta[name="guid-index"]')?.content;
 

@@ -37,7 +37,7 @@ export function renderHomePage({ meta, assets, counts }) {
             autocapitalize="off"
             spellcheck="false"
             enterkeyhint="search"
-            placeholder="Paste a SKU, GUID or service plan name"
+            placeholder="SKU, GUID, product or service plan"
           />
           <button type="submit" class="btn btn-primary">Lookup</button>
         </div>
