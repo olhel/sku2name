@@ -7,7 +7,11 @@
 // hyphenated variant would be. Everything that is not [a-z0-9_] collapses to
 // a hyphen, which is what makes the URL-hostile String IDs safe.
 
-const DEFAULT_MAX_LENGTH = 60;
+// Sized against the real data: the longest Microsoft String ID slugifies to
+// 103 characters (a Power Pages capacity pack). A shorter cap truncated four
+// genuinely distinct GCC/DOD/USGOV variants onto the same prefix, which
+// manufactured slug collisions and replaced clean URLs with GUID suffixes.
+const DEFAULT_MAX_LENGTH = 120;
 
 // Unicode combining marks, stripped after NFKD so accented product names
 // reduce to ASCII rather than dropping characters entirely.

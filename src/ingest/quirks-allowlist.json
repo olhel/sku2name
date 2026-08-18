@@ -1,0 +1,55 @@
+{
+  "_comment": "Known-and-accepted upstream defects. A quirk NOT listed here fails the build, which is how a NEW malformation gets a human's attention instead of being silently patched. Prune an entry once Microsoft fixes it; the gate warns when an allowlisted quirk stops appearing.",
+  "guidRepairs": [
+    {
+      "raw": "882e1d05-acd1-4ccb-8708- 6ee03664b117",
+      "rule": "strip-space",
+      "repaired": "882e1d05-acd1-4ccb-8708-6ee03664b117",
+      "note": "Internal space in a service plan GUID. Seen 2026-08 in the markdown, INTUNE_O365 under M365_F1_GOV."
+    },
+    {
+      "raw": "113feb6c-3fe4-4440-bddc 54d774bf0318",
+      "rule": "rehyphenate",
+      "repaired": "113feb6c-3fe4-4440-bddc-54d774bf0318",
+      "note": "Space instead of a hyphen in EXCHANGE_S_FOUNDATION under PBI_PREMIUM_EM2_ADDON. Seen 2026-08 in the markdown."
+    }
+  ],
+  "nameRepairs": [
+    {
+      "raw": "RMS_S_ENTERPRISE) (bea4c11e-220a-4e6d-8eb8-8ea15d019f90)",
+      "repaired": "RMS_S_ENTERPRISE",
+      "note": "Unbalanced trailing paren on the technical name. Seen 2026-08."
+    },
+    {
+      "raw": "Information Protection and Governance Analytics - Premium) (d9fa6af4-e046-4c89-9226-729a0786685d)",
+      "repaired": "Information Protection and Governance Analytics - Premium",
+      "note": "Unbalanced trailing paren on a friendly name. Seen 2026-08."
+    }
+  ],
+  "unclosedParen": [
+    {
+      "raw": "Whiteboard (Plan 2) (94a54592-cd8b-425e-87c6-97868b000b91",
+      "note": "Closing paren missing entirely on the friendly name. Recovered by scanning for a trailing GUID. Seen 2026-08."
+    }
+  ],
+  "guidNotLast": [
+    {
+      "raw": "Privacy Management - Subject Rights Request (1 - Exchange) (93d24177-c2c3-408a-821d-3d25dfa66e7a) (PRIVACY_MANGEMENT_DSR_EXCHANGE_1)",
+      "note": "Technical name appended after the GUID, so the last parenthesized group is not the GUID. Seen 2026-08."
+    }
+  ],
+  "sharedStringIds": ["MCOPSTN5"],
+  "fusedTechnicalNames": [
+    {
+      "raw": "EXCHANGE_S_FOUNDATION PBI_PREMIUM_EM1_ADDON",
+      "note": "CSV export fused two technical names into one cell and applied it to two different plan GUIDs. The markdown carries the correct names, which is why both sources are parsed."
+    }
+  ],
+  "thresholds": {
+    "maxUnresolvedIncompatibilityRefs": 8,
+    "maxPlansWithoutFriendlyName": 30,
+    "maxWhitespaceTechnicalNames": 10,
+    "maxSingleSourceSkuShare": 0.03,
+    "maxSingleSourceEdgeShare": 0.02
+  }
+}

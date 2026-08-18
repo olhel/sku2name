@@ -1,0 +1,212 @@
+[
+  {
+    "members": [
+      {
+        "name": "CRMPLAN1",
+        "planId": "119cf168-b6cf-41fb-b82e-7fee7bae5814",
+        "resolved": false
+      },
+      {
+        "name": "CRMPLAN2",
+        "planId": "bf36ca64-95c6-4918-9275-eb9f4ce2c04f",
+        "resolved": true
+      },
+      {
+        "name": "CRMSTANDARD",
+        "planId": "f9646fb2-e3b2-4309-95de-dc4833737456",
+        "resolved": true
+      },
+      {
+        "name": "DYN365_ENTERPRISE_P1_IW",
+        "planId": "056a5f80-b4e0-4983-a8be-7ad254a113c9",
+        "resolved": true
+      },
+      {
+        "name": "DYN365_ENTERPRISE_SALES",
+        "planId": "2da8e897-7791-486b-b08f-cc63c8129df7",
+        "resolved": true
+      },
+      {
+        "name": "DYN365_ENTERPRISE_TEAM_MEMBERS",
+        "planId": "6a54b05e-4fab-40e7-9828-428db3b336fa",
+        "resolved": true
+      },
+      {
+        "name": "EMPLOYEE_SELF_SERVICE",
+        "planId": "ba5f0cfa-d54a-4ea0-8cf4-a7e1dc4423d8",
+        "resolved": false
+      }
+    ],
+    "service": "Dynamics CRM"
+  },
+  {
+    "members": [
+      {
+        "name": "EXCHANGE_B_STANDARD",
+        "planId": "90927877-dcff-4af6-b346-2332c0b15bb7",
+        "resolved": true
+      },
+      {
+        "name": "EXCHANGE_S_ARCHIVE",
+        "planId": "da040e0a-b393-4bea-bb76-928b3fa1cf5a",
+        "resolved": true
+      },
+      {
+        "name": "EXCHANGE_S_DESKLESS",
+        "planId": "4a82b400-a79f-41a4-b4e2-e94f5787b113",
+        "resolved": true
+      },
+      {
+        "name": "EXCHANGE_S_ESSENTIALS",
+        "planId": "1126bef5-da20-4f07-b45e-ad25d2581aa8",
+        "resolved": true
+      },
+      {
+        "name": "EXCHANGE_S_STANDARD",
+        "planId": "9aaf7827-d63c-4b61-89c3-182f06f82e5c",
+        "resolved": true
+      },
+      {
+        "name": "EXCHANGE_S_STANDARD_MIDMARKET",
+        "planId": "fc52cc4b-ed7d-472d-bbe7-b081c23ecc56",
+        "resolved": true
+      }
+    ],
+    "service": "Exchange Online"
+  },
+  {
+    "members": [
+      {
+        "name": "RMS_S_ENTERPRISE",
+        "planId": "bea4c11e-220a-4e6d-8eb8-8ea15d019f90",
+        "resolved": true
+      },
+      {
+        "name": "RMS_S_ENTERPRISE_GOV",
+        "planId": "6a76346d-5d6e-4051-9fe3-ed3f312b5597",
+        "resolved": true
+      }
+    ],
+    "service": "Microsoft 365"
+  },
+  {
+    "members": [
+      {
+        "name": "INTUNE_A",
+        "planId": "c1ec4a95-1f05-45b3-a911-aa3fa01094f5",
+        "resolved": true
+      },
+      {
+        "name": "INTUNE_A_VL",
+        "planId": "3e170737-c728-4eae-bbb9-3f3360f7184c",
+        "resolved": true
+      },
+      {
+        "name": "INTUNE_B",
+        "planId": "2dc63b8a-df3d-448f-b683-8655877c9360",
+        "resolved": false
+      }
+    ],
+    "service": "Intune"
+  },
+  {
+    "members": [
+      {
+        "name": "ONEDRIVEENTERPRISE",
+        "planId": "afcafa6a-d966-4462-918c-ec0b4e0fe642",
+        "resolved": true
+      },
+      {
+        "name": "SHAREPOINT_S_DEVELOPER",
+        "planId": "a361d6e2-509e-4e25-a8ad-950060064ef4",
+        "resolved": true
+      },
+      {
+        "name": "SHAREPOINTDESKLESS",
+        "planId": "902b47e5-dcb2-4fdc-858b-c63a90a2bdb9",
+        "resolved": true
+      },
+      {
+        "name": "SHAREPOINTENTERPRISE",
+        "planId": "5dbe027f-2339-4123-9542-606e4d348a72",
+        "resolved": true
+      },
+      {
+        "name": "SHAREPOINTENTERPRISE_EDU",
+        "planId": "63038b2c-28d0-45f6-bc36-33062963b498",
+        "resolved": true
+      },
+      {
+        "name": "SHAREPOINTENTERPRISE_MIDMARKET",
+        "planId": "6b5b6a67-fc72-4a1f-a2b5-beecf05de761",
+        "resolved": true
+      },
+      {
+        "name": "SHAREPOINTLITE",
+        "planId": "a1f3d0a8-84c0-4ae0-bae4-685917b8ab48",
+        "resolved": true
+      },
+      {
+        "name": "SHAREPOINTSTANDARD",
+        "planId": "c7699d2e-19aa-44de-8edf-1736da088ca1",
+        "resolved": true
+      },
+      {
+        "name": "SHAREPOINTSTANDARD_EDU",
+        "planId": "0a4983bb-d3e5-4a09-95d8-b2d0127b3df5",
+        "resolved": true
+      },
+      {
+        "name": "SHAREPOINTSTANDARD_YAMMERSHADOW",
+        "planId": "4c9efd0c-8de7-4c71-8295-9f5fdb0dd048",
+        "resolved": false
+      }
+    ],
+    "service": "SharePoint Online"
+  },
+  {
+    "members": [
+      {
+        "name": "MCOIMP",
+        "planId": "afc06cb0-b4f4-4473-8286-d644f70d8faf",
+        "resolved": true
+      },
+      {
+        "name": "MCOSTANDARD_MIDMARKET",
+        "planId": "b2669e95-76ef-4e7e-a367-002f60a39f3e",
+        "resolved": true
+      },
+      {
+        "name": "MCOSTANDARD",
+        "planId": "0feaeb32-d00e-4d66-bd5a-43b5b83db82c",
+        "resolved": true
+      },
+      {
+        "name": "MCOLITE",
+        "planId": "70710b6b-3ab4-4a38-9f6d-9f169461650a",
+        "resolved": true
+      }
+    ],
+    "service": "Skype for Business"
+  },
+  {
+    "members": [
+      {
+        "name": "YAMMER_ENTERPRISE",
+        "planId": "7547a3fe-08ee-4ccb-b430-5077c5041653",
+        "resolved": true
+      },
+      {
+        "name": "YAMMER_EDU",
+        "planId": "2078e8df-cff6-4290-98cb-5408261a760a",
+        "resolved": true
+      },
+      {
+        "name": "YAMMER_MIDSIZE",
+        "planId": "41bf139a-4e60-409f-9346-a1361efc6dfb",
+        "resolved": true
+      }
+    ],
+    "service": "Yammer"
+  }
+]

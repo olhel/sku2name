@@ -1,0 +1,57 @@
+{
+  "counts": {
+    "disambiguationPages": 2,
+    "edges": 6001,
+    "edgesFromCsvOnly": 45,
+    "edgesFromMdOnly": 34,
+    "incompatibilityGroups": 7,
+    "plansRetiredUpstream": 9,
+    "plansWithAliases": 255,
+    "plansWithoutFriendlyName": 12,
+    "servicePlans": 798,
+    "skus": 621,
+    "skusFromCsvOnly": 7,
+    "skusFromMdOnly": 0,
+    "unresolvedIncompatibilityRefs": 4
+  },
+  "datasetHash": "sha256:c4dd1bec2c61c12773115a73b6b0b1ece309e97a86d062fad9507e60ff24a9a4",
+  "document": {
+    "lastUpdated": "2026-08-14",
+    "lastUpdatedRaw": "August 14, 2026",
+    "msDate": "2026-07-01"
+  },
+  "fetchedAt": "2026-08-18T13:07:55.814Z",
+  "quality": {
+    "issues": 6,
+    "quirks": 6,
+    "warnings": 0
+  },
+  "schemaVersion": 1,
+  "sources": {
+    "csv": {
+      "available": true,
+      "bytes": 1133601,
+      "contentHash": null,
+      "etag": null,
+      "lastModified": null,
+      "normalisedHash": null,
+      "parsed": true,
+      "url": "https://download.microsoft.com/download/e/3/e/e3e9faf2-f28b-490a-9ada-c6089a1fc5b0/Product%20names%20and%20service%20plan%20identifiers%20for%20licensing.csv"
+    },
+    "markdown": {
+      "available": true,
+      "bytes": 876562,
+      "commitDate": null,
+      "commitSha": null,
+      "commitShaSource": "unavailable",
+      "contentHash": null,
+      "etag": null,
+      "lastModified": null,
+      "normalisedHash": null,
+      "parsed": true,
+      "path": "docs/identity/users/licensing-service-plan-reference.md",
+      "repo": "MicrosoftDocs/entra-docs",
+      "url": "https://raw.githubusercontent.com/MicrosoftDocs/entra-docs/main/docs/identity/users/licensing-service-plan-reference.md"
+    }
+  }
+}
