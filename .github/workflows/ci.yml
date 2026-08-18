@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Test
+        run: npm test
+      - name: Build
+        run: npm run build
+      - name: Verify output
+        run: npm run verify
+      # Guards against a clock, an unsorted iteration, or a locale-dependent
+      # comparator creeping into a render path.
+      - name: Check build determinism
+        run: node scripts/check-determinism.mjs

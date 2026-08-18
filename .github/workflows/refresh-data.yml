@@ -1,0 +1,119 @@
+name: Refresh data
+
+on:
+  schedule:
+    # Daily. Both sources are probed with conditional requests first, so on the
+    # ~99% of days when nothing changed this costs two round trips.
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+    inputs:
+      allow_large_change:
+        description: 'Bypass the count-band gate for a reviewed change'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.ingest.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Ingest from Microsoft
+        id: ingest
+        env:
+          # Raises the unauthenticated GitHub API rate limit for the commit-SHA
+          # lookup. Failing to get a SHA is never fatal.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          node scripts/ingest.mjs ${{ inputs.allow_large_change && '--allow-large-change' || '' }}
+          status=$?
+          set -e
+          if [ $status -ne 0 ]; then
+            echo "failed=true" >> "$GITHUB_OUTPUT"
+            exit $status
+          fi
+          if git diff --quiet -- data/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Upstream data is unchanged."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # A scheduled job that fails quietly for six weeks is the realistic way
+      # this site goes stale, so the notification is load-bearing, not polish.
+      - name: Open an issue if the gate failed
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = '[data] ingest gate failed';
+            const { data: existing } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'data-refresh',
+            });
+            const body = [
+              'The scheduled data refresh failed its validation gate, so **nothing was written**',
+              'and the previously committed dataset is still being served.',
+              '',
+              `Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              '',
+              'Most likely causes:',
+              '- Microsoft introduced a new malformation not in `src/ingest/quirks-allowlist.json`',
+              '- The upstream table structure changed',
+              '- A count moved outside its tolerance band (re-run with `allow_large_change` if it is real)',
+            ].join('\n');
+
+            const match = existing.find((issue) => issue.title === title);
+            if (match) {
+              await github.rest.issues.createComment({ ...context.repo, issue_number: match.number, body });
+            } else {
+              await github.rest.issues.create({ ...context.repo, title, body, labels: ['data-refresh'] });
+            }
+
+      - name: Verify the new data builds
+        if: steps.ingest.outputs.changed == 'true'
+        run: |
+          npm test
+          npm run build
+          npm run verify
+
+      - name: Commit
+        if: steps.ingest.outputs.changed == 'true'
+        run: |
+          HASH=$(node -e "console.log(require('./data/source-meta.json').datasetHash)")
+          UPDATED=$(node -e "console.log(require('./data/source-meta.json').document.lastUpdated)")
+          COUNTS=$(node -e "const c=require('./data/source-meta.json').counts;console.log(\`\${c.skus} SKUs, \${c.servicePlans} service plans, \${c.edges} relationships\`)")
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "data: refresh from Microsoft ($UPDATED)
+
+          $COUNTS
+          $HASH"
+          git push
+
+  # Invoked directly rather than relying on the push above, because a push made
+  # with the default GITHUB_TOKEN does not trigger other workflows.
+  deploy:
+    needs: refresh
+    if: needs.refresh.outputs.changed == 'true'
+    uses: ./.github/workflows/docker-publish.yml
+    permissions:
+      contents: read
+      packages: write
