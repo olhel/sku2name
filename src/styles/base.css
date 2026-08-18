@@ -255,6 +255,10 @@ main {
   display: flex;
   flex-direction: column;
 }
+/* The homepage brings its own top offset, so main must not add a second one. */
+main:has(.home) {
+  padding-top: 0;
+}
 main > .wrap {
   flex: 1;
   display: flex;
@@ -896,6 +900,11 @@ mark {
 /* The search is the page, so it gets vertical room the way sub2tenant's does,
  * without pushing itself below the fold on a phone. */
 .home {
+  /* width:100% is load-bearing. The parent is a flex column, and auto inline
+   * margins on a flex item make it shrink to fit rather than stretch, which
+   * collapsed this block to its content width and squeezed the field to
+   * 359px. */
+  width: 100%;
   max-width: 720px;
   margin-inline: auto;
   text-align: center;
