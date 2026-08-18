@@ -385,7 +385,7 @@ main > .wrap {
 .breadcrumb {
   font-size: var(--fs-xs);
   color: var(--text-muted);
-  margin-bottom: var(--sp-3);
+  margin-bottom: var(--sp-4);
 }
 .breadcrumb a {
   color: var(--text-muted);
@@ -762,7 +762,29 @@ input::placeholder {
 /* ---------- prose pages ---------- */
 
 .prose {
-  max-width: var(--w-prose);
+  /* Centred and inset rather than flush with the wordmark. sub2tenant sets
+   * its about page the same way: a 720px column centred inside a wider shell,
+   * starting well right of the header. Left-flush left 400px of dead space
+   * down the right of every prose page. */
+  max-width: 720px;
+  margin-inline: auto;
+}
+.prose .lede {
+  /* The deck under the h1, so it should outrank body copy rather than read as
+   * a dimmer paragraph. */
+  max-width: none;
+  font-size: 1.1rem;
+}
+.prose > h2 {
+  /* A hairline above each section. The site's own geometry is squared edges
+   * and hairline rules, and an unbroken column of headings and paragraphs was
+   * the flattest surface on the site. */
+  margin-top: var(--sp-7);
+  padding-top: var(--sp-5);
+  border-top: 1px solid var(--border);
+}
+.prose > h2:first-of-type {
+  border-top: 0;
 }
 .prose h2 {
   margin-top: var(--sp-6);
