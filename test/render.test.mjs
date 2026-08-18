@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { esc, html, raw, jsonLd } from '../src/lib/html.mjs';
 import { buildTitle, trimDescription, formatDate, formatNumber } from '../src/render/layout.mjs';
 import { renderSkuPage, skuTitle, skuDescription } from '../src/render/page-sku.mjs';
@@ -201,6 +202,32 @@ test('date and number formatting never uses locale-dependent APIs', () => {
   assert.equal(formatDate(null), null);
   assert.equal(formatNumber(6001), '6,001');
   assert.equal(formatNumber(7), '7');
+});
+
+/* ---------- long identifier safety ---------- */
+
+// Microsoft String IDs reach 103 characters with no spaces, and 12 service
+// plans have no prose name at all, so a heading can BE an underscore token.
+// Without wrapping these push narrow screens sideways.
+test('every place an identifier can appear allows it to wrap', () => {
+  const css = readFileSync(new URL('../src/styles/base.css', import.meta.url), 'utf8');
+  const mustWrap = [
+    ['h3 {', 'headings, which can be a technical name'],
+    ['.mono {', 'monospace runs, which are always identifiers'],
+    ['.browse-list a {', 'browse links, which can be a technical name'],
+    ['.browse-list code {', 'browse identifiers'],
+    ['table.data .name {', 'table row names'],
+  ];
+  for (const [selector, why] of mustWrap) {
+    const at = css.indexOf(selector);
+    assert.notEqual(at, -1, `selector missing: ${selector}`);
+    const block = css.slice(at, css.indexOf('}', at));
+    const squashed = block.split(' ').join('');
+    assert.ok(
+      squashed.includes('overflow-wrap:anywhere') || squashed.includes('word-break:break'),
+      `${selector} must allow wrapping (${why})`
+    );
+  }
 });
 
 /* ---------- tokens ---------- */

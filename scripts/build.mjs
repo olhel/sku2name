@@ -19,6 +19,7 @@ import { fileURLToPath } from 'node:url';
 import { buildReverseIndex } from '../src/ingest/normalize.mjs';
 import { renderTokensCss } from '../src/render/tokens.mjs';
 import { shortHash } from '../src/lib/hash.mjs';
+import { stripCssComments } from '../src/lib/css.mjs';
 import { byCodeUnit } from '../src/lib/sort.mjs';
 import { formatDate } from '../src/render/layout.mjs';
 import { stableStringify, compactStringify } from '../src/lib/stable-json.mjs';
@@ -75,7 +76,8 @@ async function copyDir(from, to) {
  * project maintains by hand cannot be forgotten on one of 1,400 pages.
  */
 async function buildAssets() {
-  const css = renderTokensCss() + '\n' + (await readFile(join(ROOT, 'src/styles/base.css'), 'utf8'));
+  const source = renderTokensCss() + '\n' + (await readFile(join(ROOT, 'src/styles/base.css'), 'utf8'));
+  const css = stripCssComments(source);
   const manifest = {};
 
   const cssName = `styles.${shortHash(css)}.css`;

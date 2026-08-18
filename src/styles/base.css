@@ -65,6 +65,10 @@ h3 {
   line-height: var(--lh-tight);
   margin: 0;
   font-weight: var(--fw-bold);
+  /* A heading can BE a technical identifier: 12 service plans have no prose
+   * name, so the h1 is something like DYNAMICS_365_FOR_OPERATIONS_TEAM_MEMBERS
+   * at up to 34px. Without this it pushes a phone screen sideways. */
+  overflow-wrap: anywhere;
 }
 
 p {
@@ -75,6 +79,10 @@ code,
 .mono {
   font-family: var(--font-mono);
   font-variant-ligatures: none;
+  /* Every monospace run on this site is a Microsoft identifier, and those are
+   * unbreakable tokens up to 103 characters. Without this they push narrow
+   * screens sideways wherever they appear. */
+  overflow-wrap: anywhere;
 }
 
 /* Numeric columns must not jitter between rows. */
@@ -380,6 +388,7 @@ table.data .name {
   font-weight: var(--fw-medium);
   color: var(--text);
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 table.data .name:hover {
   text-decoration: underline;
@@ -762,6 +771,7 @@ mark {
 .browse-list li {
   display: flex;
   flex-wrap: wrap;
+  min-width: 0;
   align-items: baseline;
   gap: var(--sp-1) var(--sp-3);
   padding: var(--sp-2) var(--sp-4);
@@ -776,6 +786,10 @@ mark {
   font-weight: var(--fw-medium);
   color: var(--text);
   text-decoration: none;
+  /* Some service plans have no prose name, so this link carries an
+   * underscore token exactly like the code element beside it. */
+  overflow-wrap: anywhere;
+  min-width: 0;
 }
 .browse-list a:hover {
   text-decoration: underline;
@@ -784,6 +798,11 @@ mark {
 .browse-list code {
   font-size: var(--fs-mono);
   color: var(--text-muted);
+  /* Microsoft String IDs reach 103 characters with no spaces, so on a phone
+   * they push the page sideways unless they are allowed to break. "anywhere"
+   * rather than break-all: it breaks only when the line cannot otherwise fit. */
+  overflow-wrap: anywhere;
+  min-width: 0;
 }
 
 .note-cta {
