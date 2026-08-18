@@ -47,7 +47,19 @@ body {
 :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
-  border-radius: var(--r-xs);
+  /* No border-radius here. Setting one would square off the corners of any
+   * element with a larger radius the moment it takes focus. */
+}
+
+/* Text inputs get the ring flush against their own border rather than offset.
+ * A 1px border plus a 2px gap plus a 2px ring reads as a halo; flush reads as
+ * one crisp edge, which is what sub2tenant's input looks like at rest.
+ *
+ * The ring itself stays. sub2tenant sets outline:none on focus and shifts its
+ * border colour by one shade instead, which is not a sufficient focus
+ * indicator, and matching that would be copying its one real defect. */
+:where(input[type='text'], input[type='search']):focus-visible {
+  outline-offset: 0;
 }
 
 a {

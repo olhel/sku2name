@@ -118,7 +118,11 @@ export const DARK = {
   '--btn-fg': '#FFFFFF',
   '--btn-bg-hover': '#0E56E8',
   '--border': '#1E3557',
-  '--border-strong': '#4A648C',
+  // Measured against --surface, not --bg. A control's boundary is judged
+  // against what sits behind the control, and the card surface is lighter
+  // than the page, so #4A648C read as 3.2:1 on the page but only 2.65:1
+  // where it actually appears. WCAG 1.4.11 wants 3:1.
+  '--border-strong': '#546E96',
   '--focus': '#8EC5FF',
   '--ok': '#00BC7D',
   '--ok-wash': '#004F3B',
