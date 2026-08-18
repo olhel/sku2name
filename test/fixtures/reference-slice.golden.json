@@ -1,0 +1,1137 @@
+{
+  "counts": {
+    "edges": 26,
+    "edgesFromCsvOnly": 6,
+    "edgesFromMdOnly": 18,
+    "servicePlans": 22,
+    "skus": 19,
+    "skusFromCsvOnly": 4,
+    "skusFromMdOnly": 14
+  },
+  "document": {
+    "lastUpdated": "2026-08-14",
+    "lastUpdatedRaw": "August 14, 2026",
+    "msDate": "2026-07-01"
+  },
+  "incompatibilityGroups": [
+    {
+      "members": [
+        {
+          "line": 36,
+          "name": "EXCHANGE_S_STANDARD",
+          "planId": "9aaf7827-d63c-4b61-89c3-182f06f82e5c"
+        },
+        {
+          "line": 37,
+          "name": "EXCHANGE_S_ENTERPRISE",
+          "planId": "efb87545-963c-4e0d-99df-69c6916d9eb0"
+        }
+      ],
+      "service": "Exchange Online"
+    },
+    {
+      "members": [
+        {
+          "line": 43,
+          "name": "AAD_PREMIUM",
+          "planId": "41781fb2-bc02-4b7c-bd55-b576c07bb09d"
+        }
+      ],
+      "service": "Microsoft Entra ID"
+    }
+  ],
+  "issues": [
+    {
+      "guid": "eeeeeeee-0000-4000-8000-000000000005",
+      "index": 1,
+      "kind": "orphan-friendly",
+      "line": 20,
+      "name": "Orphan Friendly",
+      "source": "md",
+      "stringId": "LONGERFRIENDLY"
+    },
+    {
+      "guid": "a1a1a1a1-0000-4000-8000-000000000007",
+      "index": 1,
+      "kind": "technical-only",
+      "line": 21,
+      "source": "md",
+      "stringId": "LONGERTECHNICAL"
+    }
+  ],
+  "planObservations": [
+    {
+      "friendlyName": "Exchange Online (Plan 2)",
+      "line": 2,
+      "planId": "efb87545-963c-4e0d-99df-69c6916d9eb0",
+      "retiredUpstream": false,
+      "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900",
+      "source": "csv",
+      "technicalName": "EXCHANGE_S_ENTERPRISE"
+    },
+    {
+      "friendlyName": "Exchange Foundation",
+      "line": 3,
+      "planId": "113feb6c-3fe4-4440-bddc-54d774bf0318",
+      "retiredUpstream": false,
+      "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900",
+      "source": "csv",
+      "technicalName": "EXCHANGE_S_FOUNDATION"
+    },
+    {
+      "friendlyName": "Exchange Foundation",
+      "line": 4,
+      "planId": "113feb6c-3fe4-4440-bddc-54d774bf0318",
+      "retiredUpstream": false,
+      "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900",
+      "source": "csv",
+      "technicalName": "EXCHANGE_S_FOUNDATION"
+    },
+    {
+      "friendlyName": "Field Service Automated Routing Engine Add-On",
+      "line": 5,
+      "planId": "2ba394e0-6f18-4b77-b45f-a5663bbab540",
+      "retiredUpstream": true,
+      "skuId": "977464c4-bfaf-4b67-b761-a9bb735a2196",
+      "source": "csv",
+      "technicalName": "CRM_AUTO_ROUTING_ADDON"
+    },
+    {
+      "friendlyName": "EXCHANGE FOUNDATION",
+      "line": 6,
+      "planId": "113feb6c-3fe4-4440-bddc-54d774bf0318",
+      "retiredUpstream": false,
+      "skuId": "977464c4-bfaf-4b67-b761-a9bb735a2196",
+      "source": "csv",
+      "technicalName": "EXCHANGE_S_FOUNDATION"
+    },
+    {
+      "friendlyName": "Power Virtual Agents",
+      "line": 7,
+      "planId": "0aeeee7d-e0eb-4b23-9c5b-a2b0f9f2fbf6",
+      "retiredUpstream": false,
+      "skuId": "4b74a65c-8b4a-4fc8-9f6b-5177ed11ddfa",
+      "source": "csv",
+      "technicalName": "POWER_VIRTUAL_AGENTS"
+    },
+    {
+      "friendlyName": "Exchange Foundation",
+      "line": 8,
+      "planId": "113feb6c-3fe4-4440-bddc-54d774bf0318",
+      "retiredUpstream": false,
+      "skuId": "4b74a65c-8b4a-4fc8-9f6b-5177ed11ddfa",
+      "source": "csv",
+      "technicalName": "EXCHANGE_S_FOUNDATION"
+    },
+    {
+      "friendlyName": "Microsoft Teams Premium",
+      "line": 9,
+      "planId": "989a1621-93bc-4be0-835c-fe30171d6167",
+      "retiredUpstream": false,
+      "skuId": "36a0f3b3-adb5-49ea-bf66-762134cf063a",
+      "source": "csv",
+      "technicalName": "TEAMS_PREMIUM"
+    },
+    {
+      "friendlyName": "Microsoft Teams Enterprise",
+      "line": 10,
+      "planId": "d0d1ca43-b81b-4f5b-a5d4-9a1e9d4e5a2a",
+      "retiredUpstream": false,
+      "skuId": "3ab6abff-666f-4424-bfb7-f0bc274ec7bc",
+      "source": "csv",
+      "technicalName": "TEAMS_ENTERPRISE"
+    },
+    {
+      "friendlyName": "Exchange Online (Plan 2)",
+      "line": 12,
+      "pairing": "guid",
+      "planId": "efb87545-963c-4e0d-99df-69c6916d9eb0",
+      "retiredUpstream": false,
+      "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900",
+      "source": "md",
+      "technicalName": "EXCHANGE_S_ENTERPRISE"
+    },
+    {
+      "friendlyName": "Exchange Foundation",
+      "line": 12,
+      "pairing": "guid",
+      "planId": "113feb6c-3fe4-4440-bddc-54d774bf0318",
+      "retiredUpstream": false,
+      "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900",
+      "source": "md",
+      "technicalName": "EXCHANGE_S_FOUNDATION"
+    },
+    {
+      "friendlyName": "Alpha Friendly",
+      "line": 13,
+      "pairing": "guid",
+      "planId": "aaaaaaaa-0000-4000-8000-000000000001",
+      "retiredUpstream": false,
+      "skuId": "11111111-1111-4111-8111-111111111111",
+      "source": "md",
+      "technicalName": "ALPHA"
+    },
+    {
+      "friendlyName": "Beta Friendly",
+      "line": 13,
+      "pairing": "guid",
+      "planId": "bbbbbbbb-0000-4000-8000-000000000002",
+      "retiredUpstream": false,
+      "skuId": "11111111-1111-4111-8111-111111111111",
+      "source": "md",
+      "technicalName": "BETA"
+    },
+    {
+      "friendlyName": "Gamma Friendly",
+      "line": 13,
+      "pairing": "guid",
+      "planId": "cccccccc-0000-4000-8000-000000000003",
+      "retiredUpstream": false,
+      "skuId": "11111111-1111-4111-8111-111111111111",
+      "source": "md",
+      "technicalName": "GAMMA"
+    },
+    {
+      "friendlyName": "Microsoft Application Protection and Governance (A)",
+      "line": 14,
+      "pairing": "guid",
+      "planId": "5f3b1ded-75c0-4b31-8e6e-9b077eaadfd5",
+      "retiredUpstream": false,
+      "skuId": "22222222-2222-4222-8222-222222222222",
+      "source": "md",
+      "technicalName": "MICROSOFT_APPLICATION_PROTECTION_AND_GOVERNANCE_A"
+    },
+    {
+      "friendlyName": "Azure Rights Management",
+      "line": 15,
+      "pairing": "guid",
+      "planId": "bea4c11e-220a-4e6d-8eb8-8ea15d019f90",
+      "retiredUpstream": false,
+      "skuId": "33333333-3333-4333-8333-333333333333",
+      "source": "md",
+      "technicalName": "RMS_S_ENTERPRISE"
+    },
+    {
+      "friendlyName": "Mobile Device Management for Office 365",
+      "line": 16,
+      "pairing": "guid",
+      "planId": "882e1d05-acd1-4ccb-8708-6ee03664b117",
+      "retiredUpstream": false,
+      "skuId": "44444444-4444-4444-8444-444444444444",
+      "source": "md",
+      "technicalName": "INTUNE_O365"
+    },
+    {
+      "friendlyName": "Exchange Foundation",
+      "line": 17,
+      "pairing": "guid",
+      "planId": "113feb6c-3fe4-4440-bddc-54d774bf0318",
+      "retiredUpstream": false,
+      "skuId": "55555555-5555-4555-8555-555555555555",
+      "source": "md",
+      "technicalName": "EXCHANGE_S_FOUNDATION"
+    },
+    {
+      "friendlyName": "Whiteboard (Plan 2)",
+      "line": 18,
+      "pairing": "guid",
+      "planId": "94a54592-cd8b-425e-87c6-97868b000b91",
+      "retiredUpstream": false,
+      "skuId": "66666666-6666-4666-8666-666666666666",
+      "source": "md",
+      "technicalName": "WHITEBOARD_PLAN2"
+    },
+    {
+      "friendlyName": "Privacy Management - Subject Rights Request (1 - Exchange)",
+      "line": 19,
+      "pairing": "guid",
+      "planId": "93d24177-c2c3-408a-821d-3d25dfa66e7a",
+      "retiredUpstream": false,
+      "skuId": "77777777-7777-4777-8777-777777777777",
+      "source": "md",
+      "technicalName": "PRIVACY_MANGEMENT_DSR_EXCHANGE_1"
+    },
+    {
+      "friendlyName": "Only One",
+      "line": 20,
+      "pairing": "guid",
+      "planId": "dddddddd-0000-4000-8000-000000000004",
+      "retiredUpstream": false,
+      "skuId": "88888888-8888-4888-8888-888888888888",
+      "source": "md",
+      "technicalName": "ONLY_ONE"
+    },
+    {
+      "friendlyName": "Orphan Friendly",
+      "line": 20,
+      "pairing": "friendly-only",
+      "planId": "eeeeeeee-0000-4000-8000-000000000005",
+      "retiredUpstream": false,
+      "skuId": "88888888-8888-4888-8888-888888888888",
+      "source": "md",
+      "technicalName": null
+    },
+    {
+      "friendlyName": "First Plan",
+      "line": 21,
+      "pairing": "guid",
+      "planId": "ffffffff-0000-4000-8000-000000000006",
+      "retiredUpstream": false,
+      "skuId": "99999999-9999-4999-8999-999999999999",
+      "source": "md",
+      "technicalName": "FIRST_PLAN"
+    },
+    {
+      "friendlyName": null,
+      "line": 21,
+      "pairing": "technical-only",
+      "planId": "a1a1a1a1-0000-4000-8000-000000000007",
+      "retiredUpstream": false,
+      "skuId": "99999999-9999-4999-8999-999999999999",
+      "source": "md",
+      "technicalName": "SECOND_PLAN"
+    },
+    {
+      "friendlyName": "Tabbed Plan",
+      "line": 22,
+      "pairing": "guid",
+      "planId": "b2b2b2b2-0000-4000-8000-000000000008",
+      "retiredUpstream": false,
+      "skuId": "aaaaaaaa-1111-4111-8111-aaaaaaaaaaaa",
+      "source": "md",
+      "technicalName": "TABBED_PLAN"
+    },
+    {
+      "friendlyName": "Common Data Service",
+      "line": 23,
+      "pairing": "guid",
+      "planId": "95b76021-0000-4000-8000-000000000009",
+      "retiredUpstream": false,
+      "skuId": "bbbbbbbb-1111-4111-8111-bbbbbbbbbbbb",
+      "source": "md",
+      "technicalName": "CDS_O365_P2"
+    },
+    {
+      "friendlyName": "DOMESTIC CALLING PLAN",
+      "line": 24,
+      "pairing": "guid",
+      "planId": "54a152dc-90de-4996-93d2-bc47e670fc06",
+      "retiredUpstream": false,
+      "skuId": "54a152dc-90de-4996-93d2-bc47e670fc06",
+      "source": "md",
+      "technicalName": "MCOPSTN5"
+    },
+    {
+      "friendlyName": "Skype for Business PSTN Calling Domestic Small",
+      "line": 25,
+      "pairing": "guid",
+      "planId": "9a0125a5-c8f8-4526-b231-49e2abe0ebce",
+      "retiredUpstream": false,
+      "skuId": "d43177b5-475b-4880-92d4-d54c27b5efbd",
+      "source": "md",
+      "technicalName": "Skype for Business PSTN Calling Domestic Small"
+    },
+    {
+      "friendlyName": "EXCHANGE FOUNDATION",
+      "line": 26,
+      "pairing": "guid",
+      "planId": "113feb6c-3fe4-4440-bddc-54d774bf0318",
+      "retiredUpstream": false,
+      "skuId": "cccccccc-1111-4111-8111-cccccccccccc",
+      "source": "md",
+      "technicalName": "EXCHANGE_S_FOUNDATION"
+    }
+  ],
+  "quirks": [
+    {
+      "kind": "name-repair",
+      "line": 15,
+      "raw": "RMS_S_ENTERPRISE) (bea4c11e-220a-4e6d-8eb8-8ea15d019f90)",
+      "repaired": "RMS_S_ENTERPRISE",
+      "source": "md"
+    },
+    {
+      "kind": "guid-repair",
+      "line": 16,
+      "raw": "882e1d05-acd1-4ccb-8708- 6ee03664b117",
+      "repaired": "882e1d05-acd1-4ccb-8708-6ee03664b117",
+      "rule": "strip-space",
+      "source": "md"
+    },
+    {
+      "kind": "guid-repair",
+      "line": 17,
+      "raw": "113feb6c-3fe4-4440-bddc 54d774bf0318",
+      "repaired": "113feb6c-3fe4-4440-bddc-54d774bf0318",
+      "rule": "rehyphenate",
+      "source": "md"
+    },
+    {
+      "kind": "unclosed-paren",
+      "line": 18,
+      "raw": "Whiteboard (Plan 2) (94a54592-cd8b-425e-87c6-97868b000b91",
+      "repaired": "94a54592-cd8b-425e-87c6-97868b000b91",
+      "source": "md"
+    },
+    {
+      "kind": "guid-not-last",
+      "line": 19,
+      "raw": "Privacy Management - Subject Rights Request (1 - Exchange) (93d24177-c2c3-408a-821d-3d25dfa66e7a) (PRIVACY_MANGEMENT_DSR_EXCHANGE_1)",
+      "source": "md",
+      "trailing": "(PRIVACY_MANGEMENT_DSR_EXCHANGE_1)"
+    }
+  ],
+  "skus": [
+    {
+      "planSources": {
+        "aaaaaaaa-0000-4000-8000-000000000001": [
+          "md"
+        ],
+        "bbbbbbbb-0000-4000-8000-000000000002": [
+          "md"
+        ],
+        "cccccccc-0000-4000-8000-000000000003": [
+          "md"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Reordered Friendly Column",
+          "sources": [
+            "md"
+          ]
+        }
+      ],
+      "provenance": {
+        "md": {
+          "line": 13
+        }
+      },
+      "servicePlanIds": [
+        "aaaaaaaa-0000-4000-8000-000000000001",
+        "bbbbbbbb-0000-4000-8000-000000000002",
+        "cccccccc-0000-4000-8000-000000000003"
+      ],
+      "skuId": "11111111-1111-4111-8111-111111111111",
+      "sources": [
+        "md"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "REORDERED",
+          "sources": [
+            "md"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "5f3b1ded-75c0-4b31-8e6e-9b077eaadfd5": [
+          "md"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Nested Parens In Name",
+          "sources": [
+            "md"
+          ]
+        }
+      ],
+      "provenance": {
+        "md": {
+          "line": 14
+        }
+      },
+      "servicePlanIds": [
+        "5f3b1ded-75c0-4b31-8e6e-9b077eaadfd5"
+      ],
+      "skuId": "22222222-2222-4222-8222-222222222222",
+      "sources": [
+        "md"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "NESTEDPARENS",
+          "sources": [
+            "md"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "bea4c11e-220a-4e6d-8eb8-8ea15d019f90": [
+          "md"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Unbalanced Paren Name",
+          "sources": [
+            "md"
+          ]
+        }
+      ],
+      "provenance": {
+        "md": {
+          "line": 15
+        }
+      },
+      "servicePlanIds": [
+        "bea4c11e-220a-4e6d-8eb8-8ea15d019f90"
+      ],
+      "skuId": "33333333-3333-4333-8333-333333333333",
+      "sources": [
+        "md"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "UNBALANCED",
+          "sources": [
+            "md"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "989a1621-93bc-4be0-835c-fe30171d6167": [
+          "csv"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Teams \"Premium\" Trial",
+          "sources": [
+            "csv"
+          ]
+        }
+      ],
+      "provenance": {
+        "csv": {
+          "line": 9
+        }
+      },
+      "servicePlanIds": [
+        "989a1621-93bc-4be0-835c-fe30171d6167"
+      ],
+      "skuId": "36a0f3b3-adb5-49ea-bf66-762134cf063a",
+      "sources": [
+        "csv"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "TEAMS_PREMIUM_TRIAL",
+          "sources": [
+            "csv"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "d0d1ca43-b81b-4f5b-a5d4-9a1e9d4e5a2a": [
+          "csv"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Microsoft Teams Enterprise",
+          "sources": [
+            "csv"
+          ]
+        }
+      ],
+      "provenance": {
+        "csv": {
+          "line": 10
+        }
+      },
+      "servicePlanIds": [
+        "d0d1ca43-b81b-4f5b-a5d4-9a1e9d4e5a2a"
+      ],
+      "skuId": "3ab6abff-666f-4424-bfb7-f0bc274ec7bc",
+      "sources": [
+        "csv"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "Microsoft_Teams_Enterprise_New",
+          "sources": [
+            "csv"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "882e1d05-acd1-4ccb-8708-6ee03664b117": [
+          "md"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Malformed Guid Space",
+          "sources": [
+            "md"
+          ]
+        }
+      ],
+      "provenance": {
+        "md": {
+          "line": 16
+        }
+      },
+      "servicePlanIds": [
+        "882e1d05-acd1-4ccb-8708-6ee03664b117"
+      ],
+      "skuId": "44444444-4444-4444-8444-444444444444",
+      "sources": [
+        "md"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "MALFORMEDSPACE",
+          "sources": [
+            "md"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "0aeeee7d-e0eb-4b23-9c5b-a2b0f9f2fbf6": [
+          "csv"
+        ],
+        "113feb6c-3fe4-4440-bddc-54d774bf0318": [
+          "csv"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Microsoft Copilot Studio User License",
+          "sources": [
+            "csv"
+          ]
+        },
+        {
+          "count": 1,
+          "name": "Power Virtual Agent User License",
+          "sources": [
+            "csv"
+          ]
+        }
+      ],
+      "provenance": {
+        "csv": {
+          "line": 7
+        }
+      },
+      "servicePlanIds": [
+        "0aeeee7d-e0eb-4b23-9c5b-a2b0f9f2fbf6",
+        "113feb6c-3fe4-4440-bddc-54d774bf0318"
+      ],
+      "skuId": "4b74a65c-8b4a-4fc8-9f6b-5177ed11ddfa",
+      "sources": [
+        "csv"
+      ],
+      "stringIds": [
+        {
+          "count": 2,
+          "name": "POWER_VIRTUAL_AGENTS",
+          "sources": [
+            "csv"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "54a152dc-90de-4996-93d2-bc47e670fc06": [
+          "md"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Skype for Business PSTN Domestic Calling (120 Minutes)",
+          "sources": [
+            "md"
+          ]
+        }
+      ],
+      "provenance": {
+        "md": {
+          "line": 24
+        }
+      },
+      "servicePlanIds": [
+        "54a152dc-90de-4996-93d2-bc47e670fc06"
+      ],
+      "skuId": "54a152dc-90de-4996-93d2-bc47e670fc06",
+      "sources": [
+        "md"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "MCOPSTN5",
+          "sources": [
+            "md"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "113feb6c-3fe4-4440-bddc-54d774bf0318": [
+          "md"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Malformed Guid Hyphen",
+          "sources": [
+            "md"
+          ]
+        }
+      ],
+      "provenance": {
+        "md": {
+          "line": 17
+        }
+      },
+      "servicePlanIds": [
+        "113feb6c-3fe4-4440-bddc-54d774bf0318"
+      ],
+      "skuId": "55555555-5555-4555-8555-555555555555",
+      "sources": [
+        "md"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "MALFORMEDHYPHEN",
+          "sources": [
+            "md"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "94a54592-cd8b-425e-87c6-97868b000b91": [
+          "md"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Unclosed Paren Friendly",
+          "sources": [
+            "md"
+          ]
+        }
+      ],
+      "provenance": {
+        "md": {
+          "line": 18
+        }
+      },
+      "servicePlanIds": [
+        "94a54592-cd8b-425e-87c6-97868b000b91"
+      ],
+      "skuId": "66666666-6666-4666-8666-666666666666",
+      "sources": [
+        "md"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "UNCLOSEDPAREN",
+          "sources": [
+            "md"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "113feb6c-3fe4-4440-bddc-54d774bf0318": [
+          "csv",
+          "md"
+        ],
+        "efb87545-963c-4e0d-99df-69c6916d9eb0": [
+          "csv",
+          "md"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 4,
+          "name": "Office 365 E3",
+          "sources": [
+            "csv",
+            "md"
+          ]
+        }
+      ],
+      "provenance": {
+        "csv": {
+          "line": 2
+        },
+        "md": {
+          "line": 12
+        }
+      },
+      "servicePlanIds": [
+        "efb87545-963c-4e0d-99df-69c6916d9eb0",
+        "113feb6c-3fe4-4440-bddc-54d774bf0318"
+      ],
+      "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900",
+      "sources": [
+        "csv",
+        "md"
+      ],
+      "stringIds": [
+        {
+          "count": 4,
+          "name": "ENTERPRISEPACK",
+          "sources": [
+            "csv",
+            "md"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "93d24177-c2c3-408a-821d-3d25dfa66e7a": [
+          "md"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Guid Not Last",
+          "sources": [
+            "md"
+          ]
+        }
+      ],
+      "provenance": {
+        "md": {
+          "line": 19
+        }
+      },
+      "servicePlanIds": [
+        "93d24177-c2c3-408a-821d-3d25dfa66e7a"
+      ],
+      "skuId": "77777777-7777-4777-8777-777777777777",
+      "sources": [
+        "md"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "GUIDNOTLAST",
+          "sources": [
+            "md"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "dddddddd-0000-4000-8000-000000000004": [
+          "md"
+        ],
+        "eeeeeeee-0000-4000-8000-000000000005": [
+          "md"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Friendly Longer Than Technical",
+          "sources": [
+            "md"
+          ]
+        }
+      ],
+      "provenance": {
+        "md": {
+          "line": 20
+        }
+      },
+      "servicePlanIds": [
+        "dddddddd-0000-4000-8000-000000000004",
+        "eeeeeeee-0000-4000-8000-000000000005"
+      ],
+      "skuId": "88888888-8888-4888-8888-888888888888",
+      "sources": [
+        "md"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "LONGERFRIENDLY",
+          "sources": [
+            "md"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "113feb6c-3fe4-4440-bddc-54d774bf0318": [
+          "csv"
+        ],
+        "2ba394e0-6f18-4b77-b45f-a5663bbab540": [
+          "csv"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 2,
+          "name": "Dynamics 365 Field Service, Enterprise Edition",
+          "sources": [
+            "csv"
+          ]
+        }
+      ],
+      "provenance": {
+        "csv": {
+          "line": 5
+        }
+      },
+      "servicePlanIds": [
+        "2ba394e0-6f18-4b77-b45f-a5663bbab540",
+        "113feb6c-3fe4-4440-bddc-54d774bf0318"
+      ],
+      "skuId": "977464c4-bfaf-4b67-b761-a9bb735a2196",
+      "sources": [
+        "csv"
+      ],
+      "stringIds": [
+        {
+          "count": 2,
+          "name": "CRM_AUTO_ROUTING_ADDON",
+          "sources": [
+            "csv"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "a1a1a1a1-0000-4000-8000-000000000007": [
+          "md"
+        ],
+        "ffffffff-0000-4000-8000-000000000006": [
+          "md"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Technical Longer Than Friendly",
+          "sources": [
+            "md"
+          ]
+        }
+      ],
+      "provenance": {
+        "md": {
+          "line": 21
+        }
+      },
+      "servicePlanIds": [
+        "ffffffff-0000-4000-8000-000000000006",
+        "a1a1a1a1-0000-4000-8000-000000000007"
+      ],
+      "skuId": "99999999-9999-4999-8999-999999999999",
+      "sources": [
+        "md"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "LONGERTECHNICAL",
+          "sources": [
+            "md"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "b2b2b2b2-0000-4000-8000-000000000008": [
+          "md"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Stray Tabs Row",
+          "sources": [
+            "md"
+          ]
+        }
+      ],
+      "provenance": {
+        "md": {
+          "line": 22
+        }
+      },
+      "servicePlanIds": [
+        "b2b2b2b2-0000-4000-8000-000000000008"
+      ],
+      "skuId": "aaaaaaaa-1111-4111-8111-aaaaaaaaaaaa",
+      "sources": [
+        "md"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "STRAYTABS",
+          "sources": [
+            "md"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "95b76021-0000-4000-8000-000000000009": [
+          "md"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Url Hostile Id",
+          "sources": [
+            "md"
+          ]
+        }
+      ],
+      "provenance": {
+        "md": {
+          "line": 23
+        }
+      },
+      "servicePlanIds": [
+        "95b76021-0000-4000-8000-000000000009"
+      ],
+      "skuId": "bbbbbbbb-1111-4111-8111-bbbbbbbbbbbb",
+      "sources": [
+        "md"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "O365_w/o Teams Bundle_M3",
+          "sources": [
+            "md"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "113feb6c-3fe4-4440-bddc-54d774bf0318": [
+          "md"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Casing Variants",
+          "sources": [
+            "md"
+          ]
+        }
+      ],
+      "provenance": {
+        "md": {
+          "line": 26
+        }
+      },
+      "servicePlanIds": [
+        "113feb6c-3fe4-4440-bddc-54d774bf0318"
+      ],
+      "skuId": "cccccccc-1111-4111-8111-cccccccccccc",
+      "sources": [
+        "md"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "CASINGVARIANTS",
+          "sources": [
+            "md"
+          ]
+        }
+      ]
+    },
+    {
+      "planSources": {
+        "9a0125a5-c8f8-4526-b231-49e2abe0ebce": [
+          "md"
+        ]
+      },
+      "productNames": [
+        {
+          "count": 1,
+          "name": "Skype for Business PSTN Calling Domestic Small",
+          "sources": [
+            "md"
+          ]
+        }
+      ],
+      "provenance": {
+        "md": {
+          "line": 25
+        }
+      },
+      "servicePlanIds": [
+        "9a0125a5-c8f8-4526-b231-49e2abe0ebce"
+      ],
+      "skuId": "d43177b5-475b-4880-92d4-d54c27b5efbd",
+      "sources": [
+        "md"
+      ],
+      "stringIds": [
+        {
+          "count": 1,
+          "name": "MCOPSTN5",
+          "sources": [
+            "md"
+          ]
+        }
+      ]
+    }
+  ],
+  "source": "merged",
+  "sourcesUsed": [
+    "csv",
+    "md"
+  ]
+}
