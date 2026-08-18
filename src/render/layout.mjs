@@ -39,7 +39,7 @@ export function trimDescription(text, max = 158) {
 
 // The only blocking script on the site. It exists to prevent a light-to-dark
 // flash on first paint, which is a real CLS and perceived-quality problem.
-const THEME_INIT = `try{var t=localStorage.getItem("s2n-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}`;
+const THEME_INIT = `try{var t=localStorage.getItem("s2n-theme");if(t==="dark"||t==="light"||t==="system")document.documentElement.dataset.theme=t}catch(e){}`;
 
 function head({ title, description, path, assets, robots, jsonLdBlocks, syncedIso, extraHead }) {
   const url = canonical(path);
@@ -78,7 +78,7 @@ function header(activePath) {
   return html`<header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">
-      <span class="wordmark">sku<span class="two">2</span>name</span>
+      <span class="wordmark">sku2name</span>
       <span class="vh">${SITE.tagline}</span>
     </a>
     <span class="byline">A free tool by <a href="${SITE.bsure}" rel="noopener">bsure.</a></span>
@@ -86,7 +86,7 @@ function header(activePath) {
       ${link('/browse/', 'Browse')}
       ${link('/about/', 'About')}
       ${link('/data/', 'Data')}
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Theme: system. Activate to switch to light.">Theme</button>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Theme: dark. Activate to switch to light.">Theme</button>
     </nav>
   </div>
 </header>`;

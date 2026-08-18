@@ -150,14 +150,16 @@ code,
   color: var(--text);
 }
 .wordmark {
+  /* The one place the Bsure brand face is asked for. It is not embedded, so
+   * this resolves for anyone who has it and falls back cleanly for everyone
+   * else, which is what the brand manual prescribes for an unbundled face. */
+  font-family: var(--font-brand);
   font-size: var(--fs-lg);
   font-weight: var(--fw-bold);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1;
 }
-.wordmark .two {
-  color: var(--accent);
-}
+
 .byline {
   font-size: var(--fs-xs);
   color: var(--text-muted);
@@ -183,6 +185,16 @@ code,
 }
 .site-nav a[aria-current='page'] {
   font-weight: var(--fw-medium);
+  position: relative;
+}
+.site-nav a[aria-current='page']::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--accent);
 }
 
 .theme-toggle {
@@ -652,9 +664,17 @@ input::placeholder {
   display: flex;
   gap: var(--sp-2);
 }
-.search-input {
+.search .search-input {
   font-size: var(--fs-md);
-  padding: var(--sp-3);
+  padding: var(--sp-3) var(--sp-5);
+  height: 52px;
+  border-radius: var(--r-pill);
+}
+.search .btn {
+  height: 52px;
+  padding-inline: var(--sp-6);
+  border-radius: var(--r-pill);
+  font-size: var(--fs-md);
 }
 .search-status {
   /* Reserved height so an announcement never shifts the layout. */

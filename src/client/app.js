@@ -16,22 +16,22 @@ function announce(message) {
 
 const toggle = document.getElementById('theme-toggle');
 if (toggle) {
-  const order = ['system', 'light', 'dark'];
+  // Dark is the base, so an absent attribute already means dark and "system"
+  // has to be an explicit value rather than the absence of one.
+  const order = ['dark', 'light', 'system'];
   const read = () => {
     try {
       const stored = localStorage.getItem(THEME_KEY);
-      return stored === 'light' || stored === 'dark' ? stored : 'system';
+      return order.includes(stored) ? stored : 'dark';
     } catch {
-      return 'system';
+      return 'dark';
     }
   };
 
   const apply = (mode) => {
-    if (mode === 'system') delete document.documentElement.dataset.theme;
-    else document.documentElement.dataset.theme = mode;
+    document.documentElement.dataset.theme = mode;
     try {
-      if (mode === 'system') localStorage.removeItem(THEME_KEY);
-      else localStorage.setItem(THEME_KEY, mode);
+      localStorage.setItem(THEME_KEY, mode);
     } catch {
       /* Safari private mode throws on localStorage. */
     }

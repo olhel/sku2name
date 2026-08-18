@@ -236,14 +236,23 @@ test('light and dark palettes define exactly the same token names', () => {
   assert.deepEqual(Object.keys(LIGHT).sort(), Object.keys(DARK).sort());
 });
 
-test('the dark palette is emitted for both the media query and the attribute', () => {
+test('dark is the base palette, not a media-query branch', () => {
   const css = renderTokensCss();
-  assert.ok(css.includes('@media (prefers-color-scheme: dark)'));
-  assert.ok(css.includes(':root[data-theme="dark"]'));
+  // A first-time visitor must get navy regardless of their OS setting,
+  // which is what sub2tenant does and what the brand manual prescribes.
+  const base = css.slice(css.indexOf(':root {'), css.indexOf('}'));
+  // Match the declaration, not the bare hex: Light Blue #F2F7FE is also the
+  // TEXT colour in the dark palette, so a substring test passes either way.
+  assert.ok(base.includes(`--bg: ${DARK['--bg']}`), 'the base :root must carry the dark background');
+  assert.ok(!base.includes(`--bg: ${LIGHT['--bg']}`), 'the base :root must not be light');
+
+  // Light stays reachable two ways: chosen outright, or via "system".
   assert.ok(css.includes(':root[data-theme="light"]'));
-  // Generated from one object, so the two dark blocks cannot drift apart.
-  const occurrences = css.split(DARK['--accent']).length - 1;
-  assert.ok(occurrences >= 2, 'the dark accent must appear in both dark blocks');
+  assert.ok(css.includes('@media (prefers-color-scheme: light)'));
+  assert.ok(css.includes(':root[data-theme="system"]'));
+
+  // Both dark blocks are generated from one object, so they cannot drift.
+  assert.ok(css.split(DARK['--accent']).length - 1 >= 2);
 });
 
 test('the dark accent differs from the light one, because the light blue is unreadable on navy', () => {
