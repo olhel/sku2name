@@ -144,8 +144,7 @@ code,
 /* ---------- header ---------- */
 
 .site-header {
-  border-bottom: var(--bw) solid var(--border);
-  background: var(--surface);
+  background: transparent;
 }
 .site-header .wrap {
   display: flex;
@@ -220,14 +219,13 @@ code,
 
 .theme-toggle {
   background: transparent;
-  border: var(--bw) solid var(--border);
-  border-radius: var(--r-sm);
+  border: 0;
   color: var(--text-muted);
   cursor: pointer;
-  padding: var(--sp-1) var(--sp-2);
+  padding: 0;
   font: inherit;
-  font-size: var(--fs-xs);
-  line-height: 1.4;
+  font-size: var(--fs-sm);
+  line-height: inherit;
 }
 .theme-toggle:hover {
   background: var(--surface-hover);
@@ -598,16 +596,17 @@ input::placeholder {
 /* ---------- footer ---------- */
 
 .site-footer {
-  border-top: var(--bw) solid var(--border);
-  background: var(--surface);
-  padding-block: var(--sp-5);
+  background: transparent;
+  padding-block: var(--sp-6);
   margin-top: var(--sp-8);
   font-size: var(--fs-xs);
   color: var(--text-faint);
+  text-align: center;
 }
 .site-footer nav {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--sp-2) var(--sp-4);
   margin-bottom: var(--sp-3);
 }
@@ -616,6 +615,7 @@ input::placeholder {
 }
 .site-footer p {
   max-width: var(--w-prose);
+  margin-inline: auto;
 }
 .site-footer p + p {
   margin-top: var(--sp-1);
