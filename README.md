@@ -1,0 +1,68 @@
+# sku2name
+
+Microsoft 365 SKU and service plan lookup. Paste a SKU part number, GUID,
+product name, or service plan name and get the friendly name, the technical
+identifiers, and the relationships in both directions.
+
+Live at [sku2name.com](https://sku2name.com).
+
+sku2name is an independent tool, not affiliated with or endorsed by Microsoft.
+Microsoft 365 and Microsoft Entra are trademarks of Microsoft Corporation.
+
+## Where the data comes from
+
+sku2name keeps no license catalog of its own. It parses what Microsoft
+publishes and presents it in a searchable form.
+
+Microsoft publishes the same mapping in two places, and **neither is a superset
+of the other**, so sku2name reads both and merges them by GUID:
+
+| Source | Role |
+| --- | --- |
+| [`entra-docs` licensing reference](https://github.com/MicrosoftDocs/entra-docs/blob/main/docs/identity/users/licensing-service-plan-reference.md) (markdown) | Secondary. Supplies entities the CSV lacks, the incompatibility tables, and a commit SHA for provenance. |
+| [CSV export](https://download.microsoft.com/download/e/3/e/e3e9faf2-f28b-490a-9ada-c6089a1fc5b0/Product%20names%20and%20service%20plan%20identifiers%20for%20licensing.csv) | Primary. One row per SKU/service-plan pair, already normalized, with a dedicated service plan ID column. |
+
+Every record carries a `sources` field recording which files it came from.
+See `/data/` on the site for the current per-source contribution counts.
+
+## Architecture
+
+Three phases, cleanly separated:
+
+1. **Ingest** (`npm run ingest`) fetches both sources, parses, merges,
+   validates, and writes `data/*.json`. Runs on a schedule in CI, never at
+   request time. The normalized JSON is committed; generated HTML is not.
+2. **Build** (`npm run build`) turns `data/*.json` into `dist/`: roughly 1,400
+   static HTML pages plus search indexes, sitemaps, and hashed assets. Fully
+   deterministic, so two builds of the same data are byte-identical.
+3. **Serve** (`npm start`) is Express over `dist/`, plus the three things
+   static files cannot do: `/id/:guid` redirects, canonical-form redirects,
+   and the 404 fallback.
+
+URLs are pinned by `data/slug-registry.json`, keyed on GUID. Upstream names
+change; URLs must not.
+
+## Local development
+
+```
+npm install
+npm run ingest     # fetch and rebuild data/ (network)
+npm run build      # data/ -> dist/
+npm start          # http://localhost:8080
+npm test           # hermetic, no network
+```
+
+Requires Node 22 or newer. `express` is the only runtime dependency.
+
+## Data refresh
+
+A scheduled GitHub Action probes both sources with conditional requests, and
+only parses when something changed. A validation gate must pass before the
+dataset is written: GUID formats, count bands against the previous build,
+referential integrity, slug stability, and a cross-source agreement check. If
+the gate fails, nothing is written, the previous dataset keeps serving, and an
+issue is opened. Failing loudly is the point.
+
+## License
+
+MIT. The underlying facts are Microsoft's.
