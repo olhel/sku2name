@@ -31,7 +31,6 @@ import {
   renderDisambiguationPage,
   renderAboutPage,
   renderDataPage,
-  renderSearchPage,
   render404Page,
   renderIdNotFoundPage,
 } from '../src/render/page-static.mjs';
@@ -264,14 +263,6 @@ async function main() {
   await emitPage('/', home, pages, 'index.html');
   await emitPage('/about/', renderAboutPage({ meta, assets, counts }), pages);
   await emitPage('/data/', renderDataPage({ meta, assets, counts }), pages);
-  // Needs the index meta tags, same as the homepage, and stays out of the
-  // sitemap below: it is noindex and robots.txt disallows the ?q= form.
-  await emitPage(
-    '/search/',
-    renderSearchPage({ meta, assets, counts }).replace('</head>', `${searchMeta}
-</head>`),
-    pages
-  );
 
   // 404 and the GUID-miss template are served by Express, never crawled.
   await emit('404.html', render404Page({ meta, assets, counts }).replace('</head>', `${searchMeta}\n</head>`));

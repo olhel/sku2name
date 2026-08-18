@@ -838,9 +838,12 @@ input::placeholder {
 
 /* ---------- full results page ---------- */
 
-.search-page-form {
-  max-width: none;
-  margin-bottom: var(--sp-5);
+/* The results panel sits outside .home, which is centred and capped for the
+ * field. A result list wants the full shell width and left alignment. */
+.search-page {
+  width: 100%;
+  margin-top: var(--sp-6);
+  text-align: left;
 }
 .search-summary {
   color: var(--text-muted);
@@ -863,14 +866,47 @@ input::placeholder {
   text-decoration: none;
   color: inherit;
 }
+.results .opt-main {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-3);
+  min-width: 0;
+}
+.results .opt-name {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.results .opt-tech {
+  display: block;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  word-break: normal;
+}
 .results a:hover {
   background: var(--surface-hover);
 }
-/* The row that offers the rest of a truncated result set. It is a real
- * listbox option so the arrow keys reach it, but it is not a result. */
-.opt-more .opt-name {
-  color: var(--accent);
-  font-weight: var(--fw-medium);
+
+@media (max-width: 39.999rem) {
+  .results .opt-main {
+    flex-direction: column;
+    gap: 0;
+  }
+  /* nowrap is for the one-line desktop row. Left on, a 103-character String
+   * ID is 736px wide in a 343px column and drags the whole document sideways.
+   * The name stops truncating too: there is a full line for it here. */
+  .results .opt-name {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+  }
+  .results .opt-tech {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
 }
 
 /* ---------- search ---------- */
@@ -930,33 +966,6 @@ input::placeholder {
 }
 
 /* The popover is absolutely positioned so it never reflows the page. */
-.listbox {
-  position: absolute;
-  z-index: 5;
-  left: 0;
-  right: 0;
-  top: calc(100% - 1.6rem);
-  margin: 0;
-  padding: var(--sp-1);
-  list-style: none;
-  background: var(--surface);
-  border: var(--bw) solid var(--border-strong);
-  border-radius: var(--r-lg);
-  box-shadow: var(--shadow-pop);
-  max-height: 60vh;
-  overflow-y: auto;
-}
-.opt {
-  display: flex;
-  align-items: baseline;
-  gap: var(--sp-3);
-  padding: var(--sp-2) var(--sp-3);
-  border-radius: var(--r-sm);
-  cursor: pointer;
-}
-.opt[aria-selected='true'] {
-  background: var(--accent-wash);
-}
 .opt-badge {
   font-size: 0.625rem;
   font-weight: var(--fw-bold);

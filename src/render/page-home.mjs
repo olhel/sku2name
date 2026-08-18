@@ -19,7 +19,7 @@ export function renderHomePage({ meta, assets, counts }) {
   const body = html`<div class="home">
       <h1 class="vh">Look up any Microsoft 365 license SKU or service plan</h1>
 
-      <form class="search" role="search" action="/search/" method="get" id="search-form">
+      <form class="search" role="search" action="/browse/skus/" method="get" id="search-form">
         <label class="vh" for="q">Search Microsoft 365 SKUs and service plans</label>
         <div class="search-field">
           <input
@@ -27,10 +27,6 @@ export function renderHomePage({ meta, assets, counts }) {
             name="q"
             type="text"
             class="search-input"
-            role="combobox"
-            aria-expanded="false"
-            aria-controls="q-listbox"
-            aria-autocomplete="list"
             aria-describedby="q-hint"
             autocomplete="off"
             autocorrect="off"
@@ -42,10 +38,8 @@ export function renderHomePage({ meta, assets, counts }) {
           <button type="submit" class="btn btn-primary">Lookup</button>
         </div>
         <span id="q-hint" class="vh">
-          Results appear below as you type. Use the up and down arrow keys to review them, Enter to
-          open, Escape to dismiss.
+          Results appear below as you type. Escape clears the field.
         </span>
-        <ul id="q-listbox" role="listbox" aria-label="Search results" class="listbox" hidden></ul>
         <p id="q-status" class="search-status" role="status"></p>
       </form>
 
@@ -57,6 +51,14 @@ export function renderHomePage({ meta, assets, counts }) {
           <a href="/browse/service-plans/">all ${formatNumber(counts.servicePlans)} service plans</a>.
         </p>
       </noscript>
+    </div>
+
+    <!-- Full results live outside .home: that block is centred and capped at
+         720px for the field, and a result list wants the full shell width and
+         left alignment. Populated only when the URL carries ?q=. -->
+    <div class="search-page" id="search-panel" hidden>
+      <p id="search-summary" class="search-summary"></p>
+      <ul id="search-results" class="results"></ul>
     </div>
 
     <p class="home-footnote">

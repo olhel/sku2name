@@ -1,4 +1,10 @@
-// Client-side search: index decode, tiered scorer, ARIA 1.2 combobox.
+// Client-side search: index decode, tiered scorer, live results list.
+//
+// The results were a popover combobox capped at eight. That hid how much it
+// had found, and there was no way to reach the rest: "e3" matches 131 entries
+// and "e" matches 1,374. A flat list under the field shows the count, builds
+// as you type, and needs no aria-activedescendant, no roving selection and no
+// overlay, because the results are ordinary links that Tab already walks.
 //
 // Hand-rolled rather than Fuse.js or MiniSearch. Size is part of it, but the
 // real objection is the scoring model: Bitap and BM25 are tuned for prose and
@@ -8,16 +14,13 @@
 // incident. At ~1,400 entries a linear scan takes well under a millisecond.
 
 const input = document.getElementById('q');
-const listbox = document.getElementById('q-listbox');
 const statusLine = document.getElementById('q-status');
 const form = document.getElementById('search-form');
-// Present only on /search/. Their presence is what switches this script from
-// popover mode to full-results mode.
-const resultsList = document.getElementById('search-results');
+const panel = document.getElementById('search-panel');
+const list = document.getElementById('search-results');
 const summary = document.getElementById('search-summary');
 
-if (input && listbox) {
-  const MAX_RESULTS = 8;
+if (input) {
 
   // The full wording runs 376px, which fits the 455px of text space on a wide
   // field and overruns a 375px phone by about nine characters. The short form
@@ -34,7 +37,6 @@ if (input && listbox) {
   let entries = null;
   let guidIndex = null;
   let pending = null;
-  let active = -1;
   let results = [];
   let announceTimer = null;
   let urlTimer = null;
@@ -204,115 +206,60 @@ if (input && listbox) {
 
   /* ---------- rendering ---------- */
 
+  // A broad query can match well over a thousand entries. Rendering all of
+  // them is a lot of DOM for no benefit, so this stops at MAX_RESULTS and says
+  // so rather than truncating silently.
+  const MAX_RESULTS = 200;
+
+  const escapeHtml = (value) =>
+    String(value).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const escapeAttr = escapeHtml;
+
   function setStatus(message) {
     if (!statusLine) return;
     clearTimeout(announceTimer);
     // Debounced, and it announces a count rather than the results themselves.
+    // Announcing every keystroke's matches is the classic way to make a live
+    // search unusable with a screen reader.
     announceTimer = setTimeout(() => {
       statusLine.textContent = message;
     }, 250);
   }
 
-  function close() {
-    listbox.hidden = true;
-    listbox.innerHTML = '';
-    input.setAttribute('aria-expanded', 'false');
-    input.removeAttribute('aria-activedescendant');
-    active = -1;
+  function clear() {
+    if (panel) panel.hidden = true;
+    if (summary) summary.textContent = '';
+    if (list) list.innerHTML = '';
     results = [];
     lastCount = 0;
   }
 
-  const optionMarkup = ({ entry }, index) => {
-    const badge = entry.kind === 'sku' ? 'SKU' : 'PLAN';
-    const reading = entry.kind === 'sku' ? 'License SKU' : 'Service plan';
-    const meta = entry.kind === 'sku' ? `${entry.count} plans` : `in ${entry.count} SKUs`;
-    return `<li role="option" id="q-opt-${index}" aria-selected="false" class="opt" data-href="${escapeAttr(entry.href)}">
-  <span class="opt-badge" aria-hidden="true">${badge}</span>
-  <span class="opt-main">
-    <span class="opt-name">${escapeHtml(entry.name)}</span>
-    <span class="opt-tech">${escapeHtml(entry.id)}</span>
-  </span>
-  <span class="opt-meta">${escapeHtml(meta)}</span>
-  <span class="vh">${reading}</span>
-</li>`;
-  };
-
   function render(scored) {
     lastCount = scored.length;
-    results = scored.slice(0, MAX_RESULTS);
-    active = -1;
-
-    if (results.length === 0) {
-      close();
-      setStatus(input.value.trim() ? `No results for ${input.value.trim()}` : '');
-      return;
-    }
-
-    // The overflow row is a real option rather than a sibling of the listbox:
-    // every option here navigates, so this one navigating to the results page
-    // needs no special handling in arrow keys, Enter or navigate().
-    const overflow = scored.length > results.length
-      ? {
-          entry: {
-            kind: 'more',
-            id: '',
-            name: `See all ${scored.length} results`,
-            href: `/search/?q=${encodeURIComponent(input.value.trim())}`,
-            count: 0,
-          },
-        }
-      : null;
-    if (overflow) results = results.concat(overflow);
-
-    listbox.innerHTML = results
-      .map((item, index) => {
-        if (item.entry.kind === 'more') {
-          return `<li role="option" id="q-opt-${index}" aria-selected="false" class="opt opt-more" data-href="${escapeAttr(item.entry.href)}">
-  <span class="opt-main"><span class="opt-name">${escapeHtml(item.entry.name)}</span></span>
-</li>`;
-        }
-        return optionMarkup(item, index);
-      })
-      .join('');
-
-    listbox.hidden = false;
-    input.setAttribute('aria-expanded', 'true');
-    setStatus(`${scored.length} result${scored.length === 1 ? '' : 's'}`);
-  }
-
-  /* ---------- full results page ---------- */
-
-  // A broad query can match well over a thousand entries. Rendering all of
-  // them is a lot of DOM for no benefit, so this stops at PAGE_RESULTS and
-  // says so rather than truncating silently.
-  const PAGE_RESULTS = 200;
-
-  function renderFull(scored) {
-    lastCount = scored.length;
-    results = scored.slice(0, MAX_RESULTS);
-    active = -1;
-    close();
+    results = scored;
 
     const query = input.value.trim();
     if (!query) {
-      summary.textContent = '';
-      resultsList.innerHTML = '';
+      clear();
+      setStatus('');
       return;
     }
     if (scored.length === 0) {
+      if (panel) panel.hidden = false;
       summary.textContent = `No results for ${query}.`;
-      resultsList.innerHTML = '';
+      list.innerHTML = '';
+      setStatus(`No results for ${query}`);
       return;
     }
 
-    const shown = scored.slice(0, PAGE_RESULTS);
+    const shown = scored.slice(0, MAX_RESULTS);
+    if (panel) panel.hidden = false;
     summary.textContent =
       shown.length < scored.length
-        ? `Showing the first ${shown.length} of ${scored.length} results for ${query}. Narrow the query to see the rest.`
-        : `${scored.length} result${scored.length === 1 ? '' : 's'} for ${query}.`;
+        ? `Showing the first ${shown.length} of ${scored.length} results. Narrow the query to see the rest.`
+        : `${scored.length} result${scored.length === 1 ? '' : 's'}.`;
 
-    resultsList.innerHTML = shown
+    list.innerHTML = shown
       .map(({ entry }) => {
         const badge = entry.kind === 'sku' ? 'SKU' : 'PLAN';
         const reading = entry.kind === 'sku' ? 'License SKU' : 'Service plan';
@@ -330,33 +277,8 @@ if (input && listbox) {
 </li>`;
       })
       .join('');
-  }
 
-
-  const escapeHtml = (value) =>
-    String(value).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const escapeAttr = escapeHtml;
-
-  function setActive(index) {
-    const options = listbox.querySelectorAll('[role="option"]');
-    options.forEach((option) => option.setAttribute('aria-selected', 'false'));
-    if (index < 0 || index >= options.length) {
-      active = -1;
-      input.removeAttribute('aria-activedescendant');
-      return;
-    }
-    active = index;
-    const option = options[index];
-    option.setAttribute('aria-selected', 'true');
-    // Focus never leaves the input; the active option is communicated only
-    // through aria-activedescendant.
-    input.setAttribute('aria-activedescendant', option.id);
-    option.scrollIntoView({ block: 'nearest' });
-  }
-
-  function navigate(index) {
-    const target = results[index];
-    if (target) location.href = target.entry.href;
+    setStatus(`${scored.length} result${scored.length === 1 ? '' : 's'}`);
   }
 
   /* ---------- events ---------- */
@@ -364,7 +286,7 @@ if (input && listbox) {
   async function run() {
     const raw = input.value.trim();
     if (!raw) {
-      close();
+      clear();
       updateUrl('');
       return;
     }
@@ -372,7 +294,7 @@ if (input && listbox) {
     // A full GUID is a navigation, not a search. /id/ resolves it server-side.
     const guid = asGuid(raw);
     if (guid) {
-      show([
+      render([
         {
           entry: {
             kind: 'sku',
@@ -409,18 +331,14 @@ if (input && listbox) {
           .map(({ key, target }) => ({
             entry: { kind: 'sku', id: dashed(key), name: 'Matching GUID', href: target, count: 0 },
             value: 950,
-            // A partial GUID is a prefix, so it only counts as exact when it
-            // narrowed to a single entry. That is checked at submit.
             base: T.ID_PREFIX,
           }));
       }
     }
 
-    show(scored);
+    render(scored);
     updateUrl(raw);
   }
-
-  const show = (scored) => (resultsList ? renderFull(scored) : render(scored));
 
   function updateUrl(value) {
     clearTimeout(urlTimer);
@@ -437,90 +355,39 @@ if (input && listbox) {
   input.addEventListener('input', run);
 
   input.addEventListener('keydown', (event) => {
-    const count = results.length;
-
-    if (event.key === 'ArrowDown') {
-      event.preventDefault();
-      if (listbox.hidden && input.value.trim()) return void run();
-      setActive(active + 1 >= count ? 0 : active + 1);
-    } else if (event.key === 'ArrowUp') {
-      event.preventDefault();
-      setActive(active <= 0 ? count - 1 : active - 1);
-    } else if (event.key === 'Home' && active >= 0) {
-      event.preventDefault();
-      setActive(0);
-    } else if (event.key === 'End' && active >= 0) {
-      event.preventDefault();
-      setActive(count - 1);
-    } else if (event.key === 'Enter') {
-      if (count > 0) {
-        event.preventDefault();
-        navigate(active >= 0 ? active : 0);
-      }
-    } else if (event.key === 'Escape') {
-      // First press closes and keeps the text, second clears it.
-      if (!listbox.hidden) close();
-      else {
-        input.value = '';
-        updateUrl('');
-      }
-    } else if (event.key === 'Tab') {
-      close();
+    // No arrow-key handling: the results are plain links in document order, so
+    // Tab already walks them. Escape clears, which is the only shortcut a flat
+    // list needs.
+    if (event.key === 'Escape') {
+      input.value = '';
+      clear();
+      updateUrl('');
     }
   });
 
-  // preventDefault on mousedown so the input never blurs before the click.
-  listbox.addEventListener('mousedown', (event) => event.preventDefault());
-  listbox.addEventListener('click', (event) => {
-    const option = event.target.closest('[role="option"]');
-    if (option?.dataset.href) location.href = option.dataset.href;
-  });
-  listbox.addEventListener('mousemove', (event) => {
-    const option = event.target.closest('[role="option"]');
-    if (!option) return;
-    setActive([...listbox.querySelectorAll('[role="option"]')].indexOf(option));
-  });
-
-  // Submit is conditional, because one button was doing two jobs badly.
+  // Submit navigates only when the query named one thing outright.
   //
-  // Jumping to the top hit is exactly right for a pasted identifier, which is
+  // Going straight to the answer is right for a pasted identifier, which is
   // what this tool is for. It is wrong for a broad query: "e" matches 1,374
-  // entries and picking one of them is arbitrary. So it navigates only when
-  // the query actually named something, meaning an option was arrowed to, the
-  // top hit sits in an exact tier, or there is only one result at all.
-  // Anything else goes to the full results page.
+  // entries and picking one is arbitrary. In that case the list below is
+  // already showing, so there is nothing for submit to do.
   //
-  // Without JavaScript the form is a real GET and the action attribute
-  // handles it, so this never leaves someone stranded.
+  // Without JavaScript none of this runs and the form is a real GET to the
+  // SKU browse list, which filters from ?q= on its own.
   form?.addEventListener('submit', (event) => {
-    if (resultsList) {
-      // Already on the results page: re-run rather than navigate away.
-      event.preventDefault();
-      run();
-      return;
-    }
     if (results.length === 0) return;
-    if (active >= 0) {
-      event.preventDefault();
-      navigate(active);
-      return;
-    }
+    event.preventDefault();
     const top = results[0];
-    const named = top.base >= EXACT_TIER || lastCount === 1;
-    if (named) {
-      event.preventDefault();
-      navigate(0);
-    }
-    // Otherwise fall through: the form's action is /search/ and q is the
-    // input's own name, so the browser does the navigation.
+    if (top.base >= EXACT_TIER || lastCount === 1) location.href = top.entry.href;
   });
+
 
   // Start fetching immediately on the homepage; the index is the point here.
   ensureIndex();
 
-  // A shared ?q= URL prefills and opens the listbox but never auto-navigates:
-  // bouncing someone straight to a result breaks the back button and takes
-  // away the choice they were sharing.
+  // A shared ?q= URL prefills and renders, but never auto-navigates: bouncing
+  // someone straight to a result breaks the back button and takes away the
+  // choice they were sharing.
   const initial = new URLSearchParams(location.search).get('q');
   if (initial) {
     input.value = initial;
