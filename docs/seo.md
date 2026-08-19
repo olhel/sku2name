@@ -26,7 +26,7 @@ The original build plan called for **three static OG images, not 1,401
 generated ones**, with `og:title` carrying the per-page specificity. That
 decision still looks right. It just was never finished.
 
-### Cloudflare AI-crawler blocking, observed once and then gone
+### Cloudflare AI-crawler blocking, found on and turned off
 
 Recorded because the setting exists and its state is not obvious from the
 repo, and because it flips without a deploy.
@@ -43,19 +43,22 @@ Disallow: /   Amazonbot, Applebot-Extended, Bytespider, CCBot,
 ```
 
 Re-checked the same day it was gone: five cache-busted fetches all returned
-our own 435-byte file and nothing else. So either the setting was turned off
-in the Cloudflare dashboard in between, or it was being served transiently.
+our own 435-byte file and nothing else. Olav had turned the managed rule off in
+the Cloudflare dashboard in between.
+
+**Decided, 19 August 2026: AI crawlers are not blocked.** That is the setting
+the site should keep, because `llms.txt` exists to invite exactly the crawlers
+the managed rule turned away, and being quotable by an assistant is a stated
+goal rather than an accident.
 
 **Our `robots.txt` never contained any of it.** The build output is clean, so
 this is entirely a Cloudflare zone setting and cannot be fixed or pinned from
 this repo.
 
-Two things follow. First, verify the live file rather than the built one when
-this matters, because they are not the same document. Second, decide the
-policy deliberately: blocking training crawlers is a legitimate choice, but it
-sits badly beside `llms.txt`, which exists specifically to invite models to
-use and cite the site. Publishing that invitation while blocking ClaudeBot and
-GPTBot is worth doing on purpose or not at all.
+The lesson worth keeping is that **the robots.txt served from the edge is not
+the file we build**. Cloudflare can prepend to it, the change needs no deploy,
+and nothing in this repo records or constrains it. Check the live URL, not
+`dist/robots.txt`, whenever this matters.
 
 Worth knowing either way: the managed list never touched Googlebot, Bingbot,
 OAI-SearchBot, ChatGPT-User, PerplexityBot or plain Applebot, so classic search
@@ -141,11 +144,9 @@ crawler access and the quality of the summary files, not markup.
 1. **Generate three static OG images** and wire them per page type: one for the
    home and section pages, one for SKU pages, one for service plan pages.
    Fixes 1,422 blank cards. Keep `og:title` carrying the specificity.
-2. **Settle the Cloudflare AI-crawler policy.** It is currently off, so nothing
-   is blocked, but it was on earlier the same day and can change without a
-   deploy. Decide whether training crawlers are welcome, set it once, and note
-   the decision here. Leaving it to drift is the only wrong answer, because
-   `llms.txt` invites exactly the crawlers that setting turns away.
+2. ~~Settle the Cloudflare AI-crawler policy.~~ Done on 19 August 2026: the
+   managed rule is off and AI crawlers are allowed. Worth re-checking the live
+   file occasionally, since the setting lives outside this repo.
 
 ### P1, icons, one pass
 
@@ -172,8 +173,6 @@ crawler access and the quality of the summary files, not markup.
 
 ## Open questions
 
-- Whether to unblock AI training crawlers. This is the only item that is a
-  business decision rather than a task.
 - Whether `ai-canonical-answer`, a non-standard meta tag sub2tenant carries, is
   doing anything at all. No search engine documents it. It costs almost nothing
   and proves nothing, so it is left out until someone can point at evidence.
