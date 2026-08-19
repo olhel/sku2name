@@ -189,7 +189,15 @@ crawler access and the quality of the summary files, not markup.
    CommonMark but a naive parser takes the last parenthesised group and comes
    away with `Plan 2` as the target, which is the same trap the markdown
    plan-cell parser exists to handle.
-6. Consider `FAQPage` on `/about/` and `/data/` for retrieval systems only.
+6. ~~Consider `FAQPage` on `/about/` and `/data/`.~~ Declined on 20 August
+   2026. Google has rendered nothing from it since 7 May 2026, so the whole case
+   rests on non-Google retrieval systems parsing it, and there is no evidence
+   they do. `llms.txt` and `/llm/` already carry the same content in formats
+   that are conventional.
+
+   Cheap and unproven is exactly how sub2tenant ended up with four dead `HowTo`
+   blocks that this document now tells people not to copy. Declining it on the
+   record is better than adding markup on a hunch.
 
 ### Found off-plan and fixed
 

@@ -33,6 +33,7 @@ import {
   renderDisambiguationPage,
   renderAboutPage,
   renderDataPage,
+  renderLlmPage,
   render404Page,
   renderIdNotFoundPage,
 } from '../src/render/page-static.mjs';
@@ -233,6 +234,20 @@ async function main() {
   await emitPage('/about/', renderAboutPage({ meta, assets, counts }), pages);
   await emitPage('/data/', renderDataPage({ meta, assets, counts }), pages);
 
+  // Worked examples come from the real dataset rather than being written out,
+  // so the page cannot drift from what the site actually serves.
+  const exampleSku = skus.find((x) => x.stringId === 'SPE_E5') || skus[0];
+  const examplePlanRecord =
+    servicePlans.find((x) => x.technicalName === 'EXCHANGE_S_ENTERPRISE') || servicePlans[0];
+  const examplePlan = {
+    ...examplePlanRecord,
+    skuCount: (reverse.get(examplePlanRecord.planId) || []).length,
+  };
+  await emitPage('/llm/', renderLlmPage({
+    meta, assets, counts,
+    examples: { sku: exampleSku, plan: examplePlan },
+  }), pages);
+
   // 404 and the GUID-miss template are served by Express, never crawled.
   await emit('404.html', render404Page({ meta, assets, counts }).replace('</head>', `${searchMeta}\n</head>`));
   await emit('id-not-found.html', renderIdNotFoundPage({ meta, assets }));
@@ -246,7 +261,7 @@ async function main() {
   await emit('data/id-map.json', compactStringify(buildIdMap({ skus, servicePlans })));
 
   const canonicalPaths = pages.map((page) => page.path);
-  for (const [name, xml] of Object.entries(renderSitemaps({ skus, servicePlans, meta, extraPaths: ['/', '/browse/skus/', '/browse/service-plans/', '/about/', '/data/', ...disambiguationPaths] }))) {
+  for (const [name, xml] of Object.entries(renderSitemaps({ skus, servicePlans, meta, extraPaths: ['/', '/browse/skus/', '/browse/service-plans/', '/about/', '/data/', '/llm/', ...disambiguationPaths] }))) {
     await emit(name, xml);
   }
   await emit('robots.txt', renderRobots());

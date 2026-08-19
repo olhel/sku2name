@@ -168,6 +168,13 @@ export function renderAboutPage({ meta, assets, counts }) {
         change it.
       </p>
 
+      <h2>Using it from a script</h2>
+      <p>
+        Every page is static HTML at a stable URL and the whole dataset is published as JSON, so
+        sku2name can be read by a script or an assistant as easily as by a person.
+        <a href="/llm/">How to do that</a>.
+      </p>
+
       <h2>Independence</h2>
       <p>
         sku2name is an independent tool, not affiliated with or endorsed by Microsoft. Microsoft
@@ -326,6 +333,117 @@ function row(label, value) {
 }
 
 /* ------------------------------------------------------------ error pages */
+
+/**
+ * The page for people wiring sku2name into something else, and for assistants
+ * summarising it.
+ *
+ * It is not llms.txt in HTML. llms.txt is a summary at a conventional path, for
+ * a crawler; this is a page someone building a script or a runbook can read,
+ * carrying the worked examples and URL patterns that make the site usable
+ * without the search box. Both point at the same JSON.
+ *
+ * There is deliberately no /llm.json. sub2tenant ships one, but no convention
+ * defines that path, nothing looks for it, and it would restate llms.txt in a
+ * format with no consumer. The real machine-readable surface is
+ * /data/skus.json and /data/service-plans.json, which carry the data itself
+ * rather than prose about it.
+ */
+export function renderLlmPage({ meta, assets, counts, examples }) {
+  const { sku, plan } = examples;
+  const body = html`<div class="prose">
+      ${breadcrumb([{ href: '/', label: 'Home' }, { label: 'For scripts and assistants' }])}
+      <h1>Using sku2name from a script or an assistant</h1>
+      <p class="lede">
+        Every page is static HTML at a stable URL, and the whole dataset is available as JSON.
+        Nothing here needs a key, an account, or a rate limit.
+      </p>
+
+      <h2>URL patterns</h2>
+      <p>
+        Slugs are pinned to GUIDs in a committed registry, so a URL that works today keeps working
+        even when Microsoft renames the product.
+      </p>
+      <ul>
+        <li>
+          <strong>A SKU</strong> is <code>/sku/&lt;string-id&gt;</code>, lowercased. For
+          ${sku.stringId} that is <a href="/sku/${sku.slug}">/sku/${sku.slug}</a>.
+        </li>
+        <li>
+          <strong>A service plan</strong> is <code>/service-plan/&lt;technical-name&gt;</code>,
+          lowercased. For ${plan.technicalName} that is
+          <a href="/service-plan/${plan.slug}">/service-plan/${plan.slug}</a>.
+        </li>
+        <li>
+          <strong>Any GUID</strong> is <code>/id/&lt;guid&gt;</code>, which redirects to the right
+          page whether the GUID belongs to a SKU or a service plan. Braces and a
+          <code>urn:uuid:</code> prefix are accepted.
+        </li>
+      </ul>
+      <h2>The data, as JSON</h2>
+      <p>
+        Prefer these over scraping the pages. They are the records the pages are built from, and
+        they are regenerated whenever Microsoft's reference changes.
+      </p>
+      <ul>
+        <li>
+          <a href="/data/skus.json">/data/skus.json</a>, ${formatNumber(counts.skus)} SKUs, each
+          with its string ID, GUID, product name and the service plan GUIDs it contains
+        </li>
+        <li>
+          <a href="/data/service-plans.json">/data/service-plans.json</a>,
+          ${formatNumber(counts.servicePlans)} service plans with technical and friendly names
+        </li>
+        <li>
+          <a href="/data/source-meta.json">/data/source-meta.json</a>, counts, source URLs, and the
+          date Microsoft last updated the reference
+        </li>
+        <li><a href="/llms.txt">/llms.txt</a>, a short summary at the conventional path</li>
+      </ul>
+
+      <h2>The direction Microsoft's reference does not have</h2>
+      <p>
+        Microsoft publishes SKUs with their service plans nested inside them. It cannot be read the
+        other way, so "which SKUs include this service plan" has no answer in the source at all.
+        sku2name builds that index and puts it above the fold on every service plan page, because
+        it is the reason those pages exist.
+      </p>
+      <p>
+        <a href="/service-plan/${plan.slug}">${plan.friendlyName || plan.technicalName}</a> appears
+        in ${formatNumber(plan.skuCount)} ${plan.skuCount === 1 ? 'SKU' : 'SKUs'}, for instance.
+      </p>
+
+      <h2>What it will not tell you</h2>
+      <p>
+        sku2name resolves identifiers. It does not price licenses, recommend them, or connect to a
+        tenant, and it stops at service plan level: it will tell you Microsoft 365 E5 includes
+        Microsoft Defender for Office 365 Plan 2, not which individual features sit inside that
+        plan, because Microsoft publishes no structured source for that.
+      </p>
+      <p>
+        Everything here comes from Microsoft's published reference. If that reference is wrong,
+        sku2name is wrong, and <a href="/data/">the data page</a> records which of Microsoft's two
+        files each record came from.
+      </p>
+
+      <h2>Attribution</h2>
+      <p>
+        sku2name is an independent tool, not affiliated with or endorsed by Microsoft. Microsoft 365
+        and Microsoft Entra are trademarks of Microsoft Corporation. If you quote this site, that
+        sentence should travel with the answer.
+      </p>
+      ${ctaCard()}
+    </div>`;
+
+  return renderPage({
+    title: buildTitle('sku2name for scripts and assistants'),
+    description: `Stable URLs, a GUID redirect, and the whole ${formatNumber(counts.skus)}-SKU dataset as JSON. Using sku2name without the search box.`,
+    path: '/llm/',
+    body,
+    assets,
+    ...common(meta),
+  });
+}
 
 export function render404Page({ meta, assets, counts }) {
   const body = html`<h1>That page is not here</h1>
