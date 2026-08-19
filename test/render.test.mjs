@@ -67,7 +67,7 @@ test('JSON-LD escapes a closing script tag', () => {
 // Product names really do contain these characters.
 test('renders a product name containing an ampersand and a slash safely', () => {
   const tricky = { ...sku, productName: 'Enterprise & Mobility w/o Teams', stringId: 'O365_w/o Teams Bundle_M3' };
-  const output = renderSkuPage({ sku: tricky, plans: [], similar: [], meta, assets });
+  const output = renderSkuPage({ sku: tricky, plans: [], similar: { items: [], editionsOfThis: 0 }, meta, assets });
   assert.ok(output.includes('Enterprise &amp; Mobility w/o Teams'));
   assert.ok(!output.includes('Enterprise & Mobility'));
 });
@@ -113,7 +113,7 @@ test('plan heading falls back to the technical name when there is no friendly on
 /* ---------- page structure ---------- */
 
 test('a SKU page puts the answer in the first viewport', () => {
-  const output = renderSkuPage({ sku, plans: [{ ...plan, skuCount: 41 }], similar: [], meta, assets });
+  const output = renderSkuPage({ sku, plans: [{ ...plan, skuCount: 41 }], similar: { items: [], editionsOfThis: 0 }, meta, assets });
   const beforeTable = output.slice(0, output.indexOf('<table'));
   assert.ok(beforeTable.includes('Office 365 E3'), 'friendly name above the table');
   assert.ok(beforeTable.includes('ENTERPRISEPACK'), 'String ID above the table');
@@ -121,7 +121,7 @@ test('a SKU page puts the answer in the first viewport', () => {
 });
 
 test('a SKU page emits a canonical link, breadcrumb and DefinedTerm', () => {
-  const output = renderSkuPage({ sku, plans: [], similar: [], meta, assets });
+  const output = renderSkuPage({ sku, plans: [], similar: { items: [], editionsOfThis: 0 }, meta, assets });
   assert.ok(output.includes('<link rel="canonical" href="https://sku2name.com/sku/enterprisepack"'));
   assert.ok(output.includes('"@type": "BreadcrumbList"'));
   assert.ok(output.includes('"@type": "DefinedTerm"'));
@@ -153,45 +153,48 @@ test('a plan with no friendly name says so instead of faking one', () => {
 test('the filter bar appears only above the row count where scanning fails', () => {
   const few = Array.from({ length: 10 }, (_, i) => ({ ...plan, planId: `${i}`, slug: `p${i}`, skuCount: 1 }));
   const many = Array.from({ length: 30 }, (_, i) => ({ ...plan, planId: `${i}`, slug: `p${i}`, skuCount: 1 }));
-  assert.ok(!renderSkuPage({ sku, plans: few, similar: [], meta, assets }).includes('row-filter'));
-  assert.ok(renderSkuPage({ sku, plans: many, similar: [], meta, assets }).includes('row-filter'));
+  assert.ok(!renderSkuPage({ sku, plans: few, similar: { items: [], editionsOfThis: 0 }, meta, assets }).includes('row-filter'));
+  assert.ok(renderSkuPage({ sku, plans: many, similar: { items: [], editionsOfThis: 0 }, meta, assets }).includes('row-filter'));
 });
 
 // Regression: an unscoped filter also emptied the similar-SKUs table on the
 // same page and counted its rows in the total.
 test('a SKU page marks exactly one filterable container', () => {
   const many = Array.from({ length: 30 }, (_, i) => ({ ...plan, planId: `${i}`, slug: `p${i}`, skuCount: 1 }));
-  const similar = [{ skuId: 'x', slug: 'other', productName: 'Other SKU', stringId: 'OTHER', shared: 3, total: 30 }];
+  const similar = {
+    items: [{ slug: 'other', productName: 'Other SKU', stringId: 'OTHER', adds: 3, lacks: 27, total: 30, editions: 0 }],
+    editionsOfThis: 0,
+  };
   const output = renderSkuPage({ sku, plans: many, similar, meta, assets });
 
   assert.equal((output.match(/data-filterable/g) || []).length, 1);
   assert.ok(output.includes('row-filter'), 'the filter box should be present');
   // The similar-SKUs table must exist but must not be filterable.
-  assert.ok(output.includes('SKUs similar to this one'));
+  assert.ok(output.includes('How other SKUs compare'));
 });
 
 test('a page with a filter box always has a container for it to target', () => {
   const many = Array.from({ length: 30 }, (_, i) => ({ ...plan, planId: `${i}`, slug: `p${i}`, skuCount: 1 }));
-  const output = renderSkuPage({ sku, plans: many, similar: [], meta, assets });
+  const output = renderSkuPage({ sku, plans: many, similar: { items: [], editionsOfThis: 0 }, meta, assets });
   assert.ok(output.includes('id="row-filter"'));
   assert.ok(output.includes('data-filterable'));
 });
 
 test('every page carries the non-affiliation disclaimer', () => {
-  const output = renderSkuPage({ sku, plans: [], similar: [], meta, assets });
+  const output = renderSkuPage({ sku, plans: [], similar: { items: [], editionsOfThis: 0 }, meta, assets });
   assert.ok(output.includes('not affiliated with or endorsed by Microsoft'));
 });
 
 /* ---------- determinism ---------- */
 
 test('rendering the same page twice is byte-identical', () => {
-  const once = renderSkuPage({ sku, plans: [{ ...plan, skuCount: 41 }], similar: [], meta, assets });
-  const twice = renderSkuPage({ sku, plans: [{ ...plan, skuCount: 41 }], similar: [], meta, assets });
+  const once = renderSkuPage({ sku, plans: [{ ...plan, skuCount: 41 }], similar: { items: [], editionsOfThis: 0 }, meta, assets });
+  const twice = renderSkuPage({ sku, plans: [{ ...plan, skuCount: 41 }], similar: { items: [], editionsOfThis: 0 }, meta, assets });
   assert.equal(once, twice);
 });
 
 test('no render path leaks a build timestamp', () => {
-  const output = renderSkuPage({ sku, plans: [], similar: [], meta, assets });
+  const output = renderSkuPage({ sku, plans: [], similar: { items: [], editionsOfThis: 0 }, meta, assets });
   // The visible date must come from the dataset, not from the clock.
   assert.ok(output.includes('2026-08-14'));
   assert.ok(!output.includes(String(new Date().getFullYear() + 1)));

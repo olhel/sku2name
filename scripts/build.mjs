@@ -22,6 +22,7 @@ import { shortHash } from '../src/lib/hash.mjs';
 import { stripCssComments } from '../src/lib/css.mjs';
 import { stripJsComments } from '../src/lib/js.mjs';
 import { byCodeUnit } from '../src/lib/sort.mjs';
+import { findSimilar } from '../src/lib/similar.mjs';
 import { formatDate } from '../src/render/layout.mjs';
 import { stableStringify, compactStringify } from '../src/lib/stable-json.mjs';
 import { renderSkuPage, skuPath } from '../src/render/page-sku.mjs';
@@ -86,39 +87,6 @@ async function buildAssets() {
   return manifest;
 }
 
-/** Top 5 SKUs by Jaccard similarity of their service plan sets. */
-function findSimilar(sku, skus, planSets, limit = 5) {
-  const own = planSets.get(sku.skuId);
-  if (!own || own.size === 0) return [];
-
-  const scored = [];
-  for (const other of skus) {
-    if (other.skuId === sku.skuId) continue;
-    const theirs = planSets.get(other.skuId);
-    if (!theirs || theirs.size === 0) continue;
-
-    let shared = 0;
-    const [small, large] = own.size <= theirs.size ? [own, theirs] : [theirs, own];
-    for (const planId of small) if (large.has(planId)) shared += 1;
-    if (shared === 0) continue;
-
-    const union = own.size + theirs.size - shared;
-    scored.push({
-      skuId: other.skuId,
-      slug: other.slug,
-      productName: other.productName,
-      stringId: other.stringId,
-      shared,
-      total: own.size,
-      score: shared / union,
-    });
-  }
-
-  scored.sort(
-    (a, b) => b.score - a.score || b.shared - a.shared || byCodeUnit(a.productName, b.productName)
-  );
-  return scored.slice(0, limit);
-}
 
 async function main() {
   const started = Date.now();

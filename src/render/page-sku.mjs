@@ -77,7 +77,7 @@ export function renderSkuPage({ sku, plans, similar, meta, assets }) {
           rows,
         })}
 
-    ${similarSection(similar)}
+    ${similarSection(similar, sku.productName)}
     ${ctaCard()}`;
 
   return renderPage({
@@ -129,32 +129,70 @@ function aliasNote(sku) {
     </div>`;
 }
 
-function similarSection(similar) {
-  if (!similar || similar.length === 0) return '';
-  return html`<h2 class="section-head">SKUs similar to this one</h2>
-    <div class="table-wrap">
+/**
+ * How each candidate differs, rather than how much it shares.
+ *
+ * The table used to print "shares 82 of 86" while sorting by Jaccard, so a
+ * row sharing 74 could outrank one sharing 82 and the order looked broken.
+ * Jaccard was right: the 82 dragged in 29 extra plans. Showing both
+ * directions explains the ranking, and it makes a contained SKU obvious,
+ * which "shares 58 of 86" actively hid.
+ */
+function differenceNote(item) {
+  if (item.adds === 0) return "already inside this SKU";
+  if (item.lacks === 0) {
+    return `contains all ${formatNumber(item.total)}, adds ${formatNumber(item.adds)}`;
+  }
+  return `adds ${formatNumber(item.adds)}, lacks ${formatNumber(item.lacks)}`;
+}
+
+function similarSection(similar, productName) {
+  const items = similar?.items ?? [];
+  const editions = similar?.editionsOfThis ?? 0;
+  if (items.length === 0 && editions === 0) return "";
+
+  const table = items.length
+    ? html`<div class="table-wrap">
       <table class="data">
-        <caption class="vh">SKUs sharing service plans with this one</caption>
+        <caption class="vh">How other SKUs differ from this one</caption>
         <thead>
           <tr>
             <th scope="col">SKU</th>
-            <th scope="col" class="col-guid">Shared plans</th>
-            <th scope="col"><span class="vh">Shared</span></th>
+            <th scope="col" class="col-guid">Difference</th>
+            <th scope="col"><span class="vh">Difference</span></th>
           </tr>
         </thead>
         <tbody>
-          ${similar.map(
-            (item) => html`<tr>
+          ${items.map((item) => {
+            const note = differenceNote(item);
+            const editionNote = item.editions
+              ? `, +${formatNumber(item.editions)} edition${item.editions === 1 ? "" : "s"}`
+              : "";
+            return html`<tr>
               <th scope="row">
                 <a class="name" href="/sku/${item.slug}">${item.productName}</a>
                 <span class="tech">${item.stringId}</span>
-                <span class="guid-inline">shares ${formatNumber(item.shared)} of ${formatNumber(item.total)} plans</span>
+                <span class="guid-inline">${note}${editionNote}</span>
               </th>
-              <td class="col-guid tabular">${formatNumber(item.shared)} of ${formatNumber(item.total)}</td>
+              <td class="col-guid tabular">${note}${editionNote}</td>
               <td class="cell-copy"></td>
-            </tr>`
-          )}
+            </tr>`;
+          })}
         </tbody>
       </table>
-    </div>`;
+    </div>`
+    : "";
+
+  // Reported rather than listed: on Microsoft 365 E5 there are eleven, and
+  // they differ by region, seat minimum or bundled Teams rather than by
+  // anything a reader is choosing between.
+  const editionNote = editions
+    ? html`<p class="note">Microsoft also sells ${formatNumber(editions)}
+        other edition${raw(editions === 1 ? "" : "s")} of ${productName}, differing by region,
+        seat minimum or bundled Teams. They are all searchable.</p>`
+    : "";
+
+  return html`<h2 class="section-head">How other SKUs compare</h2>
+    ${table}
+    ${editionNote}`;
 }
