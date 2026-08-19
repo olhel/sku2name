@@ -247,6 +247,7 @@ if (input) {
     if (list) list.innerHTML = '';
     results = [];
     lastCount = 0;
+    setStatus('');
   }
 
   function render(scored) {
@@ -412,15 +413,21 @@ if (input) {
     ensureIndex().then(run);
   }
 
-  // Deliberately no autofocus.
+  // Focus the field on load, so the page is ready to paste into.
   //
-  // A text input always matches :focus-visible when focused, so autofocusing
-  // on load means every desktop visitor arrives at a lit-up box. sub2tenant
-  // autofocuses too, but hides the effect with outline:none, which is not an
-  // option here: suppressing the indicator to win back the visual is the
-  // wrong trade.
+  // Gated on a real pointer rather than a width: on a touch device this would
+  // throw up the keyboard and hide the page behind it before anyone asked for
+  // anything. (hover: hover) and (pointer: fine) is the signal that actually
+  // means "mouse or trackpad".
   //
-  // Moving focus without the user asking is also disorienting with a screen
-  // reader or a magnifier. The field is the first interactive element on the
-  // page, so Tab reaches it immediately, and "/" focuses it from anywhere.
+  // The focus ring comes with it, because a text input always matches
+  // :focus-visible when focused. sub2tenant autofocuses too and hides the
+  // effect with outline:none; that trade is not made here. A lit box is what
+  // a focused control should look like.
+  //
+  // Skipped when the page was opened at an anchor, where the visitor asked to
+  // be somewhere specific and moving focus would scroll them away from it.
+  if (!location.hash && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    input.focus({ preventScroll: true });
+  }
 }
