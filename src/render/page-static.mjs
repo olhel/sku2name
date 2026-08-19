@@ -160,8 +160,9 @@ export function renderAboutPage({ meta, assets, counts }) {
       <h2>Independence</h2>
       <p>
         sku2name is an independent tool, not affiliated with or endorsed by Microsoft. Microsoft
-        365 and Microsoft Entra are trademarks of Microsoft Corporation. It is built and paid for
-        by <a href="${SITE.bsure}" rel="noopener">Bsure</a>, and the source is on
+        365 and Microsoft Entra are trademarks of Microsoft Corporation. It is built by
+        <a href="${SITE.author.url}" rel="noopener">${SITE.author.name}</a>, paid for by
+        <a href="${SITE.bsure}" rel="noopener">Bsure</a>, and the source is on
         <a href="${SITE.github}" rel="noopener">GitHub</a>.
       </p>
       ${ctaCard()}

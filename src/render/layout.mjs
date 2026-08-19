@@ -8,6 +8,7 @@ export const SITE = {
   tagline: 'Microsoft 365 SKU and service plan lookup',
   bsure: 'https://www.bsure.io/?utm_source=sku2name&utm_medium=referral',
   github: 'https://github.com/olhel/sku2name',
+  author: { name: 'Olav Helland', url: 'https://www.linkedin.com/in/olavhelland/' },
   sourceUrl:
     'https://learn.microsoft.com/entra/identity/users/licensing-service-plan-reference',
 };
