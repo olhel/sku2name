@@ -330,6 +330,14 @@ code,
   }
   /* .theme-toggle zeroes its own padding and inherits the body line-height
    * for the desktop row, which made it 3px taller than the links here. */
+  .site-nav .theme-label {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip-path: none;
+  }
   .site-nav .theme-toggle {
     padding-block: 0.75rem;
     font-size: inherit;
@@ -354,7 +362,60 @@ code,
   font: inherit;
   font-size: 0.9rem;
   line-height: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  /* An 18px glyph on its own is an 18px target. WCAG 2.5.8 asks for 24. */
+  min-width: 24px;
+  min-height: 24px;
 }
+/* The icon shows the mode the button switches TO, matching the aria-label.
+ * Driven off :root[data-theme] rather than from script, so the correct icon
+ * is painted before app.js runs and there is no swap on load. An absent
+ * attribute is dark, which is the base palette, so the sun is the default. */
+.theme-toggle .i {
+  display: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.theme-toggle .i-sun,
+:root[data-theme='dark'] .theme-toggle .i-sun {
+  display: block;
+}
+:root[data-theme='light'] .theme-toggle .i-sun,
+:root[data-theme='system'] .theme-toggle .i-sun {
+  display: none;
+}
+:root[data-theme='light'] .theme-toggle .i-system {
+  display: block;
+}
+:root[data-theme='system'] .theme-toggle .i-moon {
+  display: block;
+}
+/* The moon is a filled crescent rather than an outline: at 18px the outlined
+ * version reads as a blob. */
+.theme-toggle .i-moon path {
+  fill: currentColor;
+  stroke: none;
+}
+/* Icon only in the desktop row, where the other items are text and a word
+ * here would be the odd one out. The mobile panel shows the label, because a
+ * lone glyph in a stacked list of words has nothing to sit against. */
+.theme-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .theme-toggle:hover {
   background: var(--surface-hover);
   color: var(--text);

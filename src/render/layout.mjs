@@ -99,7 +99,12 @@ function header(activePath) {
         ${link('/about/', 'About')}
         ${link('/data/', 'Data')}
         <a href="${SITE.github}" rel="noopener">GitHub</a>
-        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Theme: dark. Activate to switch to light.">Theme</button>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Theme: dark. Activate to switch to light.">
+          <svg class="i i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="i i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+          <svg class="i i-system" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          <span class="theme-label">Theme</span>
+        </button>
       </nav>
     </details>
   </div>

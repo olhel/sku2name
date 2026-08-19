@@ -37,6 +37,11 @@ if (toggle) {
     }
     const next = order[(order.indexOf(mode) + 1) % order.length];
     toggle.setAttribute('aria-label', `Theme: ${mode}. Activate to switch to ${next}.`);
+    // Names the mode the button switches to, matching the icon. Hidden in the
+    // desktop row and visible in the stacked mobile menu; it ships as "Theme"
+    // so the no-script case still reads as something.
+    const label = toggle.querySelector('.theme-label');
+    if (label) label.textContent = next[0].toUpperCase() + next.slice(1);
   };
 
   apply(read());
