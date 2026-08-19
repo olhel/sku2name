@@ -7,7 +7,7 @@
 // Deploy:
 //   az deployment group create -g <rg> -f infra/main.bicep -p appName=sku2name
 
-@description('Name of the container app.')
+@description('Base name. Resource names are derived from it.')
 param appName string = 'sku2name'
 
 @description('Location for all resources.')
@@ -27,8 +27,11 @@ param minReplicas int = 1
 @minValue(1)
 param maxReplicas int = 4
 
-var workspaceName = '${appName}-logs'
-var environmentName = '${appName}-env'
+// Follows the convention already in this subscription, where sub2tenant runs
+// as rg-sub2tenant.com / cae-sub2tenant-prod / aca-sub2tenant.
+var workspaceName = 'log-${appName}-prod'
+var environmentName = 'cae-${appName}-prod'
+var containerAppName = 'aca-${appName}'
 
 resource workspace 'Microsoft.OperationalInsights/workspaces@2023-09-01' = {
   name: workspaceName
@@ -56,7 +59,7 @@ resource environment 'Microsoft.App/managedEnvironments@2024-03-01' = {
 }
 
 resource containerApp 'Microsoft.App/containerApps@2024-03-01' = {
-  name: appName
+  name: containerAppName
   location: location
   identity: {
     // No Graph or ARM calls are made, so this exists only for pulling from a
