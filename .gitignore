@@ -4,3 +4,6 @@ tmp/
 .env
 npm-debug.log*
 .claude/
+
+# Deployment runbook. Account-specific plumbing, kept out of the public repo.
+infra/DEPLOY.md
