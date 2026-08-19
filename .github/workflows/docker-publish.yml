@@ -48,9 +48,10 @@ jobs:
     needs: publish
     runs-on: ubuntu-latest
     # Skipped until Azure is wired up, so pushes do not fail red on a repo
-    # that has no subscription behind it yet. Set the variables and it starts
-    # running on its own.
-    if: vars.AZURE_CLIENT_ID != ''
+    # that has no subscription behind it yet. Guarded on the resource group
+    # rather than the client id, because the secrets context is not available
+    # in a job-level if.
+    if: vars.AZURE_RESOURCE_GROUP != ''
     permissions:
       # Required for OIDC. There is no stored Azure secret: GitHub mints a
       # short-lived token that the app registration trusts for this repo only.
@@ -59,9 +60,9 @@ jobs:
     steps:
       - uses: azure/login@v2
         with:
-          client-id: ${{ vars.AZURE_CLIENT_ID }}
-          tenant-id: ${{ vars.AZURE_TENANT_ID }}
-          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Point the container app at this build
         run: |
