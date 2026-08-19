@@ -9,6 +9,7 @@ import express from 'express';
 import { readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { visitRecord, isLoggablePath } from './src/lib/visit.mjs';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const DIST = join(ROOT, 'dist');
@@ -27,6 +28,43 @@ const notFoundPage = existsSync(join(DIST, '404.html')) ? readFileSync(join(DIST
 const idMissTemplate = existsSync(join(DIST, 'id-not-found.html'))
   ? readFileSync(join(DIST, 'id-not-found.html'), 'utf8')
   : null;
+
+/* ---------- visit logging ---------- */
+
+// One JSON line per page view to stdout. Container Apps forwards stdout to the
+// Log Analytics workspace, so there is no client, no agent and no endpoint.
+// See docs/analytics.md for what is deliberately not recorded.
+//
+// Server-side rather than a browser beacon on purpose: a beacon only counts
+// visitors that run JavaScript, and sub2tenant's does, which is why only 3% of
+// its visits are flagged as bots. Crawler traffic is the point here.
+const ANALYTICS_SALT = process.env.ANALYTICS_SALT || null;
+
+app.use((req, res, next) => {
+  if (!isLoggablePath(req.path)) return next();
+  const startedAt = Date.now();
+
+  // On finish rather than up front, so the status and duration are real.
+  res.on('finish', () => {
+    const record = visitRecord({
+      // req.path already excludes the query string; visitRecord strips it
+      // again rather than trusting that.
+      path: req.path,
+      status: res.statusCode,
+      durationMs: Date.now() - startedAt,
+      referer: req.headers.referer || req.headers.referrer || null,
+      userAgent: req.headers['user-agent'] || null,
+      country: req.headers['cf-ipcountry'] || null,
+      // Used to derive the daily hash and never written to the record.
+      ip: req.headers['cf-connecting-ip'] || req.ip || null,
+      secret: ANALYTICS_SALT,
+      now: new Date(),
+    });
+    console.log('VISIT', JSON.stringify(record));
+  });
+
+  next();
+});
 
 /* ---------- security headers ---------- */
 

@@ -23,6 +23,10 @@ param retentionInDays int = 30
 @minValue(0)
 param minReplicas int = 1
 
+@description('Salt for the daily visitor hash. Rotating it resets unique counts; leaving it empty disables the hash and logs everything else.')
+@secure()
+param analyticsSalt string = ''
+
 @description('Maximum replicas.')
 @minValue(1)
 param maxReplicas int = 4
@@ -69,6 +73,12 @@ resource containerApp 'Microsoft.App/containerApps@2024-03-01' = {
   properties: {
     managedEnvironmentId: environment.id
     configuration: {
+      secrets: empty(analyticsSalt) ? [] : [
+        {
+          name: 'analytics-salt'
+          value: analyticsSalt
+        }
+      ]
       ingress: {
         external: true
         targetPort: 8080
@@ -93,6 +103,16 @@ resource containerApp 'Microsoft.App/containerApps@2024-03-01' = {
             cpu: json('0.25')
             memory: '0.5Gi'
           }
+          // Derives the per-day visitor hash. It must be the same across all
+          // replicas or one visitor hashes several ways and unique counts
+          // inflate; a secret rather than a random value per instance is what
+          // guarantees that. See docs/analytics.md.
+          env: empty(analyticsSalt) ? [] : [
+            {
+              name: 'ANALYTICS_SALT'
+              secretRef: 'analytics-salt'
+            }
+          ]
           probes: [
             {
               type: 'Liveness'

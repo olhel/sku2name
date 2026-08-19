@@ -1,10 +1,11 @@
 # Page visit logging
 
-Plan for logging visits to the Log Analytics workspace the site already has.
-Not implemented yet.
+Implemented. One JSON line per page view to stdout, which Container Apps
+forwards to the workspace the site already had. No client, no agent, no
+endpoint.
 
-The short version: no new infrastructure, an Express middleware, a daily
-rotating hash for unique visitors, and one decision to make about caching.
+Code: `src/lib/bots.mjs`, `src/lib/visit.mjs`, the middleware at the top of
+`server.js`, and `test/visit.test.mjs`.
 
 ## What already exists
 
@@ -17,7 +18,7 @@ rotating hash for unique visitors, and one decision to make about caching.
 
 So this is a code change, not an infrastructure one.
 
-## The decision to make first
+## The caching decision, and why it went this way
 
 Every HTML request currently reaches Azure:
 
@@ -33,14 +34,22 @@ stale-while-revalidate=86400` headers written for the edge are being ignored.
 Adding a Cache Rule to fix that would make cached hits stop reaching the
 origin, and origin logging would silently undercount. So:
 
-- **Origin logging accurate, pages slower.** Leave caching as it is.
-- **Pages fast, origin logging partial.** Add the Cache Rule, and accept that
-  server-side counts become a floor rather than a total.
+**Left uncached, deliberately, so the logs are complete.** The caching being
+given up is worth less than it looks:
 
-Worth choosing knowingly rather than discovering it later from a graph that
-suddenly drops. Cloudflare's own Analytics stays accurate either way but is
-shallow and lives outside Log Analytics. Logpush would solve it properly and
-needs a paid plan; this zone is Free.
+- The hashed assets are already cached at the edge and stay that way. A CSS
+  request came back `cf-cache-status: HIT` with an age of 21,254s. That is
+  where the byte savings are, and none of this touches them.
+- HTML caching would add a 7 to 31 KB document on a 600 second TTL, across
+  1,428 pages with long-tail search traffic. Most pages are viewed rarely
+  enough to expire between visits, so they would miss anyway. E3 and E5 would
+  cache well; the other 1,400 would not.
+- Origin TTFB is already 107 to 125 ms. That is not a page rescued by caching.
+
+If traffic grows enough that origin latency matters for distant visitors, the
+answer is to turn on HTML caching **and** add a browser beacon, keeping both
+streams: the server sees bots and uncached hits, the beacon sees humans behind
+the cache. Two streams reconciled in KQL. Not worth it yet.
 
 ## What to log
 
@@ -136,18 +145,72 @@ search, "is Googlebot actually crawling all 1,428 pages" is one of the
 questions worth asking, and only server-side logging answers it. The cost is
 the caching trade above.
 
-## Shape of the work
+## Queries
 
-1. `ANALYTICS_SALT` as a Container Apps secret, surfaced as an env var.
-2. `src/lib/bots.mjs` with the corrected classifier, and tests. It is pure
-   string handling, so it is straightforward to cover properly.
-3. Request middleware in `server.js`: build the record, skip the exclusions,
-   `console.log('VISIT', JSON.stringify(record))`.
-4. Extend the `verify-dist` or test suite with a guard that the query string
-   never reaches the log record, because that is the one mistake that would
-   quietly contradict a published promise.
-5. KQL in this file: top pages, SKU versus plan split, referrers, bots versus
-   humans, 404s, daily uniques.
+Records are written as `VISIT {json}`, so the prefix comes off before parsing.
+
+```kusto
+let visits = ContainerAppConsoleLogs_CL
+  | where Log_s startswith "VISIT"
+  | extend v = parse_json(substring(Log_s, 6))
+  | extend path = tostring(v.path), status = toint(v.status),
+           isBot = tobool(v.isBot), botKind = tostring(v.botKind),
+           country = tostring(v.country), referer = tostring(v.referer),
+           visitor = tostring(v.visitor), durationMs = toint(v.durationMs);
+```
+
+**Most visited pages, humans only.** Without the bot filter this is mostly
+Googlebot.
+
+```kusto
+visits | where TimeGenerated > ago(7d) and not(isBot) and status == 200
+| summarize views = count(), visitors = dcount(visitor) by path
+| top 25 by views desc
+```
+
+**Which crawlers, and how much of the site each reaches.** The second column
+against 1,428 answers whether a crawler is actually working through the site.
+
+```kusto
+visits | where TimeGenerated > ago(7d) and isBot
+| summarize requests = count(), distinctPages = dcount(path) by botKind
+| order by requests desc
+```
+
+**Where humans come from.**
+
+```kusto
+visits | where TimeGenerated > ago(30d) and not(isBot) and isnotempty(referer)
+| summarize n = count() by referer | top 20 by n desc
+```
+
+**Daily unique visitors.** The hash rotates at midnight UTC, so this is uniques
+per day and must not be summed across days.
+
+```kusto
+visits | where TimeGenerated > ago(30d) and not(isBot)
+| summarize visitors = dcount(visitor), views = count() by bin(TimeGenerated, 1d)
+| render timechart
+```
+
+**404s, which double as a broken-link report.** A 404 with a referer is
+someone else's dead link into the site.
+
+```kusto
+visits | where TimeGenerated > ago(7d) and status == 404
+| summarize n = count(), example = any(referer) by path | top 25 by n desc
+```
+
+**SKU pages versus service plan pages**, which says whether the reverse lookup
+is being used at all.
+
+```kusto
+visits | where TimeGenerated > ago(30d) and not(isBot) and status == 200
+| extend kind = case(path startswith "/sku/", "sku",
+                     path startswith "/service-plan/", "plan",
+                     path == "/", "home", "other")
+| summarize views = count() by kind
+```
 
 ## Retention
 
@@ -161,9 +224,11 @@ that for a year while raw lines expire. The second is cheaper and enough.
 A record is roughly 200 bytes, so 100k page views is about 20 MB a month
 against PerGB2018. Not a consideration at this scale.
 
-## Verify before implementing
+## Still to check
 
-- Whether `Log_s` needs `parse_json(substring(Log_s, 6))` in KQL to reach the
-  structured fields, as it does for sub2tenant's `VISIT ` prefix.
 - Actual daily volume once real traffic arrives, which decides whether the
   rollup in the retention section is worth building.
+- Whether `cf-connecting-ip` or `req.ip` is the one that actually arrives in
+  production. Both are read, preferring the Cloudflare header, but only
+  production traffic will confirm the hash is varying per visitor rather than
+  collapsing onto one Cloudflare egress address.
