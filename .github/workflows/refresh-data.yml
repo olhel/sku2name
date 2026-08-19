@@ -117,3 +117,6 @@ jobs:
     permissions:
       contents: read
       packages: write
+      # A called workflow does not inherit the caller's permissions, so the
+      # OIDC token the deploy job needs has to be granted here too.
+      id-token: write

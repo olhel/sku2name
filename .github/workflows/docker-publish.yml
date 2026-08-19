@@ -39,3 +39,44 @@ jobs:
             ${{ env.IMAGE_NAME }}:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+  # Container Apps only pulls on a NEW revision, so this deliberately deploys
+  # the immutable :${{ github.sha }} tag rather than :latest. Updating to
+  # :latest leaves the image reference unchanged, ACA sees nothing to do, and
+  # the deploy reports success while shipping nothing.
+  deploy:
+    needs: publish
+    runs-on: ubuntu-latest
+    # Skipped until Azure is wired up, so pushes do not fail red on a repo
+    # that has no subscription behind it yet. Set the variables and it starts
+    # running on its own.
+    if: vars.AZURE_CLIENT_ID != ''
+    permissions:
+      # Required for OIDC. There is no stored Azure secret: GitHub mints a
+      # short-lived token that the app registration trusts for this repo only.
+      id-token: write
+      contents: read
+    steps:
+      - uses: azure/login@v2
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Point the container app at this build
+        run: |
+          az containerapp update             --name "${{ vars.AZURE_APP_NAME }}"             --resource-group "${{ vars.AZURE_RESOURCE_GROUP }}"             --image "${{ env.IMAGE_NAME }}:${{ github.sha }}"
+
+      - name: Check the new revision is actually serving
+        run: |
+          fqdn=$(az containerapp show             --name "${{ vars.AZURE_APP_NAME }}"             --resource-group "${{ vars.AZURE_RESOURCE_GROUP }}"             --query properties.configuration.ingress.fqdn -o tsv)
+          for i in $(seq 1 30); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "https://$fqdn/healthz" || true)
+            if [ "$code" = "200" ]; then
+              echo "healthy at https://$fqdn"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "no healthy response from https://$fqdn after 150s"
+          exit 1
