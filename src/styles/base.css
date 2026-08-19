@@ -1096,14 +1096,14 @@ mark {
   /* Started as sub2tenant's own .page padding-top, which put the field level
    * with theirs. Pulled up from there: this is a paste-and-go box, so it wants
    * to be the first thing under the header rather than sitting mid-page. */
-  padding-top: clamp(3rem, 10vh, 7rem);
+  padding-top: clamp(2.5rem, 8vh, 6rem);
 }
 /* 16vh is tuned for a desktop viewport; on a phone it pushes the field 80px
  * below where sub2tenant puts it. Must sit after the rule above, not up with
  * the nav block, or it loses on source order at equal specificity. */
 @media (max-width: 39.999rem) {
   .home {
-    padding-top: clamp(2rem, 6vh, 4rem);
+    padding-top: clamp(1.5rem, 4vh, 3rem);
   }
 }
 .home h1 {
