@@ -246,10 +246,13 @@ test('dark is the base palette, not a media-query branch', () => {
   assert.ok(base.includes(`--bg: ${DARK['--bg']}`), 'the base :root must carry the dark background');
   assert.ok(!base.includes(`--bg: ${LIGHT['--bg']}`), 'the base :root must not be light');
 
-  // Light stays reachable two ways: chosen outright, or via "system".
+  // Light is an explicit choice and nothing else. The OS is never consulted:
+  // a prefers-color-scheme block reappearing here would quietly hand a light
+  // OS a light site on first visit, which is the thing this test exists to
+  // prevent.
   assert.ok(css.includes(':root[data-theme="light"]'));
-  assert.ok(css.includes('@media (prefers-color-scheme: light)'));
-  assert.ok(css.includes(':root[data-theme="system"]'));
+  assert.ok(!css.includes('prefers-color-scheme'), 'the OS colour scheme must not be consulted');
+  assert.ok(!css.includes('data-theme="system"'), 'the system mode was removed');
 
   // Both dark blocks are generated from one object, so they cannot drift.
   assert.ok(css.split(DARK['--accent']).length - 1 >= 2);

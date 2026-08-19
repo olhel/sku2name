@@ -16,9 +16,8 @@ function announce(message) {
 
 const toggle = document.getElementById('theme-toggle');
 if (toggle) {
-  // Dark is the base, so an absent attribute already means dark and "system"
-  // has to be an explicit value rather than the absence of one.
-  const order = ['dark', 'light', 'system'];
+  // Dark is the base, so an absent attribute already means dark.
+  const order = ['dark', 'light'];
   const read = () => {
     try {
       const stored = localStorage.getItem(THEME_KEY);
