@@ -115,3 +115,40 @@ test('a URL-hostile String ID is preserved verbatim in the data', () => {
 test('parsing is deterministic', () => {
   assert.equal(JSON.stringify(slice()), JSON.stringify(slice()));
 });
+
+// Regression: Microsoft lists "Microsoft Sales Copilot (3227bcb2-...)" in the
+// friendly-names column of the Microsoft Copilot for Microsoft 365 row, and
+// that GUID is the SKU GUID of Microsoft_Viva_Sales, not a service plan.
+// Treating the friendly column as authoritative for membership invented a
+// service plan with no technical name, no SKUs, and "(null)" in its title.
+test('a GUID only in the friendly column names a plan but never joins a SKU', () => {
+  const STRAY = '3227bcb2-8448-4f81-b3c2-8c2074e15a2a';
+  const REAL = 'efb87545-963c-4e0d-99df-69c6916d9eb0';
+  const row =
+    '| Test Product | TEST_SKU | aaaaaaaa-0000-4000-8000-000000000001 | ' +
+    `EXCHANGE_S_ENTERPRISE (${REAL}) | ` +
+    `Exchange Online (Plan 2) (${REAL})<br/>Microsoft Sales Copilot (${STRAY}) |`;
+  const source = [
+    '---',
+    'ms.date: 07/01/2026',
+    '---',
+    '',
+    '# Product names',
+    '',
+    MAIN_HEADER,
+    DELIMITER,
+    row,
+    '',
+    '## Next steps',
+    '',
+  ].join('\n');
+
+  const out = parseMarkdownSource(source);
+  const sku = out.skus[0];
+  assert.deepEqual(sku.servicePlanIds, [REAL], 'the stray GUID must not become an edge');
+
+  const observed = out.planObservations.filter((o) => o.planId === STRAY);
+  assert.equal(observed.length, 1, 'it is still recorded, so the name is not silently lost');
+  assert.equal(observed[0].technicalName, null);
+  assert.equal(observed[0].pairing, 'friendly-only');
+});

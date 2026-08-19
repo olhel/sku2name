@@ -98,7 +98,16 @@ export function parseMarkdownSource(text) {
     const servicePlanIds = [];
     for (const plan of plans) {
       if (!plan.guid) continue;
-      if (!servicePlanIds.includes(plan.guid)) servicePlanIds.push(plan.guid);
+      // The technical column decides membership. A friendly-only entry may
+      // still contribute a display name, but it must never create an edge:
+      // the Microsoft Copilot for Microsoft 365 row carries
+      // "Microsoft Sales Copilot (3227bcb2-...)" in its friendly-names
+      // column, and that GUID is the SKU GUID of Microsoft_Viva_Sales.
+      // Treated as an edge it invented a service plan that does not exist,
+      // whose page title read "Microsoft Sales Copilot (null)".
+      if (plan.pairing !== 'friendly-only') {
+        if (!servicePlanIds.includes(plan.guid)) servicePlanIds.push(plan.guid);
+      }
       planObservations.push({
         planId: plan.guid,
         technicalName: plan.technicalName,

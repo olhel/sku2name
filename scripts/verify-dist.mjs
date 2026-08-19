@@ -78,6 +78,12 @@ async function main() {
     // because it looks fine until someone reads the page.
     if (contents.includes('undefined')) fail(`${path} contains the literal string "undefined"`);
     if (contents.includes('[object Object]')) fail(`${path} contains "[object Object]"`);
+    // A missing name used to reach the page as the literal "(null)", which is
+    // how a phantom service plan shipped a title reading
+    // "Microsoft Sales Copilot (null)". Bare "null" is too broad to forbid,
+    // because JSON-LD legitimately carries it.
+    if (contents.includes('(null)')) fail(`${path} contains "(null)"`);
+    if (contents.includes('>null<')) fail(`${path} renders a bare null`);
     if (!contents.includes('<link rel="canonical"')) fail(`${path} has no canonical link`);
     // style-src 'self' blocks style attributes, and the failure is silent:
     // the rule is simply dropped and the page looks subtly wrong.

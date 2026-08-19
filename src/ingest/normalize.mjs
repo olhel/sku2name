@@ -31,6 +31,24 @@ export function normalizeDataset(merged, { registry = emptyRegistry(), firstSeen
     });
   }
 
+  // A service plan's identity is its technical name, and only the technical
+  // column carries one. Microsoft occasionally puts a stray GUID in the
+  // friendly-names column: the M365_Copilot row lists `Microsoft Sales Copilot`
+  // against 3227bcb2-8448-4f81-b3c2-8c2074e15a2a, which is in fact the SKU GUID
+  // of Microsoft_Viva_Sales. Taken at face value that mints a phantom plan with
+  // no technical name, no SKUs, and `(null)` printed in its page title.
+  //
+  // A friendly-only observation may still name a plan that exists elsewhere,
+  // which is how PURVIEW_DISCOVERY gets its friendly name. It just may not
+  // bring one into being.
+  const planIdsWithEdges = new Set();
+  for (const sku of merged.skus) {
+    for (const planId of sku.servicePlanIds) planIdsWithEdges.add(planId);
+  }
+  for (const [planId, plan] of planRecords) {
+    if (!plan.technicalName && !planIdsWithEdges.has(planId)) planRecords.delete(planId);
+  }
+
   // --- SKUs ----------------------------------------------------------------
   const skuRecords = merged.skus.map((sku) => {
     const stringId = pickCanonical(sku.stringIds, { kind: 'technical' });

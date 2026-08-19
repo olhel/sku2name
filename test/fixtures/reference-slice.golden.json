@@ -1,8 +1,8 @@
 {
   "counts": {
-    "edges": 26,
+    "edges": 25,
     "edgesFromCsvOnly": 6,
-    "edgesFromMdOnly": 18,
+    "edgesFromMdOnly": 17,
     "servicePlans": 22,
     "skus": 19,
     "skusFromCsvOnly": 4,
@@ -861,9 +861,6 @@
       "planSources": {
         "dddddddd-0000-4000-8000-000000000004": [
           "md"
-        ],
-        "eeeeeeee-0000-4000-8000-000000000005": [
-          "md"
         ]
       },
       "productNames": [
@@ -881,8 +878,7 @@
         }
       },
       "servicePlanIds": [
-        "dddddddd-0000-4000-8000-000000000004",
-        "eeeeeeee-0000-4000-8000-000000000005"
+        "dddddddd-0000-4000-8000-000000000004"
       ],
       "skuId": "88888888-8888-4888-8888-888888888888",
       "sources": [

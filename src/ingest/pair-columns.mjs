@@ -80,7 +80,12 @@ export function pairPlanColumns(technical, friendly, context = {}) {
   }
 
   // Pass 3: leftovers in the friendly column. Recorded rather than dropped so
-  // a plan that exists only there still gets a page and a searchable name.
+  // the name still reaches a plan that exists elsewhere, which is how
+  // PURVIEW_DISCOVERY gets its friendly name. These are marked friendly-only
+  // and parse-markdown deliberately does not turn them into edges: the
+  // friendly-names column is a display column, and a GUID appearing only
+  // there is a Microsoft typo rather than a membership fact. Trusting it
+  // invented a service plan out of the Microsoft_Viva_Sales SKU GUID.
   friendly.forEach((entry, index) => {
     if (consumed[index]) return;
     issues.push({ kind: 'orphan-friendly', ...context, index, guid: entry.guid, name: entry.name });

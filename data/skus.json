@@ -238,9 +238,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
-    ],
     "productName": "Microsoft 365 E3",
     "servicePlanIds": [
       "795f6fe0-cc4d-4773-b050-5dde4dc704c9",
@@ -292,8 +289,7 @@
       "aebd3021-9f8f-4bf8-bbe3-0ed2f4f047a1",
       "2789c901-c14e-48ab-a76a-be334d9d793a",
       "292cc034-7b7c-4950-aaf5-943befd3f1d4",
-      "94065c59-bc8e-4e8b-89e5-5138d471eaff",
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
+      "94065c59-bc8e-4e8b-89e5-5138d471eaff"
     ],
     "skuId": "05e9a617-0261-4cee-bb44-138d3ef5d965",
     "slug": "spe_e3",
@@ -1800,13 +1796,10 @@
       "productName": [],
       "stringId": []
     },
-    "edgesMdOnly": [
-      "a22efeae-e37a-47ac-9a61-1572d74202e5"
-    ],
     "productName": "Windows 365 Shared Use 4 vCPU 16 GB 128 GB",
     "servicePlanIds": [
-      "dd3801e2-4aa1-4b16-a44b-243e55497584",
-      "a22efeae-e37a-47ac-9a61-1572d74202e5"
+      "a22efeae-e37a-47ac-9a61-1572d74202e5",
+      "dd3801e2-4aa1-4b16-a44b-243e55497584"
     ],
     "skuId": "1bf40e76-4065-4530-ac37-f1513f362f50",
     "slug": "windows_365_s_4vcpu_16gb_128gb",
@@ -4071,9 +4064,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesMdOnly": [
-      "ccaebebf-3634-4975-a0ad-3eccb697f393"
-    ],
     "productName": "Microsoft Workplace Analytics",
     "servicePlanIds": [
       "f477b0f0-3bb1-4890-940c-40fcee6ce05f",
@@ -5472,9 +5462,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
-    ],
     "productName": "Office 365 G3 GCC",
     "servicePlanIds": [
       "199a5c09-e0ca-4e37-8f7c-b05d533e1ea2",
@@ -5500,8 +5487,7 @@
       "5136a095-5cf0-4aff-bec3-e84448b38ea5",
       "2b815d45-56e4-4e3a-b65c-66cb9175b560",
       "e7d09ae4-099a-4c34-a2a2-3e166e95c44a",
-      "6e5b7995-bd4f-4cbd-9d19-0e32010c72f0",
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
+      "6e5b7995-bd4f-4cbd-9d19-0e32010c72f0"
     ],
     "skuId": "535a3a29-c5f0-42fe-8215-d3b9e1f38c4a",
     "slug": "enterprisepack_gov",
@@ -6173,6 +6159,14 @@
       "productName": [],
       "stringId": []
     },
+    "edgesMdOnly": [
+      "0504111f-feb8-4a3c-992a-70280f9a2869",
+      "711413d0-b36e-4cd4-93db-0a50a4ab7ea3",
+      "9104f592-f2a7-4f77-904c-ca5a5715883f",
+      "ab2d4fb5-f80a-4bf1-a11d-7f1da254041b",
+      "cc8c0802-a325-43df-8cba-995d0c6cb373",
+      "f8b44f54-18bb-46a3-9658-44ab58712968"
+    ],
     "productName": "Microsoft Teams Premium",
     "servicePlanIds": [
       "0504111f-feb8-4a3c-992a-70280f9a2869",
@@ -6185,7 +6179,6 @@
     "skuId": "6432c818-bcef-43b6-9290-aec052964950",
     "slug": "m365_teams_premium",
     "sources": [
-      "csv",
       "md"
     ],
     "stringId": "M365_TEAMS_PREMIUM"
@@ -6721,9 +6714,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
-    ],
     "productName": "Office 365 E3",
     "servicePlanIds": [
       "57ff2da0-773e-42df-b2af-ffb7a2317929",
@@ -6761,8 +6751,7 @@
       "76846ad7-7776-4c40-a281-a386362dd1b9",
       "c68f8d98-5534-41c8-bf36-22fa496fa792",
       "7547a3fe-08ee-4ccb-b430-5077c5041653",
-      "041fe683-03e4-45b6-b1af-c0cdc516daee",
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
+      "041fe683-03e4-45b6-b1af-c0cdc516daee"
     ],
     "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900",
     "slug": "enterprisepack",
@@ -8523,9 +8512,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesMdOnly": [
-      "c948ea65-2053-4a5a-8a62-9eaaaf11b522"
-    ],
     "productName": "Microsoft 365 E5 EEA (no Teams) without Audio Conferencing",
     "servicePlanIds": [
       "bea4c11e-220a-4e6d-8eb8-8ea15d019f90",
@@ -8605,8 +8591,7 @@
       "46129a58-a698-46f0-aa5b-17f6586297d9",
       "6db1f1db-2b46-403f-be40-e39395f08dbb",
       "6dc145d6-95dd-4191-b9c3-185575ee6f6b",
-      "531ee2f8-b1cb-453b-9c21-d2180d014ca5",
-      "c948ea65-2053-4a5a-8a62-9eaaaf11b522"
+      "531ee2f8-b1cb-453b-9c21-d2180d014ca5"
     ],
     "skuId": "90277bc7-a6fe-4181-99d8-712b08b8d32b",
     "slug": "microsoft_365_e5_eea_no_teams_without_audio_conferencing",
@@ -9317,10 +9302,6 @@
       ],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "3afa0b92-83ef-41c1-8d64-586ab882a951",
-      "795aec3a-93a2-45be-92c4-47b9a76340ca"
-    ],
     "productName": "Microsoft 365 E5 Suite features",
     "servicePlanIds": [
       "d2d51368-76c9-4317-ada2-a12c004c432f",
@@ -9339,9 +9320,7 @@
       "9a6eeb79-0b4b-4bf0-9808-39d99a2cd5a3",
       "7bf960f6-2cd9-443a-8046-5dbff9558365",
       "99cd49a9-0e54-4e07-aea1-d8d9f5f704f5",
-      "3efbd4ed-8958-4824-8389-1321f8730af8",
-      "795aec3a-93a2-45be-92c4-47b9a76340ca",
-      "3afa0b92-83ef-41c1-8d64-586ab882a951"
+      "3efbd4ed-8958-4824-8389-1321f8730af8"
     ],
     "skuId": "99cc8282-2f74-4954-83b7-c6a9a1999067",
     "slug": "m365_e5_suite_components",
@@ -10390,7 +10369,6 @@
     },
     "edgesMdOnly": [
       "0aedf20c-091d-420b-aadf-30c042609612",
-      "3227bcb2-8448-4f81-b3c2-8c2074e15a2a",
       "3e26ee1f-8a5f-4d52-aee2-b81ce45c8f40",
       "fe6c28b3-d468-44ea-bbd0-a10a5167435c"
     ],
@@ -10404,8 +10382,7 @@
       "82d30987-df9b-4486-b146-198b21d164c7",
       "3e26ee1f-8a5f-4d52-aee2-b81ce45c8f40",
       "fe6c28b3-d468-44ea-bbd0-a10a5167435c",
-      "0aedf20c-091d-420b-aadf-30c042609612",
-      "3227bcb2-8448-4f81-b3c2-8c2074e15a2a"
+      "0aedf20c-091d-420b-aadf-30c042609612"
     ],
     "skuId": "a809996b-059e-42e2-9866-db24b99a9782",
     "slug": "m365_copilot",
@@ -10852,9 +10829,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
-    ],
     "productName": "Office 365 E3_USGOV_GCCHIGH",
     "servicePlanIds": [
       "0feaeb32-d00e-4d66-bd5a-43b5b83db82c",
@@ -10865,8 +10839,7 @@
       "9e700747-8b1d-45e5-ab8d-ef187ceec156",
       "bea4c11e-220a-4e6d-8eb8-8ea15d019f90",
       "efb87545-963c-4e0d-99df-69c6916d9eb0",
-      "9953b155-8aef-4c56-92f3-72b0487fce41",
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
+      "9953b155-8aef-4c56-92f3-72b0487fce41"
     ],
     "skuId": "aea38a85-9bd5-4981-aa00-616b411205bf",
     "slug": "enterprisepack_usgov_gcchigh",
@@ -11088,9 +11061,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
-    ],
     "productName": "Office 365 E3_USGOV_DOD",
     "servicePlanIds": [
       "fd500458-c24c-478e-856c-a6067a8376cd",
@@ -11100,8 +11070,7 @@
       "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
       "5dbe027f-2339-4123-9542-606e4d348a72",
       "0feaeb32-d00e-4d66-bd5a-43b5b83db82c",
-      "43de0ff5-c92c-492b-9116-175376d08c38",
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
+      "43de0ff5-c92c-492b-9116-175376d08c38"
     ],
     "skuId": "b107e5a3-3e60-4c0d-a184-a7e4395eb44c",
     "slug": "enterprisepack_usgov_dod",
@@ -12466,6 +12435,9 @@
       "productName": [],
       "stringId": []
     },
+    "edgesMdOnly": [
+      "29c62f1c-8ffc-4304-9cb9-398a6aa1852b"
+    ],
     "productName": "Office 365 E5",
     "servicePlanIds": [
       "4a51bca5-1eff-43f5-878c-177680f191af",
@@ -12649,9 +12621,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
-    ],
     "productName": "Microsoft 365 E3_USGOV_GCCHIGH",
     "servicePlanIds": [
       "43de0ff5-c92c-492b-9116-175376d08c38",
@@ -12667,8 +12636,7 @@
       "41781fb2-bc02-4b7c-bd55-b576c07bb09d",
       "6c57d4b6-3b23-47a5-9bc9-69f17b4947b3",
       "bea4c11e-220a-4e6d-8eb8-8ea15d019f90",
-      "932ad362-64a8-4783-9106-97849a1a30b9",
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
+      "932ad362-64a8-4783-9106-97849a1a30b9"
     ],
     "skuId": "ca9d1dd9-dfe9-4fef-b97c-9bc1ea3c3658",
     "slug": "spe_e3_usgov_gcchigh",
@@ -13281,14 +13249,11 @@
       "productName": [],
       "stringId": []
     },
-    "edgesMdOnly": [
-      "6dc0e3c6-2e4e-463c-90a4-9989d8543841"
-    ],
     "productName": "Windows 365 Enterprise 4 vCPU 16 GB 128 GB",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
-      "2de9c682-ca3f-4f2b-b360-dfc4775db133",
-      "6dc0e3c6-2e4e-463c-90a4-9989d8543841"
+      "6dc0e3c6-2e4e-463c-90a4-9989d8543841",
+      "2de9c682-ca3f-4f2b-b360-dfc4775db133"
     ],
     "skuId": "d201f153-d3b2-4057-be2f-fe25c8983e6f",
     "slug": "cpc_e_4c_16gb_128gb",
@@ -13400,6 +13365,9 @@
       "productName": [],
       "stringId": []
     },
+    "edgesMdOnly": [
+      "d4009785-b899-4cab-97b6-d06a7c799507"
+    ],
     "productName": "Skype for Business PSTN Domestic and International Calling",
     "servicePlanIds": [
       "d4009785-b899-4cab-97b6-d06a7c799507"
@@ -13407,7 +13375,6 @@
     "skuId": "d4009785-b899-4cab-97b6-d06a7c799507",
     "slug": "mcosms2",
     "sources": [
-      "csv",
       "md"
     ],
     "stringId": "MCOSMS2"
@@ -13489,9 +13456,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
-    ],
     "productName": "Microsoft 365 E3_USGOV_DOD",
     "servicePlanIds": [
       "fd500458-c24c-478e-856c-a6067a8376cd",
@@ -13505,8 +13469,7 @@
       "6c57d4b6-3b23-47a5-9bc9-69f17b4947b3",
       "41781fb2-bc02-4b7c-bd55-b576c07bb09d",
       "5dbe027f-2339-4123-9542-606e4d348a72",
-      "bea4c11e-220a-4e6d-8eb8-8ea15d019f90",
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
+      "bea4c11e-220a-4e6d-8eb8-8ea15d019f90"
     ],
     "skuId": "d61d61cc-f992-433f-a577-5bd016037eeb",
     "slug": "spe_e3_usgov_dod",
@@ -14794,9 +14757,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
-    ],
     "productName": "Microsoft 365 G3 GCC",
     "servicePlanIds": [
       "5b4ef465-7ea1-459a-9f91-033317755a51",
@@ -14826,8 +14786,7 @@
       "0a20c815-5e81-4727-9bdc-2b5a117850c3",
       "c1ec4a95-1f05-45b3-a911-aa3fa01094f5",
       "a70bbf38-cdda-470d-adb8-5804b8770f41",
-      "c537f360-6a00-4ace-a7f5-9128d0ac1e4b",
-      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
+      "c537f360-6a00-4ace-a7f5-9128d0ac1e4b"
     ],
     "skuId": "e823ca47-49c4-46b3-b38d-ca11d5abe3d2",
     "slug": "m365_g3_gov",
@@ -15890,9 +15849,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "c6675fa4-68fe-415f-aec1-a44520f0c3a3"
-    ],
     "productName": "Office 365 E1 (no Teams)",
     "servicePlanIds": [
       "b737dad2-2f6c-4c65-90e3-ca563267e8b9",
@@ -15932,8 +15888,7 @@
       "31cf2cfc-6b0d-4adc-a336-88b724ed8122",
       "40b010bb-0b69-4654-ac5e-ba161433f4b4",
       "199a5c09-e0ca-4e37-8f7c-b05d533e1ea2",
-      "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
-      "c6675fa4-68fe-415f-aec1-a44520f0c3a3"
+      "e95bec33-7c88-4a70-8e19-b10bd9d0c014"
     ],
     "skuId": "f8ced641-8e17-4dc5-b014-f5a2d53f6ac8",
     "slug": "office_365_e1_no_teams",

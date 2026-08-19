@@ -221,7 +221,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Teams Premium Intelligent",
-    "observations": 8,
+    "observations": 7,
     "planId": "0504111f-feb8-4a3c-992a-70280f9a2869",
     "retiredUpstream": false,
     "slug": "teamspro_mgmt",
@@ -2194,12 +2194,11 @@
       "technical": []
     },
     "friendlyName": "Microsoft Teams Events",
-    "observations": 2,
+    "observations": 1,
     "planId": "29c62f1c-8ffc-4304-9cb9-398a6aa1852b",
     "retiredUpstream": false,
     "slug": "microsoft_teams_events",
     "sources": [
-      "csv",
       "md"
     ],
     "technicalName": "MICROSOFT_TEAMS_EVENTS"
@@ -2783,21 +2782,6 @@
       "friendly": [],
       "technical": []
     },
-    "friendlyName": "Microsoft Sales Copilot",
-    "observations": 1,
-    "planId": "3227bcb2-8448-4f81-b3c2-8c2074e15a2a",
-    "retiredUpstream": false,
-    "slug": "microsoft-sales-copilot",
-    "sources": [
-      "md"
-    ],
-    "technicalName": null
-  },
-  {
-    "aliases": {
-      "friendly": [],
-      "technical": []
-    },
     "friendlyName": "Exchange Online Protection",
     "observations": 2,
     "planId": "326e2b78-9d27-42c9-8509-46c827743a17",
@@ -3198,21 +3182,6 @@
       "md"
     ],
     "technicalName": "D365_SALES_ENT_ATTACH"
-  },
-  {
-    "aliases": {
-      "friendly": [],
-      "technical": []
-    },
-    "friendlyName": "Intune Enterprise Application Management",
-    "observations": 1,
-    "planId": "3afa0b92-83ef-41c1-8d64-586ab882a951",
-    "retiredUpstream": false,
-    "slug": "3_party_app_patch",
-    "sources": [
-      "csv"
-    ],
-    "technicalName": "3_PARTY_APP_PATCH"
   },
   {
     "aliases": {
@@ -5953,11 +5922,12 @@
       "technical": []
     },
     "friendlyName": "Windows 10 ESU Commercial",
-    "observations": 2,
+    "observations": 3,
     "planId": "6dc0e3c6-2e4e-463c-90a4-9989d8543841",
     "retiredUpstream": false,
     "slug": "windows_10_esu_commercial",
     "sources": [
+      "csv",
       "md"
     ],
     "technicalName": "Windows_10_ESU_Commercial"
@@ -6132,7 +6102,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Teams Premium Virtual Appointments",
-    "observations": 8,
+    "observations": 7,
     "planId": "711413d0-b36e-4cd4-93db-0a50a4ab7ea3",
     "retiredUpstream": false,
     "slug": "mco_virtual_appt",
@@ -6457,21 +6427,6 @@
       "md"
     ],
     "technicalName": "TEAMSPRO_WEBINAR"
-  },
-  {
-    "aliases": {
-      "friendly": [],
-      "technical": []
-    },
-    "friendlyName": "Microsoft Cloud PKI",
-    "observations": 1,
-    "planId": "795aec3a-93a2-45be-92c4-47b9a76340ca",
-    "retiredUpstream": false,
-    "slug": "cloud_pki",
-    "sources": [
-      "csv"
-    ],
-    "technicalName": "CLOUD_PKI"
   },
   {
     "aliases": {
@@ -7739,7 +7694,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Teams Premium Virtual Appointment",
-    "observations": 8,
+    "observations": 7,
     "planId": "9104f592-f2a7-4f77-904c-ca5a5715883f",
     "retiredUpstream": false,
     "slug": "teamspro_virtualappt",
@@ -8679,11 +8634,12 @@
       "technical": []
     },
     "friendlyName": "Windows 10 ESU Tenant",
-    "observations": 1,
+    "observations": 2,
     "planId": "a22efeae-e37a-47ac-9a61-1572d74202e5",
     "retiredUpstream": false,
     "slug": "windows_10_esu_tenant",
     "sources": [
+      "csv",
       "md"
     ],
     "technicalName": "WINDOWS_10_ESU_TENANT"
@@ -9278,7 +9234,7 @@
       "technical": []
     },
     "friendlyName": "Queues app for Microsoft Teams",
-    "observations": 4,
+    "observations": 3,
     "planId": "ab2d4fb5-f80a-4bf1-a11d-7f1da254041b",
     "retiredUpstream": false,
     "slug": "queues_app",
@@ -10463,21 +10419,6 @@
   },
   {
     "aliases": {
-      "friendly": [],
-      "technical": []
-    },
-    "friendlyName": "Microsoft 365 built-in email and collaboration security",
-    "observations": 1,
-    "planId": "c6675fa4-68fe-415f-aec1-a44520f0c3a3",
-    "retiredUpstream": false,
-    "slug": "mdolite_enterprise",
-    "sources": [
-      "csv"
-    ],
-    "technicalName": "MDOLITE_ENTERPRISE"
-  },
-  {
-    "aliases": {
       "friendly": [
         "POWERAPPS FOR OFFICE 36",
         "POWERAPPS FOR OFFICE 365"
@@ -10773,7 +10714,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Teams Premium Personalized",
-    "observations": 8,
+    "observations": 7,
     "planId": "cc8c0802-a325-43df-8cba-995d0c6cb373",
     "retiredUpstream": false,
     "slug": "teamspro_cust",
@@ -10805,11 +10746,12 @@
       "technical": []
     },
     "friendlyName": "Skills in Viva",
-    "observations": 1,
+    "observations": 2,
     "planId": "ccaebebf-3634-4975-a0ad-3eccb697f393",
     "retiredUpstream": false,
     "slug": "skills_in_viva",
     "sources": [
+      "csv",
       "md"
     ],
     "technicalName": "SKILLS_IN_VIVA"
@@ -11172,12 +11114,11 @@
       "technical": []
     },
     "friendlyName": "DOMESTIC AND INTERNATIONAL CALLING PLAN",
-    "observations": 2,
+    "observations": 1,
     "planId": "d4009785-b899-4cab-97b6-d06a7c799507",
     "retiredUpstream": false,
     "slug": "mcosms2",
     "sources": [
-      "csv",
       "md"
     ],
     "technicalName": "MCOSMS2"
@@ -12679,7 +12620,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Defender for Office 365 (Plan 1)",
-    "observations": 86,
+    "observations": 78,
     "planId": "f20fedf3-f3c3-43c3-8267-2bfdd51c0939",
     "retiredUpstream": false,
     "slug": "atp_enterprise",
@@ -12978,7 +12919,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Teams Premium Secure",
-    "observations": 8,
+    "observations": 7,
     "planId": "f8b44f54-18bb-46a3-9658-44ab58712968",
     "retiredUpstream": false,
     "slug": "teamspro_protection",
