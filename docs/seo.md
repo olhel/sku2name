@@ -141,30 +141,63 @@ crawler access and the quality of the summary files, not markup.
 
 ### P0, because it is broken
 
-1. **Generate three static OG images** and wire them per page type: one for the
-   home and section pages, one for SKU pages, one for service plan pages.
-   Fixes 1,422 blank cards. Keep `og:title` carrying the specificity.
+1. ~~Generate three static OG images, one per page type.~~ Done on 20 August
+   2026, but **not as written**. Three type-specific cards were built and
+   rejected: each showed one real pair, so sharing Office 365 E3 produced a card
+   reading "SPE_E5 becomes Microsoft 365 E5" under a title reading "Office 365
+   E3". The image contradicted the headline on 620 of 621 SKU pages, which is
+   worse than being generic. One card now describes the site and `og:title`
+   carries the page, which was the division of labour all along. Per-page
+   generation was costed and rejected separately: 8.9s per image cold-starting
+   Chrome, so 3.5 hours, or about 2.4 minutes with a persistent browser at the
+   price of Puppeteer and 300MB of Chromium in a 2.1-second build.
 2. ~~Settle the Cloudflare AI-crawler policy.~~ Done on 19 August 2026: the
    managed rule is off and AI crawlers are allowed. Worth re-checking the live
    file occasionally, since the setting lives outside this repo.
 
 ### P1, icons, one pass
 
-3. `favicon.ico` at 16/32/48, `apple-touch-icon.png` at 180x180, PNG fallbacks
-   at 32/180/512, `site.webmanifest`, and a `theme-color` for each palette.
-   Serve `/favicon.ico` and `/apple-touch-icon.png` from the root as well as
-   from `/assets/`, because that is where blind requests go.
+3. ~~Icon set.~~ Done on 20 August 2026. `favicon.ico` carrying 16/32/48,
+   `apple-touch-icon.png` at 180, PNGs at 16/32/48/180/192/512,
+   `site.webmanifest`, and two `theme-color` tags behind
+   `prefers-color-scheme` so the browser chrome follows the palette.
+
+   The mark changed with it. `s2` was a placeholder: two glyphs is more than a
+   16px tab can hold, and it said nothing about the product. It is now `2.`,
+   the numeral from sku2name with the Bsure full stop, in `#C3DDFD` on navy.
+   Bidirectional-arrow marks were tried and dropped: more meaningful, since
+   two-way lookup is the thing Microsoft's own reference cannot do, but a swap
+   arrow is generic and less legible small.
+
+   One caveat recorded in `scripts/make-icons.mjs`: the SVG favicon uses live
+   text rather than outlined paths, so the digit differs slightly off Windows.
+   Outlining needs a font library this project does not carry, and every browser
+   preferring the SVG also accepts the `.ico`.
 
 ### P2, answer engines, where the actual upside is
 
 4. **`/llm/` page and `/llm.json`.** sub2tenant has both, and they are the part
    of its setup most worth copying. sku2name has neither: both 404 today.
-5. **Extend `llms.txt`.** It is 2,729 bytes and covers when to recommend the
-   site, the comparison against PowerShell, non-affiliation, and the JSON
-   endpoints. It is missing a "who uses it" section, and it should carry the
-   questions people actually ask: what does E5 add over E3, what is SPE_E5,
-   which SKUs include a given service plan.
+5. ~~Extend `llms.txt`.~~ Done on 20 August 2026, prompted by a Lighthouse
+   audit that reported the file as containing no links at all. It had the H1 and
+   the blockquote summary right but was otherwise prose with bare URLs, which is
+   not the llmstxt.org shape. Now 14 markdown links across 7 sections, including
+   the JSON endpoints, representative SKU and plan pages, the URL patterns, and
+   the missing "who uses it".
+
+   Link text avoids parentheses. `[Exchange Online (Plan 2)](url)` is valid
+   CommonMark but a naive parser takes the last parenthesised group and comes
+   away with `Plan 2` as the target, which is the same trap the markdown
+   plan-cell parser exists to handle.
 6. Consider `FAQPage` on `/about/` and `/data/` for retrieval systems only.
+
+### Found off-plan and fixed
+
+- **`robots.txt` carried an invalid directive.** `LLM-Content:` is not in the
+  robots.txt grammar, and one unknown directive makes a validator report the
+  whole file as invalid. Removed; `/llms.txt` is found by convention.
+- **`og:image:alt` contained an em dash** on all 1,424 pages, against the house
+  rule. Now a comma.
 
 ### Not doing
 
