@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#0248CE"/>
-  <text x="16" y="22" font-family="system-ui, Segoe UI, sans-serif" font-size="17" font-weight="600" fill="#F2F7FE" text-anchor="middle">s2</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#091A33"/>
+  <text x="19.2" y="44.8" fill="#C3DDFD" text-anchor="middle"
+        font-family="Segoe UI Variable Display, Segoe UI, system-ui, sans-serif"
+        font-size="46.08" font-weight="700">2</text>
+  <circle cx="42.88" cy="39.36" r="6.08" fill="#C3DDFD"/>
 </svg>

@@ -59,13 +59,18 @@ ${robots ? raw(`<meta name="robots" content="${esc(robots)}" />`) : ''}
 <meta property="og:image" content="${SITE.origin}/assets/og/og-default.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="${SITE.name} — ${SITE.tagline}" />
+<meta property="og:image:alt" content="${SITE.name}, ${SITE.tagline}" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="${title}" />
 <meta name="twitter:description" content="${description}" />
 <meta name="twitter:image" content="${SITE.origin}/assets/og/og-default.png" />
 ${syncedIso ? raw(`<meta name="dataset-synced" content="${esc(syncedIso)}" />`) : ''}
 <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#F2F7FE" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#091A33" media="(prefers-color-scheme: dark)" />
 <link rel="stylesheet" href="${assets.css}" />
 <script>${raw(THEME_INIT)}</script>
 ${extraHead ? raw(extraHead) : ''}
