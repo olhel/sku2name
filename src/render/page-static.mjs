@@ -156,6 +156,17 @@ export function renderAboutPage({ meta, assets, counts }) {
         There is no sign-in and no account. Lookups happen in your browser against a static index,
         so what you search for is never sent anywhere. No cookies are set.
       </p>
+      <p>
+        sku2name records one line per page view, so I can see which pages are useful: the page
+        path, the response status, the country the request came from, the referring site, and
+        your browser&#8217;s user-agent. Search terms are never recorded, and neither is your IP
+        address. To count daily visitors, each request produces a short code derived from your IP
+        address and browser; it resets every day and cannot be turned back into an IP address.
+      </p>
+      <p>
+        The only thing stored on your device is your light or dark theme choice, and only if you
+        change it.
+      </p>
 
       <h2>Independence</h2>
       <p>
