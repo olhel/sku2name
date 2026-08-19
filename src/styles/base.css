@@ -428,6 +428,11 @@ main {
 /* The homepage brings its own top offset, so main must not add a second one. */
 main:has(.home) {
   padding-top: 0;
+  /* The footnote is anchored to the bottom of main, so main's own 64px of
+   * bottom padding stacked with the footer's 32px of top padding and pushed
+   * the two blocks 96px apart. They are both small muted text and belong
+   * together. */
+  padding-bottom: var(--sp-4);
 }
 main > .wrap {
   flex: 1;
