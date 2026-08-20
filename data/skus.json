@@ -2353,11 +2353,11 @@
   {
     "aliases": {
       "productName": [
-        "Dynamics 365 for Marketing Additional Contacts Tier 3"
+        "Dynamics 365 for Marketing Addnl Contacts Tier 3"
       ],
       "stringId": []
     },
-    "productName": "Dynamics 365 for Marketing Addnl Contacts Tier 3",
+    "productName": "Dynamics 365 for Marketing Additional Contacts Tier 3",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
       "e626a4ec-1ba2-409e-bf75-9bc0bc30cca7"
@@ -3711,11 +3711,11 @@
   {
     "aliases": {
       "productName": [
-        "Dynamics 365 P1 Trial for Information Workers"
+        "Dynamics 365 P1 Tria for Information Workers"
       ],
       "stringId": []
     },
-    "productName": "Dynamics 365 P1 Tria for Information Workers",
+    "productName": "Dynamics 365 P1 Trial for Information Workers",
     "servicePlanIds": [
       "056a5f80-b4e0-4983-a8be-7ad254a113c9",
       "113feb6c-3fe4-4440-bddc-54d774bf0318"
@@ -8984,11 +8984,11 @@
   {
     "aliases": {
       "productName": [
-        "Windows 365 Enterprise 4 vCPU, 16 GB, 256 GB"
+        "Windows 365 Enterprise 4 vCPU 16 GB 256 GB"
       ],
       "stringId": []
     },
-    "productName": "Windows 365 Enterprise 4 vCPU 16 GB 256 GB",
+    "productName": "Windows 365 Enterprise 4 vCPU, 16 GB, 256 GB",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
       "9ecf691d-8b82-46cb-b254-cd061b2c02fb"
@@ -9485,11 +9485,11 @@
   {
     "aliases": {
       "productName": [
-        "Microsoft Teams Calling Plan pay-as-you-go (country/region zone 1 - US)"
+        "Microsoft Teams Calling Plan pay-as-you-go (country zone 1 - US)"
       ],
       "stringId": []
     },
-    "productName": "Microsoft Teams Calling Plan pay-as-you-go (country zone 1 - US)",
+    "productName": "Microsoft Teams Calling Plan pay-as-you-go (country/region zone 1 - US)",
     "servicePlanIds": [
       "156a1efe-17cd-4b03-9f17-2eb512298fb3"
     ],
@@ -13806,11 +13806,11 @@
   {
     "aliases": {
       "productName": [
-        "Microsoft Teams Calling Plan pay-as-you-go (country/region zone 1)"
+        "Microsoft Teams Calling Plan pay-as-you-go (country zone 1)"
       ],
       "stringId": []
     },
-    "productName": "Microsoft Teams Calling Plan pay-as-you-go (country zone 1)",
+    "productName": "Microsoft Teams Calling Plan pay-as-you-go (country/region zone 1)",
     "servicePlanIds": [
       "2b9bf4f4-ac52-42c5-8456-f70ee4924295",
       "156a1efe-17cd-4b03-9f17-2eb512298fb3"
@@ -14605,11 +14605,11 @@
   {
     "aliases": {
       "productName": [
-        "Microsoft 365 Business Voice (UK)"
+        "Microsoft 365 Business Voice (UK"
       ],
       "stringId": []
     },
-    "productName": "Microsoft 365 Business Voice (UK",
+    "productName": "Microsoft 365 Business Voice (UK)",
     "servicePlanIds": [
       "4ed3ff63-69d7-4fb7-b984-5aec7f605ca8",
       "3e26ee1f-8a5f-4d52-aee2-b81ce45c8f40",
@@ -14819,11 +14819,11 @@
   {
     "aliases": {
       "productName": [
-        "Exchange Enterprise CAL Services (EOP, DLP)"
+        "Exchange Enterprise CAL Services (EOP DLP)"
       ],
       "stringId": []
     },
-    "productName": "Exchange Enterprise CAL Services (EOP DLP)",
+    "productName": "Exchange Enterprise CAL Services (EOP, DLP)",
     "servicePlanIds": [
       "bea4c11e-220a-4e6d-8eb8-8ea15d019f90",
       "75badc48-628e-4446-8460-41344d73abd6"

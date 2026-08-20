@@ -14,17 +14,17 @@
     "skusFromMdOnly": 0,
     "unresolvedIncompatibilityRefs": 4
   },
-  "datasetHash": "sha256:463e4caad82f5fd32daf501a8f5b017960603e1c68261f6ba260ff28b6a15d15",
+  "datasetHash": "sha256:3a3bb08278cb01ee8b3ec5ce000c3fa11637ea6bc24516785fe82acf65868228",
   "document": {
     "lastUpdated": "2026-08-19",
     "lastUpdatedRaw": "August 19, 2026",
     "msDate": "2026-08-18"
   },
-  "fetchedAt": "2026-08-20T05:47:57.305Z",
+  "fetchedAt": "2026-08-20T10:56:59.633Z",
   "quality": {
     "issues": 6,
     "quirks": 6,
-    "warnings": 1
+    "warnings": 0
   },
   "schemaVersion": 1,
   "sources": {

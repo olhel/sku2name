@@ -253,12 +253,20 @@ export function renderDataPage({ meta, assets, counts }) {
         produces the same output:
       </p>
       <ol>
-        <li>Prefer a name whose shape matches its kind: <code>UNDERSCORE_CAPS</code> for technical names, prose for display names.</li>
+        <li>Set aside a name whose brackets do not close: <code>Microsoft 365 Business Voice (UK</code> loses to <code>Microsoft 365 Business Voice (UK)</code>.</li>
+        <li>Set aside a name that is another spelling with characters missing from inside a word: <code>Dynamics 365 P1 Tria</code> loses to <code>Dynamics 365 P1 Trial</code>.</li>
+        <li>Then prefer a name whose shape matches its kind: <code>UNDERSCORE_CAPS</code> for technical names, prose for display names.</li>
         <li>Then prefer a name that both Microsoft files agree on.</li>
         <li>Then prefer the more frequent spelling.</li>
         <li>Then prefer a display name that differs from the technical name.</li>
         <li>Finally, sort alphabetically, so the result is never ambiguous.</li>
       </ol>
+      <p>
+        The first two steps exist because Microsoft's CSV carries truncated names its markdown does
+        not, so the complete spelling is usually sitting in the other file. Only a damaged word
+        counts. A name that adds or drops a whole word is a rename rather than a defect, which is
+        why <code>SharePoint (Plan 2)</code> is not replaced by <code>SharePoint Online (Plan 2)</code>.
+      </p>
       <p>
         Every rejected spelling is kept, listed on the plan's page, and remains searchable.
         Where Microsoft provides no display name distinct from the technical name, sku2name says so

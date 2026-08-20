@@ -79,6 +79,101 @@ function distinctRank(name, otherName) {
   return normaliseForCompare(name) === normaliseForCompare(otherName) ? 1 : 0;
 }
 
+/**
+ * Brackets that do not close mark a name as damaged rather than merely
+ * different. Microsoft's CSV publishes "Microsoft 365 Business Voice (UK"
+ * where the markdown has "Microsoft 365 Business Voice (UK)", and the markdown
+ * separately publishes "RMS_S_ENTERPRISE)". The defect runs in both
+ * directions, so it cannot be expressed as a preference for one file.
+ */
+export function bracketRank(name) {
+  let depth = 0;
+  for (const character of String(name ?? '')) {
+    if (character === '(') depth++;
+    else if (character === ')') depth--;
+    if (depth < 0) return 1;
+  }
+  return depth === 0 ? 0 : 1;
+}
+
+/**
+ * The characters of `long` that `short` does not account for, or null when
+ * `short` is not `long` with characters deleted and nothing else.
+ */
+export function deletedText(short, long) {
+  if (short.length >= long.length) return null;
+  let index = 0;
+  let deleted = '';
+  for (const character of long) {
+    if (index < short.length && short[index] === character) index++;
+    else deleted += character;
+  }
+  return index === short.length ? deleted : null;
+}
+
+/**
+ * Rank a candidate as truncated when another candidate is the same string with
+ * characters put back. Lower is better.
+ *
+ * This exists because Microsoft's CSV carries truncations the markdown does
+ * not: "Dynamics 365 P1 Tria for Information Workers" against the markdown's
+ * "Trial", and "(EOP DLP)" against "(EOP, DLP)" where the CSV export dropped
+ * a comma out of an unquoted field. The complete spelling is sitting in the
+ * other file, and publishing the broken one while holding the good one as an
+ * alias is indefensible.
+ *
+ * "One name is the other with characters deleted" is on its own far too weak a
+ * signal. Taken plainly it fires on every rename, annotation and abbreviation
+ * Microsoft has ever published, and running the real ingest with it turned
+ * "Places Core" into "RETIRED - Places Core" and "Microsoft Entra ID P1" into
+ * "Azure Active Directory Premium Plan 1".
+ *
+ * What separates the two is the word. An export defect damages a word in
+ * place, while a rename adds or removes whole ones:
+ *
+ *   damaged    Tria -> Trial          Cust -> Customer      (EOP -> (EOP,
+ *   renamed    P1 -> Plan 1           SharePoint -> SharePoint Online
+ *
+ * So a truncation is only recognised when the two names have the same number
+ * of words and differ by characters missing from inside them. That also means
+ * this rank never fires against a candidate with more words, which is what
+ * kept the "RETIRED - " prefix and the " - VIRAL" suffix out.
+ *
+ * One further guard: no underscores. "Dynamics 365 Team Members" is "Dynamics
+ * 365 Team Members_wDynamicsRetail" with characters deleted and matches on
+ * word count, but there the deleted text is an internal suffix that leaked
+ * into a display name and the shorter name is the one to publish.
+ */
+function truncationRank(name, allNames) {
+  for (const other of allNames) {
+    if (other === name) continue;
+    // A damaged name is not evidence of what a complete one looks like.
+    // Content_Explorer is published four ways, one of them with a stray
+    // closing paren, and "Analytics - Premium" is "Analytics - Premium)" with
+    // a character deleted. Without this the clean name is demoted for lacking
+    // the defect, and an en dash variant wins the page by default.
+    if (bracketRank(other) === 1) continue;
+    if (isWordDamageOf(name, other)) return 1;
+  }
+  return 0;
+}
+
+/** True when `name` is `other` with characters missing from inside its words. */
+function isWordDamageOf(name, other) {
+  const words = name.split(/\s+/);
+  const otherWords = other.split(/\s+/);
+  if (words.length !== otherWords.length) return false;
+
+  let damaged = false;
+  for (const [index, word] of words.entries()) {
+    if (word === otherWords[index]) continue;
+    const deleted = deletedText(word, otherWords[index]);
+    if (deleted === null || deleted.includes('_')) return false;
+    damaged = true;
+  }
+  return damaged;
+}
+
 /** Prefer a name both files agree on over one only a single file carries. */
 function sourceRank(candidate, preferredSource) {
   const sources = candidate.sources || [];
@@ -98,12 +193,19 @@ export function pickCanonical(candidates, { kind, otherName = null, preferredSou
   const usable = (candidates || []).filter((candidate) => candidate && candidate.name);
   if (usable.length === 0) return null;
 
+  const names = usable.map((candidate) => candidate.name);
+
   const ranked = [...usable].sort(
     (a, b) =>
       // Structural quality outranks provenance. The CSV is the naming
       // authority, but it also carries export defects such as two technical
       // names fused into one cell, and a malformed name from the preferred
       // source must never beat a clean name from the other one.
+      //
+      // Damage outranks style in turn: a name missing a character is wrong,
+      // while a name in the less preferred casing is only imperfect.
+      bracketRank(a.name) - bracketRank(b.name) ||
+      truncationRank(a.name, names) - truncationRank(b.name, names) ||
       styleRank(a.name, kind) - styleRank(b.name, kind) ||
       sourceRank(a, preferredSource) - sourceRank(b, preferredSource) ||
       (b.count || 0) - (a.count || 0) ||

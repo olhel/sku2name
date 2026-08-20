@@ -702,11 +702,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Enterprise 2 vCPU, 4 GB, 256 GB"
+        "Windows 365 Enterprise 2 vCPU 4 GB 256 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Enterprise 2 vCPU 4 GB 256 GB",
+    "friendlyName": "Windows 365 Enterprise 2 vCPU, 4 GB, 256 GB",
     "observations": 2,
     "planId": "0d143570-9b92-4f57-adb5-e4efcd23b3bb",
     "retiredUpstream": false,
@@ -752,11 +752,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Enterprise 8 vCPU, 32 GB, 512 GB"
+        "Windows 365 Enterprise 8 vCPU 32 GB 512 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Enterprise 8 vCPU 32 GB 512 GB",
+    "friendlyName": "Windows 365 Enterprise 8 vCPU, 32 GB, 512 GB",
     "observations": 2,
     "planId": "0e837228-8250-4047-8a80-d4a34ba11658",
     "retiredUpstream": false,
@@ -1157,11 +1157,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Business 4 vCPU, 16 GB, 512 GB"
+        "Windows 365 Business 4 vCPU 16 GB 512 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Business 4 vCPU 16 GB 512 GB",
+    "friendlyName": "Windows 365 Business 4 vCPU, 16 GB, 512 GB",
     "observations": 2,
     "planId": "15499661-b229-4a1f-b0f9-bd5832ef7b3e",
     "retiredUpstream": false,
@@ -1175,11 +1175,11 @@
   {
     "aliases": {
       "friendly": [
-        "Microsoft Teams Calling Plan pay-as-you-go - country/region zone 1"
+        "Microsoft Teams Calling Plan pay-as-you-go - country zone 1"
       ],
       "technical": []
     },
-    "friendlyName": "Microsoft Teams Calling Plan pay-as-you-go - country zone 1",
+    "friendlyName": "Microsoft Teams Calling Plan pay-as-you-go - country/region zone 1",
     "observations": 4,
     "planId": "156a1efe-17cd-4b03-9f17-2eb512298fb3",
     "retiredUpstream": false,
@@ -1477,11 +1477,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Business 2 vCPU, 4 GB, 128 GB"
+        "Windows 365 Business 2 vCPU 4 GB 128 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Business 2 vCPU 4 GB 128 GB",
+    "friendlyName": "Windows 365 Business 2 vCPU, 4 GB, 128 GB",
     "observations": 2,
     "planId": "1a13832e-cd79-497d-be76-24186f55c8b0",
     "retiredUpstream": false,
@@ -1495,11 +1495,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Business 2 vCPU, 8 GB, 256 GB"
+        "Windows 365 Business 2 vCPU 8 GB 256 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Business 2 vCPU 8 GB 256 GB",
+    "friendlyName": "Windows 365 Business 2 vCPU, 8 GB, 256 GB",
     "observations": 2,
     "planId": "1a3ef005-2ef6-434b-8be1-faa56c892854",
     "retiredUpstream": false,
@@ -1630,11 +1630,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Business 4 vCPU, 16 GB, 128 GB"
+        "Windows 365 Business 4 vCPU 16 GB 128 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Business 4 vCPU 16 GB 128 GB",
+    "friendlyName": "Windows 365 Business 4 vCPU, 16 GB, 128 GB",
     "observations": 4,
     "planId": "1d4f75d3-a19b-49aa-88cb-f1ea1690b550",
     "retiredUpstream": false,
@@ -1696,11 +1696,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Shared Use 8 vCPU, 32 GB, 256 GB"
+        "Windows 365 Shared Use 8 vCPU 32 GB 256 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Shared Use 8 vCPU 32 GB 256 GB",
+    "friendlyName": "Windows 365 Shared Use 8 vCPU, 32 GB, 256 GB",
     "observations": 2,
     "planId": "1e2321a0-f81c-4d43-a0d5-9895125706b8",
     "retiredUpstream": false,
@@ -1946,11 +1946,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Enterprise 2 vCPU, 4 GB, 64 GB"
+        "Windows 365 Enterprise 2 vCPU 4 GB 64 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Enterprise 2 vCPU 4 GB 64 GB",
+    "friendlyName": "Windows 365 Enterprise 2 vCPU, 4 GB, 64 GB",
     "observations": 2,
     "planId": "23a25099-1b2f-4e07-84bd-b84606109438",
     "retiredUpstream": false,
@@ -2411,11 +2411,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Shared Use 4 vCPU, 16 GB, 256 GB"
+        "Windows 365 Shared Use 4 vCPU 16 GB 256 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Shared Use 4 vCPU 16 GB 256 GB",
+    "friendlyName": "Windows 365 Shared Use 4 vCPU, 16 GB, 256 GB",
     "observations": 2,
     "planId": "2d1d344e-d10c-41bb-953b-b3a47521dca0",
     "retiredUpstream": false,
@@ -2497,11 +2497,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Enterprise 4 vCPU, 16 GB, 128 GB"
+        "Windows 365 Enterprise 4 vCPU 16 GB 128 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Enterprise 4 vCPU 16 GB 128 GB",
+    "friendlyName": "Windows 365 Enterprise 4 vCPU, 16 GB, 128 GB",
     "observations": 2,
     "planId": "2de9c682-ca3f-4f2b-b360-dfc4775db133",
     "retiredUpstream": false,
@@ -2583,11 +2583,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Enterprise 8 vCPU, 32 GB, 128 GB"
+        "Windows 365 Enterprise 8 vCPU 32 GB 128 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Enterprise 8 vCPU 32 GB 128 GB",
+    "friendlyName": "Windows 365 Enterprise 8 vCPU, 32 GB, 128 GB",
     "observations": 2,
     "planId": "2f3cdb12-bcde-4e37-8529-e9e09ec09e23",
     "retiredUpstream": false,
@@ -2719,11 +2719,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Business 4 vCPU, 16 GB, 256 GB"
+        "Windows 365 Business 4 vCPU 16 GB 256 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Business 4 vCPU 16 GB 256 GB",
+    "friendlyName": "Windows 365 Business 4 vCPU, 16 GB, 256 GB",
     "observations": 2,
     "planId": "30f6e561-8805-41d0-80ce-f82698b72d7d",
     "retiredUpstream": false,
@@ -3207,11 +3207,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Business 1 vCPU, 2 GB, 64 GB"
+        "Windows 365 Business 1 vCPU 2 GB 64 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Business 1 vCPU 2 GB 64 GB",
+    "friendlyName": "Windows 365 Business 1 vCPU, 2 GB, 64 GB",
     "observations": 2,
     "planId": "3b98b912-1720-4a1e-9630-c9a41dbb61d8",
     "retiredUpstream": false,
@@ -3225,11 +3225,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Enterprise 4 vCPU, 16 GB, 512 GB"
+        "Windows 365 Enterprise 4 vCPU 16 GB 512 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Enterprise 4 vCPU 16 GB 512 GB",
+    "friendlyName": "Windows 365 Enterprise 4 vCPU, 16 GB, 512 GB",
     "observations": 2,
     "planId": "3bba9856-7cf2-4396-904a-00de74fba3a4",
     "retiredUpstream": false,
@@ -3473,11 +3473,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Enterprise 2 vCPU, 8 GB, 128 GB"
+        "Windows 365 Enterprise 2 vCPU 8 GB 128 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Enterprise 2 vCPU 8 GB 128 GB",
+    "friendlyName": "Windows 365 Enterprise 2 vCPU, 8 GB, 128 GB",
     "observations": 4,
     "planId": "3efff3fe-528a-4fc5-b1ba-845802cc764f",
     "retiredUpstream": false,
@@ -3704,11 +3704,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Business 8 vCPU, 32 GB, 512 GB"
+        "Windows 365 Business 8 vCPU 32 GB 512 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Business 8 vCPU 32 GB 512 GB",
+    "friendlyName": "Windows 365 Business 8 vCPU, 32 GB, 512 GB",
     "observations": 2,
     "planId": "4229a0b4-7f34-4835-b068-6dc8d10be57c",
     "retiredUpstream": false,
@@ -4069,11 +4069,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Shared Use 4 vCPU, 16 GB, 512 GB"
+        "Windows 365 Shared Use 4 vCPU 16 GB 512 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Shared Use 4 vCPU 16 GB 512 GB",
+    "friendlyName": "Windows 365 Shared Use 4 vCPU, 16 GB, 512 GB",
     "observations": 2,
     "planId": "48b82071-99a5-4214-b493-406a637bd68d",
     "retiredUpstream": false,
@@ -4579,11 +4579,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Shared Use 2 vCPU, 4 GB, 128 GB"
+        "Windows 365 Shared Use 2 vCPU 4 GB 128 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Shared Use 2 vCPU 4 GB 128 GB",
+    "friendlyName": "Windows 365 Shared Use 2 vCPU, 4 GB, 128 GB",
     "observations": 2,
     "planId": "51855c77-4d2e-4736-be67-6dca605f2b57",
     "retiredUpstream": false,
@@ -4693,11 +4693,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Enterprise 2 vCPU, 4 GB, 128 GB"
+        "Windows 365 Enterprise 2 vCPU 4 GB 128 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Enterprise 2 vCPU 4 GB 128 GB",
+    "friendlyName": "Windows 365 Enterprise 2 vCPU, 4 GB, 128 GB",
     "observations": 4,
     "planId": "545e3611-3af8-49a5-9a0a-b7867968f4b0",
     "retiredUpstream": false,
@@ -5483,11 +5483,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Business 8 vCPU, 32 GB, 128 GB"
+        "Windows 365 Business 8 vCPU 32 GB 128 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Business 8 vCPU 32 GB 128 GB",
+    "friendlyName": "Windows 365 Business 8 vCPU, 32 GB, 128 GB",
     "observations": 2,
     "planId": "648005fc-b330-4bd9-8af6-771f28958ac0",
     "retiredUpstream": false,
@@ -5501,11 +5501,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Shared Use 2 vCPU, 4 GB, 64 GB"
+        "Windows 365 Shared Use 2 vCPU 4 GB 64 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Shared Use 2 vCPU 4 GB 64 GB",
+    "friendlyName": "Windows 365 Shared Use 2 vCPU, 4 GB, 64 GB",
     "observations": 2,
     "planId": "64981bdb-a5a6-4a22-869f-a9455366d5bc",
     "retiredUpstream": false,
@@ -5687,11 +5687,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Enterprise 8 vCPU, 32 GB, 256 GB"
+        "Windows 365 Enterprise 8 vCPU 32 GB 256 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Enterprise 8 vCPU 32 GB 256 GB",
+    "friendlyName": "Windows 365 Enterprise 8 vCPU, 32 GB, 256 GB",
     "observations": 2,
     "planId": "69dc175c-dcff-4757-8389-d19e76acb45d",
     "retiredUpstream": false,
@@ -6324,11 +6324,11 @@
   {
     "aliases": {
       "friendly": [
-        "Exchange Enterprise CAL Services (EOP, DLP)"
+        "Exchange Enterprise CAL Services (EOP DLP)"
       ],
       "technical": []
     },
-    "friendlyName": "Exchange Enterprise CAL Services (EOP DLP)",
+    "friendlyName": "Exchange Enterprise CAL Services (EOP, DLP)",
     "observations": 2,
     "planId": "75badc48-628e-4446-8460-41344d73abd6",
     "retiredUpstream": false,
@@ -7038,11 +7038,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Enterprise 1 vCPU, 2 GB, 64 GB"
+        "Windows 365 Enterprise 1 vCPU 2 GB 64 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Enterprise 1 vCPU 2 GB 64 GB",
+    "friendlyName": "Windows 365 Enterprise 1 vCPU, 2 GB, 64 GB",
     "observations": 2,
     "planId": "86d70dbb-d4c6-4662-ba17-3014204cbb28",
     "retiredUpstream": false,
@@ -8465,11 +8465,11 @@
   {
     "aliases": {
       "friendly": [
-        "Power BI Premium P1"
+        "Power BI Premium P"
       ],
       "technical": []
     },
-    "friendlyName": "Power BI Premium P",
+    "friendlyName": "Power BI Premium P1",
     "observations": 2,
     "planId": "9da49a6d-707a-48a1-b44a-53dcde5267f8",
     "retiredUpstream": false,
@@ -8520,11 +8520,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Enterprise 4 vCPU, 16 GB, 256 GB"
+        "Windows 365 Enterprise 4 vCPU 16 GB 256 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Enterprise 4 vCPU 16 GB 256 GB",
+    "friendlyName": "Windows 365 Enterprise 4 vCPU, 16 GB, 256 GB",
     "observations": 4,
     "planId": "9ecf691d-8b82-46cb-b254-cd061b2c02fb",
     "retiredUpstream": false,
@@ -8588,11 +8588,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Business 2 vCPU, 4 GB, 256 GB"
+        "Windows 365 Business 2 vCPU 4 GB 256 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Business 2 vCPU 4 GB 256 GB",
+    "friendlyName": "Windows 365 Business 2 vCPU, 4 GB, 256 GB",
     "observations": 2,
     "planId": "a0b1c075-51c9-4a42-b34c-308f3993bb7e",
     "retiredUpstream": false,
@@ -9006,11 +9006,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Business 2 vCPU, 4 GB, 64 GB"
+        "Windows 365 Business 2 vCPU 4 GB 64 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Business 2 vCPU 4 GB 64 GB",
+    "friendlyName": "Windows 365 Business 2 vCPU, 4 GB, 64 GB",
     "observations": 2,
     "planId": "a790cd6e-a153-4461-83c7-e127037830b6",
     "retiredUpstream": false,
@@ -9188,11 +9188,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Shared Use 2 vCPU, 4 GB, 256 GB"
+        "Windows 365 Shared Use 2 vCPU 4 GB 256 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Shared Use 2 vCPU 4 GB 256 GB",
+    "friendlyName": "Windows 365 Shared Use 2 vCPU, 4 GB, 256 GB",
     "observations": 2,
     "planId": "aa8fbe7b-695c-4c05-8d45-d1dddf6f7616",
     "retiredUpstream": false,
@@ -9507,11 +9507,11 @@
   {
     "aliases": {
       "friendly": [
-        "SKYPE FOR BUSINESS ONLINE (PLAN 2) FOR MIDSIZE"
+        "SKYPE FOR BUSINESS ONLINE (PLAN 2) FOR MIDSIZ"
       ],
       "technical": []
     },
-    "friendlyName": "SKYPE FOR BUSINESS ONLINE (PLAN 2) FOR MIDSIZ",
+    "friendlyName": "SKYPE FOR BUSINESS ONLINE (PLAN 2) FOR MIDSIZE",
     "observations": 2,
     "planId": "b2669e95-76ef-4e7e-a367-002f60a39f3e",
     "retiredUpstream": false,
@@ -10983,12 +10983,12 @@
     "aliases": {
       "friendly": [
         "Dataverse for Cust Insights BASE",
-        "Dataverse for Customer Insights BASE",
-        "Dataverse for Customer Insights BASE"
+        "Dataverse for Cust Insights BASE",
+        "Dataverse for Customer Insights BASE"
       ],
       "technical": []
     },
-    "friendlyName": "Dataverse for Cust Insights BASE",
+    "friendlyName": "Dataverse for Customer Insights BASE",
     "observations": 6,
     "planId": "d04ca659-b119-4a92-b8fc-3ede584a9d65",
     "retiredUpstream": false,
@@ -11121,11 +11121,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Enterprise 2 vCPU, 8 GB, 256 GB"
+        "Windows 365 Enterprise 2 vCPU 8 GB 256 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Enterprise 2 vCPU 8 GB 256 GB",
+    "friendlyName": "Windows 365 Enterprise 2 vCPU, 8 GB, 256 GB",
     "observations": 2,
     "planId": "d3468c8c-3545-4f44-a32f-b465934d2498",
     "retiredUpstream": false,
@@ -11353,11 +11353,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Business 8 vCPU, 32 GB, 256 GB"
+        "Windows 365 Business 8 vCPU 32 GB 256 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Business 8 vCPU 32 GB 256 GB",
+    "friendlyName": "Windows 365 Business 8 vCPU, 32 GB, 256 GB",
     "observations": 2,
     "planId": "d7a5113a-0276-4dc2-94f8-ca9f2c5ae078",
     "retiredUpstream": false,
@@ -11724,11 +11724,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Shared Use 4 vCPU, 16 GB, 128 GB"
+        "Windows 365 Shared Use 4 vCPU 16 GB 128 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Shared Use 4 vCPU 16 GB 128 GB",
+    "friendlyName": "Windows 365 Shared Use 4 vCPU, 16 GB, 128 GB",
     "observations": 2,
     "planId": "dd3801e2-4aa1-4b16-a44b-243e55497584",
     "retiredUpstream": false,
@@ -11977,11 +11977,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Shared Use 8 vCPU, 32 GB, 128 GB"
+        "Windows 365 Shared Use 8 vCPU 32 GB 128 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Shared Use 8 vCPU 32 GB 128 GB",
+    "friendlyName": "Windows 365 Shared Use 8 vCPU, 32 GB, 128 GB",
     "observations": 2,
     "planId": "e4dee41f-a5c5-457d-b7d3-c309986fdbb2",
     "retiredUpstream": false,
@@ -12077,11 +12077,11 @@
   {
     "aliases": {
       "friendly": [
-        "Dynamics 365 for Marketing 50K Additional Contacts"
+        "Dynamics 365 for Marketing 50K Addnl Contacts"
       ],
       "technical": []
     },
-    "friendlyName": "Dynamics 365 for Marketing 50K Addnl Contacts",
+    "friendlyName": "Dynamics 365 for Marketing 50K Additional Contacts",
     "observations": 6,
     "planId": "e626a4ec-1ba2-409e-bf75-9bc0bc30cca7",
     "retiredUpstream": false,
@@ -12875,11 +12875,11 @@
   {
     "aliases": {
       "friendly": [
-        "Dynamics 365 for Operations, Enterprise Edition - Sandbox Tier 4:Standard Performance Testing"
+        "Dynamics 365 for Operations Enterprise Edition - Sandbox Tier 4:Standard Performance Testing"
       ],
       "technical": []
     },
-    "friendlyName": "Dynamics 365 for Operations Enterprise Edition - Sandbox Tier 4:Standard Performance Testing",
+    "friendlyName": "Dynamics 365 for Operations, Enterprise Edition - Sandbox Tier 4:Standard Performance Testing",
     "observations": 2,
     "planId": "f6b5efb1-1813-426f-96d0-9b4f7438714f",
     "retiredUpstream": false,
@@ -13013,11 +13013,11 @@
   {
     "aliases": {
       "friendly": [
-        "MICROSOFT DYNAMICS CRM ONLINE PROFESSIONAL"
+        "MICROSOFT DYNAMICS CRM ONLINE PROFESSIONA"
       ],
       "technical": []
     },
-    "friendlyName": "MICROSOFT DYNAMICS CRM ONLINE PROFESSIONA",
+    "friendlyName": "MICROSOFT DYNAMICS CRM ONLINE PROFESSIONAL",
     "observations": 2,
     "planId": "f9646fb2-e3b2-4309-95de-dc4833737456",
     "retiredUpstream": false,
@@ -13065,11 +13065,11 @@
   {
     "aliases": {
       "friendly": [
-        "Windows 365 Shared Use 8 vCPU, 32 GB, 512 GB"
+        "Windows 365 Shared Use 8 vCPU 32 GB 512 GB"
       ],
       "technical": []
     },
-    "friendlyName": "Windows 365 Shared Use 8 vCPU 32 GB 512 GB",
+    "friendlyName": "Windows 365 Shared Use 8 vCPU, 32 GB, 512 GB",
     "observations": 2,
     "planId": "fa0b4021-0f60-4d95-bf68-95036285282a",
     "retiredUpstream": false,
