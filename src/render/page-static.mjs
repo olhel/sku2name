@@ -256,6 +256,7 @@ export function renderDataPage({ meta, assets, counts }) {
         <li>Set aside a name whose brackets do not close: <code>Microsoft 365 Business Voice (UK</code> loses to <code>Microsoft 365 Business Voice (UK)</code>.</li>
         <li>Set aside a name that is another spelling with characters missing from inside a word: <code>Dynamics 365 P1 Tria</code> loses to <code>Dynamics 365 P1 Trial</code>.</li>
         <li>Then prefer a name whose shape matches its kind: <code>UNDERSCORE_CAPS</code> for technical names, prose for display names.</li>
+        <li>Then prefer the current brand name over one Microsoft has renamed, so <code>Azure Active Directory</code> gives way to <code>Microsoft Entra ID</code> and <code>Flow</code> to <code>Power Automate</code>.</li>
         <li>Then prefer a name that both Microsoft files agree on.</li>
         <li>Then prefer the more frequent spelling.</li>
         <li>Then prefer a display name that differs from the technical name.</li>
@@ -266,6 +267,12 @@ export function renderDataPage({ meta, assets, counts }) {
         not, so the complete spelling is usually sitting in the other file. Only a damaged word
         counts. A name that adds or drops a whole word is a rename rather than a defect, which is
         why <code>SharePoint (Plan 2)</code> is not replaced by <code>SharePoint Online (Plan 2)</code>.
+      </p>
+      <p>
+        The rename step is a fixed list of Microsoft's own rebrands, because a retired name can sit
+        in either file depending on which was regenerated last. It never invents a name: a spelling
+        is only set aside when Microsoft has published the newer one for that same identifier
+        somewhere. Where they have not, the older name stands.
       </p>
       <p>
         Every rejected spelling is kept, listed on the plan's page, and remains searchable.

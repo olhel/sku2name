@@ -12,6 +12,7 @@
 // no reason and trains Google to distrust the signal.
 
 import { byCodeUnit } from '../lib/sort.mjs';
+import { rebrandRank } from './rebrands.mjs';
 
 /** Loose comparison: case, underscores and spacing all treated as noise. */
 export function normaliseForCompare(name) {
@@ -207,6 +208,11 @@ export function pickCanonical(candidates, { kind, otherName = null, preferredSou
       bracketRank(a.name) - bracketRank(b.name) ||
       truncationRank(a.name, names) - truncationRank(b.name, names) ||
       styleRank(a.name, kind) - styleRank(b.name, kind) ||
+      // Below style, above provenance. A retired brand name is stale rather
+      // than broken, so it should not outrank a readability defect such as
+      // ALL CAPS, but it should beat "the CSV said so", because which file
+      // carries the current name is an accident of which was regenerated last.
+      rebrandRank(a.name, names) - rebrandRank(b.name, names) ||
       sourceRank(a, preferredSource) - sourceRank(b, preferredSource) ||
       (b.count || 0) - (a.count || 0) ||
       distinctRank(a.name, otherName) - distinctRank(b.name, otherName) ||

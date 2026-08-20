@@ -2989,11 +2989,11 @@
   {
     "aliases": {
       "productName": [
-        "Power Automate Plan 1 for Government (Qualified Offer)"
+        "Flow Plan 1 for Government"
       ],
       "stringId": []
     },
-    "productName": "Flow Plan 1 for Government",
+    "productName": "Power Automate Plan 1 for Government (Qualified Offer)",
     "servicePlanIds": [
       "774da41c-a8b3-47c1-8322-b9c1ab68be9f",
       "922ba911-5694-4e99-a794-73aed9bfeec8",
@@ -3933,11 +3933,11 @@
   {
     "aliases": {
       "productName": [
-        "Microsoft Teams Essentials (Microsoft Entra identity)"
+        "Microsoft Teams Essentials (AAD Identity)"
       ],
       "stringId": []
     },
-    "productName": "Microsoft Teams Essentials (AAD Identity)",
+    "productName": "Microsoft Teams Essentials (Microsoft Entra identity)",
     "servicePlanIds": [
       "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
       "afc06cb0-b4f4-4473-8286-d644f70d8faf",
@@ -11742,11 +11742,11 @@
   {
     "aliases": {
       "productName": [
-        "Power Apps per app baseline access"
+        "PowerApps per app baseline access"
       ],
       "stringId": []
     },
-    "productName": "PowerApps per app baseline access",
+    "productName": "Power Apps per app baseline access",
     "servicePlanIds": [
       "35122886-cef5-44a3-ab36-97134eabd9ba",
       "dd14867e-8d31-4779-a595-304405f5ad39",
@@ -15075,11 +15075,11 @@
   {
     "aliases": {
       "productName": [
-        "Power Apps Plan 1 for Government"
+        "PowerApps Plan 1 for Government"
       ],
       "stringId": []
     },
-    "productName": "PowerApps Plan 1 for Government",
+    "productName": "Power Apps Plan 1 for Government",
     "servicePlanIds": [
       "5ce719f1-169f-4021-8a64-7d24dcaec15f",
       "774da41c-a8b3-47c1-8322-b9c1ab68be9f",

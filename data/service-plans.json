@@ -1593,14 +1593,14 @@
   {
     "aliases": {
       "friendly": [
+        "Azure Active Directory Basic for Education",
         "Microsoft Entra Basic for EDU",
         "Microsoft Entra Basic for Education",
-        "Microsoft Entra ID Basic for EDU",
-        "Microsoft Entra ID Basic for Education"
+        "Microsoft Entra ID Basic for EDU"
       ],
       "technical": []
     },
-    "friendlyName": "Azure Active Directory Basic for Education",
+    "friendlyName": "Microsoft Entra ID Basic for Education",
     "observations": 34,
     "planId": "1d0f309f-fdf9-4b2a-9ae7-9c48b91f1426",
     "retiredUpstream": false,
@@ -7004,11 +7004,11 @@
   {
     "aliases": {
       "friendly": [
-        "Microsoft Entra Workload ID P1"
+        "Azure Active Directory workload identities P1"
       ],
       "technical": []
     },
-    "friendlyName": "Azure Active Directory workload identities P1",
+    "friendlyName": "Microsoft Entra Workload ID P1",
     "observations": 2,
     "planId": "84c289f0-efcb-486f-8581-07f44fc9efad",
     "retiredUpstream": false,
@@ -11758,11 +11758,11 @@
   {
     "aliases": {
       "friendly": [
-        "Microsoft Entra ID"
+        "Azure Active Directory"
       ],
       "technical": []
     },
-    "friendlyName": "Azure Active Directory",
+    "friendlyName": "Microsoft Entra ID",
     "observations": 10,
     "planId": "de377cbc-0019-4ec2-b77c-3f223947e102",
     "retiredUpstream": false,

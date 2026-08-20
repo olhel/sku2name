@@ -296,19 +296,22 @@ test('a stray-space defect does not make the clean name look truncated', () => {
   );
 });
 
-test('spacing alone is a style difference, not damage', () => {
-  // Both spellings are Microsoft's and neither is missing content, so this is
-  // left to styleRank and frequency rather than being forced by the truncation
-  // rank. The point is only that the rank does not fire.
+test('spacing alone is not damage, so the truncation rank leaves it alone', () => {
+  // "PowerApps" is "Power Apps" with a space deleted, but splitting on
+  // whitespace gives 1 word against 2, so the word-count guard stops the
+  // truncation rank before the question of spacing arises at all.
   assert.equal(deletedText('PowerApps', 'Power Apps'), ' ', 'it is still a deletion');
-  const candidates = [
-    { name: 'PowerApps Plan 1 for Government', count: 1, sources: ['csv'] },
-    { name: 'Power Apps Plan 1 for Government', count: 1, sources: ['md'] },
-  ];
+  // What actually decides this pair is the rebrand rule, not truncation and
+  // not the preferred source.
   assert.equal(
-    pickCanonical(candidates, { kind: 'product' }),
-    'PowerApps Plan 1 for Government',
-    'the preferred source decides, as it did before'
+    pickCanonical(
+      [
+        { name: 'PowerApps Plan 1 for Government', count: 1, sources: ['csv'] },
+        { name: 'Power Apps Plan 1 for Government', count: 1, sources: ['md'] },
+      ],
+      { kind: 'product' }
+    ),
+    'Power Apps Plan 1 for Government'
   );
 });
 
