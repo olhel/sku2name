@@ -232,3 +232,65 @@ against PerGB2018. Not a consideration at this scale.
   production. Both are read, preferring the Cloudflare header, but only
   production traffic will confirm the hash is varying per visitor rather than
   collapsing onto one Cloudflare egress address.
+
+## First 20 hours of real data
+
+Logging started 19 August 2026 at 14:42 UTC. By 20 August at 10:18 the workspace
+held 5,586 visit records, and two things stood out.
+
+### The AI crawlers arrived as soon as the block came off
+
+The Cloudflare managed rule that disallowed GPTBot and friends was turned off on
+the afternoon of 19 August.
+
+| crawler | first seen | distinct pages | requests |
+| --- | --- | --- | --- |
+| GoogleOther | 19 Aug 23:58 | 1,374 | 1,680 |
+| GPTBot | 20 Aug 06:23 | 1,434 | 1,430 |
+| heritrix, Internet Archive | 20 Aug 01:06 | 103 | 103 |
+| Googlebot | 19 Aug 14:43 | 22 | 36 |
+| ClaudeBot | 19 Aug 14:47 | 2 | 16 |
+
+GPTBot took the whole site, 1,434 pages, in thirteen minutes. GoogleOther swept
+it overnight. Googlebot, meanwhile, has reached 22 pages: classic search
+indexing has barely started while the AI crawlers went deep immediately. For a
+site built to be quotable by assistants that is the most encouraging number in
+the set, and it is a direct consequence of the crawler decision.
+
+### The bot classifier was under-detecting, badly
+
+The raw split read 3,088 bots against 2,498 humans. About 75% of those "humans"
+were crawlers:
+
+```
+1,680  GoogleOther                      no "googlebot", and no "bot" at all
+  103  heritrix
+   50  Cloudflare-AgentReadiness
+   40  a research scanner naming its institution
+```
+
+**GoogleOther is the important one.** It is Google's non-search crawler, and its
+agent string contains neither `googlebot` nor even the bare substring `bot`, so
+the name list and the generic hint both missed it. It reached 1,374 pages while
+being counted as a person.
+
+Two fixes, in `src/lib/bots.mjs`. `googleother` joins the named list. And a
+general rule behind it: **a user-agent carrying a URL is a crawler identifying
+itself**, which no shipping browser does. That catches heritrix, the
+`+http://...bot.html` convention, and one-off research scanners, without another
+round of name-by-name patching. Both are covered by tests built from the exact
+strings production logged, and both fail two tests each when removed.
+
+This is the same disease diagnosed in sub2tenant and then reproduced here, which
+suggests the honest posture is that any user-agent list is a floor rather than a
+measurement. Treat the human number as an upper bound.
+
+### Everything else
+
+- Most requested page is `/` at 257, then `/robots.txt` at 47. Crawlers check
+  permissions before they read anything.
+- 332 of 5,586 requests are 404s and **none are broken links**: `/wp-login.php`,
+  `/.env`, `/.env.local`, `/.git/config` and a long tail of WordPress
+  `wlwmanifest.xml` probes. Routine background scanning.
+- US 4,263 and Belgium 579 are crawler infrastructure rather than an audience.
+  Norway at 146 is mostly the author.

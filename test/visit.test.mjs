@@ -171,3 +171,61 @@ test('serialises to a single line, since one line is one log record', () => {
   assert.ok(!line.includes('\n'));
   assert.deepEqual(JSON.parse(line).path, '/sku/enterprisepack');
 });
+
+// Regression: these four were logged as human in production on 19-20 August
+// 2026. GoogleOther alone reached 1,374 pages in one night while being counted
+// as a person, which made the human/bot split in the logs meaningless.
+test('catches the crawlers production logged as human', () => {
+  const cases = [
+    [
+      'GoogleOther',
+      'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.137 Mobile Safari/537.36 (compatible; GoogleOther)',
+      'googleother',
+    ],
+    [
+      'heritrix',
+      'Mozilla/5.0 (compatible; heritrix/3.14.2-SNAPSHOT-2026-04-13T06:21:22Z +https://www.image-meta.com)',
+      null,
+    ],
+    ['Cloudflare-AgentReadiness', 'Mozilla/5.0 (compatible; Cloudflare-AgentReadiness/1.0)', null],
+    [
+      'a research scanner naming its institution',
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko, Yokohama Institute of Information Security  https://www.iisec.ac.jp) Chrome/124.0.0.0 Safari/537.36',
+      'self-identified-crawler',
+    ],
+  ];
+  for (const [label, ua, expectedKind] of cases) {
+    const out = classifyUserAgent(ua);
+    assert.equal(out.isBot, true, label);
+    if (expectedKind) assert.equal(out.botKind, expectedKind, label);
+  }
+});
+
+// GoogleOther is the reason the name list alone is not enough: it contains
+// neither "googlebot" nor the bare substring "bot".
+test('GoogleOther would not be caught by the bot substring alone', () => {
+  const ua = 'mozilla/5.0 (compatible; googleother)';
+  assert.ok(!ua.includes('bot'), 'the premise: there is no "bot" in this string');
+  assert.equal(classifyUserAgent(ua).isBot, true);
+});
+
+// The general rule behind the name list. A crawler that puts a contact URL in
+// its agent is identifying itself; no shipping browser does that.
+test('a user-agent carrying a URL is treated as a crawler', () => {
+  assert.equal(
+    classifyUserAgent('SomeNewCrawler/2.0 (+https://example.com/crawler)').botKind,
+    'generic-bot',
+    'this one also contains "crawler", so the named hint wins'
+  );
+  assert.equal(
+    classifyUserAgent('Unnamed/1.0 (https://example.com/about)').botKind,
+    'self-identified-crawler'
+  );
+  // And the rule must not fire on a browser, none of which carry a URL.
+  assert.equal(
+    classifyUserAgent(
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36'
+    ).isBot,
+    false
+  );
+});

@@ -22,6 +22,10 @@
 /** Named first, so the log says which crawler rather than just "a bot". */
 const NAMED_BOTS = [
   ['googlebot', 'googlebot'],
+  // GoogleOther is Google's non-search crawler. It contains neither
+  // "googlebot" nor even the substring "bot", and it reached 1,374 pages
+  // here in one night while being counted as a human the whole time.
+  ['googleother', 'googleother'],
   ['google-extended', 'google-extended'],
   ['storebot-google', 'googlebot'],
   ['bingbot', 'bingbot'],
@@ -61,6 +65,9 @@ const NAMED_BOTS = [
 /** Anything automated that did not name itself above. */
 const GENERIC_HINTS = [
   'bot',
+  'heritrix',
+  'nutch',
+  'cloudflare-',
   'crawl',
   'spider',
   'slurp',
@@ -95,6 +102,12 @@ const GENERIC_HINTS = [
 ];
 
 /**
+ * Crawlers conventionally put a contact URL in the agent string. No shipping
+ * browser does, which is what makes this safe to treat as automation.
+ */
+const URL_IN_AGENT = new RegExp(String.raw`https?://`);
+
+/**
  * Chrome older than 80 on Windows XP through 7 is, in practice, a crawler
  * wearing a costume rather than someone on a very old machine.
  */
@@ -122,6 +135,12 @@ export function classifyUserAgent(userAgent) {
   for (const hint of GENERIC_HINTS) {
     if (ua.includes(hint)) return { isBot: true, botKind: 'generic-bot' };
   }
+
+  // A user-agent carrying a URL is a crawler identifying itself, which is a
+  // convention no mainstream browser follows. This is the general form of the
+  // name-by-name list above: it catches heritrix, the "+http://...bot.html"
+  // style, and one-off research scanners that announce an institution.
+  if (URL_IN_AGENT.test(ua)) return { isBot: true, botKind: 'self-identified-crawler' };
   if (isLegacyBrowserBot(ua)) return { isBot: true, botKind: 'legacy-browser-bot' };
 
   return { isBot: false, botKind: null };
