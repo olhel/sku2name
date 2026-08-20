@@ -978,8 +978,8 @@
     },
     "3afa0b92-83ef-41c1-8d64-586ab882a951": {
       "firstSeen": "2026-08-18",
-      "retired": true,
-      "retiredOn": "2026-08-19",
+      "retired": false,
+      "retiredOn": null,
       "slug": "3_party_app_patch"
     },
     "3b98b912-1720-4a1e-9630-c9a41dbb61d8": {
@@ -1949,8 +1949,8 @@
     },
     "795aec3a-93a2-45be-92c4-47b9a76340ca": {
       "firstSeen": "2026-08-18",
-      "retired": true,
-      "retiredOn": "2026-08-19",
+      "retired": false,
+      "retiredOn": null,
       "slug": "cloud_pki"
     },
     "795f6fe0-cc4d-4773-b050-5dde4dc704c9": {
@@ -3140,8 +3140,8 @@
     },
     "c6675fa4-68fe-415f-aec1-a44520f0c3a3": {
       "firstSeen": "2026-08-18",
-      "retired": true,
-      "retiredOn": "2026-08-19",
+      "retired": false,
+      "retiredOn": null,
       "slug": "mdolite_enterprise"
     },
     "c68f8d98-5534-41c8-bf36-22fa496fa792": {
@@ -6563,7 +6563,8 @@
     },
     "d4009785-b899-4cab-97b6-d06a7c799507": {
       "firstSeen": "2026-08-18",
-      "retired": false,
+      "retired": true,
+      "retiredOn": "2026-08-20",
       "slug": "mcosms2"
     },
     "d42c793f-6c78-4f43-92ca-e8f6a02b035f": {

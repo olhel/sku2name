@@ -221,7 +221,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Teams Premium Intelligent",
-    "observations": 7,
+    "observations": 8,
     "planId": "0504111f-feb8-4a3c-992a-70280f9a2869",
     "retiredUpstream": false,
     "slug": "teamspro_mgmt",
@@ -877,7 +877,7 @@
       "technical": []
     },
     "friendlyName": "Exchange Foundation",
-    "observations": 494,
+    "observations": 497,
     "planId": "113feb6c-3fe4-4440-bddc-54d774bf0318",
     "retiredUpstream": false,
     "slug": "exchange_s_foundation",
@@ -1174,11 +1174,13 @@
   },
   {
     "aliases": {
-      "friendly": [],
+      "friendly": [
+        "Microsoft Teams Calling Plan pay-as-you-go - country/region zone 1"
+      ],
       "technical": []
     },
     "friendlyName": "Microsoft Teams Calling Plan pay-as-you-go - country zone 1",
-    "observations": 3,
+    "observations": 4,
     "planId": "156a1efe-17cd-4b03-9f17-2eb512298fb3",
     "retiredUpstream": false,
     "slug": "mcopstn_payg_1",
@@ -1212,7 +1214,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Forms (Plan E1)",
-    "observations": 59,
+    "observations": 60,
     "planId": "159f4cd6-e380-449f-a816-af1a9ef76344",
     "retiredUpstream": false,
     "slug": "forms_plan_e1",
@@ -1446,7 +1448,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Bookings",
-    "observations": 138,
+    "observations": 139,
     "planId": "199a5c09-e0ca-4e37-8f7c-b05d533e1ea2",
     "retiredUpstream": false,
     "slug": "microsoftbookings",
@@ -1562,12 +1564,13 @@
       "technical": []
     },
     "friendlyName": "Dataverse for Copilot for Finance Trial",
-    "observations": 1,
+    "observations": 2,
     "planId": "1c56fdd3-59ce-417a-b8bb-a97bb4e67b99",
     "retiredUpstream": false,
     "slug": "cds_copilot_for_finance_trial",
     "sources": [
-      "csv"
+      "csv",
+      "md"
     ],
     "technicalName": "CDS_Copilot_for_Finance_Trial"
   },
@@ -1748,7 +1751,7 @@
       "technical": []
     },
     "friendlyName": "Places Core",
-    "observations": 15,
+    "observations": 16,
     "planId": "1fe6227d-3e01-46d0-9510-0acad4ff6e94",
     "retiredUpstream": true,
     "slug": "places_core",
@@ -1930,7 +1933,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Dynamics 365 Customer Voice for Marketing Application",
-    "observations": 5,
+    "observations": 6,
     "planId": "22b657cf-0a9e-467b-8a91-5e31f21bc570",
     "retiredUpstream": false,
     "slug": "forms_pro_marketing_app",
@@ -2194,11 +2197,12 @@
       "technical": []
     },
     "friendlyName": "Microsoft Teams Events",
-    "observations": 1,
+    "observations": 4,
     "planId": "29c62f1c-8ffc-4304-9cb9-398a6aa1852b",
     "retiredUpstream": false,
     "slug": "microsoft_teams_events",
     "sources": [
+      "csv",
       "md"
     ],
     "technicalName": "MICROSOFT_TEAMS_EVENTS"
@@ -2277,12 +2281,13 @@
       "technical": []
     },
     "friendlyName": "Microsoft 365 SMS Pay As You Go",
-    "observations": 1,
+    "observations": 2,
     "planId": "2b9bf4f4-ac52-42c5-8456-f70ee4924295",
     "retiredUpstream": false,
     "slug": "mcosms_payg_1",
     "sources": [
-      "csv"
+      "csv",
+      "md"
     ],
     "technicalName": "MCOSMS_PAYG_1"
   },
@@ -2427,7 +2432,7 @@
       "technical": []
     },
     "friendlyName": "Power Virtual Agents for Digital Messaging",
-    "observations": 5,
+    "observations": 6,
     "planId": "2d2f174c-c3cc-4abe-9ce8-4dd86f469ab1",
     "retiredUpstream": false,
     "slug": "power_virtual_agents_d365_cs_messaging",
@@ -3185,6 +3190,22 @@
   },
   {
     "aliases": {
+      "friendly": [],
+      "technical": []
+    },
+    "friendlyName": "Intune Enterprise Application Management",
+    "observations": 2,
+    "planId": "3afa0b92-83ef-41c1-8d64-586ab882a951",
+    "retiredUpstream": false,
+    "slug": "3_party_app_patch",
+    "sources": [
+      "csv",
+      "md"
+    ],
+    "technicalName": "3_PARTY_APP_PATCH"
+  },
+  {
+    "aliases": {
       "friendly": [
         "Windows 365 Business 1 vCPU, 2 GB, 64 GB"
       ],
@@ -3439,7 +3460,7 @@
       "technical": []
     },
     "friendlyName": "Avatars for Teams (additional)",
-    "observations": 53,
+    "observations": 54,
     "planId": "3efbd4ed-8958-4824-8389-1321f8730af8",
     "retiredUpstream": false,
     "slug": "mesh_avatars_additional_for_teams",
@@ -3770,7 +3791,7 @@
       "technical": []
     },
     "friendlyName": "Dynamics 365 Customer Service Digital Messaging Application Integration",
-    "observations": 5,
+    "observations": 6,
     "planId": "43b076f2-1123-45ba-a339-2e170ee58c53",
     "retiredUpstream": false,
     "slug": "dyn365_cs_messaging",
@@ -3822,7 +3843,7 @@
       "technical": []
     },
     "friendlyName": "OneDrive for Business (Basic 2)",
-    "observations": 5,
+    "observations": 6,
     "planId": "4495894f-534f-41ca-9d3b-0ebf1220a423",
     "retiredUpstream": false,
     "slug": "onedrive_basic_p2",
@@ -3952,7 +3973,7 @@
       "technical": []
     },
     "friendlyName": "Dynamics 365 Customer Service Digital Messaging add-on",
-    "observations": 13,
+    "observations": 14,
     "planId": "47c2b191-a5fb-4129-b690-00c474d2f623",
     "retiredUpstream": false,
     "slug": "dyn365_cs_messaging_tps",
@@ -4156,7 +4177,7 @@
       "technical": []
     },
     "friendlyName": "Exchange Online Kiosk",
-    "observations": 21,
+    "observations": 22,
     "planId": "4a82b400-a79f-41a4-b4e2-e94f5787b113",
     "retiredUpstream": false,
     "slug": "exchange_s_deskless",
@@ -4326,12 +4347,13 @@
       "technical": []
     },
     "friendlyName": "Skype Meeting Video Interop for Skype for Business",
-    "observations": 1,
+    "observations": 2,
     "planId": "4f0142e8-8fb8-44a7-8ef8-665425d93888",
     "retiredUpstream": false,
     "slug": "video_interop",
     "sources": [
-      "csv"
+      "csv",
+      "md"
     ],
     "technicalName": "VIDEO_INTEROP"
   },
@@ -4694,7 +4716,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft 365 Domestic Calling Plan (120 min)",
-    "observations": 3,
+    "observations": 4,
     "planId": "54a152dc-90de-4996-93d2-bc47e670fc06",
     "retiredUpstream": false,
     "slug": "mcopstn5",
@@ -4862,7 +4884,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Teams",
-    "observations": 133,
+    "observations": 134,
     "planId": "57ff2da0-773e-42df-b2af-ffb7a2317929",
     "retiredUpstream": false,
     "slug": "teams1",
@@ -4926,12 +4948,13 @@
       "technical": []
     },
     "friendlyName": "Copilot for Finance Trial",
-    "observations": 1,
+    "observations": 2,
     "planId": "5a6d0425-3ef2-4e42-8372-76709c9effe0",
     "retiredUpstream": false,
     "slug": "financecopilot_trial",
     "sources": [
-      "csv"
+      "csv",
+      "md"
     ],
     "technicalName": "financecopilot_trial"
   },
@@ -5635,12 +5658,13 @@
       "technical": []
     },
     "friendlyName": "Power Automate for Copilot for Finance Trial",
-    "observations": 1,
+    "observations": 2,
     "planId": "68bf3da4-4e1a-4e13-a1cc-2bc6986b4d88",
     "retiredUpstream": false,
     "slug": "flow_copilot_for_finance_trial",
     "sources": [
-      "csv"
+      "csv",
+      "md"
     ],
     "technicalName": "FLOW_Copilot_for_Finance_Trial"
   },
@@ -6102,7 +6126,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Teams Premium Virtual Appointments",
-    "observations": 7,
+    "observations": 8,
     "planId": "711413d0-b36e-4cd4-93db-0a50a4ab7ea3",
     "retiredUpstream": false,
     "slug": "mco_virtual_appt",
@@ -6287,12 +6311,13 @@
       "technical": []
     },
     "friendlyName": "Microsoft 365 SMS 100 Units",
-    "observations": 1,
+    "observations": 2,
     "planId": "754aec36-45fc-4eaa-bcaf-44f6cb1f553c",
     "retiredUpstream": false,
     "slug": "mcosms5",
     "sources": [
-      "csv"
+      "csv",
+      "md"
     ],
     "technicalName": "MCOSMS5"
   },
@@ -6427,6 +6452,22 @@
       "md"
     ],
     "technicalName": "TEAMSPRO_WEBINAR"
+  },
+  {
+    "aliases": {
+      "friendly": [],
+      "technical": []
+    },
+    "friendlyName": "Microsoft Cloud PKI",
+    "observations": 2,
+    "planId": "795aec3a-93a2-45be-92c4-47b9a76340ca",
+    "retiredUpstream": false,
+    "slug": "cloud_pki",
+    "sources": [
+      "csv",
+      "md"
+    ],
+    "technicalName": "CLOUD_PKI"
   },
   {
     "aliases": {
@@ -7079,7 +7120,7 @@
       "technical": []
     },
     "friendlyName": "Mobile Device Management for Office 365",
-    "observations": 171,
+    "observations": 172,
     "planId": "882e1d05-acd1-4ccb-8708-6ee03664b117",
     "retiredUpstream": false,
     "slug": "intune_o365",
@@ -7694,7 +7735,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Teams Premium Virtual Appointment",
-    "observations": 7,
+    "observations": 8,
     "planId": "9104f592-f2a7-4f77-904c-ca5a5715883f",
     "retiredUpstream": false,
     "slug": "teamspro_virtualappt",
@@ -7914,7 +7955,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Search",
-    "observations": 163,
+    "observations": 164,
     "planId": "94065c59-bc8e-4e8b-89e5-5138d471eaff",
     "retiredUpstream": false,
     "slug": "microsoft_search",
@@ -8735,7 +8776,7 @@
       "technical": []
     },
     "friendlyName": "Dynamics 365 for Marketing",
-    "observations": 5,
+    "observations": 6,
     "planId": "a3a4fa10-5092-401a-af30-0462a95a7ac8",
     "retiredUpstream": false,
     "slug": "dyn365_marketing_app",
@@ -9234,7 +9275,7 @@
       "technical": []
     },
     "friendlyName": "Queues app for Microsoft Teams",
-    "observations": 3,
+    "observations": 4,
     "planId": "ab2d4fb5-f80a-4bf1-a11d-7f1da254041b",
     "retiredUpstream": false,
     "slug": "queues_app",
@@ -9355,7 +9396,7 @@
       "technical": []
     },
     "friendlyName": "Skype for Business Online (Plan 1)",
-    "observations": 23,
+    "observations": 24,
     "planId": "afc06cb0-b4f4-4473-8286-d644f70d8faf",
     "retiredUpstream": false,
     "slug": "mcoimp",
@@ -10419,6 +10460,22 @@
   },
   {
     "aliases": {
+      "friendly": [],
+      "technical": []
+    },
+    "friendlyName": "Microsoft 365 built-in email and collaboration security",
+    "observations": 2,
+    "planId": "c6675fa4-68fe-415f-aec1-a44520f0c3a3",
+    "retiredUpstream": false,
+    "slug": "mdolite_enterprise",
+    "sources": [
+      "csv",
+      "md"
+    ],
+    "technicalName": "MDOLITE_ENTERPRISE"
+  },
+  {
+    "aliases": {
       "friendly": [
         "POWERAPPS FOR OFFICE 36",
         "POWERAPPS FOR OFFICE 365"
@@ -10714,7 +10771,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Teams Premium Personalized",
-    "observations": 7,
+    "observations": 8,
     "planId": "cc8c0802-a325-43df-8cba-995d0c6cb373",
     "retiredUpstream": false,
     "slug": "teamspro_cust",
@@ -10806,16 +10863,19 @@
   },
   {
     "aliases": {
-      "friendly": [],
+      "friendly": [
+        "Retired - Microsoft Social Engagement"
+      ],
       "technical": []
     },
     "friendlyName": "Microsoft Social Engagement",
-    "observations": 1,
+    "observations": 2,
     "planId": "ce112267-84df-4a78-9e8d-707ea8af89f3",
     "retiredUpstream": true,
     "slug": "dyn365_marketing_app_mse",
     "sources": [
-      "csv"
+      "csv",
+      "md"
     ],
     "technicalName": "DYN365_MARKETING_APP_MSE"
   },
@@ -11114,11 +11174,12 @@
       "technical": []
     },
     "friendlyName": "DOMESTIC AND INTERNATIONAL CALLING PLAN",
-    "observations": 1,
+    "observations": 2,
     "planId": "d4009785-b899-4cab-97b6-d06a7c799507",
     "retiredUpstream": false,
     "slug": "mcosms2",
     "sources": [
+      "csv",
       "md"
     ],
     "technicalName": "MCOSMS2"
@@ -11618,7 +11679,7 @@
       "technical": []
     },
     "friendlyName": "Avatars for Teams",
-    "observations": 53,
+    "observations": 54,
     "planId": "dcf9d2f4-772e-4434-b757-77a453cfbc02",
     "retiredUpstream": false,
     "slug": "mesh_avatars_for_teams",
@@ -12161,7 +12222,7 @@
       "technical": []
     },
     "friendlyName": "Office for the Web",
-    "observations": 189,
+    "observations": 190,
     "planId": "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
     "retiredUpstream": false,
     "slug": "sharepointwac",
@@ -12588,7 +12649,7 @@
       "technical": []
     },
     "friendlyName": "Immersive spaces for Teams",
-    "observations": 33,
+    "observations": 34,
     "planId": "f0ff6ac6-297d-49cd-be34-6dfef97f0c28",
     "retiredUpstream": false,
     "slug": "mesh_immersive_for_teams",
@@ -12620,7 +12681,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Defender for Office 365 (Plan 1)",
-    "observations": 78,
+    "observations": 94,
     "planId": "f20fedf3-f3c3-43c3-8267-2bfdd51c0939",
     "retiredUpstream": false,
     "slug": "atp_enterprise",
@@ -12919,7 +12980,7 @@
       "technical": []
     },
     "friendlyName": "Microsoft Teams Premium Secure",
-    "observations": 7,
+    "observations": 8,
     "planId": "f8b44f54-18bb-46a3-9658-44ab58712968",
     "retiredUpstream": false,
     "slug": "teamspro_protection",
@@ -13229,7 +13290,7 @@
       "technical": []
     },
     "friendlyName": "Copilot Studio in Copilot for M365",
-    "observations": 10,
+    "observations": 11,
     "planId": "fe6c28b3-d468-44ea-bbd0-a10a5167435c",
     "retiredUpstream": false,
     "slug": "copilot_studio_in_copilot_for_m365",

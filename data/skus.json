@@ -4,12 +4,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "113feb6c-3fe4-4440-bddc-54d774bf0318",
-      "22b657cf-0a9e-467b-8a91-5e31f21bc570",
-      "a3a4fa10-5092-401a-af30-0462a95a7ac8",
-      "ce112267-84df-4a78-9e8d-707ea8af89f3"
-    ],
     "productName": "Dynamics 365 Marketing App",
     "servicePlanIds": [
       "a3a4fa10-5092-401a-af30-0462a95a7ac8",
@@ -20,7 +14,8 @@
     "skuId": "00b861da-8087-4e30-beb8-8db3c6d9581e",
     "slug": "dyn365_marketing_app",
     "sources": [
-      "csv"
+      "csv",
+      "md"
     ],
     "stringId": "DYN365_MARKETING_APP"
   },
@@ -289,7 +284,8 @@
       "aebd3021-9f8f-4bf8-bbe3-0ed2f4f047a1",
       "2789c901-c14e-48ab-a76a-be334d9d793a",
       "292cc034-7b7c-4950-aaf5-943befd3f1d4",
-      "94065c59-bc8e-4e8b-89e5-5138d471eaff"
+      "94065c59-bc8e-4e8b-89e5-5138d471eaff",
+      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
     "skuId": "05e9a617-0261-4cee-bb44-138d3ef5d965",
     "slug": "spe_e3",
@@ -981,10 +977,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "54a152dc-90de-4996-93d2-bc47e670fc06",
-      "754aec36-45fc-4eaa-bcaf-44f6cb1f553c"
-    ],
     "productName": "Microsoft 365 Domestic Calling Plan (120 min)",
     "servicePlanIds": [
       "54a152dc-90de-4996-93d2-bc47e670fc06",
@@ -993,7 +985,8 @@
     "skuId": "11dee6af-eca8-419f-8061-6864517c1875",
     "slug": "mcopstn_5",
     "sources": [
-      "csv"
+      "csv",
+      "md"
     ],
     "stringId": "MCOPSTN_5"
   },
@@ -5121,7 +5114,8 @@
       "c1ec4a95-1f05-45b3-a911-aa3fa01094f5",
       "57ff2da0-773e-42df-b2af-ffb7a2317929",
       "0feaeb32-d00e-4d66-bd5a-43b5b83db82c",
-      "4a51bca5-1eff-43f5-878c-177680f191af"
+      "4a51bca5-1eff-43f5-878c-177680f191af",
+      "29c62f1c-8ffc-4304-9cb9-398a6aa1852b"
     ],
     "skuId": "4cde982a-ede4-4409-9ae6-b003453c8ea6",
     "slug": "microsoft_teams_rooms_pro",
@@ -5487,7 +5481,8 @@
       "5136a095-5cf0-4aff-bec3-e84448b38ea5",
       "2b815d45-56e4-4e3a-b65c-66cb9175b560",
       "e7d09ae4-099a-4c34-a2a2-3e166e95c44a",
-      "6e5b7995-bd4f-4cbd-9d19-0e32010c72f0"
+      "6e5b7995-bd4f-4cbd-9d19-0e32010c72f0",
+      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
     "skuId": "535a3a29-c5f0-42fe-8215-d3b9e1f38c4a",
     "slug": "enterprisepack_gov",
@@ -6022,10 +6017,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "113feb6c-3fe4-4440-bddc-54d774bf0318",
-      "4f0142e8-8fb8-44a7-8ef8-665425d93888"
-    ],
     "productName": "Skype Meeting Video Interop for Skype for Business",
     "servicePlanIds": [
       "113feb6c-3fe4-4440-bddc-54d774bf0318",
@@ -6034,7 +6025,8 @@
     "skuId": "610b16c2-bc9b-4b6b-b59f-0168123049ad",
     "slug": "video_interop",
     "sources": [
-      "csv"
+      "csv",
+      "md"
     ],
     "stringId": "VIDEO_INTEROP"
   },
@@ -6159,14 +6151,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesMdOnly": [
-      "0504111f-feb8-4a3c-992a-70280f9a2869",
-      "711413d0-b36e-4cd4-93db-0a50a4ab7ea3",
-      "9104f592-f2a7-4f77-904c-ca5a5715883f",
-      "ab2d4fb5-f80a-4bf1-a11d-7f1da254041b",
-      "cc8c0802-a325-43df-8cba-995d0c6cb373",
-      "f8b44f54-18bb-46a3-9658-44ab58712968"
-    ],
     "productName": "Microsoft Teams Premium",
     "servicePlanIds": [
       "0504111f-feb8-4a3c-992a-70280f9a2869",
@@ -6179,6 +6163,7 @@
     "skuId": "6432c818-bcef-43b6-9290-aec052964950",
     "slug": "m365_teams_premium",
     "sources": [
+      "csv",
       "md"
     ],
     "stringId": "M365_TEAMS_PREMIUM"
@@ -6751,7 +6736,8 @@
       "76846ad7-7776-4c40-a281-a386362dd1b9",
       "c68f8d98-5534-41c8-bf36-22fa496fa792",
       "7547a3fe-08ee-4ccb-b430-5077c5041653",
-      "041fe683-03e4-45b6-b1af-c0cdc516daee"
+      "041fe683-03e4-45b6-b1af-c0cdc516daee",
+      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
     "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900",
     "slug": "enterprisepack",
@@ -7171,12 +7157,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "1c56fdd3-59ce-417a-b8bb-a97bb4e67b99",
-      "5a6d0425-3ef2-4e42-8372-76709c9effe0",
-      "68bf3da4-4e1a-4e13-a1cc-2bc6986b4d88",
-      "fe6c28b3-d468-44ea-bbd0-a10a5167435c"
-    ],
     "productName": "Microsoft 365 Copilot for Finance (Preview)",
     "servicePlanIds": [
       "1c56fdd3-59ce-417a-b8bb-a97bb4e67b99",
@@ -7187,7 +7167,8 @@
     "skuId": "7792674b-fa0c-4af5-b2a1-a15239f933b6",
     "slug": "microsoft_copilot_for_finance_trial",
     "sources": [
-      "csv"
+      "csv",
+      "md"
     ],
     "stringId": "Microsoft_Copilot_for_Finance_trial"
   },
@@ -7667,21 +7648,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "159f4cd6-e380-449f-a816-af1a9ef76344",
-      "199a5c09-e0ca-4e37-8f7c-b05d533e1ea2",
-      "1fe6227d-3e01-46d0-9510-0acad4ff6e94",
-      "3efbd4ed-8958-4824-8389-1321f8730af8",
-      "4495894f-534f-41ca-9d3b-0ebf1220a423",
-      "4a82b400-a79f-41a4-b4e2-e94f5787b113",
-      "57ff2da0-773e-42df-b2af-ffb7a2317929",
-      "882e1d05-acd1-4ccb-8708-6ee03664b117",
-      "94065c59-bc8e-4e8b-89e5-5138d471eaff",
-      "afc06cb0-b4f4-4473-8286-d644f70d8faf",
-      "dcf9d2f4-772e-4434-b757-77a453cfbc02",
-      "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
-      "f0ff6ac6-297d-49cd-be34-6dfef97f0c28"
-    ],
     "productName": "Microsoft Teams Enterprise",
     "servicePlanIds": [
       "afc06cb0-b4f4-4473-8286-d644f70d8faf",
@@ -7701,7 +7667,8 @@
     "skuId": "7e31c0d9-9551-471d-836f-32ee72be4a01",
     "slug": "microsoft_teams_enterprise_new",
     "sources": [
-      "csv"
+      "csv",
+      "md"
     ],
     "stringId": "Microsoft_Teams_Enterprise_New"
   },
@@ -9320,7 +9287,9 @@
       "9a6eeb79-0b4b-4bf0-9808-39d99a2cd5a3",
       "7bf960f6-2cd9-443a-8046-5dbff9558365",
       "99cd49a9-0e54-4e07-aea1-d8d9f5f704f5",
-      "3efbd4ed-8958-4824-8389-1321f8730af8"
+      "3efbd4ed-8958-4824-8389-1321f8730af8",
+      "795aec3a-93a2-45be-92c4-47b9a76340ca",
+      "3afa0b92-83ef-41c1-8d64-586ab882a951"
     ],
     "skuId": "99cc8282-2f74-4954-83b7-c6a9a1999067",
     "slug": "m365_e5_suite_components",
@@ -9515,7 +9484,9 @@
   },
   {
     "aliases": {
-      "productName": [],
+      "productName": [
+        "Microsoft Teams Calling Plan pay-as-you-go (country/region zone 1 - US)"
+      ],
       "stringId": []
     },
     "productName": "Microsoft Teams Calling Plan pay-as-you-go (country zone 1 - US)",
@@ -10839,7 +10810,8 @@
       "9e700747-8b1d-45e5-ab8d-ef187ceec156",
       "bea4c11e-220a-4e6d-8eb8-8ea15d019f90",
       "efb87545-963c-4e0d-99df-69c6916d9eb0",
-      "9953b155-8aef-4c56-92f3-72b0487fce41"
+      "9953b155-8aef-4c56-92f3-72b0487fce41",
+      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
     "skuId": "aea38a85-9bd5-4981-aa00-616b411205bf",
     "slug": "enterprisepack_usgov_gcchigh",
@@ -10854,12 +10826,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "113feb6c-3fe4-4440-bddc-54d774bf0318",
-      "2d2f174c-c3cc-4abe-9ce8-4dd86f469ab1",
-      "43b076f2-1123-45ba-a339-2e170ee58c53",
-      "47c2b191-a5fb-4129-b690-00c474d2f623"
-    ],
     "productName": "Dynamics 365 Customer Service Digital Messaging Partner Sandbox",
     "servicePlanIds": [
       "2d2f174c-c3cc-4abe-9ce8-4dd86f469ab1",
@@ -10870,7 +10836,8 @@
     "skuId": "aeb8c883-d700-4aa1-8719-402b5adf2949",
     "slug": "dynamics_365_customer_service_digital_messaging_partner_sandbox",
     "sources": [
-      "csv"
+      "csv",
+      "md"
     ],
     "stringId": "Dynamics_365_Customer_Service_Digital_Messaging_Partner_Sandbox"
   },
@@ -11070,7 +11037,8 @@
       "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
       "5dbe027f-2339-4123-9542-606e4d348a72",
       "0feaeb32-d00e-4d66-bd5a-43b5b83db82c",
-      "43de0ff5-c92c-492b-9116-175376d08c38"
+      "43de0ff5-c92c-492b-9116-175376d08c38",
+      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
     "skuId": "b107e5a3-3e60-4c0d-a184-a7e4395eb44c",
     "slug": "enterprisepack_usgov_dod",
@@ -12435,9 +12403,6 @@
       "productName": [],
       "stringId": []
     },
-    "edgesMdOnly": [
-      "29c62f1c-8ffc-4304-9cb9-398a6aa1852b"
-    ],
     "productName": "Office 365 E5",
     "servicePlanIds": [
       "4a51bca5-1eff-43f5-878c-177680f191af",
@@ -12636,7 +12601,8 @@
       "41781fb2-bc02-4b7c-bd55-b576c07bb09d",
       "6c57d4b6-3b23-47a5-9bc9-69f17b4947b3",
       "bea4c11e-220a-4e6d-8eb8-8ea15d019f90",
-      "932ad362-64a8-4783-9106-97849a1a30b9"
+      "932ad362-64a8-4783-9106-97849a1a30b9",
+      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
     "skuId": "ca9d1dd9-dfe9-4fef-b97c-9bc1ea3c3658",
     "slug": "spe_e3_usgov_gcchigh",
@@ -13331,7 +13297,8 @@
     },
     "productName": "Skype for Business PSTN Domestic and International Calling",
     "servicePlanIds": [
-      "5a10155d-f5c1-411a-a8ec-e99aae125390"
+      "5a10155d-f5c1-411a-a8ec-e99aae125390",
+      "d4009785-b899-4cab-97b6-d06a7c799507"
     ],
     "skuId": "d3b4fe1f-9992-4930-8acb-ca6ec609365e",
     "slug": "mcopstn2",
@@ -13359,25 +13326,6 @@
       "md"
     ],
     "stringId": "PRIVACY_MANAGEMENT_SUB_RIGHTS_REQ_1_V2_USGOV_DOD"
-  },
-  {
-    "aliases": {
-      "productName": [],
-      "stringId": []
-    },
-    "edgesMdOnly": [
-      "d4009785-b899-4cab-97b6-d06a7c799507"
-    ],
-    "productName": "Skype for Business PSTN Domestic and International Calling",
-    "servicePlanIds": [
-      "d4009785-b899-4cab-97b6-d06a7c799507"
-    ],
-    "skuId": "d4009785-b899-4cab-97b6-d06a7c799507",
-    "slug": "mcosms2",
-    "sources": [
-      "md"
-    ],
-    "stringId": "MCOSMS2"
   },
   {
     "aliases": {
@@ -13469,7 +13417,8 @@
       "6c57d4b6-3b23-47a5-9bc9-69f17b4947b3",
       "41781fb2-bc02-4b7c-bd55-b576c07bb09d",
       "5dbe027f-2339-4123-9542-606e4d348a72",
-      "bea4c11e-220a-4e6d-8eb8-8ea15d019f90"
+      "bea4c11e-220a-4e6d-8eb8-8ea15d019f90",
+      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
     "skuId": "d61d61cc-f992-433f-a577-5bd016037eeb",
     "slug": "spe_e3_usgov_dod",
@@ -13856,13 +13805,11 @@
   },
   {
     "aliases": {
-      "productName": [],
+      "productName": [
+        "Microsoft Teams Calling Plan pay-as-you-go (country/region zone 1)"
+      ],
       "stringId": []
     },
-    "edgesCsvOnly": [
-      "156a1efe-17cd-4b03-9f17-2eb512298fb3",
-      "2b9bf4f4-ac52-42c5-8456-f70ee4924295"
-    ],
     "productName": "Microsoft Teams Calling Plan pay-as-you-go (country zone 1)",
     "servicePlanIds": [
       "2b9bf4f4-ac52-42c5-8456-f70ee4924295",
@@ -13871,7 +13818,8 @@
     "skuId": "dbd31205-338e-4dec-903d-44402e305e32",
     "slug": "microsoft_teams_calling_plan_pay_as_you_go_country_zone_1",
     "sources": [
-      "csv"
+      "csv",
+      "md"
     ],
     "stringId": "Microsoft_Teams_Calling_Plan_pay_as_you_go_(country_zone_1)"
   },
@@ -14786,7 +14734,8 @@
       "0a20c815-5e81-4727-9bdc-2b5a117850c3",
       "c1ec4a95-1f05-45b3-a911-aa3fa01094f5",
       "a70bbf38-cdda-470d-adb8-5804b8770f41",
-      "c537f360-6a00-4ace-a7f5-9128d0ac1e4b"
+      "c537f360-6a00-4ace-a7f5-9128d0ac1e4b",
+      "f20fedf3-f3c3-43c3-8267-2bfdd51c0939"
     ],
     "skuId": "e823ca47-49c4-46b3-b38d-ca11d5abe3d2",
     "slug": "m365_g3_gov",
@@ -15888,7 +15837,8 @@
       "31cf2cfc-6b0d-4adc-a336-88b724ed8122",
       "40b010bb-0b69-4654-ac5e-ba161433f4b4",
       "199a5c09-e0ca-4e37-8f7c-b05d533e1ea2",
-      "e95bec33-7c88-4a70-8e19-b10bd9d0c014"
+      "e95bec33-7c88-4a70-8e19-b10bd9d0c014",
+      "c6675fa4-68fe-415f-aec1-a44520f0c3a3"
     ],
     "skuId": "f8ced641-8e17-4dc5-b014-f5a2d53f6ac8",
     "slug": "office_365_e1_no_teams",
