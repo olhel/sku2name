@@ -7,3 +7,9 @@ npm-debug.log*
 
 # Deployment runbook. Account-specific plumbing, kept out of the public repo.
 infra/DEPLOY.md
+
+# Working notes: measured findings, competitive analysis, traffic numbers and
+# the reasoning behind decisions. Kept out of a public repo deliberately, the
+# same call as infra/DEPLOY.md. Untracking does not remove what is already in
+# the history.
+docs/

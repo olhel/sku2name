@@ -1,7 +1,7 @@
 // Building the one JSON line written per page view.
 //
 // Container Apps forwards stdout to the Log Analytics workspace, so a
-// console.log here is the whole transport. See docs/analytics.md.
+// console.log here is the whole transport.
 //
 // Three things are deliberately absent, each because the site makes a public
 // promise on /about/:

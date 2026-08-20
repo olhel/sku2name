@@ -33,7 +33,10 @@ const idMissTemplate = existsSync(join(DIST, 'id-not-found.html'))
 
 // One JSON line per page view to stdout. Container Apps forwards stdout to the
 // Log Analytics workspace, so there is no client, no agent and no endpoint.
-// See docs/analytics.md for what is deliberately not recorded.
+// Three things are deliberately absent, each because /about/ makes a promise:
+// the query string, since /?q= reaches the server on a shared link; the IP,
+// which derives the daily visitor hash and is never written; and any
+// identifier stored on the device.
 //
 // Server-side rather than a browser beacon on purpose: a beacon only counts
 // visitors that run JavaScript, and sub2tenant's does, which is why only 3% of
